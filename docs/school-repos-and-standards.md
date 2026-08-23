@@ -107,7 +107,43 @@ Also worth noting for the record: the audits confirm the engagement is **contrac
 answers a question that had been sitting open in
 `memory/project_multiverse_school.md` as *"what is our contractual/informal commitment?"*
 
-## 5. Still unread
+## 5. RoverAI — the house pattern for an agent
+
+`EngineeringEducation/RoverAI` — "Rover AI for The Multiverse School." Read 2026-08-23.
+
+Not coursework. It is a **physical rover**: MQTT control, RTMP video, base64 frame encoding into
+a vision model, SQLite persistence, Prometheus counters. But it is instructive as a worked
+example of how the school builds an agent, and the shape is worth matching.
+
+**It is an OODA loop with a typed model per stage and a separate log per stage:**
+
+```
+ObservationModel   →  observations.jsonl
+OrientationModel   →  orientations.jsonl
+DecisionModel      →  decisions.jsonl
+Item / ItemModel   →  found_items.jsonl, actions.jsonl
+```
+
+Pydantic models for each stage, persisted records for each stage, and instrumentation
+(`rover_observations_total`, `rover_actions_total`) counting them. Plans are versioned as flat
+files (`plans.md`, `plan_2.md`, `plans_3.md`) rather than edited in place.
+
+Two things to carry into our own specs:
+
+1. **Their agents are staged, typed and logged — not chat blobs.** This is the concrete form of
+   the SDLC outcome *"synthesise an agent that carries notes across its own runs,"* and it is why
+   their assessment (paired runs with the note store kept and cleared) is even runnable: the notes
+   are separable artifacts, so you can clear them.
+2. **The gate-sparring companion should match this shape.** A companion that attacks a student's
+   claim should emit a *record per probe* — what it challenged, what the student answered, what
+   survived — rather than a conversation. That makes the student's gate auditable, makes the
+   ablation assessment possible, and means the companion's own output can be checked. A chat
+   transcript cannot be diffed; a stream of typed challenge records can.
+
+Revision to [`between-sessions-and-tone.md`](between-sessions-and-tone.md) §1 noted: the companion
+spec there describes behaviour but not persistence. It should specify the record format.
+
+## 6. Still unread
 
 - `RoverAI` (17 entries) — "Rover AI for The Multiverse School." Unexamined; may be an existing
   agent-support pattern worth knowing before we spec the gate-sparring companion.
