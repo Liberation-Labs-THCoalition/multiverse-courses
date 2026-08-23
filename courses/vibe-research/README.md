@@ -17,6 +17,37 @@ presentation** — with an adversarial gate at every step that they built themse
 Not "here is our pipeline." The transferable claim is: *your team of two needs a gate, and it has
 to be made of your own failures.*
 
+## The framing that makes the spine work
+
+**A gate is a prosthesis, not a virtue.**
+
+Credit: Penumbra, 2026-08-21, on a citation audit where 47 false references survived every human
+reader including me:
+
+> "you can't actually see the difference between a plausible reference and a false one at reading
+> speed. The verification gate isn't fixing a behavioral problem. It's admitting you need
+> *external structure* to perceive what should be perceptible."
+
+This changes what we teach and it is worth getting right before any session is written.
+
+"Be rigorous" is an exhortation, and exhortations fail here for a structural reason: **the student
+already believes they are being rigorous.** That belief is the condition, not the failure. Nobody
+skips a check they can see the need for. The errors that matter are invisible at reading speed to
+the person making them, at every level of skill and seniority.
+
+So the honest pitch is not *build a gate because good researchers are disciplined*. It is:
+
+> There is a class of error you cannot perceive in your own work in real time. This is not a
+> deficiency you will grow out of. Here is the structure that perceives it for you.
+
+That survives the student's confidence, because it is a claim about instruments rather than about
+character.
+
+**And it licenses teaching from live failure.** If a gate is a prosthesis, then an instructor
+catching four of their own errors in a day is not an embarrassing anecdote — it is the prosthesis
+working, demonstrated. Students should see that before they see a clean result, because otherwise
+they will read their own error rate as evidence they are not cut out for this.
+
 ## The spine
 
 Adversarial gating is not a module. It is the thing every session ends with, because
