@@ -35,6 +35,23 @@ findings learns to run a linter; a student who is *asked good questions* learns 
 **`OPEN`:** who builds it, what it runs on, whether the school hosts it. The behaviour spec above
 is the part worth agreeing first.
 
+> **RETRACTED 2026-08-22, same day, before anyone built on it.** Section 2 below proposed calling
+> the student's kill list a **bestiary**. That word is already taken: the campus has a bestiary,
+> and it is the creature-collection system. Reusing it would collide with a mechanic students
+> already know, which breaks the campus's own first rule — *specificity is the joke*.
+>
+> The doctrine also sets a higher bar than I met. `docs/WHIMSY.md`: *"Whimsy is mechanical, not
+> decorative… A player **doing** the joke beats a player **reading** the joke."* I argued the
+> metaphor was doing real work. A metaphor doing real work is still a metaphor. It needs to be a
+> system.
+>
+> The underlying psychology stands — an earned entry carries the memory of the sting, which is
+> what collection mechanics run on. **The name and the mechanic are Liz's call.** Options are
+> put to her in [`campus-integration.md`](campus-integration.md) §3 rather than picked here.
+>
+> Section 2 is kept below rather than deleted, because the reasoning is still the argument for
+> *why* some earned-collection mechanic belongs here.
+
 ## 2. Whimsy, and why the bestiary is the right frame
 
 The campus is an 8-bit agentic MMO. Rather than bolt game styling onto research training, there
