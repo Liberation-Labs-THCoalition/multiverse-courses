@@ -118,8 +118,25 @@ a name over a flag today it was `agni-open` pointing at a private repo.
   (*what does this paper not support?* / *what would change your mind?*)
 - Whether course submissions can register as research contributions in the existing pet economy
 - Who owns any new in-world naming — assumed Liz, confirm
-- Whether `github.com/EngineeringEducation` holds course-side material we have not seen
-  **(still unexamined — highest-value remaining source)**
+- ~~Whether `github.com/EngineeringEducation` holds course-side material we have not seen~~
+  **ANSWERED 2026-08-24, by me rather than by Liz:** it is classical software-engineering
+  curriculum (java, python, sql, linux, web, security), and `agentic-sdlc-space-opera` — the repo
+  named for the course — is **empty**. Nothing course-side we had not seen. See
+  [`school-repos-and-standards.md`](school-repos-and-standards.md).
+
+**RESOLVED 2026-08-24 (Thomas):** we have **PR permissions on the campus repo, including for
+agents**, and Liz is loose with creative control. So the first two questions are no longer
+requests — they are **pull requests**, which is the right shape: proposed in-world, visible, and
+hers to accept or decline. The third (naming) stays a courtesy question and the answer is still
+Liz.
+
+**Licensing resolved:** the course will be property of the Multiverse and the revenue accrues to
+the rights holder, so CC BY-NC-SA's non-commercial clause is not engaged — we are not a third
+party charging for their work. One residual care: the curriculum repo asks for attribution to
+"Enki, **and the author of the work**", so any specific content block with a named non-Liz author
+wants a provenance check before it is lifted. *(Enki is a company — the San Francisco
+learn-to-code app, ~2015. Its "AI-powered mentor" is a product feature, not the entity. Checked
+rather than assumed.)*
 
 ## 5. Note on our own audits
 
