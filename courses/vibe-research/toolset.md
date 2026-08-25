@@ -25,6 +25,69 @@ hearsay. Marked below:
 
 ---
 
+## What will actually stop you — the barrier table
+
+*The per-section tables below say what each tool is **for**. This one says what it **costs you to
+start**, which is the thing that stops a student at 11pm on a Tuesday and is almost never written
+down. Scan this to pick; read the sections to learn.*
+
+**Columns.** `cost` is out-of-pocket. `account` is what you must create *before the tool does
+anything* — the distinction that matters is whether an **agent can hold the credential**, because
+a tool an agent cannot authenticate to is a tool the student has to babysit. `install` is the real
+shape of getting it running, not a difficulty score. `hw` flags anything that is not "any laptop".
+
+| tool | cost | account | install | hw | status |
+|---|---|---|---|---|---|
+| **Python 3.12+** | $0 | none | installer / `uv` / conda | any | `used` |
+| **numpy**, **scipy** | $0 | none | `pip` | any | `used` |
+| **git** | $0 | none for local; host acct to push | installer | any | `used` |
+| **LaTeX** (TeX Live/MiKTeX) | $0 | none | **system install, multi-GB, slow** | any | `used` |
+| **latexmk** | $0 | none | ships with TeX Live | any | `used` |
+| **poppler** (`pdftotext`) | $0 | none | **system pkg**, not `pip` — `brew`/`apt`/`choco` | any | `used` |
+| **pingouin** | $0 | none | `pip` | any | `known` |
+| **statsmodels** | $0 | none | `pip` | any | `used` |
+| **Quarto** | $0 | none | installer + a TeX for PDF | any | `known` |
+| **Jupyter** + `papermill` | $0 | none | `pip` | any | `used` |
+| **Zotero** (desktop) | $0 | **acct only for sync**; local works without | installer | any | `used` |
+| **Better BibTeX** | $0 | none | drop-in plugin | any | `used` |
+| **Zotero local API** | $0 | none — **no key at all** | **desktop app must be running** | any | `used` |
+| **Zotero Web API** | $0 | acct + key | `pip` client | any | `used` |
+| **OpenAlex** | $0 → **metered** | keyless works, then throttles | `pip`/HTTP | any | `used` |
+| **OpenAlex S3 snapshot** | $0 | **none, no key** | S3 client + **disk** | any | `known` |
+| **Semantic Scholar API** | $0 | key in practice — **429s on a first keyless call** | HTTP | any | `used` |
+| **PubMed / E-utilities** | $0 | none; key raises rate | HTTP | any | `used` |
+| **ClinicalTrials.gov API v2** | $0 | **none** | HTTP | any | `known` |
+| **OSF** | $0 | acct + token | `pip` (`osfclient`) | any | `known` |
+| **AsPredicted** | $0 | **email magic-link only — no credential exists** | web only | any | `known` |
+| **Zenodo** | $0 | acct + token | HTTP | any | `known` |
+| **DVC** | $0 | none for local remote | `pip` | any | `known` |
+| **git-annex** | $0 | none | system pkg | any | `known` |
+| **jamovi** + **jmv** | $0 | none | installer (GUI) / `R` pkg | any | `known` |
+| **REDCap** | **$0 but not open** | **signed institutional licence** | server deploy | server | `known` |
+| **torch** (CPU) | $0 | none | `pip` | any | `used` |
+| **torch** + MPS | $0 | none | `pip` | **Apple Silicon** | `used` |
+| **torch** + CUDA | $0 | none | `pip` w/ CUDA index | **NVIDIA GPU** | `known` |
+| **MLX** | $0 | none | `pip` | **Apple Silicon** | **ruled out — see below** |
+
+### Three rows that are the lesson
+
+- **poppler is a system package, not `pip`.** The highest-yield tool on this page is the one most
+  likely to fail at install for a student who only knows `pip`. Budget for it explicitly.
+- **Zotero's local API needs no key and no account — and needs the desktop app open.** That is a
+  strange, very good property: the agent authenticates to nothing, and the student can see every
+  change land in a UI. It is the cheapest agentic surface in the whole stack.
+- **AsPredicted has no credential to hold.** *"There are no userids nor passwords. All
+  identification is done via email."* An agent cannot use it — not "has no API", but has nothing
+  to authenticate **with**. Structural, not a gap.
+
+### The cost column is mostly $0, and that is a claim about the field, not the list
+
+Everything a student needs to do real, checkable, pre-registered research is free — and the two
+non-free entries are instructive rather than annoying. **REDCap is free but not open** (signed
+Vanderbilt licence, source not redistributable), which is where a clinical student meets *free is
+not open*. **OpenAlex is free until it is metered**, which is where anyone meets *the terms moved
+under a tool you already depend on*. Keep both in, precisely because they complicate the story.
+
 ## Dependencies — must-haves, choices, and hardware
 
 Three different kinds of entry, and conflating them is how a setup guide becomes unusable.
