@@ -39,46 +39,55 @@ shape of getting it running, not a difficulty score. `hw` flags anything that is
 | tool | cost | account | install | hw | status |
 |---|---|---|---|---|---|
 | **Python 3.12+** | $0 | none | installer / `uv` / conda | any | `used` |
-| **numpy**, **scipy** | $0 | none | `pip` | any | `used` |
-| **git** | $0 | none for local; host acct to push | installer | any | `used` |
-| **LaTeX** (TeX Live/MiKTeX) | $0 | none | **system install, multi-GB, slow** | any | `used` |
-| **latexmk** | $0 | none | ships with TeX Live | any | `used` |
-| **poppler** (`pdftotext`) | $0 | none | **system pkg**, not `pip` — `brew`/`apt`/`choco` | any | `used` |
-| **pingouin** | $0 | none | `pip` | any | `known` |
+| **numpy**, **scipy** | $0 | none | `pip` (wheels for win/mac-arm/manylinux) | any | `used` |
+| **git** | $0 | none for local; host acct to push | installer / `apt` / `brew` | any | `used` |
+| **LaTeX** (TeX Live/MiKTeX) | $0 | none | **system install** — ~GB (scheme-full, the installer default) / ~few hundred MB (basic) / ~tens of MB (TinyTeX) | any | `used` |
+| **latexmk** | $0 | none | in TeX Live **medium/full only** (`collection-binextra`) — **not** in scheme-basic, scheme-small or BasicTeX; MiKTeX on demand; in TinyTeX | **it is a Perl script** — TL/Windows bundles a minimal Perl, MiKTeX bundles none | `used` |
+| **poppler** (`pdftotext`) | $0 | none | **CLI: system pkg or conda-forge — never pip.** PyPI `pdftotext` is sdist-only (needs `libpoppler-cpp` + a compiler); PyPI `poppler-utils` **ships no binaries at all**. Text-only alternative: `pypdfium2`, pure pip, every platform. | any | `used` |
+| **pingouin** | $0 | none | `pip` (`py3-none-any`) | any | `known` |
 | **statsmodels** | $0 | none | `pip` | any | `used` |
-| **Quarto** | $0 | none | installer + a TeX for PDF | any | `known` |
+| **Quarto** | $0 | none | installer. LaTeX PDF needs a TeX (`quarto install tinytex`); **`format: typst` gives PDF with no TeX at all** — the Typst CLI is bundled. | any | `known` |
 | **Jupyter** + `papermill` | $0 | none | `pip` | any | `used` |
 | **Zotero** (desktop) | $0 | **acct only for sync**; local works without | installer | any | `used` |
-| **Better BibTeX** | $0 | none | drop-in plugin | any | `used` |
-| **Zotero local API** | $0 | none — **no key at all** | **desktop app must be running** | any | `used` |
-| **Zotero Web API** | $0 | acct + key | `pip` client | any | `used` |
-| **OpenAlex** | $0 → **metered** | keyless works, then throttles | `pip`/HTTP | any | `used` |
-| **OpenAlex S3 snapshot** | $0 | **none, no key** | S3 client + **disk** | any | `known` |
-| **Semantic Scholar API** | $0 | key in practice — **429s on a first keyless call** | HTTP | any | `used` |
-| **PubMed / E-utilities** | $0 | none; key raises rate | HTTP | any | `used` |
-| **ClinicalTrials.gov API v2** | $0 | **none** | HTTP | any | `known` |
-| **OSF** | $0 | acct + token | `pip` (`osfclient`) | any | `known` |
-| **AsPredicted** | $0 | **email magic-link only — no credential exists** | web only | any | `known` |
-| **Zenodo** | $0 | acct + token | HTTP | any | `known` |
-| **DVC** | $0 | none for local remote | `pip` | any | `known` |
-| **git-annex** | $0 | none | system pkg | any | `known` |
-| **jamovi** + **jmv** | $0 | none | installer (GUI) / `R` pkg | any | `known` |
-| **REDCap** | **$0 but not open** | **signed institutional licence** | server deploy | server | `known` |
-| **torch** (CPU) | $0 | none | `pip` | any | `used` |
-| **torch** + MPS | $0 | none | `pip` | **Apple Silicon** | `used` |
-| **torch** + CUDA | $0 | none | `pip` w/ CUDA index | **NVIDIA GPU** | `known` |
-| **MLX** | $0 | none | `pip` | **Apple Silicon** | **ruled out — see below** |
+| **Better BibTeX** | $0 | none | `.xpi` from GitHub releases → Tools ▸ Plugins ▸ Install From File (**not** a one-click store install) | any | `used` |
+| **Zotero local API** | $0 | **no key to READ**; writes need a runtime-granted local key — agent *can* hold it, a human must grant it | desktop app running **and** local API switched on in Settings ▸ Advanced — **off by default, 403 until then** | any | `used` |
+| **Zotero Web API** | $0 | acct + key (plain string, agent-holdable) | `pip` (`pyzotero`) | any | `used` |
+| **OpenAlex** | $0 → **metered**; free key = **$1/day**, 10× the anonymous budget | keyless works, then throttles | `pip`/HTTP | any | `used` |
+| **OpenAlex S3 snapshot** | $0 | **none — no AWS account** | S3 client + **~750 GB compressed, several TB open** | any | `known` |
+| **Semantic Scholar API** | $0 | key needed in practice — keyless is a **shared** 1000 req/s pool across *all* anonymous users, routinely saturated (5/5 calls 429'd during our check). A key buys a **private 1 RPS**, not a bigger number. | HTTP | any | `used` |
+| **PubMed / E-utilities** | $0 | none (3 req/s); key raises to 10 | HTTP | any | `used` |
+| **ClinicalTrials.gov API v2** | $0 | **none** — verified 200 keyless | HTTP | any | `known` |
+| **OSF** | $0 | **read public: none.** Write/private: acct + PAT (`OSF_TOKEN`), agent-holdable | `pip` (`osfclient`) | any | `known` |
+| **AsPredicted** | $0 | **email magic-link only — no password field exists on the page.** An agent would need mailbox access, and coauthor approval is a human email loop regardless. | web only | any | `known` |
+| **Zenodo** | $0 | **read public: none** (60/min). Deposit: acct + token w/ `deposit:write`+`deposit:actions` (100/min) | HTTP | any | `known` |
+| **DVC** | $0 | **none** for a local/filesystem remote | `pip`; cloud remotes need extras (`dvc[s3]`…) | any | `known` |
+| **git-annex** | $0 | none | **`pip` — real binary wheels** (linux x86_64/aarch64, macOS arm64/x86_64, win_amd64), or system pkg / conda-forge | any | `known` |
+| **jamovi** + **jmv** | **$0 desktop**; Cloud has paid Priority/Teams tiers | none for desktop; acct for Cloud | installer (GUI) / CRAN pkg (needs R) | any | `known` |
+| **REDCap** | **$0 for non-profit consortium members only** — commercial use is paid (REDCap Cloud) | **an executed EULA with Vanderbilt.** A human signature, not a credential. | server deploy | server | `known` |
+| **torch** (CPU) | $0 | none | `pip` — **but on Linux plain `pip install torch` installs the CUDA build** and pulls ~2 GB of NVIDIA wheels onto a GPU-less box. Use `--index-url .../whl/cpu` for a real CPU install. | any | `used` |
+| **torch** + MPS | $0 | none | `pip` | **Apple Silicon, macOS 14+** — no Intel-Mac wheels ship at all | `used` |
+| **torch** + CUDA | $0 | none | Linux: plain `pip install torch`. **Windows: needs the CUDA index URL.** No macOS CUDA. | **NVIDIA GPU** | `known` |
+| **MLX** | $0 | none | `pip`; CUDA backend on Linux via `pip install mlx[cuda]` | Apple Silicon — **or NVIDIA via the CUDA backend** | **not for this course — see below** |
 
-### Three rows that are the lesson
+### Four rows that are the lesson
 
-- **poppler is a system package, not `pip`.** The highest-yield tool on this page is the one most
-  likely to fail at install for a student who only knows `pip`. Budget for it explicitly.
-- **Zotero's local API needs no key and no account — and needs the desktop app open.** That is a
-  strange, very good property: the agent authenticates to nothing, and the student can see every
-  change land in a UI. It is the cheapest agentic surface in the whole stack.
-- **AsPredicted has no credential to hold.** *"There are no userids nor passwords. All
-  identification is done via email."* An agent cannot use it — not "has no API", but has nothing
-  to authenticate **with**. Structural, not a gap.
+- **poppler's CLI is genuinely un-`pip`-able, and PyPI actively misleads you about it.** The
+  highest-yield tool on this page is the one most likely to stop a student who only knows `pip`.
+  `pip install pdftotext` is source-only and needs a C++ toolchain; `pip install poppler-utils`
+  succeeds and gives you **nothing** (see below). Route students to `conda-forge` or a system
+  package, and budget for it out loud.
+- **Zotero's local API is off by default.** It needs no key to read — genuinely rare, and the
+  cheapest agentic surface in the stack — but until someone ticks a box in Settings ▸ Advanced it
+  returns `403`, and *writes* need a key the user grants at runtime. "No credential" and "no setup"
+  are not the same thing, and we had them conflated.
+- **AsPredicted has no credential to hold.** The sign-in form has an email field and **no password
+  field at all**. An agent cannot use it — not "has no API", but has nothing to authenticate
+  *with*. Coauthor approval is an email loop too, so a human is structurally in the path.
+- **Four rows we marked "any" are not.** `latexmk` (TeX Live scheme-dependent, and a Perl script
+  where MiKTeX ships no Perl), `poppler` (a different package manager per OS), `torch`
+  (**CUDA-by-default on Linux, CPU-by-default on Windows, arm64-only on macOS** — one `pip install`
+  command, three different products), and MLX (Apple-only until recently, no longer). For a
+  mixed-platform cohort, "any" was the single most error-prone cell in the table.
 
 ### The cost column is mostly $0, and that is a claim about the field, not the list
 
@@ -233,39 +242,84 @@ have to be earned first. **We do not ship our kill list, in any session.**
 **Three parallel surveys, 2026-08-25**, briefed to return evidence with provenance tags rather
 than recommendations. The headline is not a tool list.
 
-### Finding: a tool's metadata is less reliable than the tool
+### Finding: hand-typed metadata lies; generated metadata does not
 
-Seven independent instances, across three surveys that never spoke to each other:
+Eleven independent instances, across **four** surveys that never spoke to each other. The first
+seven came from the toolset search pass. The last four were found while **fact-checking this
+page's own barrier table**, which had been written partly from recall — so the finding reproduced
+itself on us, one section below where we wrote it down.
 
-| tool | what the metadata said | what the artifact said |
+| tool | what was claimed | what the artifact showed |
 |---|---|---|
-| **OSF** | `developer.osf.io` documents no registration-submit endpoint | `POST /v2/registrations/` **exists**; two independent probes agree |
-| **MLX** | docs describe `stream` as "the default device" | source: `"[SVD::eval_gpu] Metal SVD NYI"` plus a `check_cpu_stream` guard that **throws**, no fallback |
+| **`poppler-utils`** (PyPI) | *"Precompiled command-line utilities… for manipulating PDF files"*, licence `GPL-2.0`, 18 KB LICENSE shipped | **9 KB wheel. Two Python files. Zero binaries, no CLI entry point.** Name, summary and licence each imply shipped binaries; `unzip -l` disproves all three in one command. |
+| **OSF** | `developer.osf.io` documents no registration-submit endpoint | `POST /v2/registrations/` exists — two independent probes agree |
+| **MLX** | PyPI summary: *"a framework for machine learning on Apple silicon"* | the **same release** ships manylinux x86_64/aarch64 and win_amd64/arm64 wheels and documents `pip install mlx[cuda]` |
+| **MLX** (docs) | `stream` described as "the default device" | source: `"[SVD::eval_gpu] Metal SVD NYI"` + a `check_cpu_stream` guard that **throws**, no fallback |
 | **Zotero** | GitHub SPDX badge: `NOASSERTION` | `COPYING`: **AGPLv3** |
-| **Taguette** | GitHub mirror's tags stop at 2019 — reads as abandoned | GitLab canonical, **active this month** |
+| **jamovi** | GitHub metadata: `license: Other`, `spdx_id: NOASSERTION` | `LICENSE.md` is explicit and per-component: **AGPL3** for client/server, **GPL2+** for engine; `jmv` separately GPL-2 \| GPL-3 on CRAN |
+| **Taguette** | GitHub mirror's tags stop at 2019 — reads abandoned | GitLab canonical, **active this month** |
 | **revtools** | `pushed_at: 2026-07-07` | default-branch HEAD: **2020-01-10** |
 | **Pweave** | PyPI classifier: `Development Status :: 5 - Production/Stable` | **fails at import**; no `requires_python`, no `requires_dist` |
 | **Hatch** | widely repeated: "no lockfile support" | `hatch env lock` since **1.17.0**, emits PEP 751 `pylock.toml` |
+| **PyTorch** | **no prose anywhere states the platform split** | `requires_dist` markers (`platform_system == "Linux"` on every NVIDIA dep) and a **502 MB vs 116 MB** wheel gap state it unambiguously |
 
-**This is CHECK THE PRIMARY applied to software** — the same shape as *the paper says which model
-→ read the shipped `config.json`*. It belongs in the course as a worked exercise, not a maxim:
-give students a tool whose badge, `pushed_at` and classifiers all disagree with its source, and
-let them find out.
+### The rule this actually supports — and why "distrust metadata" is wrong
 
-**Corollary worth teaching:** `pushed_at` counts activity on *any* ref. A repo can look alive for
-six years on the strength of a stale branch.
+The PyTorch row is the reverse of the other ten, and it is the one that fixes the rule. There, the
+machine-readable metadata is the **only** honest account and the human-written docs are silent. So
+the lesson is not *distrust metadata*. It is:
+
+> **Trust what the build generates. Distrust what a human typed once.**
+>
+> *Generated:* wheel filenames, dependency markers, file sizes, ZIP listings, `LICENSE` files, git
+> HEAD dates, source code. These are produced by the thing itself, every release.
+> *Hand-typed:* summaries, badges, classifiers, README prose, `pushed_at`-style aggregates. These
+> are written once, at a moment that has passed, and nothing forces them to keep up.
+
+Every one of the eleven fits. `poppler-utils`'s summary, MLX's summary, Pweave's classifier and
+Zotero's and jamovi's SPDX badges are all hand-typed-or-inferred; the wheel contents, the wheel
+filenames, the import failure and the `COPYING` files are all generated. **This is CHECK THE
+PRIMARY applied to software**, with a usable test attached — *ask who wrote this string, and
+whether anything would have forced them to revisit it.*
+
+**Two corollaries worth teaching:**
+
+- `pushed_at` counts activity on *any* ref. A repo can look alive for six years on a stale branch.
+- A licence detector that fails degrades to `NOASSERTION`, which downstream tools then render as
+  **"unknown licence"** — a materially different and much scarier claim than the truth. Zotero and
+  jamovi are both AGPL3 and both read as unlicensed. Failure presenting as a finding is the same
+  shape as a broken search returning zero results.
+
+This goes in the course as a worked exercise, not a maxim: hand students `poppler-utils`, let them
+read the name, the summary and the licence, then have them run `unzip -l` on the wheel.
 
 ### Verified facts we are relying on
 
 - **OpenAlex is now metered.** Confirmed live: `x-ratelimit-limit: 1000`, `limit-usd: 0.1`, one
   credit per list request. Keyless still returns data, then stops. **The CC0 S3 bulk snapshot
-  remains free and unkeyed — teach the snapshot, not the live API.** Semantic Scholar 429s on a
-  first keyless call.
-- **MLX is irrelevant to an analysis course.** `eigvalsh` and `svd(compute_uv=False)` exist, and
-  every decomposition **throws on GPU by design**. On CPU it calls the same `gesdd`/`syevd`
-  through Accelerate that NumPy already calls on macOS 14+. *Verified on our own hardware:* torch
-  2.13.0 raises `NotImplementedError` for `_linalg_eigh` on MPS at both 90x90 and 768x768 — not a
-  size gate, the op is absent. Spectra work is CPU on both frameworks.
+  remains free and unkeyed — teach the snapshot, not the live API.** A free key raises the budget
+  10× to **$1/day**; the snapshot is ~750 GB compressed.
+- **Semantic Scholar's keyless tier is a shared pool, and that is the teachable part.** We first
+  wrote "429s on a first keyless call" from a single observation. Re-checked: **5 of 5** keyless
+  calls returned 429 while OSF, Zenodo, OpenAlex and ClinicalTrials.gov all returned 200 from the
+  same host in the same session — so it is real and specific to S2, not our egress. But the
+  documented mechanism is not a low per-user limit: unauthenticated traffic shares **one 1000
+  req/s pool across every anonymous user on Earth**, and it is routinely saturated. A key does not
+  buy a bigger number — it buys a **private 1 RPS**. *A symptom reproduced 5/5 still told us
+  nothing about the cause; we had to read the terms for that.*
+- **MLX buys an analysis course nothing *on Apple Silicon*, which is the only claim we can make.**
+  `eigvalsh` and `svd(compute_uv=False)` exist, and every decomposition **throws on Metal by
+  design** — `"[SVD::eval_gpu] Metal SVD NYI"` plus a `check_cpu_stream` guard with no fallback. On
+  CPU it calls the same `gesdd`/`syevd` through Accelerate that NumPy already calls on macOS 14+.
+  *Verified on our own hardware:* torch 2.13.0 raises `NotImplementedError` for `_linalg_eigh` on
+  MPS at both 90x90 and 768x768 — not a size gate, the op is absent. **On Apple Silicon, spectra
+  work is CPU on both frameworks.**
+  **Correction, 2026-08-25:** we first wrote this as *"MLX is irrelevant to an analysis course"*,
+  full stop. That was over-broad. MLX now ships manylinux and Windows wheels with a **CUDA
+  backend** (`pip install mlx[cuda]`), and **we have not tested whether the decompositions throw
+  there.** The Metal finding does not transfer, and we should not let it look like it does. The
+  narrow claim survives; the general one was never tested. *(A student on NVIDIA would reach for
+  torch anyway, so this changes no recommendation — it changes what we are entitled to say.)*
 - **A lockfile buys "agrees to ~1e-13", not "bit-identical."** One `pixi.lock` resolved to three
   different BLAS libraries across platforms. Glatard et al. 2015 measured a one-bit `expf()`
   change between glibc versions moving FSL subcortical Dice from 0.99 to **0.59**. `glibc` is in
