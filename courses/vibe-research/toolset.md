@@ -46,7 +46,7 @@ If a student cannot run these, they cannot do the course. Pin versions in the sy
 | role | options | note |
 |---|---|---|
 | **effect sizes + CIs** | `pingouin` *(recommended)* · `statsmodels` · raw `scipy` | Recommended because it gives Hedges' *g* and confidence intervals **by default**. The others let you report an uncorrected *d* at n=3 in silence. See the self-indictment below. |
-| **reference manager** | `Zotero` + Better BibTeX *(recommended)* · `JabRef` · a hand-maintained `.bib` | Recommended for the API — it is what makes agentic maintenance possible. |
+| **reference manager** | `Zotero` + Better BibTeX *(recommended)* · `JabRef` · a hand-maintained `.bib` | Recommended for the API — it is what makes agentic maintenance possible, and it is what **we** run. |
 | **notebook / literate doc** | `Quarto` · `Jupyter` + `papermill` · plain scripts | Any is fine. The requirement is that **numbers in prose are generated, not typed.** |
 | **data versioning** | `DVC` · `git-annex` · a committed `data/` dir | The last is what we do, and it is adequate at our scale. |
 | **prereg** | `OSF` · `AsPredicted` · dated public commit | Strength decreases left to right. Teach the weakness of the one you pick. |
@@ -76,8 +76,8 @@ versions, and whether any fast path fell back. We now do this and we did not alw
 
 | tool | status | failure mode it closes |
 |---|---|---|
-| **Zotero** + **Better BibTeX** | `known` | A citation with a stable key that resolves to a record is checkable. A citation typed into a `.tex` by hand is a claim. Better BibTeX gives you pinned citation keys and an auto-exported `.bib` that stays in sync with the library. |
-| **Zotero Web API / local API** | `known` | This is the piece that makes it *agentic*: the agent can add, tag, deduplicate and — critically — **fetch the stored PDF and check whether the claimed sentence is in it**. |
+| **Zotero** + **Better BibTeX** | `used` | A citation with a stable key that resolves to a record is checkable. A citation typed into a `.tex` by hand is a claim. Better BibTeX gives you pinned citation keys and an auto-exported `.bib` that stays in sync with the library. |
+| **Zotero Web API / local API** | `used` | This is the piece that makes it *agentic*: the agent can add, tag, deduplicate and — critically — **fetch the stored PDF and check whether the claimed sentence is in it**. |
 | **OpenAlex**, **Semantic Scholar API**, **PubMed** | `used` | Programmatic metadata and abstracts; our own Research Runner sits on these. Resolves "does this paper exist" before "does it say what I claimed." |
 | **`unpaywall` / DOI resolution** | `known` | Turns a DOI into a document you can actually read, which is the difference between verifying a citation and verifying a citation *record*. |
 
@@ -86,6 +86,22 @@ to sources that did not contain the values attributed to them, and one was a **f
 reference** (Vera's find: a study attributed to a real researcher, at an institution that does not
 exist). A library where every entry has an attached document and a resolvable key does not prevent
 that — but it makes the check a lookup instead of an act of will.
+
+> **CORRECTED 2026-08-25.** I marked Zotero `known` and wrote "we have not used it in this
+> work." **Wrong.** We run `zotero-lib` on MTH — an `ingest.py`, an API key, and a working
+> agentic loop where I send Nexus papers with DOIs and suggested collections and they land in the
+> library. There is a message in the archive **from me** doing exactly that, on 2026-06-20, six
+> papers for the presence-metric related-work section.
+>
+> Why I got it wrong: the library has been idle for weeks, because prep and cleanup for the
+> hackathon turned my work from *doing research* into *red-teaming existing research*. I checked
+> what I had been doing recently and reported it as what we do. **A tool you have stopped using
+> is not a tool you have never used**, and my own week is not a survey of the lab's capabilities.
+>
+> This is the fourth time in three days I have been confidently wrong about the state of our own
+> work — after "nobody has looked at the 27B", "I'm not working on attention heads", and a
+> registry claim that went through three states. The pattern is specific enough to name:
+> **I narrate my own recent context as though it were the lab's inventory.**
 
 **The agentic part, concretely.** The student's agent maintains the library: deduplicates,
 normalises, attaches PDFs, and flags entries with no retrievable document. Then hour 3's tracing
@@ -148,3 +164,29 @@ have to be earned first. **We do not ship our kill list, in any session.**
   its own agentic resources and custom GPTs; we should not fork what exists)
 - Whether we supply a pre-built Zotero group library for the pre-made research setups
 - Licensing on any tool we bundle rather than link
+
+## To do before this ships — a search pass per category
+
+`OPEN`, flagged by Thomas 2026-08-25. Everything above is drawn from what we happen to use plus
+what I happen to know, which is **exactly the sampling bias this course teaches students to
+catch**. Before it goes to students, run an actual search per category and build a recommendation
+list from evidence rather than recall.
+
+Categories needing a sweep: reference management · pre-registration · effect sizes and CIs ·
+data versioning · literate documents · workflow orchestration · environment capture.
+
+**And widen past computer science.** We will likely field a lot of CS, but the Multiverse takes
+all comers and the method is domain-general. Worth surveying:
+
+- **Life sciences / clinical** — the pre-registration and reporting-standard culture is far more
+  mature here than in ML; CONSORT, PRISMA, and registered reports are worth borrowing from rather
+  than reinventing
+- **Social sciences** — where the replication crisis produced most of the tooling we are quietly
+  relying on
+- **Assistant-based science suites** (e.g. Claude's) — `known`, unevaluated, and increasingly the
+  default entry point for someone outside CS
+- **Domain-specific**: qualitative coding, geospatial, bioinformatics, digital humanities
+
+A student from outside CS should not have to translate a software-engineering toolchain before
+they can start. If we cannot name a tool for their domain, we should say so rather than hand them
+ours.
