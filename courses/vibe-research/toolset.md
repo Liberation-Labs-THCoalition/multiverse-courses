@@ -25,6 +25,53 @@ hearsay. Marked below:
 
 ---
 
+## Dependencies — must-haves, choices, and hardware
+
+Three different kinds of entry, and conflating them is how a setup guide becomes unusable.
+
+### Must-haves — no alternatives offered
+
+If a student cannot run these, they cannot do the course. Pin versions in the syllabus.
+
+| | status | why it is non-negotiable |
+|---|---|---|
+| **Python 3.12+** | `used` | Everything below. We run 3.12 and 3.13 in different environments; either is fine, mixing them in one project is not. |
+| **numpy**, **scipy** | `used` | `scipy.stats` is the floor for any inferential claim. Mann-Whitney, bootstrap, the lot. |
+| **git** | `used` | Not for collaboration — for **dated, immutable evidence of what you believed when**. This is the prereg substrate when OSF is overkill. |
+| **LaTeX** (TeX Live or MiKTeX) + **latexmk** | `used` | The write-up is an artifact that must rebuild from source. `latexmk` because it resolves the multi-pass dance so "I forgot to rerun bibtex" stops being a class of error. |
+| **poppler** (`pdftotext`) | `used` | **The single highest-yield tool on this page.** It is how you check that the built artifact says what the source says. Five stale-PDF defects in three days across three people were all caught with it. |
+
+### Categories — pick one, know why
+
+| role | options | note |
+|---|---|---|
+| **effect sizes + CIs** | `pingouin` *(recommended)* · `statsmodels` · raw `scipy` | Recommended because it gives Hedges' *g* and confidence intervals **by default**. The others let you report an uncorrected *d* at n=3 in silence. See the self-indictment below. |
+| **reference manager** | `Zotero` + Better BibTeX *(recommended)* · `JabRef` · a hand-maintained `.bib` | Recommended for the API — it is what makes agentic maintenance possible. |
+| **notebook / literate doc** | `Quarto` · `Jupyter` + `papermill` · plain scripts | Any is fine. The requirement is that **numbers in prose are generated, not typed.** |
+| **data versioning** | `DVC` · `git-annex` · a committed `data/` dir | The last is what we do, and it is adequate at our scale. |
+| **prereg** | `OSF` · `AsPredicted` · dated public commit | Strength decreases left to right. Teach the weakness of the one you pick. |
+
+### Hardware — and this is a reproducibility surface, not a footnote
+
+The same code gives different wall-clock, different memory behaviour, and sometimes different
+numerics across these. **Students will not all be on the same one, and that is worth naming in
+session 1 rather than discovering in session 3.**
+
+| platform | stack | status | what actually bites |
+|---|---|---|---|
+| **Apple Silicon** | `torch` + **MPS** backend | `used` | What Starship runs. Unified memory is generous, but **kernels silently fall back**: we lost real time to a flash-linear-attention fast path that was unavailable on MPS and dropped to a torch implementation without failing. It printed a warning and kept going. |
+| **Apple Silicon** | **MLX** | `known` | Apple's own array framework — likely faster and more memory-efficient than torch-MPS for the same work. **We have not used it.** A student who benchmarks MLX against torch-MPS on an identical analysis has produced a genuinely useful contribution. |
+| **NVIDIA** | `torch` + CUDA | `known` | The default assumption of most tutorials, which is why Mac students hit undocumented walls |
+| **CPU only** | `torch` CPU / `numpy` | `used` | Entirely sufficient for everything in this course **except** running a model. All the analysis work — bootstrap, AUROC, spectra — is CPU-bound. A student with no GPU is not excluded. |
+
+**The teaching point, and it belongs in session 2's confound hour:** *"it ran differently on my
+machine"* is not a support issue, it is an uncontrolled variable. If two students get different
+numbers from the same notebook, that is a finding about the environment, and the environment is
+part of the method.
+
+**Practical rule:** whatever the platform, record it with the result — device, backend, library
+versions, and whether any fast path fell back. We now do this and we did not always.
+
 ## Lit review — `vr.verify-number`, and the citation standard
 
 | tool | status | failure mode it closes |
