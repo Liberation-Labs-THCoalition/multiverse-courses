@@ -17,6 +17,17 @@ presentation** — with an adversarial gate at every step that they built themse
 Not "here is our pipeline." The transferable claim is: *your team of two needs a gate, and it has
 to be made of your own failures.*
 
+## Tooling
+
+[`toolset.md`](toolset.md) — open-source tools for each pipeline stage, selected on one rule:
+**each tool earns its place by closing a specific failure mode the student is learning to catch,
+and by making the closing mechanical rather than dependent on remembering.** An agentically
+maintained Zotero library is the anchor example — it turns citation verification from an act of
+will into a lookup.
+
+Tools are marked `used` (we run it) or `known` (established, but not used in this work), because a
+course on verification should not recommend from hearsay.
+
 ## The framing that makes the spine work
 
 **A gate is a prosthesis, not a virtue.**
