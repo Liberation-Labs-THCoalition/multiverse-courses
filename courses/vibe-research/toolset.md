@@ -165,7 +165,96 @@ have to be earned first. **We do not ship our kill list, in any session.**
 - Whether we supply a pre-built Zotero group library for the pre-made research setups
 - Licensing on any tool we bundle rather than link
 
-## To do before this ships — a search pass per category
+## The search pass, and what it actually found
+
+**Three parallel surveys, 2026-08-25**, briefed to return evidence with provenance tags rather
+than recommendations. The headline is not a tool list.
+
+### Finding: a tool's metadata is less reliable than the tool
+
+Seven independent instances, across three surveys that never spoke to each other:
+
+| tool | what the metadata said | what the artifact said |
+|---|---|---|
+| **OSF** | `developer.osf.io` documents no registration-submit endpoint | `POST /v2/registrations/` **exists**; two independent probes agree |
+| **MLX** | docs describe `stream` as "the default device" | source: `"[SVD::eval_gpu] Metal SVD NYI"` plus a `check_cpu_stream` guard that **throws**, no fallback |
+| **Zotero** | GitHub SPDX badge: `NOASSERTION` | `COPYING`: **AGPLv3** |
+| **Taguette** | GitHub mirror's tags stop at 2019 — reads as abandoned | GitLab canonical, **active this month** |
+| **revtools** | `pushed_at: 2026-07-07` | default-branch HEAD: **2020-01-10** |
+| **Pweave** | PyPI classifier: `Development Status :: 5 - Production/Stable` | **fails at import**; no `requires_python`, no `requires_dist` |
+| **Hatch** | widely repeated: "no lockfile support" | `hatch env lock` since **1.17.0**, emits PEP 751 `pylock.toml` |
+
+**This is CHECK THE PRIMARY applied to software** — the same shape as *the paper says which model
+→ read the shipped `config.json`*. It belongs in the course as a worked exercise, not a maxim:
+give students a tool whose badge, `pushed_at` and classifiers all disagree with its source, and
+let them find out.
+
+**Corollary worth teaching:** `pushed_at` counts activity on *any* ref. A repo can look alive for
+six years on the strength of a stale branch.
+
+### Verified facts we are relying on
+
+- **OpenAlex is now metered.** Confirmed live: `x-ratelimit-limit: 1000`, `limit-usd: 0.1`, one
+  credit per list request. Keyless still returns data, then stops. **The CC0 S3 bulk snapshot
+  remains free and unkeyed — teach the snapshot, not the live API.** Semantic Scholar 429s on a
+  first keyless call.
+- **MLX is irrelevant to an analysis course.** `eigvalsh` and `svd(compute_uv=False)` exist, and
+  every decomposition **throws on GPU by design**. On CPU it calls the same `gesdd`/`syevd`
+  through Accelerate that NumPy already calls on macOS 14+. *Verified on our own hardware:* torch
+  2.13.0 raises `NotImplementedError` for `_linalg_eigh` on MPS at both 90x90 and 768x768 — not a
+  size gate, the op is absent. Spectra work is CPU on both frameworks.
+- **A lockfile buys "agrees to ~1e-13", not "bit-identical."** One `pixi.lock` resolved to three
+  different BLAS libraries across platforms. Glatard et al. 2015 measured a one-bit `expf()`
+  change between glibc versions moving FSL subcortical Dice from 0.99 to **0.59**. `glibc` is in
+  no Python or R lockfile. *Checked on our box:* `d_eff` at L21 is **bit-identical across 1, 4 and
+  12 threads** on Accelerate — the OpenBLAS thread-nondeterminism does not reproduce here, but
+  that had to be measured rather than assumed.
+- **Quarto's inline expressions are a CI gate.** `error: false` is the default and `quarto render`
+  exits 1 on a failed expression. Stronger than any "typed number linter" — which does not exist —
+  because a numeral that is never a literal cannot go stale.
+
+### Pre-registration: what an agent can and cannot do
+
+| | create by API | submit by API | gate |
+|---|---|---|---|
+| **Zenodo** | yes | **yes, immediate** | none — but **metadata stays editable indefinitely**, which defeats the purpose |
+| **OSF** | yes | **yes, undocumented** | **~48-72h** auto-approve by daily cron, or a human clicks an email. No API path skips it. |
+| **AsPredicted** | **no, structurally** | no | *"There are no userids nor passwords"* — magic-link only. **There is no credential an agent could hold.** |
+
+The OSF wait is a **deliberate guard-rail, not a missing feature**, and worth presenting that way.
+
+**Two traps for the syllabus:** the `prereg` R package depends only on `rmarkdown` — structurally
+incapable of HTTP — and ships an `aspredicted_prereg` template with **no connection to
+aspredicted.org**. And **OpenTimestamps proves timing, not commitment**: stamping is free and
+unlimited, so one can stamp fifty contradictory hypotheses and reveal only the winner.
+
+### The domain finding
+
+> **The tooling gradient is not about field prestige, it is about workflow shape.** Standards
+> describing a *single narrative document* (STROBE, STARD, CARE) stayed checklist-only. Standards
+> describing a *pipeline with discrete steps* (PRISMA) grew real scriptable ecosystems.
+
+A clinical or sociology student is **not short of rigor — they are short of workflows that
+decompose.** That reframes the domain-widening problem: we are not bringing rigor to them, we are
+bringing decomposition.
+
+Best non-CS agent targets, each verified end-to-end: **ClinicalTrials.gov API v2** (open, no key,
+600k studies), **Zotero's local write-capable API** at `localhost:23119/api/`, and the
+**Nextflow / Snakemake / CWL** config-file family. **`jmv` + jamovi** is the cleanest
+*GUI-for-the-student, script-for-the-agent* pairing found — same analyses, both ways, no
+translation.
+
+**REDCap is free but not open** — signed Vanderbilt license, source not redistributable. Keep it
+as a teaching case: *free is not open* is a distinction a clinical student meets immediately.
+
+### Still open
+
+Nobody has benchmarked MLX against torch-MPS on linear algebra — **including Apple**. That is a
+genuine null, not a search failure, and it is a publishable-sized gap if anyone wants it. Also
+unmeasured anywhere: same code, same pinned versions, OpenBLAS vs MKL vs Accelerate — what is the
+relative error? If the course needs that number, it must be produced.
+
+## Original to-do (kept — the pass above covers categories, not sessions)
 
 `OPEN`, flagged by Thomas 2026-08-25. Everything above is drawn from what we happen to use plus
 what I happen to know, which is **exactly the sampling bias this course teaches students to
