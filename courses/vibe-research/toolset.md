@@ -367,9 +367,40 @@ as a teaching case: *free is not open* is a distinction a clinical student meets
 ### Still open
 
 Nobody has benchmarked MLX against torch-MPS on linear algebra — **including Apple**. That is a
-genuine null, not a search failure, and it is a publishable-sized gap if anyone wants it. Also
-unmeasured anywhere: same code, same pinned versions, OpenBLAS vs MKL vs Accelerate — what is the
-relative error? If the course needs that number, it must be produced.
+genuine null, not a search failure, and it is a publishable-sized gap if anyone wants it.
+
+**Correction, 2026-08-25.** We also wrote here that *"same code, same pinned versions, OpenBLAS vs
+MKL vs Accelerate — the relative error is unmeasured anywhere."* **That was half wrong, and the
+half that was wrong is the half that mattered.** Whether numerical variation at the BLAS/LAPACK
+level moves a downstream *scientific conclusion* has been asked and answered — repeatedly, for
+eleven years, by Tristan Glatard's group. Most directly **Kiar et al. 2021** (*PLoS ONE*,
+[10.1371/journal.pone.0250755](https://doi.org/10.1371/journal.pone.0250755)), whose "dense"
+Monte-Carlo-arithmetic configuration instruments BLAS, LAPACK, NumPy and Cython and swings a
+downstream classification accuracy from **0.520 to 0.716**. Graph features retained *under one
+significant digit*. The reproducibility literature we did not know about is now the reason this
+section is shorter.
+
+What is genuinely open is narrower: that literature **perturbs arithmetic to simulate the gap**,
+and nobody has swapped the backends that actually ship and measured the real disagreement. Worth
+doing, but it is a fourth noise source to add to a known picture — **Vila et al. 2024**
+([10.1145/3641525.3663626](https://doi.org/10.1145/3641525.3663626)) already showed hardware,
+software packaging and rounding produce perturbations of *similar magnitude and uncorrelated*.
+
+**This is the course's own lesson, arriving on schedule.** We claimed a null after three
+independent surveys, and the null was an artifact of not knowing the field's vocabulary — the work
+is indexed under *numerical reproducibility* and *stochastic arithmetic*, not under the tool names
+we searched. *A search that fails and a search that finds nothing return the same empty result*,
+and a search in the wrong vocabulary fails silently in exactly that way. **Three agreeing surveys
+did not fix it, because they shared the vocabulary.** Session 1 gets this as a live example.
+
+### One more thing, and it is for the syllabus rather than the toolset
+
+**Acher, Gotlieb, Spieker & Lyan 2025**, *"Teaching Reproducibility and Embracing Variability: From
+Floating-Point Experiments to Replicating Research"*
+([10.1145/3736731.3746162](https://doi.org/10.1145/3736731.3746162), gold OA). Someone has already
+published the pedagogy for the exact thing we are building a session around. **Read it before
+writing that session.** Not yet read — ACM DL blocked automated fetching, so this is a metadata-
+only sighting and the title is doing all the work in that sentence.
 
 ## Original to-do (kept — the pass above covers categories, not sessions)
 
