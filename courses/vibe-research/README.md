@@ -1,6 +1,8 @@
 # Vibe Research — intensive series
 
-**Status: `DRAFT`.** Structure proposed 2026-08-22, not agreed. Session count and dates are `OPEN`.
+**Status: `DRAFT`.** Structure proposed 2026-08-22. **Session count SETTLED at 4** (Thomas, 2026-08-25) — *"stick with 4 until someone says otherwise."* Dates still `OPEN`.
+
+**Names are ours to propose.** Liz has creative latitude over the campus and her bandwidth is stretched, so we present finished names rather than options and she changes whatever she likes. Everything below is a proposal, not a claim.
 
 3–4 four-hour intensives over roughly 60 days. Prerequisite: Multiverse agentic coursework, so
 **every student arrives with a long-horizon agent** and has already run a paired ablation as an
@@ -96,7 +98,9 @@ Written to match the house format at ascending Bloom levels — see
 | 3 | **Running it, and reading what came back** | execution + analysis | a result *and* an honest account of what it does not support |
 | 4 | **The gate, and the room** | gating; presentation; what to do when you were wrong | your own kill list, and a five-minute honest talk |
 
-Session 4 may fold into 3 if we land on three sessions.
+**Four sessions, not three.** The gap between *running it* and *the gate* is where the course actually lives — folding 4 into 3 would compress the two things students cannot get anywhere else (what a result does not support, and what to do when you were wrong) into a coda on an analysis session. They are the subject, not the wrap-up.
+
+**Seeded material:** `exercises/seeded-01-the-approved-analysis/` — a confidently-approved analysis whose permutation null has an orbit of 4, so it cannot reject at α=0.05 under any data. Synthetic reconstruction of a real gate failure in our own lab; runs in 40 minutes on numpy alone. Fits session 2, or opens session 4 as the first entry in a student's kill list.
 
 ## Assessment — adopt theirs
 
