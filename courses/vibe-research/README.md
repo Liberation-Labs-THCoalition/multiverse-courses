@@ -95,8 +95,8 @@ Written to match the house format at ascending Bloom levels — see
 |---|---|---|---|
 | 1 | **The question you cannot stop thinking about** | curiosity → testable claim; lit review with an agent | a pre-registration with a named unwanted outcome |
 | 2 | **Designing something that can fail** | design; confounds; controls; power | a design your agent tried to break, and the break log |
-| 3 | **Running it, and reading what came back** | execution + analysis | a result *and* an honest account of what it does not support |
-| 4 | **The gate, and the room** | gating; presentation; what to do when you were wrong | your own kill list, and a five-minute honest talk |
+| 3 | **[Running it, and reading what came back](session-3-reading-what-came-back.md)** | execution + analysis | a result *and* an honest account of what it does not support |
+| 4 | **[The gate, and the room](session-4-the-gate-and-the-room.md)** | gating; presentation; what to do when you were wrong | your own kill list, and a five-minute honest talk |
 
 **Four sessions, not three.** The gap between *running it* and *the gate* is where the course actually lives — folding 4 into 3 would compress the two things students cannot get anywhere else (what a result does not support, and what to do when you were wrong) into a coda on an analysis session. They are the subject, not the wrap-up.
 

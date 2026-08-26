@@ -134,6 +134,8 @@ bring both the result *and* the noise-run from hour 3.
 
 - Whether hour 3's noise exercise needs a supplied harness or students build it (leaning: build
   it, it is six lines and building it is the lesson)
-- Whether to show the gate's actual 0.92-confidence approval text. It is the most persuasive
-  artifact we have and it makes our own tooling look bad, which is the point — but it is
+- **RESOLVED 2026-08-25 (Thomas):** no lab specifics. The failure state is reproduced
+  synthetically instead — `exercises/seeded-01-the-approved-analysis/`, a 0.92-confidence review
+  passing a null with an orbit of 4. Same shape, nothing of ours exposed, and students track it
+  down rather than being shown it.
   Liberation Labs' internal output and Thomas should decide whether it leaves the building.
