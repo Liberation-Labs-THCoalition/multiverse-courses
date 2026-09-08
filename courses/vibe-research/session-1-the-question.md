@@ -38,12 +38,48 @@ room instantly — tense meeting, awkward party — without parsing every conver
 - the claim, with a **direction** — not "X relates to Y" but "X increases Y"
 - what observation would **falsify** it
 - **what they are hoping for**, named as a stake rather than a prediction
+- **what result — either way — would let you stop**
 
-That fourth line is the one people skip and it is the one that matters. A stake you have written
-down can be audited. A stake you have not is just a thumb on the scale.
+The fourth line is the one people skip. A stake you have written down can be audited; a stake you
+have not is just a thumb on the scale.
 
-**Pair exercise:** swap pages. Your partner's job is to find the claim that cannot fail. Most first
-drafts have one.
+**The fifth line is the one this course added last, and it is the one an agent will cost you.**
+
+### Falsifiable is not the same as finishable
+
+Everything else on that page defends you against believing something false. The fifth line defends
+something else entirely: **a claim can be perfectly falsifiable and still have no end.** Nothing
+about it is wrong. No gate will ever fire on it. You simply work for a month and arrive nowhere,
+and every individual step was defensible.
+
+This is the failure an enthusiastic collaborator produces, and your agent is the most
+enthusiastic collaborator you will ever have. It can always propose a next step. The next step
+will always sound reasonable — *"we should control for that first,"* *"it would be stronger with
+another condition,"* *"before we can answer this we need to establish…"* Each is good advice. In
+sequence, unbounded, they are a goose chase with excellent manners.
+
+**You cannot out-argue this in the moment.** In the moment the suggestion is genuinely sensible and
+you are genuinely curious. The only defence is a stopping condition written down **before** you
+start, by the version of you who was not yet invested.
+
+> **A question with no stopping condition is not a question. It is a topic.**
+> Topics are where agents take you.
+
+### You already know how to do this
+
+Your prerequisite courses taught you to build and test an automation. When you did that, you wrote
+the acceptance test **first** — you knew what "working" looked like before you wrote a line. That
+is the same muscle. The only difference is that almost nobody writes an acceptance test for a
+*question*.
+
+That transfer is the whole reason the prerequisite exists. You are not here to learn to build a
+harness. You know that. You are here to learn where to point one.
+
+**Pair exercise, two passes.** Swap pages.
+
+1. Find the claim that **cannot fail**. Most first drafts have one.
+2. Find the claim that **cannot finish**. More first drafts have one, and it is harder to see —
+   because it does not look like a mistake. It looks like ambition.
 
 ## Hour 2 — The prediction game, which is pre-registration in miniature
 

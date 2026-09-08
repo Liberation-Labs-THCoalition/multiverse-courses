@@ -33,6 +33,7 @@ agent and has already run a paired ablation as an assessment.
 ---
 ## Course: Execution and Analysis
 
+- [Bound an inquiry so it can end](./execution/bound-an-inquiry-so-it-can-end.md)
 - Verify that a search which returned nothing actually ran
 - Reconcile a result with the estimator that produced it
 - Distinguish a per-sample statistic from a rank-bounded one
@@ -48,6 +49,14 @@ agent and has already run a paired ablation as an assessment.
 
 ## Note on the four Standards written out in full
 
-Twelve are listed; four are authored. That is deliberate — enough to judge the shape and the
+Thirteen are listed; five are authored. That is deliberate — enough to judge the shape and the
 level, not so much that it presumes agreement on the structure. If the shape is right the
 remaining eight are mechanical.
+
+**`vr.bound` was added 2026-09-08** and is the only one not in the original twelve. It exists
+because a gap was found by asking what the course defends against: every other standard here
+guards against believing something *false*, and none guarded against an inquiry that is
+perfectly sound and simply never ends. That failure is produced by a *good* collaborator
+rather than a bad one, which is why a course built around agentic partners needs it named.
+`vr.formulate` objective 6 authors the stopping condition; `vr.bound` assesses whether it was
+honoured or revised in the open.

@@ -18,5 +18,7 @@ In order to fully cover this standard, a performance must be recording for each 
 3. State the observation you are hoping for, and name it as a stake rather than a prediction
 4. Identify a cheaper question that would have to be answered first
 5. Distinguish a claim your available data can address from one it cannot, and say which you have
+6. State what result — in **either** direction — would let you stop, and hand it forward as the
+   stopping condition assessed under `vr.bound`
 
 ---
