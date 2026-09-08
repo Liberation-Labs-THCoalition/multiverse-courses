@@ -2,7 +2,22 @@
 
 **Reviewer:** Lyra · **Date:** 2026-09-03 · **Scope:** all four session drafts
 **Requested by:** Thomas — *"the first draft was a little overly red team focused."*
-**Status:** `REVIEW`. Nothing changed yet; this is the argument for changing it.
+**Status:** `ACTIONED 2026-09-08`. Items 1, 2 and 3 applied to sessions 3 and 4. Item 4 (keep
+every kill) honoured — nothing was removed.
+
+> **Post-hoc note, 2026-09-08.** Re-running this review's own word count after the fix:
+> `kill` 23 -> **30**, `fail` 21 -> 25, `finding` 9 -> 15, `believe` 0 -> **3**,
+> `curious` 0 -> 0. **The kill count went UP**, because the repair includes a passage
+> *about* killing's momentum, which uses the word.
+>
+> The count diagnosed the defect and **cannot certify the repair**, because the repair is
+> structural — the graded point in session 4 moved from the student's error to the
+> student's belief — and a lexical metric cannot see a rubric. `curious` could be made
+> non-zero by inserting the word; that would be optimising the instrument rather than the
+> thing, which is the failure this course teaches. Left at zero on purpose.
+>
+> Worth teaching: **the measurement that finds a problem is often the wrong one for
+> confirming it is fixed.**
 
 ---
 

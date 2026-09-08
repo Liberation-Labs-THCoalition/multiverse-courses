@@ -100,6 +100,40 @@ must be reported differently. *"The prediction failed"* is a finding. *"My stati
 measuring what I named it"* is a repair. Conflating them lets a real null hide behind a fixable bug
 — and lets a bug get published as a null.
 
+### The other direction, which costs more to miss
+
+Everything above is about not believing something false. The rest of this hour is about **not
+discarding something true**, which no amount of scepticism will do for you.
+
+**The discrepancy you are about to explain away.** From this lab, 2026-05: we had data showing a
+gap between two conditions — honest answers about common things versus honest answers about rare
+things. The gap was inconvenient. It was being treated as a confound, something to residualise out
+and mention in the limitations. Thomas asked one question about it. The data rearranged, and the
+"confound" turned out to be the finding — retrieval difficulty was the thing the geometry was
+tracking all along.
+
+Nothing about that was caught by rigour. Rigour was what was about to bury it.
+
+> **Before you residualise a discrepancy out, say aloud what it would mean if it were real.**
+> If the answer is interesting, it is a hypothesis, not a nuisance. You are allowed to run it.
+
+**And immediately, the check that has to travel with it.** From the same store, 2026-07-07: in a
+single session a paper was inflated (0.969 led instead of the defensible 0.707, twelve convergences
+claimed where three held), a token list was cherry-picked 10-of-41 to build a narrative, and an
+echo check shipped with a directional bug. Every one caught by the gate, none by the author.
+
+> **The excitement of convergence is a confound on judgment, and it is strongest when the thing
+> you want to be true actually might be true.**
+
+That is the honest pair, and students should hold both:
+
+| | the move | the failure it prevents | the failure it invites |
+|---|---|---|---|
+| **Look** | say what the discrepancy would mean if real | burying a finding as a nuisance | chasing noise you like |
+| **Check** | run it as a claim that can fail | publishing what you hoped | burying it again |
+
+Neither one is the safe one. **Scepticism has a cost and it is paid in findings you never made.**
+
 ## Hour 4 — Writing the limits section first
 
 **The limits section is not the apology at the end. It is the part that makes the rest citable.**

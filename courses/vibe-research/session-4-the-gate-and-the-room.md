@@ -5,8 +5,8 @@
 *build a check for a defect that does not present as a claim*.
 
 **Walks in with:** a result, a limits section, three earned kills.
-**Walks out with:** their own kill list, a working gate, and a five-minute honest talk delivered
-to the room.
+**Walks out with:** **a finding they will defend in front of the room** — plus the gate and the
+kill list that make it credible, and a standing answer to what would change their mind.
 
 ---
 
@@ -15,6 +15,13 @@ to the room.
 A gate is not a quality filter you install at the end. **It is your own history of being wrong,
 written down in a form that fires automatically.** Every entry costs someone something to learn.
 That is what makes it worth having and what makes it hard to fake.
+
+And it is **for** something. The course README says *a gate is a prosthesis, not a virtue* — a
+prosthesis lets you reach further than you otherwise could. Nobody builds one to admire it. Three
+sessions have made you hard to fool. This one is where that buys you the right to say something
+and be believed.
+
+**Caution protects the convictions you already have. It never makes a new one.**
 
 And then the harder half, which most of a session on rigor never reaches: **some defects are not
 in a claim at all**, so no claim-checker will ever see them.
@@ -92,17 +99,44 @@ every place two verified things are joined. Then they check only the joins, not 
 back what they found. *We do not have a good automated answer to this and should say so.* If a
 student invents one, that is a genuine contribution and should be treated as one.
 
-## Hour 4 — The five-minute honest talk
+## Hour 4 — The finding you will defend
 
 Each student presents for five minutes. The required structure:
 
-1. What you set out to show
-2. What you found
-3. **What you got wrong on the way, and how you caught it**
-4. What your result does not support
+1. **The question you could not stop thinking about** — and whether you still cannot
+2. **What you now believe, and why the room should believe it too**
+3. What you got wrong on the way, and how you caught it
+4. **What would change your mind** — stated as something that could actually happen
+5. What your result does not support
 
-**Point 3 is the graded one**, and it must be a real error with a real cost, not a rehearsed
-humility move. A talk with no point 3 is incomplete, not modest.
+**Point 2 is the graded one.** Not the size of the claim — its *warrant*. A student who defends
+something small with a gate that could have killed it has done the thing. A student who defends
+nothing has not, however clean their kill list.
+
+Point 3 still must be a real error with a real cost, not a rehearsed humility move — but it is now
+doing a different job. It is not the deliverable. **It is the evidence that point 2 survived
+something.** A belief that has never been shot at is not modest, it is untested.
+
+And point 1 is not a warm-up. Session 1 asked what you could not stop thinking about. Sixty days
+later the honest answers include *"I still can't"*, *"I can now, and here is what closed it"*, and
+*"no — a better question ate it."* All three are good outcomes. Only silence is not.
+
+### The failure mode this hour exists to prevent
+
+Tell them this, with the receipt:
+
+> **Killing has momentum, and the momentum is invisible from inside it.**
+
+From this lab's own record, 2026-08-16: after a night of pulling claims *down*, the next
+judgment under-claimed **independently of its merits** — three real results were buried or absent
+from an abstract, and a genuine methods finding was written as an apology. The bias was not toward
+error in one direction. It was **toward the direction of the last several corrections.**
+
+A course that spends three sessions teaching you to kill, and never mentions that killing has its
+own drift, installs the bias it does not name. So: the same care you spend asking *is this real?*
+is owed to *am I burying this because it is weak, or because I have spent all week burying things?*
+
+Underclaiming is not the safe error. It is the error that looks like rigour.
 
 **The rule to state out loud before the talks begin:**
 
@@ -116,8 +150,15 @@ where the gate works.
 
 ## Assessment
 
-Paired runs, one variable changed — plus the kill list and the talk. The kill list is graded on
-whether each entry has a real `EARNED` case. The talk is graded on point 3.
+Paired runs, one variable changed — plus the kill list and the talk.
+
+- The **kill list** is graded on whether each entry has a real `EARNED` case.
+- The **talk** is graded on **point 2**: is the belief warranted, and does the student know what
+  would unseat it? A defended small claim beats an undefended large one and beats a beautiful
+  kill list with nothing standing at the end of it.
+
+The kill list is not the deliverable. It is the **warrant**. That distinction is the whole course
+and it belongs in the rubric, not just the prose.
 
 ## After the course
 
