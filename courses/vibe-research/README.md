@@ -21,9 +21,17 @@ to be made of your own failures.*
 
 ## Tooling
 
-[`the-pipeline.md`](the-pipeline.md) — **the eight stages, named once.** Everything else points here.
+[`the-pipeline.md`](the-pipeline.md) — **the eight stages, named once.** Everything else points
+here. Also carries **the entrustment ladder**: which stages a graduate may hand to their agent
+unsupervised, and which three they never may.
 
-[`toolset.md`](toolset.md) — open-source tools for each pipeline stage, selected on one rule:
+[`tools-by-stage.md`](tools-by-stage.md) — **the selection view.** What to reach for at each of the
+eight stages, and — at the three that have no tool — what the student **builds** instead. The
+finding that shapes the course lives here: *stages 1, 3 and 7 have no tool you can install, but
+they do have a check you can write.*
+
+[`toolset.md`](toolset.md) — **the procurement view**: cost, credential, install shape, hardware.
+Tools selected on one rule:
 **each tool earns its place by closing a specific failure mode the student is learning to catch,
 and by making the closing mechanical rather than dependent on remembering.** An agentically
 maintained Zotero library is the anchor example — it turns citation verification from an act of

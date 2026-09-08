@@ -30,6 +30,19 @@ supply agents, and session one is not an agent-setup workshop.
 *onward pathway* for graduates. They are the *on-ramp*. See
 [`docs/source-analysis.md`](docs/source-analysis.md).
 
+### Why this course, empirically
+
+Brodeur et al. (PNAS 2026) randomised **288 researchers into 103 teams** reproducing published
+social-science results, under human-only, AI-assisted and AI-led conditions. Reproduction rates
+were **94% / 91% / 37%**. But the number that matters here is the other one: major coding errors
+found, **1.70 / 0.74 / 0.23** — human-only teams caught significantly more (*P* = 0.006 and
+*P* < 0.001), and AI assistance was *"associated with reduced detection of major errors"* **even in
+the arm where reproduction held up fine**.
+
+**Error detection is the capability that degrades when you work with an agent.** That is precisely
+what this course teaches, and it is why the syllabus weights the judgment stages over the
+mechanical ones. Full scan and sourcing: [`docs/prior-art.md`](docs/prior-art.md).
+
 ## What we are not shipping
 
 **Agni.** Our adversarial gate is tuned to our work and stays ours. The course teaches students

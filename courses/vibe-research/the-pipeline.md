@@ -90,11 +90,47 @@ grouping but should not be mistaken for the pipeline. `vr.bound` belongs to stag
 
 ---
 
+## The entrustment ladder
+
+*Added 2026-09-08 from [prior art](../../docs/prior-art.md). The schema is ten Cate's Entrustable
+Professional Activities, borrowed from medical education and **pointed the other way**.*
+
+In clinical training the unit of assessment is a **task**, not a trait, and the grade is a
+**supervision level** — from *observe only* up to *ready to supervise others*. Competence means
+level 4 **on that specific task**, not in general.
+
+Invert it and it answers the question this course actually graduates people on:
+
+> **Which stages may this student now entrust to their agent unsupervised, and which never?**
+
+| # | stage | entrust to the agent | why |
+|---|---|---|---|
+| 1 | Question | **never unsupervised** | It will accept any falsifier you propose, including one you would never honour. |
+| 2 | Survey | **distant** — spot-check the citations | Its best stage. The residual risk is a source that does not contain the claim. |
+| 3 | Design | **never unsupervised** | It will approve a design that cannot fail. This is the expensive one. |
+| 4 | Pre-register | **indirect** — you write the commitments, it formats them | The commitment must be yours or it is not a commitment. |
+| 5 | Execute | **distant** | Mechanical, and provenance stamping makes it auditable after the fact. |
+| 6 | Analyse | **indirect** | It runs the test correctly and cannot tell you whether the hypothesis died or the measurement did. |
+| 7 | Gate | **never unsupervised** | It does not know which failures were yours, and a gate built from someone else's failures is a checklist. |
+| 8 | Ship | **distant** | Verify the built artifact against source yourself — one command. |
+
+**Three "never"s, and they are stages 1, 3 and 7 again** — the same three that have no tools. That
+is not a coincidence; it is the same fact stated twice. A stage with no tool is a stage where
+judgment is the whole job, and judgment is exactly what cannot be entrusted.
+
+*This table is a course output, not just a design note.* A graduate who can defend their own
+version of it — including where they disagree with ours — has demonstrated the thing we are
+actually teaching.
+
+---
+
 ## `OPEN`
 
-- **Re-tag `toolset.md` by stage.** It is currently organised by tool with stage names appearing
-  as incidental headings. One table, stage-ordered, is the more useful artifact — and it makes
-  the three empty rows visible, which is the point.
+- ~~**Re-tag `toolset.md` by stage.**~~ **Done 2026-09-08** as a separate file:
+  [`tools-by-stage.md`](./tools-by-stage.md) is the selection view, stage-ordered;
+  [`toolset.md`](./toolset.md) keeps the barrier table, which answers a different question
+  (what will stop you installing it). The three empty stages are now stated more usefully:
+  **no tool you can install, but a check you can write.**
 - **Stage 8 is under-taught.** We have tools for it and no session hour. "A stranger can retrieve
   it and re-run it" is the definition of done for the whole pipeline, and it is currently one
   bullet in session 4.
