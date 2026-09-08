@@ -54,7 +54,7 @@ uncertainty stated rather than hidden behind further hedging.
 Each session now carries a **kill** *and* a **commitment**. That pairing is the change.
 
 ### Session 1 — The question you cannot stop thinking about
-*Walks in with:* a curiosity from their own domain, and an agent.
+*Walks in with:* an agent, and the prerequisites. **The curiosity is supplied** — own questions belong to the accelerator.
 *Walks out with:* **a claim they would defend in a room**, a verified citation trail, and
 their first earned kill.
 

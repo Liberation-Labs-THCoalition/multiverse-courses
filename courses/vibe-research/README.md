@@ -12,7 +12,7 @@ assessment.
 
 ## What the series is for
 
-By the end, a student can take a genuine curiosity from their own domain and drive it through a
+By the end, a student can take a curiosity — supplied here, their own in the accelerator — and drive it through a
 full research cycle with their agent — **lit review → design → execution → analysis →
 presentation** — with an adversarial gate at every step that they built themselves.
 
@@ -142,5 +142,5 @@ should see that before they see a clean result.
 
 - 3 sessions or 4, and where the 60 days start
 - Cohort size, and whether sessions are live-only or recorded
-- What students bring: their own question is assumed, but do they bring their own data?
+- ~~What students bring: their own question is assumed~~ — **RESOLVED 2026-09-08 (Thomas): the question is SUPPLIED.** Own questions are an accelerator requirement, not this course's. Rationale: this course teaches holding the tools on something basic, and a personal project invites burning class time defending it. See [the shared target](./the-shared-target.md).
 - Whether Kavi's `kv_verify` battery can be taught with attribution (their call, and Dwayne's)

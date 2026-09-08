@@ -159,9 +159,23 @@ have answered it with a written stopping condition and saturation (`vr.bound`, s
 hour 4). Acher answers it by choosing the target. **Both are legitimate; ours costs more and
 carries further.** Worth deciding deliberately rather than by default:
 
-- **`OPEN`** — should session 1 open with a bounded shared warm-up in the Acher style, before
-  students bring their own question? It would demonstrate the whole arc in an hour with a
-  guaranteed endpoint. Cost: an hour, and it delays the thing they came for.
+- **~~`OPEN`~~ — RESOLVED 2026-09-08 by Thomas, and further than I proposed.** Not a warm-up
+  before their own question: **the question is supplied for the whole course.** Own questions are
+  an *accelerator* requirement, and this course is its prerequisite. Here we teach holding the
+  tools on something basic.
+
+  His second reason is the one I had not priced: a personal project invites a student to *"wax
+  prosaic about their likely delusional research project and burn class time."* With a cohort
+  that is a tax on everyone; the supplied target is deliberately unromantic and nobody can
+  monologue about it.
+
+  So we land on **Acher's answer, arrived at from a different direction** — they chose a bounded
+  target because it teaches variability cleanly; we choose one because unbounded personal
+  questions are where novices get lost and where class time goes to die. Same structure, two
+  independent reasons, which is the sort of agreement worth more than either argument alone.
+  Target: [`the-shared-target.md`](../courses/vibe-research/the-shared-target.md) — *is
+  `temperature=0` deterministic?*, whose root cause is floating-point non-associativity, which is
+  literally Acher's opener one abstraction layer down.
 
 **Also confirmed by their experience:** students found reproducibility flaws *in the
 instructor's own prior work*. That is our "instructors go first" principle, arrived at

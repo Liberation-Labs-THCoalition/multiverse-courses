@@ -5,7 +5,7 @@
 [Course: Question](../../standards/vibe-research/README.md).
 
 **Decided (Thomas, 2026-08-24):** four sessions over ~60 days, *not padded* — if the content fits
-in three we ship three. Students bring their own question; **a set of pre-made research setups is
+in three we ship three. **The question is supplied** — see [the shared target](./the-shared-target.md); **a set of pre-made research setups is
 provided** for those who arrive without one.
 
 ---
@@ -18,7 +18,7 @@ welfare meetup. **Session one does not set anything up.** It starts with the wor
 
 ## What they walk out with
 
-1. One claim from their own domain that could come out the other way
+1. One claim, on the supplied target, that could come out the other way
 2. A verified citation trail — or an explicit, written admission that one number has no primary
 3. **Their first kill entry**, earned in hour four rather than handed to them
 
@@ -34,7 +34,7 @@ room instantly — tense meeting, awkward party — without parsing every conver
 
 **Then the work.** Each student writes, in this order, on one page:
 
-- the curiosity, one sentence, in their own domain
+- the curiosity, one sentence, **in their own words** — the supplied one, restated without looking
 - the claim, with a **direction** — not "X relates to Y" but "X increases Y"
 - what observation would **falsify** it
 - **what they are hoping for**, named as a stake rather than a prediction
@@ -126,8 +126,8 @@ discovered than asserted.
 Covers the lit-review standard and feeds `vr.bound`.
 
 **Students build the review loop; we do not hand them one.** Twenty minutes, their own agent,
-their own question. It does not need to be good — it needs to be *theirs*, because the next part
-only works if they wrote the termination clause themselves.
+the shared target. It does not need to be good — the **loop** needs to be theirs, because the next
+part only works if they wrote the termination clause themselves.
 
 The minimum loop: a search, a log of what came back, a rule for what counts as relevant, and **a
 condition under which it stops**. That is four lines of scaffolding and one hard decision.
