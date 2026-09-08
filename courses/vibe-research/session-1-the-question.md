@@ -121,11 +121,42 @@ Compare across the room afterward. The pattern that emerges — *a plausible num
 doubt than an obviously missing one* — is the whole reason a gate exists, and it lands far better
 discovered than asserted.
 
-## Hour 4 — Lit review with the agent, and your first kill
+## Hour 4 — Build the lit review, and get two things out of it
 
-Covers the lit-review standard.
+Covers the lit-review standard and feeds `vr.bound`.
 
-Students run a literature review with their own agent on their own question. Then:
+**Students build the review loop; we do not hand them one.** Twenty minutes, their own agent,
+their own question. It does not need to be good — it needs to be *theirs*, because the next part
+only works if they wrote the termination clause themselves.
+
+The minimum loop: a search, a log of what came back, a rule for what counts as relevant, and **a
+condition under which it stops**. That is four lines of scaffolding and one hard decision.
+
+> **You cannot write a loop without a termination condition.** You already know this — you have
+> known it since your first `while`. A question with no stopping condition is the same bug, in a
+> shape no linter will ever catch for you.
+
+### Job one — the review tells you where the edge is
+
+Run it and answer three things in writing:
+
+1. **Has this already been answered?** If yes, that is not a defeat, it is the fastest possible
+   result. The endpoint arrived in one hour instead of six weeks. Take the next question.
+2. **What is the *reachable* version of my question?** The literature will show you where people
+   stopped, and usually why. That boundary is the shape of a claim you can actually close.
+3. **When did new sources stop changing the picture?** Write the number down.
+
+That third one is **saturation**, and it is the first real stopping condition most people ever
+write. Your agent will find papers forever — that is what it is for, and it is not a flaw. It has
+no opinion about when you have enough. **Saturation is the opinion.** Without it you are not
+reviewing a literature, you are being fed one.
+
+*Facilitator note:* students consistently under-estimate saturation and are startled by how early
+it arrives on a well-formed question. On a badly-formed one it never arrives — and that is
+diagnostic, not a failure of effort. A question that will not saturate is usually a topic
+wearing a question's clothes. Send them back to line two of their one-page.
+
+### Job two — the review is also where your first kill comes from
 
 **Find one citation your agent gave you that you cannot verify.** Not "might be wrong" — one you
 traced and could not confirm. There will be one. There is essentially always one.
@@ -139,6 +170,14 @@ Then the move that makes the course work:
 **That is their first kill entry, and they earned it in the first four hours.** A kill list you're
 handed is a checklist. A kill list you earned is a memory — the entry means something because you
 were there when it cost you.
+
+*Instructor note:* do not supply our kill list. Not in this session, not in any session. A student
+who leaves with **three kills of their own** has something better than our fifty-seven.
+
+*Second instructor note, and it is the one to hold onto:* the same hour produced a boundary and a
+kill. Students will remember the kill because it stung. **Ask them at the end which one changed
+what they are going to do next** — it is almost always the saturation number, and almost never the
+one they would have reported.
 
 *Instructor note:* do not supply our kill list. Not in this session, not in any session. A student
 who leaves with **three kills of their own** has something better than our fifty-seven.

@@ -127,3 +127,42 @@ reproducibility) are standard and well-covered elsewhere. What is not covered an
 find is *how a human and a long-horizon agent divide the work of being rigorous* — who checks
 what, what the agent can see that you cannot, what you can see that it cannot. That is the part
 only we can write, and it should be the spine.
+
+
+---
+
+## Acher, Gotlieb, Spieker & Le Bartz Lyan (ACM REP 2025) — read 2026-09-08
+
+*"Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to
+Replicating Research."* Proc. 3rd ACM Conference on Reproducibility and Replicability,
+Vancouver, Jul 29-31 2025. `10.1145/3736731.3746162` (paywalled; read via abstract, venue
+listing and the companion *Embracing Deep Variability*, ACM REP 2024).
+
+**Structure.** Two halves. First: floating-point associativity — *"how often is
+(x + y) + z = x + (y + z)?"* — as a reproducibility "Hello World", with Docker, GitHub
+Actions and templated experimentation, exploring variability across languages, compiler
+flags and numerical precision. Second: reproducing and replicating real published work
+(LLMs playing chess; football home advantage under COVID; energy efficiency across
+languages). Students found subtle issues such as changed library defaults, and designed
+replications that extended or challenged the originals.
+
+**The thing worth stealing, and we had not noticed we needed it.** *Both halves are bounded
+by construction.* The floating-point question has an answer you can compute in an afternoon
+and still opens onto compilers, containers and precision. A replication is bounded by the
+paper already existing: you get their number or you do not, and the interesting part is why.
+**Acher does not teach focus. He hands students targets that cannot sprawl.**
+
+**Where that puts us — an open tension, not a defect.** Our session 1 asks students to bring
+*their own* curiosity, which is unbounded by construction. That is a real strength (it is
+their domain, they care, the prerequisite means they can act on it) and a real exposure. We
+have answered it with a written stopping condition and saturation (`vr.bound`, session 1
+hour 4). Acher answers it by choosing the target. **Both are legitimate; ours costs more and
+carries further.** Worth deciding deliberately rather than by default:
+
+- **`OPEN`** — should session 1 open with a bounded shared warm-up in the Acher style, before
+  students bring their own question? It would demonstrate the whole arc in an hour with a
+  guaranteed endpoint. Cost: an hour, and it delays the thing they came for.
+
+**Also confirmed by their experience:** students found reproducibility flaws *in the
+instructor's own prior work*. That is our "instructors go first" principle, arrived at
+independently, and it is evidence the move survives contact with a real cohort.
