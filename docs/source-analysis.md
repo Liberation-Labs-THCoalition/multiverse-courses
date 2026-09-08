@@ -173,7 +173,7 @@ carries further.** Worth deciding deliberately rather than by default:
   target because it teaches variability cleanly; we choose one because unbounded personal
   questions are where novices get lost and where class time goes to die. Same structure, two
   independent reasons, which is the sort of agreement worth more than either argument alone.
-  Target: [`the-shared-target.md`](../courses/vibe-research/the-shared-target.md) — *is
+  Target: [`the-target-bank.md`](../courses/vibe-research/the-target-bank.md) — *is
   `temperature=0` deterministic?*, whose root cause is floating-point non-associativity, which is
   literally Acher's opener one abstraction layer down.
 

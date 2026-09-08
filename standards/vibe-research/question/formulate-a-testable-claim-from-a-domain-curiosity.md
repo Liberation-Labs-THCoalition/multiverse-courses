@@ -6,7 +6,7 @@ slug: vr.formulate
 Research begins with something you cannot stop wondering about, and that is not yet a claim. This
 standard covers the move from "I wonder whether X" to "I predict X because Y, and here is what
 would change my mind". **In this course the curiosity is supplied** — see
-[the shared target](../../../courses/vibe-research/the-shared-target.md) — because the skill being
+[the target bank](../../../courses/vibe-research/the-target-bank.md) — because the skill being
 assessed is the *move*, not the sourcing of the question. Learners bring their own question to the
 accelerator, for which this course is a prerequisite. The test of a claim is not whether it is
 interesting but whether it could come out the other way.

@@ -5,7 +5,7 @@
 [Course: Question](../../standards/vibe-research/README.md).
 
 **Decided (Thomas, 2026-08-24):** four sessions over ~60 days, *not padded* — if the content fits
-in three we ship three. **The question is supplied** — see [the shared target](./the-shared-target.md); **a set of pre-made research setups is
+in three we ship three. **The question is supplied** — see [the target bank](./the-target-bank.md); **a set of pre-made research setups is
 provided** for those who arrive without one.
 
 ---
@@ -126,7 +126,7 @@ discovered than asserted.
 Covers the lit-review standard and feeds `vr.bound`.
 
 **Students build the review loop; we do not hand them one.** Twenty minutes, their own agent,
-the shared target. It does not need to be good — the **loop** needs to be theirs, because the next
+the target bank. It does not need to be good — the **loop** needs to be theirs, because the next
 part only works if they wrote the termination clause themselves.
 
 The minimum loop: a search, a log of what came back, a rule for what counts as relevant, and **a
