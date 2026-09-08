@@ -1,5 +1,10 @@
 # Toolset — open source, one tool per failure mode
 
+> **Stage names in this file refer to [the pipeline](./the-pipeline.md), eight stages, canonical.**
+> This file is currently organised *by tool*; re-tagging it stage-first is an open item there.
+> Note in advance: **stages 1 (question), 3 (design) and 7 (gate) have no tools** — they are the
+> judgment stages, and that absence is the finding, not a gap in the list.
+
 **Status: `DRAFT`, 2026-08-25.** Suggested by Thomas: point students at good open-source tooling
 for each pipeline stage, e.g. an agentically-maintained Zotero library for lit review.
 

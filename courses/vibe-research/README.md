@@ -21,6 +21,8 @@ to be made of your own failures.*
 
 ## Tooling
 
+[`the-pipeline.md`](the-pipeline.md) — **the eight stages, named once.** Everything else points here.
+
 [`toolset.md`](toolset.md) — open-source tools for each pipeline stage, selected on one rule:
 **each tool earns its place by closing a specific failure mode the student is learning to catch,
 and by making the closing mechanical rather than dependent on remembering.** An agentically
