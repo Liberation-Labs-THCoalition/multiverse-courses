@@ -17,17 +17,39 @@ The oven schedule has period 4. Shifting a period-4 pattern by `k` gives back on
 distinct labelings — `k mod 4`. Shifts of 4, 8, 12 … 60 return the *identity*. So the 63 "draws"
 contain **4 distinct values, one of them the original labeling**.
 
-Ground truth, computable in one line:
+Ground truth:
 
 ```python
 orbit = {tuple(np.roll(IS_OVEN_D, k)) for k in range(1, 64)}
-len(orbit)          # -> 4
-1 / (len(orbit)+1)  # -> 0.2   the smallest p this test can EVER return
+len(orbit)                                                    # -> 4  distinct labelings
+
+# The floor counts DRAWS THAT TIE, not distinct values:
+ties = sum(np.array_equal(np.roll(IS_OVEN_D, k), IS_OVEN_D) for k in range(1, 64))
+ties                                                          # -> 15  (k = 4, 8, ... 60)
+(ties + 1) / 64                                               # -> 0.25  the true floor
 ```
 
 **The test cannot reject at α = 0.05 under any dataset whatsoever.** Not underpowered —
-*incapable*. There is no experiment you could run, no effect size however enormous, that would
-let this design produce p < 0.2.
+*incapable*. No effect size, however enormous, lets this design produce p < 0.25.
+
+> ### ⚠ This block was WRONG until 2026-09-09, and how it was wrong is worth an extra two minutes
+>
+> It read `1 / (len(orbit) + 1)` → **0.2**, and called that the floor. It is not. `analysis.py`
+> computes `p = (n_at_least_as_extreme + 1) / (n_null + 1)`, which counts **draws**. Fifteen of the
+> 63 shifts reproduce the original labeling exactly, each ties `|observed|`, and a tie is "at least
+> as extreme." So the floor is **16/64 = 0.25**, which is what `session-2` said all along and what
+> the code does.
+>
+> **Two true numbers — orbit size 4, and the p formula — joined by a false relation.** That is the
+> defect class this very exercise teaches, committed in the line labelled *ground truth*, and it
+> survived every review until a hostile audit recomputed it.
+>
+> **Why it hid:** the wrong formula and the right one **agree in every healthy case** (see the
+> table below — 0.0161, 0.0159, 0.0154 in both) and diverge *only* in the degenerate case. The
+> error was invisible except in exactly the situation the exercise exists to expose.
+>
+> Tell the room. It is the best available evidence for the course's own thesis, and it cost us
+> nothing but embarrassment.
 
 ## Why the review passes it, which is the actual lesson
 
@@ -86,19 +108,24 @@ own reviews will be too unless they build the missing checks deliberately.
   `N_DAYS = 63`. Leave everything else untouched. Have students predict the new p-floor **before**
   computing it. Measured:
 
-  | `N_DAYS` | distinct labelings | p-floor | |
-  |---|---|---|---|
-  | 60 | **4** | **0.200** | degenerate |
-  | **64** | **4** | **0.200** | degenerate — *the exercise as shipped* |
-  | 62 | 61 | 0.016 | healthy |
-  | **63** | **62** | **0.016** | healthy |
-  | 65 | 64 | 0.015 | healthy |
+  | `N_DAYS` | distinct labelings | shifts that tie | **p-floor** | |
+  |---|---|---|---|---|
+  | 60 | 4 | 14 | **0.2500** | degenerate |
+  | **64** | **4** | **15** | **0.2500** | degenerate — *the exercise as shipped* |
+  | 62 | 61 | 0 | 0.0161 | healthy |
+  | **63** | **62** | **0** | **0.0159** | healthy |
+  | 65 | 64 | 0 | 0.0154 | healthy |
+
+  *(Recomputed 2026-09-09. The earlier version of this table used `1/(distinct+1)` and read 0.200
+  for the degenerate rows. The healthy rows were unaffected — which is exactly why nobody caught
+  it.)*
 
   The condition is exact: **the null is degenerate precisely when the schedule's period divides
   the series length.** 4 divides 60 and 64; it does not divide 62, 63 or 65.
 
-  So **collecting one day less data takes this test from incapable to fine** — floor 0.200 to
-  0.016, a 12× change in resolution, with strictly less information. Nothing about the effect,
+  So **collecting one day less data takes this test from incapable to fine** — floor 0.2500 to
+  0.0159, roughly a 16-fold change in resolution, with strictly less information. Nothing about
+  the effect,
   the noise, the statistic or the sample size moved. Only the arithmetic relationship between
   two numbers nobody was looking at.
 
