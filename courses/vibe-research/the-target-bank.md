@@ -15,14 +15,29 @@ The first draft ran **one** target through all four sessions. That was a bug, an
 The fix is not a worse session 1. It is **one target per session**, each matched to the skill that
 session teaches.
 
-**And the cadence forces the same answer independently.** Sessions are monthly against a rolling
-student body. Anyone who joins at session 2, or repeats a session, or talks to someone who took it
-last month, arrives with the answer already. Self-contained sessions survive that; an arc does not.
+**That rationale is *within-arc* and survives any delivery model.** It is about session 1 killing
+session 2's target, not about who is in the room.
 
-**Targets rotate across cohorts too.** Four is the minimum, not the design. The bank should grow
-to two or three per slot so a returning student meets a fresh one. Contributing a target that
-worked is a legitimate way for a graduate to give back — it is also a strong signal they are ready
-for the accelerator.
+> **Delivery model, `SETTLED` 2026-09-09 (Thomas): rolling cohorts, not rolling attendance.**
+> A cohort runs 1 → 2 → 3 → 4 together, **fortnightly** (≈ 56 days, which is the README's "roughly
+> 60"), and **each session is a formal prerequisite for the next.** Mid-arc entry is not
+> discouraged, it is *impossible*. Then a new cohort starts, and graduates may take the arc again.
+>
+> An earlier draft of this file argued the target bank was needed because *"anyone who joins at
+> session 2 arrives with the answer already."* **That justification is void** — there is no
+> session-2 joiner. The within-arc reason above is the real one, and it stands alone.
+
+**Where rotation actually matters: the second cohort.** A repeat-taker sits in a mixed cohort
+alongside first-timers, already knowing every target and every seeded reveal. So the bank still
+needs **two or three per slot — but the trigger is "before cohort two runs," not "before anyone
+repeats a session."** More breathing room, and a date you can actually plan against.
+
+**The exercises need the same treatment and currently have none.** One `seeded-01`, one
+`seeded-02`, no variants. A repeat-taker meets identical reveals. `OPEN`, and it is the larger gap
+of the two — a fresh target with a stale exercise is still a rerun.
+
+Contributing a target that worked is a legitimate way for a graduate to give back, and a strong
+signal they are ready for the accelerator.
 
 ### What makes a target eligible
 

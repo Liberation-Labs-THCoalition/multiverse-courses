@@ -82,15 +82,28 @@ watching you build it is not a stranger, and the test silently returns a pass it
 
 ---
 
-## Rolling attendance
+## Rolling cohorts — *not* rolling attendance
 
-Sessions are monthly against a rolling body, and each is self-contained by design. Two
-consequences for the room:
+**`SETTLED` 2026-09-09 (Thomas).** A cohort runs sessions 1 → 2 → 3 → 4 together, **fortnightly**,
+and **each session is a formal prerequisite for the next.** Nobody joins mid-arc. Then a new cohort
+starts; graduates may take the whole arc again.
 
-- **Assume a mix of first-timers and returners in every session.** The opening five minutes has to
-  orient someone who has never been here without boring someone on their third.
-- **Returners get a fresh target** — see [the target bank](../courses/vibe-research/the-target-bank.md).
-  Pair a returner with a first-timer where you can; it is the cheapest teaching help available.
+*(This supersedes an earlier draft of this file which assumed rolling attendance into self-contained
+sessions. The session files' "walks in with… two earned kills" chain was never the defect — my
+assumption about who was in the room was.)*
+
+Consequences for the room:
+
+- **Everyone in the cohort is at the same point in the arc.** You can rely on the previous session's
+  artifacts existing, which is what sessions 2–4 have always assumed.
+- **The mix you will get is first-timers and arc-repeaters**, not people at different stages.
+  Repeaters know every reveal — so pair a repeater with a first-timer **for discussion**, but
+  **never inside a seeded exercise's discovery window.** A repeater in the room during
+  `seeded-01`'s first ten minutes ends the exercise for their partner.
+- **Repeaters get fresh targets** where the bank has depth — see
+  [the target bank](../courses/vibe-research/the-target-bank.md). It does not yet.
+- **Cadence check `OPEN`:** fortnightly is the intent; Thomas to confirm with Liz against the wider
+  school schedule.
 
 ---
 

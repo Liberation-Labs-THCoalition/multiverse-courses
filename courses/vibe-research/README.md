@@ -4,7 +4,7 @@
 
 **Names are ours to propose.** Liz has creative latitude over the campus and her bandwidth is stretched, so we present finished names rather than options and she changes whatever she likes. Everything below is a proposal, not a claim.
 
-3–4 four-hour intensives over roughly 60 days. Prerequisite: Multiverse agentic coursework, so
+**Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: Multiverse agentic coursework, so
 **every student arrives with a long-horizon agent** and has already run a paired ablation as an
 assessment.
 
@@ -165,7 +165,8 @@ should see that before they see a clean result.
 
 ## Open
 
-- 3 sessions or 4, and where the 60 days start
-- Cohort size, and whether sessions are live-only or recorded
+- ~~3 sessions or 4, and where the 60 days start~~ — **RESOLVED 2026-09-09 (Thomas).** Four, and the clock starts at the cohort's session 1. **Rolling cohorts:** a cohort runs 1→2→3→4 together, **fortnightly** (≈56 days, which is the "roughly 60"), and **each session is a formal prerequisite for the next** — nobody joins mid-arc. New cohort after; graduates may repeat the whole arc. *(An earlier line here read "3–4 … over roughly 60 days" while the status line above said `SETTLED at 4` — a claim that was simultaneously SETTLED and OPEN in one file, which is exactly what the marking scheme exists to prevent. Found by audit.)*
+- **`OPEN`, needs Liz:** does fortnightly fit the wider school schedule?
+- Cohort size, and whether sessions are live-only or recorded. **Ten students is the hard cap** — set by session 4 hour 4 at five minutes per student; see [the clock](./session-4-the-gate-and-the-room.md).
 - ~~What students bring: their own question is assumed~~ — **RESOLVED 2026-09-08 (Thomas): the question is SUPPLIED.** Own questions are an accelerator requirement, not this course's. Rationale: this course teaches holding the tools on something basic, and a personal project invites burning class time defending it. See [the target bank](./the-target-bank.md).
 - Whether Kavi's `kv_verify` battery can be taught with attribution (their call, and Dwayne's)
