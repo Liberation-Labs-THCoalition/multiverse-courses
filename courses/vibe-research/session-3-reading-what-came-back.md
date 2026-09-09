@@ -146,14 +146,33 @@ Give them a real one, from an artifact of ours, and have them mark which limit i
 > - **29 null draws**, floor p = 0.034. Underpowered for a subtle effect.
 > - **One model, one prompt set, one fit.**
 
-Then the sting, which is the point of the hour: **three days later, two other researchers cited
-that result as establishing something the limits section explicitly excludes** — and one of them
-built a proposed experimental protocol on top of it. They had read the finding and not the limits.
-The limits were correct, written by us, sitting in the same file, and **did not travel three days.**
+Then the sting, which is the point of the hour:
 
-*(Instructor note: the first draft of this line said "three months." It was three days. The event
-was real and the interval was invented — a true thing fastened to a false one, which is the defect
-of session 4 hour 3 committed inside the session that teaches it. Worth saying aloud if it fits.)*
+> **A finding travels. Its limits section does not.**
+
+You can write a correct, complete, honest set of limits, put them in the same file as the result,
+and watch the result be cited for something the limits explicitly exclude — sometimes within days.
+Not by careless people. By people who read the finding, which is what a finding is *for*.
+
+The mechanism has been measured. Greenberg (2009) reconstructed the full citation network behind a
+single biomedical claim: **242 papers, 675 citations, and 220,553 citation paths supporting it.**
+He identifies how the belief acquired authority it had not earned — **bias** (citing only
+supportive work), **amplification** (citing reviews as if they were evidence), and **invention**
+(citing papers for claims they do not make). The qualifications did not survive the journey; the
+claim did.
+
+> Greenberg, *BMJ* 2009;339:b2680 · free full text: <https://pmc.ncbi.nlm.nih.gov/articles/PMC2714656/>
+
+**So the limits section is not a disclaimer, and writing it is not defensive.** It is the only part
+of your paper that constrains what the next person is allowed to build on top of you — and it is
+the part least likely to be read. Write it as though it will be the only thing that survives,
+knowing it probably will not be.
+
+*Facilitator note:* this is the hour to tell an "I did this" story if you have one — a result of
+your own that got cited past its limits, or a citation you yourself made too generously. The
+published network above carries the point for anyone taking this asynchronously, but a first-person
+account lands harder in a room. **Check your own numbers before you tell it**: a true event
+fastened to an invented detail is the exact defect of session 4, hour 3.
 
 **Exercise.** Students write the limits section for their own result *before* writing the result.
 Then they hand the limits section alone to another group and ask: **"what would you now be entitled

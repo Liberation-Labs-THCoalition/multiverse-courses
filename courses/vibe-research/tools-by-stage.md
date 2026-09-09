@@ -284,6 +284,15 @@ published curriculum teaches with them**, which is an opening rather than a curi
 > power above *N* = 100. An inconsistency says the reported *set* cannot co-exist; it does not say
 > **which** number is wrong, and it is not evidence of misconduct.
 >
+> **Why it lands:** Brown & Heathers tested 71 eligible articles and found that **about half (36)
+> contained at least one impossible mean**, with 16 carrying multiple. A student who has just
+> written the detector themselves, and then reads that number, has understood something about
+> published literature that no lecture delivers.
+>
+> Brown & Heathers 2017, *SPPS* 8(4):363–369, [doi:10.1177/1948550616673876](https://doi.org/10.1177/1948550616673876).
+> **Free preprint:** <https://peerj.com/preprints/2064/> — send students this one, not the paywall.
+> Check their implementations against [`rsprite2::GRIM_test`](https://lukaswallrich.github.io/rsprite2/reference/GRIM_test.html).
+>
 > Facilitator reference implementation (do **not** distribute): `tools/grim_reference.py`.
 
 ### And the kill list is still yours

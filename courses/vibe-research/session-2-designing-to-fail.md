@@ -83,9 +83,10 @@ true floor was `p = 0.25`. The test could not have rejected under *any* data.
 
 Two things make this worth an hour rather than an anecdote:
 
-- **The gate approved it at 0.92 confidence**, called the null "principled," and issued a required
-  change instructing the author to report the impossible floor. A reviewer that shares your
-  assumption returns confidence, not coverage.
+- **The reviewing agent approved it at 0.92 confidence**, called the null "principled," and issued
+  a required change instructing the author to report the impossible floor. **A reviewer that shares
+  your assumption returns confidence, not coverage** — and an agent reviewing your design shares
+  every assumption you gave it.
 - **The tell was free and arrived before any interpretation**: the output contained nothing but
   multiples of 0.25.
 

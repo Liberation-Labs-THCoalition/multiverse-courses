@@ -41,9 +41,15 @@ NAME_IN_CAPS
   EARNED: the actual case, with the actual numbers.
 ```
 
-**The `EARNED` line is not decoration.** A kill without a case attached gets softened, then
-argued with, then dropped. A kill with `d = 9.86, n = 3, and the phrase "most robust findings"`
-attached to it survives, because there is nothing to argue with.
+**The `EARNED` line is not decoration.** A kill without a case attached gets softened, then argued
+with, then dropped. A kill that carries its own evidence survives, because there is nothing left to
+argue with — compare:
+
+| weak | survives |
+|---|---|
+| *"watch out for overstated effect sizes"* | *`d = 9.86` at `n = 3`, described in the abstract as one of "our most robust findings"* |
+
+The second is not a better sentence. It is a **case**, and a case cannot be talked down.
 
 **Exercise.** Write all three kills in the format. Then trade lists with another group and try to
 *violate* each other's kills without triggering them. Every successful evasion is a fourth kill.
