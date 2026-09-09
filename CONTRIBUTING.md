@@ -46,6 +46,17 @@ it needs no trust in us at all.
 So: **the stories stay — they move.** When you catch yourself writing *"we once…"* in a session
 file, ask whether it wants to be a facilitator note or an exercise. It is almost never body text.
 
+**The underlying distinction, sharpened 2026-09-09 (Thomas):** the problem was never
+*first-person*, it was **anecdote stated as finding**. *"I shipped a stale PDF and it cost me a
+results table"* is testimony, and its grammar tells the reader exactly what it is. *"Stale PDFs are
+the most common defect in this workflow"* is a claim about the world, and it needs a citation
+wherever it appears — body text, facilitator note, or on camera.
+
+So the table above still holds for **written coursework**, where a reader has no speaker to
+attribute testimony to. Spoken delivery is governed by the sharper rule instead: relate experience
+freely, **and do not let a war story turn into a rate.** See
+[running a session](docs/running-a-session.md).
+
 Two things this rule does **not** forbid:
 
 - **Naming our own defects in facilitator notes**, including embarrassing ones. Session 4 tells

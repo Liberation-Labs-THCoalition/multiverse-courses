@@ -103,10 +103,25 @@ on the reasoning that a facilitator can expand them on request. **A recording ca
 told on camera and then distributed reaches a viewer with exactly the problem the rule exists to
 prevent: an unverifiable claim from someone they cannot ask.
 
-`OPEN` — **decide before session one is filmed**, not after:
+**RESOLVED 2026-09-09 (Thomas).** The concern was overstated, on two grounds:
 
-- anecdotes told on camera carry the same citation discipline as body text, **or**
-- they are cut from the distributed version, **or**
-- the recording ships with a note naming which parts are first-person and unsourced.
+1. **Relating personal experience is not presenting data as fact.** A facilitator saying *"we hit
+   this, here is what it cost us"* is doing something a viewer can evaluate as testimony. The
+   failure the rule guards against is an anecdote **stated as a finding** — a rate, a frequency, a
+   general claim about how often something happens. That distinction survives a camera.
+2. **Recordings are mostly for review**, by people who were in the room and could have asked.
 
-Any of the three is defensible. Silently distributing them is not.
+**So the usable line is about framing, not about venue:**
+
+| fine on camera | not fine on camera |
+|---|---|
+| *"I once shipped a stale PDF and it cost me a results table."* | *"Stale PDFs are the most common defect in this workflow."* |
+| *"Our gate approved a degenerate null."* | *"Automated gates approve degenerate nulls about a third of the time."* |
+
+The left column is testimony and is clearly marked as such by the grammar. The right column is a
+**claim about the world wearing an anecdote's clothes**, and it needs a citation whether or not
+anyone is filming.
+
+*One caveat worth keeping:* this holds while recordings serve **review**. If a session cut is ever
+published as standalone teaching material to people who were never in the room, re-read the
+left-hand column with that audience in mind.
