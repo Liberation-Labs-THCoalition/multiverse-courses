@@ -73,7 +73,7 @@ at a time cannot see it by construction.
 
 That is the bridge to hour 3, and students should feel the bridge rather than be told about it.
 
-## Hour 3 — Defects that do not present as claims
+## Hour 3 — Defects that do not present as claims *(40 minutes)*
 
 **This is the newest material and the least settled. Teach it as an open problem.**
 
@@ -105,6 +105,84 @@ every place two verified things are joined. Then they check only the joins, not 
 back what they found. *We do not have a good automated answer to this and should say so.* If a
 student invents one, that is a genuine contribution and should be treated as one.
 
+## Hour 3½ — The handoff test *(20 minutes, and it gates hour 4)*
+
+Covers **stage 8 — Ship**, whose *done when* is the definition of done for the entire pipeline:
+**a stranger can retrieve it and re-run it.**
+
+That condition has a property the other seven do not. Every earlier stage you can assess yourself —
+you can read your own falsifier, inspect your own control, run your own gate. This one you cannot.
+
+> **You do not know whether your work is reproducible.** It is not a fact about your repository. It
+> is a fact about a reader, and you are not one. **Only a stranger knows — and there is one sitting
+> across the room.**
+
+### The swap
+
+**Twenty minutes. Trade repositories with another student. No talking.**
+
+Not "review it." **Reproduce the headline number.** Clone or copy what they have, and try to get
+the value they are about to present. You may read anything in the repo. You may not ask them
+anything — the moment you speak, you have stopped being a stranger, and their artifact has been
+silently repaired by a conversation that will not exist for the next reader.
+
+Write down where you stopped and why. That list is their stage-8 defect list, and they have the
+rest of the session to fix it before they present.
+
+### What it will find, in roughly this order
+
+Facilitators: these recur, and naming them in advance takes the sting out without spoiling the
+exercise.
+
+| what stops the stranger | why the author never saw it |
+|---|---|
+| a file that was never committed | it exists on their machine, so it exists |
+| an absolute path | it resolves for exactly one person |
+| an undeclared dependency | installed months ago for something else |
+| **a number typed into the prose rather than generated** | correct when typed, and now unfalsifiable |
+| no seed, or a seed that is not actually used | the run reproduces for them because it is cached |
+| a stale built artifact | the PDF opens and looks finished |
+| a step that lives only in their head | it is one command, so it is not worth writing down |
+
+**The fourth row is the one worth stopping the room for.** A number transcribed by hand into a
+sentence has no link to the thing that produced it. It cannot go stale *visibly* — it just quietly
+stops being true. This is the failure that
+[Quarto and its relatives exist to kill](./tools-by-stage.md), by generating the number where it is
+read rather than copying it there.
+
+### Then build the two mechanical fixes
+
+Ten minutes, and they are permanent:
+
+1. **Provenance stamping.** Every output file records the commit hash and the config that produced
+   it. Ten lines. It converts *"which run made this?"* from archaeology into a lookup.
+2. **The staleness check.** Is the built artifact older than its source? One line, in `pre-commit`,
+   not in your habits — a stale PDF is invisible precisely because it renders.
+
+### The framing to leave them with
+
+**"Done" is a property of the reader, not the author.** A stranger is not a hostile reviewer; a
+stranger is just someone without your context — which, in six months, includes *you*. The person
+most likely to need your repository to work is the person who wrote it, after they have forgotten
+everything.
+
+*Facilitator note:* Brodeur et al. found teams reproducing **published, peer-reviewed** social
+science at **94% / 91% / 37%** depending on how the work was run — and those papers had all cleared
+review. The gap between "published" and "reproducible" is not a gap in effort. It is a gap in
+*checking*, and twenty minutes of swapping closes more of it than a checklist ever has.
+
+*If the cohort is odd-numbered or remote:* the facilitator takes the orphan repo. Do not skip
+anyone — the student who does not get read is the one who most needs it.
+
+### `OPEN` — depositing
+
+Zenodo, a DOI, an archived release: correct, and mostly beyond a four-session course. **The honest
+floor is a public repository with a tagged commit and a README that names the one command.** Teach
+that as sufficient, and name deposit as the next step rather than a requirement, so nobody
+concludes that unarchived work does not count.
+
+---
+
 ## Hour 4 — The finding you will defend
 
 Each student presents for five minutes. The required structure:
@@ -114,6 +192,10 @@ Each student presents for five minutes. The required structure:
 3. What you got wrong on the way, and how you caught it
 4. **What would change your mind** — stated as something that could actually happen
 5. What your result does not support
+
+**Precondition, from hour 3½: you present a finding someone else reproduced.** If the handoff test
+stopped, say where it stopped and what you changed. A result nobody but you has ever obtained is
+not yet a finding — it is a claim about your laptop.
 
 **Point 2 is the graded one.** Not the size of the claim — its *warrant*. A student who defends
 something small with a gate that could have killed it has done the thing. A student who defends
@@ -174,7 +256,7 @@ attached, and that theirs will grow the same way: one expensive afternoon at a t
 
 ## `OPEN`
 
-- Hour 3 has no exercise with a known-good answer, unlike every other hour in the course. It is
-  honest to teach an unsolved problem as unsolved, but four hours of solvable followed by one hour
-  of open may read as the material running out. **Decide whether hour 3 shrinks to 40 minutes and
-  hour 4 absorbs the rest.**
+- ~~Hour 3 has no exercise with a known-good answer... decide whether it shrinks to 40 minutes.~~
+  **RESOLVED 2026-09-08.** Hour 3 is now 40 minutes and the freed 20 go to **hour 3½, the handoff
+  test** — which is the exercise-with-a-known-good-answer that hour 3 lacked, sitting immediately
+  after it. The answer is known because either the stranger reproduced the number or they did not.

@@ -334,8 +334,13 @@ build-a-document workflow, and among the least visible: the PDF opens, it looks 
 table in it is two revisions old. Nothing about a stale artifact announces itself.
 
 *Done when a stranger can retrieve it and re-run it.* That is the definition of done for the whole
-pipeline, and it currently gets one bullet in session 4. `OPEN`, and the cheapest fix is to make
-the stage-8 hook the last thing every student builds.
+pipeline — and it is the one condition **you cannot assess yourself**. Every other stage you can
+check alone; this one is a fact about a reader.
+
+**Taught as [session 4, hour 3½ — the handoff test](./session-4-the-gate-and-the-room.md):** repos
+swapped, twenty minutes, no talking, reproduce the other student's headline number from the repo
+alone. Whatever stops them is the defect list. Then build the two permanent fixes — provenance
+stamping and the staleness hook — and present a finding somebody else has actually obtained.
 
 ---
 
@@ -371,7 +376,8 @@ front of a room.
   respect.
 - **Stage 6 has no build step.** That may be correct — it is the one stage where the library's
   default is the intervention — but it leaves session 3 lighter on construction than the others.
-- **Stage 8 needs session time**, not a bullet. See above.
+- ~~**Stage 8 needs session time**, not a bullet.~~ **RESOLVED 2026-09-08** — hour 3½, the handoff
+  test. Twenty minutes, taken from hour 3.
 - **Offline / rate-limited fallbacks** for the stage-2 tools: OpenAlex is metered and Semantic
   Scholar's keyless pool is routinely saturated. A cohort of twenty hitting them at once in one
   room is a scenario nobody has tested.

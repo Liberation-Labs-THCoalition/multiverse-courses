@@ -145,9 +145,11 @@ actually teaching.
   empty — they carry FINER, problematization, LBD, DeclareDesign, dagitty, specification-curve
   analysis, Mayo's severe testing and the Red Team Challenge protocol. The empty rows were a fact
   about our inventory.
-- **Stage 8 is under-taught.** We have tools for it and no session hour. "A stranger can retrieve
-  it and re-run it" is the definition of done for the whole pipeline, and it is currently one
-  bullet in session 4.
+- ~~**Stage 8 is under-taught.**~~ **RESOLVED 2026-09-08** — [session 4, hour 3½: the handoff
+  test](./session-4-the-gate-and-the-room.md). Twenty minutes, repos swapped, no talking, reproduce
+  the other student's headline number from the repo alone. It is deliberately *not* a full hour:
+  stage 8 is a **precondition for presenting**, not a topic. You cannot defend a finding you cannot
+  hand over. The freed time came from hour 3, closing that OPEN at the same time.
 - **Should stage 4 (pre-register) exist for a four-hour session?** AsPredicted needs an email
   magic-link and coauthor approval; OSF needs a token. Both are friction inside a live class.
   Possible answer: a timestamped commit to their own repo is a legitimate pre-registration and
