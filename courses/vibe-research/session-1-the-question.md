@@ -1,5 +1,7 @@
 # Session 1 — The question you cannot stop thinking about
 
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S1 needs ~211 min against 201 available. Cuts are listed there, and **pairs must be posted PRE-SESSION** (hour 1's pair exercise precedes any break). Hours 2 and 3 reference materials that **do not exist yet**.
+
 **Status: `DRAFT`, 2026-08-24.** Four hours. First of four.
 **Standards covered:** `vr.formulate`, `vr.verify-number`, and the lit-review standard from
 [Course: Question](../../standards/vibe-research/README.md).

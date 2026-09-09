@@ -1,5 +1,7 @@
 # Session 2 — Designing something that can fail
 
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, and hour 3 has an ordering defect: it asks students to run "their planned test", which hour 4 has not specified yet.
+
 **Status: `DRAFT`, 2026-08-25.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
 your variable does*, *select a control that is capable of failing*.

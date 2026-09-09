@@ -1,5 +1,7 @@
 # Session 3 — Running it, and reading what came back
 
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S3 needs **252 min against 201**. Hour 2 is the single worst block in the course (72 against 50). The header promises three deliverables and the body budgets time for one.
+
 **Status: `DRAFT`, 2026-08-25.** Four hours. Third of four.
 **Standards covered:** *report what a result does not support*, *choose an estimator that survives
 your sample size*, *distinguish a failed hypothesis from a failed measurement*.

@@ -28,26 +28,31 @@ in a claim at all**, so no claim-checker will ever see them.
 
 ## The clock
 
-240 minutes, not 4 × 60. See [running a session](../../docs/running-a-session.md) for the
-arithmetic and the pairing mechanics.
+**Corrected 2026-09-09 — the previous version of this table was wrong**, and because the other
+three sessions were told to match it, all four inherited the error. It summed to **220 minutes
+against 201 available**, with **zero minutes for transitions and zero for overrun** — the 19 the
+house arithmetic explicitly budgets. Full set: [the four clocks](../../docs/session-clocks.md).
 
 | | block | min |
 |---|---|---|
 | 0:00 | Opening | 5 |
 | 0:05 | **Hour 1** — build the gate | 50 |
-| 0:55 | **break** — stand up, look at something far away | 5 |
+| 0:55 | **break** — "back at 1:00" | 5 |
 | 1:00 | **Hour 2** — seeded exercise | 40 |
-| 1:40 | **Hour 3** — defects that do not present as claims | 40 |
-| 2:20 | **break** — *post the handoff pairs before this break, not after* | 5 |
+| 1:40 | transition | 3 |
+| 1:43 | **Hour 3** — defects that do not present as claims | 37 |
+| 2:20 | **break** — *post the handoff pairs before this break* | 5 |
 | 2:25 | **Hour 3½** — the handoff test | 20 |
-| 2:45 | fix what the handoff found | 20 |
-| 3:05 | **Hour 4** — the finding you will defend | 50 |
+| 2:45 | fix what the handoff found | 18 |
+| 3:03 | transition | 3 |
+| 3:06 | **Hour 4** — the finding you will defend | 45 |
+| 3:51 | overrun buffer | 4 |
 | 3:55 | close | 5 |
 
-**Hour 4 is 5 minutes per student.** At 50 minutes that is **ten students maximum** — which is the
-real cohort cap for this session, and it should be stated when the session is scheduled rather than
-discovered at 3:05. Above ten, either run two rooms for hour 4 or drop to 4 minutes and hold the
-line hard.
+**Hour 4 at 45 minutes is eight students at five minutes each**, or nine with no handover between
+speakers. **Eight is the cohort cap**, and all four facilitators reached it independently — see
+[the cap section](../../docs/session-clocks.md) for why sessions 2 and 3 bind before this one does.
+Above eight: two rooms for hour 4, or hold four minutes hard.
 
 ---
 
