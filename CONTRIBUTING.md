@@ -65,6 +65,39 @@ Two things this rule does **not** forbid:
 - **Published work, ours or anyone's.** If it has a citation a student can follow, it is a source,
   not an anecdote.
 
+## `PREDICTED` — we have never run this course
+
+**Added 2026-09-09**, after an audit found the repo asserting student behaviour in the present
+tense — *"students consistently under-estimate saturation," "most rooms will approve v2," "these
+recur"* — in a course that **has never been taught to anyone.**
+
+Those were inventions. Not exaggerations: invented observations, of the exact kind
+[session 3 teaches Greenberg's citation network to expose](courses/vibe-research/session-3-reading-what-came-back.md).
+Written by people who had never watched a student do any of it.
+
+**The rule.** Any claim about what students, rooms, or facilitators actually *do* is either:
+
+| marker | meaning |
+|---|---|
+| **`PREDICTED`** | our expectation, never observed. The default, until a cohort runs. |
+| **`OBSERVED <date>, n=<cohorts>`** | it happened, this many times, and we were there. |
+
+Nothing sits in between, and **the unmarked present tense is the failure mode** — it reads as
+experience and is indistinguishable from it.
+
+### Why this is worth the friction
+
+We now have a written, dated, falsifiable record of what we expected before we had any evidence.
+**Cohort one is the test.** Some of these predictions will be wrong, and we will find out which,
+which is more than most curricula can say about their own folklore.
+
+That is the thing this course teaches, applied to the course: *state what you expect before you
+see the data, then honour it or revise it out loud.* We were failing our own standard in the
+facilitator notes while teaching it in the sessions.
+
+**When a cohort runs, upgrade the ones that held and strike the ones that did not.** A `PREDICTED`
+marker that survives three cohorts without ever being revisited has become folklore again.
+
 ## Dates on everything
 
 This engagement moves. A claim that was true in January was still sitting in our notes in August,

@@ -74,9 +74,9 @@ Do not let them polish. The code is not the deliverable.
 ## Answers to the limits questions
 
 **1. When does it not apply?** Anything not integer-valued. Weights, times, reaction latencies,
-already-averaged composites, percentages of a non-integer base. Students often say "continuous
-data," which is close enough — but push once on **composites**: a mean of subscale means is not
-integer data even though every underlying item was.
+already-averaged composites, percentages of a non-integer base. **`PREDICTED`** (never observed):
+students say "continuous data," which is close enough. Either way, push once on **composites** — a
+mean of subscale means is not integer data even though every underlying item was.
 
 **2. When does it stop discriminating?** At **`n ≥ 10^decimals`**. Two decimals → no power at or
 above `n = 100`, because by then every two-decimal value is reachable by some integer total. Have

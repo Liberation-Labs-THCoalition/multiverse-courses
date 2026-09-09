@@ -156,8 +156,10 @@ rest of the session to fix it before they present.
 
 ### What it will find, in roughly this order
 
-Facilitators: these recur, and naming them in advance takes the sting out without spoiling the
-exercise.
+**`PREDICTED`**, never observed — this table is what we expect the swap to surface, drawn from
+ordinary handoff failures rather than from watching any student. Naming them in advance takes the
+sting out without spoiling the exercise. **Log what actually stops people**; the real list will be
+better than this one.
 
 | what stops the stranger | why the author never saw it |
 |---|---|
@@ -192,9 +194,13 @@ most likely to need your repository to work is the person who wrote it, after th
 everything.
 
 *Facilitator note:* Brodeur et al. found teams reproducing **published, peer-reviewed** social
-science at **94% / 91% / 37%** depending on how the work was run — and those papers had all cleared
-review. The gap between "published" and "reproducible" is not a gap in effort. It is a gap in
-*checking*, and twenty minutes of swapping closes more of it than a checklist ever has.
+science at **94% human-only / 91% AI-assisted / 37% AI-led** — and those papers had all cleared
+review. The gap between "published" and "reproducible" is not a gap in effort — those were
+competent researchers on already-accepted papers.
+
+**What Brodeur establishes is the problem, not this remedy.** They measured no swaps, no
+checklists, and no training. That twenty minutes of swapping helps is **our expectation, and
+`PREDICTED`** — the study tells you the gap is real and large, not that this closes it.
 
 *If the cohort is odd-numbered or remote:* the facilitator takes the orphan repo. Do not skip
 anyone — the student who does not get read is the one who most needs it.

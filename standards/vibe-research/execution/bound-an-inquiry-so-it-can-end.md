@@ -46,7 +46,8 @@ In order to fully cover this standard, a performance must be recording for each 
 ## Notes for the facilitator
 
 **Objective 2 is the one that does the work**, and it is cheap: a two-column log kept live
-during the session. Students are routinely surprised by the ratio. The point is not that
+during the session. **`PREDICTED`** (never observed): students are surprised by the ratio. The
+point is not that
 extending suggestions are bad — many are correct — but that the ratio is invisible until it
 is written down, and an unlogged sequence of reasonable extensions is indistinguishable from
 progress while you are inside it.

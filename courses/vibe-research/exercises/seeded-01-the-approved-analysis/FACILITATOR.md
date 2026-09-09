@@ -48,8 +48,11 @@ that is wrong.** Not sloppy. Not vague. Wrong in a way that its own structure ca
 ## Running it
 
 1. **Ten minutes, no tools.** Read `analysis.py` and `review.md`. Write one sentence: *what is
-   wrong here?* Collect answers before anyone runs anything. Most groups defend the analysis —
-   the review is persuasive and the null genuinely is thoughtful.
+   wrong here?* Collect answers before anyone runs anything. **`PREDICTED`** (never observed):
+   most groups defend the analysis, because the review is persuasive and the null genuinely is
+   thoughtful. **If the room kills it in four minutes instead, that is a finding — write it
+   down.** It would mean either the exercise is too easy or the room was pre-warned, and the two
+   need different fixes.
 2. **Ten minutes.** Answer the three questions at the bottom of `analysis.py`. Question 2 says
    *do not reason about it — compute it.* Watch for groups that reason instead. Reasoning about
    orbit size is where people get it wrong; the one-line `set()` is where they get it right.

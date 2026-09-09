@@ -96,9 +96,9 @@ which one you reported.
 | 25–35 | Full room. Take answers before confirming anything. |
 | 35–40 | The table above, then the generalisation. |
 
-**Do not rescue them at minute 20.** The productive failure is approving v2 — most rooms will,
-because all three required changes are visibly present and correctly implemented. Approving it and
-*then* seeing the `+0.000` is worth more than being told.
+**Do not rescue them at minute 20.** The productive failure is approving v2, and **`PREDICTED`**
+(never observed) most rooms will, because all three required changes are visibly present and
+correctly implemented. Approving it and *then* seeing the `+0.000` is worth more than being told.
 
 ---
 

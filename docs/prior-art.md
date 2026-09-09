@@ -61,8 +61,15 @@ detection of major errors**."
 
 **Why this is the citation that matters.** The capability that degrades first — and degrades even
 in the *assisted* arm, where reproduction rates held up fine — is **error detection**. That is not
-a side finding for us. It is the entire subject of sessions 3 and 4, and it means the course's
-thesis is empirically supported rather than merely plausible. Put it in the README and in session 4.
+a side finding for us; it is the entire subject of sessions 3 and 4.
+
+> **Scope, corrected 2026-09-09 after audit.** Brodeur establishes the **problem statement**, not
+> our pedagogy. They tested no training, no gates, and no intervention of any kind. What is
+> supported: *error detection degrades when you work with an agent, measurably, even when the work
+> otherwise looks fine.* What is **not** supported: that a student-built gate restores it. That is
+> our claim and it is currently untested. Citing Brodeur for the remedy is amplification — one of
+> the three mechanisms [Greenberg names](../courses/vibe-research/session-3-reading-what-came-back.md),
+> which we teach one session earlier.
 
 > There is a **correction** to this paper, [10.1073/pnas.2621051123](https://doi.org/10.1073/pnas.2621051123),
 > July 2026. I checked it: **affiliation only**, three authors, production error. **No finding,

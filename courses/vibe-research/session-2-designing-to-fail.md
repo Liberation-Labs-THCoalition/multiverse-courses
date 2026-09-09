@@ -139,4 +139,16 @@ bring both the result *and* the noise-run from hour 3.
   synthetically instead — `exercises/seeded-01-the-approved-analysis/`, a 0.92-confidence review
   passing a null with an orbit of 4. Same shape, nothing of ours exposed, and students track it
   down rather than being shown it.
-  Liberation Labs' internal output and Thomas should decide whether it leaves the building.
+
+- 🔴 **BLOCKING CONFLICT, found 2026-09-09 by audit. Needs a decision, not an edit.**
+  **This hour teaches seeded-01's answer**, and session 4 hour 2 then runs seeded-01 as a
+  discovery exercise. Same orbit-of-4, same 0.92 confidence, same *"principled"*, same one-line
+  fix. Anyone who took session 2 has been told the answer for a full hour, a month earlier — so
+  session 4's *"most groups defend the analysis"* run-sheet is written for a room the course's own
+  sequence guarantees will not exist.
+
+  Three ways out, all viable, none mine to pick: **(a)** session 2 keeps the teaching case and
+  session 4 gets a different seeded exercise; **(b)** session 2 loses the worked case and session 4
+  keeps the discovery; **(c)** they are never scheduled in the same cohort's path — which only
+  works if the rolling model wins. See the `OPEN` on
+  [arc vs. rolling](../../docs/audit-2026-09-09.md).

@@ -39,7 +39,8 @@ for the accelerator.
 
 > **Ask a model the same question twice at `temperature=0`. Do you get the same answer?**
 
-Everyone says yes. The answer is **no**, and the root cause is floating-point non-associativity —
+**`PREDICTED`** (never observed): most of the room says yes. The answer is **no**, and the root
+cause is floating-point non-associativity —
 which is precisely the opener Acher et al. use in their reproducibility course
 (`docs/source-analysis.md`), one abstraction layer down, in the domain our students work in.
 

@@ -123,7 +123,9 @@ Written to match the house format at ascending Bloom levels — see
 
 **Four sessions, not three.** The gap between *running it* and *the gate* is where the course actually lives — folding 4 into 3 would compress the two things students cannot get anywhere else (what a result does not support, and what to do when you were wrong) into a coda on an analysis session. They are the subject, not the wrap-up.
 
-**Seeded material:** `exercises/seeded-01-the-approved-analysis/` — a confidently-approved analysis whose permutation null has an orbit of 4, so it cannot reject at α=0.05 under any data. Synthetic reconstruction of a real gate failure in our own lab; runs in 40 minutes on numpy alone. Fits session 2, or opens session 4 as the first entry in a student's kill list.
+**Seeded material:** `exercises/seeded-01-the-approved-analysis/` — a confidently-approved analysis containing one fatal, findable defect. Synthetic reconstruction of a real gate failure in our own lab; runs in 40 minutes on numpy alone.
+
+> ⚠ **Spoiler discipline.** The defect used to be described here in full. **It is a discovery exercise, and this is a student-reachable file** — the answer now lives only in that directory's `FACILITATOR.md`. Do not restate it in any file a student can open. Same rule for `seeded-02` and for the target bank's reveals; see [the audit](../../docs/audit-2026-09-09.md).
 
 ## Assessment — adopt theirs
 

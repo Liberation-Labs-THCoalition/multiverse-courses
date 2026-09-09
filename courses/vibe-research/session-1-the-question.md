@@ -104,7 +104,7 @@ is what the pre-made setups are for.
 Covers `vr.verify-number` 0–6. **This is the centrepiece and it is entirely hands-on.**
 
 Each student receives a short claim and a pointer to the artifact behind it, and traces it.
-The set is seeded so that the three failure modes each appear:
+The set is seeded so that each of the five failure modes appears at least once:
 
 | seeded case | what the student should discover |
 |---|---|
@@ -151,10 +151,12 @@ write. Your agent will find papers forever — that is what it is for, and it is
 no opinion about when you have enough. **Saturation is the opinion.** Without it you are not
 reviewing a literature, you are being fed one.
 
-*Facilitator note:* students consistently under-estimate saturation and are startled by how early
-it arrives on a well-formed question. On a badly-formed one it never arrives — and that is
-diagnostic, not a failure of effort. A question that will not saturate is usually a topic
-wearing a question's clothes. Send them back to line two of their one-page.
+*Facilitator note —* **`PREDICTED`**, never observed; this course has not run. We expect students
+to under-estimate saturation and to be startled by how early it arrives on a well-formed question.
+**Record what actually happens.** The reasoning behind the prediction is the part to trust: on a
+badly-formed question saturation never arrives, which is diagnostic rather than a failure of
+effort. A question that will not saturate is usually a topic wearing a question's clothes — send
+them back to line two of their one-page.
 
 ### Job two — the review is also where your first kill comes from
 
@@ -171,16 +173,15 @@ Then the move that makes the course work:
 handed is a checklist. A kill list you earned is a memory — the entry means something because you
 were there when it cost you.
 
-*Instructor note:* do not supply our kill list. Not in this session, not in any session. A student
-who leaves with **three kills of their own** has something better than our fifty-seven.
+*Instructor note:* do not supply our kill list. Not in this session, not in any session. **Three
+kills of their own beat fifty of anyone else's.**
 
 *Second instructor note, and it is the one to hold onto:* the same hour produced a boundary and a
-kill. Students will remember the kill because it stung. **Ask them at the end which one changed
-what they are going to do next** — it is almost always the saturation number, and almost never the
-one they would have reported.
+kill. **Ask them at the end which one changed what they are going to do next.**
 
-*Instructor note:* do not supply our kill list. Not in this session, not in any session. A student
-who leaves with **three kills of their own** has something better than our fifty-seven.
+**`PREDICTED`:** they will report the kill, because it stung — and the answer that actually changed
+their next move will be the saturation number. Never observed. **This one is worth logging
+verbatim**, because if it is wrong the hour is structured around the wrong beat.
 
 ---
 
