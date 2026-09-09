@@ -22,6 +22,38 @@ worse than prose that admits it is not — it does not get checked.
 If you cannot find the primary, write what you actually have:
 `(Thomas, verbally, 2026-08-22 — not verified against a syllabus)`.
 
+## Our stories go in the structure, not the prose
+
+**Added 2026-09-08.** Some students take this remotely and asynchronously. They cannot raise a
+hand. So a lab anecdote in learner-facing text — *"we hit that five times in three days," "our gate
+approved a degenerate null"* — reaches them as an assertion they can neither interrogate nor
+verify, from people they have never met. In a live room a facilitator expands it in ten seconds.
+Async, it is either dead weight or name-dropping.
+
+**The rule.** Sort every war story into one of three places:
+
+| where | what belongs | why it works async |
+|---|---|---|
+| **Learner-facing body text** | published, citable sources only | they can go read it |
+| **Facilitator notes** | our anecdotes, freely | a human is present to expand it |
+| **Exercises and session design** | our failures rebuilt synthetically | the story becomes something they *do* |
+
+**The third row is the good one, and it is where most of them should go.**
+`seeded-01-the-approved-analysis` *is* a real gate failure of ours, reconstructed so a student
+meets the defect instead of hearing about it. That transmits more than the anecdote ever did, and
+it needs no trust in us at all.
+
+So: **the stories stay — they move.** When you catch yourself writing *"we once…"* in a session
+file, ask whether it wants to be a facilitator note or an exercise. It is almost never body text.
+
+Two things this rule does **not** forbid:
+
+- **Naming our own defects in facilitator notes**, including embarrassing ones. Session 4 tells
+  facilitators to say plainly that our gate approved a degenerate null. Keep that. A room being
+  taught to gate should hear that the people who built the gate failed it.
+- **Published work, ours or anyone's.** If it has a citation a student can follow, it is a source,
+  not an anecdote.
+
 ## Dates on everything
 
 This engagement moves. A claim that was true in January was still sitting in our notes in August,

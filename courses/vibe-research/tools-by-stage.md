@@ -131,7 +131,7 @@ picture. Write the number down.
 |---|---|
 | **DeclareDesign** (R) | Declare a design as a code object under **MIDA** — Model, Inquiry, Data strategy, Answer strategy — then `diagnose_design()` **simulates it and reports its statistical properties before you run it**. Companions: `randomizr` (assignment), `fabricatr` ("imagining your data before you collect it"), `DesignLibrary` (templates). Covers observational and experimental, causal and descriptive. |
 | **dagitty** (browser + R), **dowhy** (Python) | Draw the causal structure and it tells you what to adjust for — **and what adjusting for would break.** Collider bias becomes a mechanical catch instead of a thing you have to remember. |
-| **Design analysis** (Gelman & Carlin) | Type **S** (sign) and Type **M** (magnitude) errors instead of plain power. Far more useful at small *n* — Type M is exactly the *d* = 9.86-at-*n*-3 failure in our own corpus. |
+| **Design analysis** (Gelman & Carlin) | Type **S** (sign) and Type **M** (magnitude) errors instead of plain power. Far more useful at small *n*: it tells you that *conditional on reaching significance*, an underpowered study's effect size is inflated — so a huge *d* from a tiny sample is evidence of low power, not of a huge effect. |
 | **Specification-curve / multiverse analysis** (Steegen et al. 2016; Simonsohn et al.) — `specr`, `multiverse` (R) | Enumerate every defensible analytic choice and report the whole distribution. The formalisation of researcher degrees of freedom. |
 | **Classical DOE** (Box, Hunter & Hunter) — `pyDOE3`, `statsmodels` | Factorial, fractional factorial, blocking, confounding structure, resolution. |
 | **Power** — G\*Power, `statsmodels.stats.power`, `pingouin.power_*` | Sample size at design time rather than as a post-hoc apology. |
@@ -207,7 +207,7 @@ unique values first. Read the log's *tail*, not its head.
 
 | tool | status | what it closes |
 |---|---|---|
-| **pingouin** | `known` | Reports effect sizes **with confidence intervals by default**, and Hedges' *g* directly. We once headlined a *d* = 9.86 at n=3 with no CI and a ~20% small-sample inflation that lived in a commented-out caveat. A library whose default output includes the corrected statistic makes that error harder to make than to avoid. |
+| **pingouin** | `known`, **installed 2026-09-08** (0.6.1) — demo-able, but not used in the work this course draws on | Reports effect sizes **with confidence intervals by default**, and Hedges' *g* directly. Cohen's *d* at small *n* is upward-biased by roughly `1 − 3/(4df−1)`; at *n* = 3 that is about 20%, and a bare *d* with no interval hides both the bias and the width. A library whose default output includes the corrected statistic and its CI makes that error **harder to make than to avoid** — which is a better safeguard than remembering. |
 | **statsmodels**, **scipy.stats** | `used` | What we use. Powerful, and entirely willing to let you report an uncorrected *d* at n=3 without comment. |
 | **`scipy.stats.bootstrap`** | `used` | Resampling with BCa. **Teach the trap**: refit any residualisation *inside* each replicate, or the interval comes out too narrow. |
 | **jamovi** + **jmv** | `known` | GUI with a reproducible syntax trail — a real option for non-programmers. |
@@ -256,22 +256,42 @@ Two things to steal, and the second is the one students need:
    finding and the tenth reads as despair. **Most of what an adversarial pass produces does not
    survive arbitration, and that is the process working, not failing.**
 
-We have the same ratio from the other side: six false alarms in one evening, all ours, the work
-clean every time. Published version, our version, same number.
+*Facilitator note:* we have hit this ratio from the inside more than once — an evening's worth of
+findings, every one of them an instrument fault, the work clean throughout. Tell that story here if
+the room needs it; the published number above carries the point on its own for anyone reading this
+asynchronously.
 
 ### Mechanical detectors
 
-**statcheck** (recomputes reported *p*-values from test statistics), **GRIM** and **GRIMMER**
-(whether a reported mean/SD is arithmetically possible for the stated *n*), **SPRITE** (reconstructs
-plausible raw distributions). Free, fast, and — per our prior-art scan — **nobody teaches with
-them**, which is an opening rather than a curiosity.
+**statcheck** (recomputes reported *p*-values from test statistics; R), **GRIM** and **GRIMMER**
+(whether a reported mean/SD is arithmetically possible for the stated *n*), **SPRITE**
+(reconstructs plausible raw distributions). Free, fast, and — per the prior-art scan — **no
+published curriculum teaches with them**, which is an opening rather than a curiosity.
+
+> **GRIM is the build exercise for this stage, and it is the best one in the course.**
+> **`known`, implemented and controls passing 2026-09-08 — not yet run against our own corpus,
+> so not `used`.** It is **fifteen lines of arithmetic** with no
+> dependencies: if *N* observations are integers their total is an integer, so the mean can only be
+> one of *N* values. A reported mean that is not the rounded form of any of them **cannot exist**,
+> whatever the data was. No statistics, no *p*-value, no judgement call.
+>
+> A student writes it in an hour, and walks out owning a working error detector they can point at
+> real published papers. That is the entire philosophy of this course in one exercise: **they build
+> the instrument, then use it on something real.**
+>
+> Teach the limits in the same hour, because they are where the thinking is. GRIM applies **only**
+> to integer-valued measures, and it goes blind once *N* ≥ 10^decimals — at two decimals it has no
+> power above *N* = 100. An inconsistency says the reported *set* cannot co-exist; it does not say
+> **which** number is wrong, and it is not evidence of misconduct.
+>
+> Facilitator reference implementation (do **not** distribute): `tools/grim_reference.py`.
 
 ### And the kill list is still yours
 
-**We do not ship ours, in any session.** A kill list you are handed is a checklist. A kill list you
-earned is a memory, and the entry means something because you were there when it cost you. A
-student who leaves with **three of their own** has something better than our fifty-odd. The methods
-above tell you how to *run* a gate; only your own failures tell you what to put in it.
+**No course ships you one, this one included.** A kill list you are handed is a checklist. A kill
+list you earned is a memory, and the entry means something because you were there when it cost you.
+**Three of your own beat fifty of anyone else's.** The methods above tell you how to *run* a gate;
+only your own failures tell you what to put in it.
 
 **Build — the check, and then the check on the check:**
 
@@ -279,8 +299,9 @@ above tell you how to *run* a gate; only your own failures tell you what to put 
 
 Then the inverse, which is the one that gets missed: **would this check print the same thing if the
 artifact were correct and my pattern were wrong?** A broken check reports a *defect*, not an error
-— it fails toward alarm, which looks like a finding and survives the glance a crash would not. Six
-false alarms in one evening, all ours, the work clean every time.
+— **it fails toward alarm.** That is the dangerous direction, because an alarm looks like a finding
+and survives the glance a crash would never survive. A check that crashes gets fixed in a minute; a
+check that cries wolf gets believed.
 
 *This stage is the course's reason for existing.* Brodeur et al. ran 288 researchers through
 reproduction work and found that error detection was the capability that degraded — not just under
@@ -299,8 +320,9 @@ fine. The thing that quietly gets worse when you work with an agent is exactly t
 | **Zenodo** | `known` | A DOI and an archived copy. Read is keyless; deposit needs a token. |
 
 **Build — the staleness hook.** Is the built PDF older than its source? One line, and it belongs in
-`pre-commit` rather than in your habits. We hit that defect **five times in three days across three
-people**, including a shipped paper missing six of eight rows of a results table.
+`pre-commit` rather than in your habits. This is among the most common defects in any
+build-a-document workflow, and among the least visible: the PDF opens, it looks finished, and the
+table in it is two revisions old. Nothing about a stale artifact announces itself.
 
 *Done when a stranger can retrieve it and re-run it.* That is the definition of done for the whole
 pipeline, and it currently gets one bullet in session 4. `OPEN`, and the cheapest fix is to make
