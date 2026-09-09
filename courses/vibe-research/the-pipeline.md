@@ -39,9 +39,9 @@ stage" against a stage list that does not exist.
 
 ## The observation that should shape the tools list
 
-Map every tool in `toolset.md` onto that table and a pattern falls out immediately:
+Map every tool in `toolset.md` onto that table and three rows come back empty:
 
-| stage | tools |
+| stage | tools *in our list* |
 |---|---|
 | 1 Question | **none** |
 | 2 Survey | Zotero, Better BibTeX, Zotero API, OpenAlex, Semantic Scholar, PubMed, ClinicalTrials.gov |
@@ -52,11 +52,19 @@ Map every tool in `toolset.md` onto that table and a pattern falls out immediate
 | 7 Gate | **none — ours is bespoke** |
 | 8 Ship | Quarto, LaTeX, Zenodo |
 
-**Stages 1, 3 and 7 have no tools.** They are the judgment stages — and they are exactly the
-stages that decide whether the other five were worth doing.
+> **⚠ CORRECTED 2026-09-08.** This table was read as *"stages 1, 3 and 7 have no tools"* and that
+> claim went into four files before Thomas asked whether experiment design was really a solved
+> problem. **It is.** DeclareDesign, dagitty, specification-curve analysis and classical DOE all
+> live at stage 3; literature-based discovery and citation-graph mapping at stage 1; statcheck,
+> GRIM and the Red Team Challenge protocol at stage 7.
+>
+> The empty cells describe **our list**, which we assembled for our own pipeline. An absence in
+> your own inventory is not an absence in the world. Corrected tables:
+> [`tools-by-stage.md`](./tools-by-stage.md).
 
-That is not a gap in the tool list. It is the shape of the work, and it is worth saying out loud
-in session 1:
+The surviving distinction is narrower and it is the one worth saying out loud in session 1 — the
+mechanical stages have tools that *do the work*; the judgment stages have tools that *structure the
+judgment and hand it back to you*:
 
 > **Your agent is strongest where the work is mechanical and weakest where it is decisive.**
 > Survey, execute, analyse and ship are the stages it can carry almost alone. Question, design
@@ -114,9 +122,13 @@ Invert it and it answers the question this course actually graduates people on:
 | 7 | Gate | **never unsupervised** | It does not know which failures were yours, and a gate built from someone else's failures is a checklist. |
 | 8 | Ship | **distant** | Verify the built artifact against source yourself — one command. |
 
-**Three "never"s, and they are stages 1, 3 and 7 again** — the same three that have no tools. That
-is not a coincidence; it is the same fact stated twice. A stage with no tool is a stage where
-judgment is the whole job, and judgment is exactly what cannot be entrusted.
+**Three "never"s, and they are stages 1, 3 and 7 again** — the same three our tool list came back
+empty on. Not a coincidence, and the corrected version is sharper than the original: these are the
+stages where the available tools **structure a judgment and then hand it back**. `diagnose_design()`
+reports your design's properties; it cannot tell you the comparison was the wrong one. `statcheck`
+finds an impossible *p*-value; it cannot tell you the claim was never worth testing. The tool does
+real work and the decision stays with you — which is exactly the definition of a task that cannot
+be entrusted.
 
 *This table is a course output, not just a design note.* A graduate who can defend their own
 version of it — including where they disagree with ours — has demonstrated the thing we are
@@ -129,8 +141,10 @@ actually teaching.
 - ~~**Re-tag `toolset.md` by stage.**~~ **Done 2026-09-08** as a separate file:
   [`tools-by-stage.md`](./tools-by-stage.md) is the selection view, stage-ordered;
   [`toolset.md`](./toolset.md) keeps the barrier table, which answers a different question
-  (what will stop you installing it). The three empty stages are now stated more usefully:
-  **no tool you can install, but a check you can write.**
+  (what will stop you installing it). **Corrected 2026-09-08:** the three "empty" stages are not
+  empty — they carry FINER, problematization, LBD, DeclareDesign, dagitty, specification-curve
+  analysis, Mayo's severe testing and the Red Team Challenge protocol. The empty rows were a fact
+  about our inventory.
 - **Stage 8 is under-taught.** We have tools for it and no session hour. "A stranger can retrieve
   it and re-run it" is the definition of done for the whole pipeline, and it is currently one
   bullet in session 4.

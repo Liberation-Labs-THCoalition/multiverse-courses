@@ -8,8 +8,10 @@
 > cost, credential, install shape, hardware. Pick there; check the barrier table here before
 > anything goes in a syllabus.
 >
-> Note in advance: **stages 1 (question), 3 (design) and 7 (gate) have no tool you can install** —
-> they are the judgment stages, and that absence is the finding, not a gap in the list.
+> **⚠ Note in advance, corrected 2026-09-08:** this file has **no entries** for stages 1, 3 and 7,
+> and we twice mistook that for those stages having no tools. They do — DeclareDesign, dagitty,
+> literature-based discovery, statcheck, and more. **The gap is in this list, not in the field.**
+> Treat every empty row here as "we have not adopted one," never as "none exists."
 
 **Status: `DRAFT`, 2026-08-25.** Suggested by Thomas: point students at good open-source tooling
 for each pipeline stage, e.g. an agentically-maintained Zotero library for lit review.

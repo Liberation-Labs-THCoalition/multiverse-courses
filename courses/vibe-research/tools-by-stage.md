@@ -10,22 +10,34 @@
 
 ---
 
-## The finding, sharpened
+## The finding, corrected twice
 
-The first pass said stages 1, 3 and 7 **have no tools**. True, and it undersold itself. The
-accurate version:
+**First pass:** stages 1, 3 and 7 *have no tools*.
+**Second pass:** they have *no tool you can install, but a check you can write*.
+**Both were wrong**, and the way they were wrong is worth more to this course than the claim was.
 
-> **Stages 1, 3 and 7 have no tool you can install. They have a check you can write.**
+What actually happened: I mapped `toolset.md` — a list assembled for **our** pipeline, by us, for
+our work — found three empty rows, and reported that as a fact about the field. It is a fact about
+our list. There is a large, mature literature on question formation, experimental design and
+adversarial review, most of it older than any of us, some of it packaged as software.
 
-That is a better sentence for this course than the original, because a stage with no tooling reads
-as a stage where you are on your own, and that is not what happens. What happens is that the
-artifact is *yours* — a one-page, a design memo, a kill list — and the check on it is fifteen lines
-you write in an afternoon. Nobody ships those as a package, because they only make sense against
-your artifact.
+> **An absence in your own inventory is not an absence in the world.** The gap you find by reading
+> your own notes is a gap in your notes.
 
-**This is the whole course in one line, and it is the reason we do not hand out automation.** The
-mechanical stages have mature tools you should absolutely use and mostly already know. The
-judgment stages have checks that do not exist until you write them, and writing them is the skill.
+That is now the honest version, and it changes what the course teaches at these three stages. Not
+*"you are on your own here, go build something"* — which would have sent students to reinvent
+`DeclareDesign` badly, exactly as I did. Instead:
+
+> **These stages have methods, and the methods are old. What they do not have is anything that
+> will make the judgment for you.** A design package will tell you your design's properties; it
+> will not tell you the comparison was the wrong one. A question framework will tell you your
+> question is unfalsifiable; it will not tell you it is boring.
+
+**The mechanical stages have tools that do the work. The judgment stages have tools that structure
+the judgment and then hand it back to you.** That distinction survives contact with the literature,
+which the previous one did not.
+
+*What follows is verified — primary sources checked, and the places I got it wrong left visible.*
 
 **Legend.** `used` — we run it in the work this course draws on. `known` — established, but we have
 not used it here; evaluate before adopting. **Build** — the student writes it; it is not a
@@ -33,24 +45,54 @@ download.
 
 ---
 
-## 1 · Question — *no tool*
+## 1 · Question
 
 | | |
 |---|---|
 | **artifact** | the one-page: curiosity · directional claim · falsifier · stake · **stopping condition** |
-| **agent can carry** | drafting variants, arguing the other side, spotting a vague predicate |
-| **agent cannot carry** | whether *you* would accept the falsifier. It will accept anything you propose. |
+| **agent can carry** | drafting variants, arguing the other side, spotting a vague predicate, surfacing candidate connections at scale |
+| **agent cannot carry** | whether *you* would accept the falsifier — it will accept anything you propose — and, per below, it cannot problematize |
 
-**Build — the one-page linter.** Five required fields, and one real assertion: **line 3 (falsifier)
-and line 5 (stopping condition) must name an observation, not a feeling.** A crude test that
-catches most of it: does the line contain a number, a comparison, or a named artifact? "I would
-stop when I am satisfied" fails. "I would stop when three more sources add nothing new" passes.
+### Methods, and they are not new
 
-Fifteen minutes to write, and it is the first thing in the course that is *theirs*. Their partner's
-read in the pair exercise is the other half — the linter catches empty, a human catches hollow.
+| method | what it does |
+|---|---|
+| **FINER** (Hulley et al., *Designing Clinical Research*) | Feasible · Interesting · Novel · Ethical · Relevant. A question-quality rubric, decades old, and frankly a superset of our one-page. |
+| **PICO / PICOT** | Population · Intervention · Comparison · Outcome (· Time). Forces you to *name the comparison*, which is the thing most first drafts omit. |
+| **Problematization** (Alvesson & Sandberg 2011, *AMR* 36(2):247–271; Sandberg & Alvesson 2011, *Organization* 18:23–44) | A published method for generating questions by identifying and **challenging an assumption the literature shares**. Five assumption types to interrogate: in-house, root metaphor, paradigm, ideology, field. |
+| **Strong inference** (Platt 1964, *Science*) | Multiple competing hypotheses, then design the experiment that *excludes* some. Question and design in one move. |
 
-*Why no tool exists:* a question is only well-formed relative to what you would do with the answer,
-and no package knows that.
+### The one that is about agents
+
+Alvesson & Sandberg's whole argument is a contrast between **gap-spotting** — finding what the
+literature has not covered — and **problematization** — challenging what it assumes. They observe
+that gap-spotting dominates, and that it reliably produces uninteresting questions.
+
+> **Gap-spotting is an agent's native mode.** Ask an agent *"what's missing in this literature?"*
+> and it will answer, forever, fluently, and mostly with questions nobody needed answered. It is
+> extremely good at the operation that produces boring research.
+
+Problematization requires holding a position about what the field takes for granted — which is a
+stance, not a retrieval. Your agent can *help you test* an assumption once you have named it. It
+will not name one for you, because naming one means disagreeing with the corpus it learned from.
+
+### Tools, which do exist
+
+| tool | what it does |
+|---|---|
+| **Literature-based discovery** (Swanson's ABC, 1986) | A–B known in one literature, B–C in another, A–C never tested. This is *"a string of things that seem connected"* formalised. **Open** discovery: given A, find candidate Cs. **Closed**: given a known A–C, find the B that explains it. Swanson's fish-oil/Raynaud's link came out of abstracts alone. |
+| **Citation-graph mapping** — Connected Papers, Litmaps, Inciteful, VOSviewer, CiteSpace | Renders the structural holes visible. You look at a map and see the sparse region between two dense clusters. Cheapest possible version of the above, and browser-based. |
+| **OpenAlex + embeddings** | Roll your own LBD. Genuinely buildable in a session, and the students already have the skills. |
+
+**The honest caveat, and it is good teaching material:** LBD is a *candidate generator*. Most of
+what it emits is junk. It relocates the judgment rather than removing it — which is a more
+interesting thing to teach than "no tools exist," and it is the same shape as every other stage.
+
+**Still build the one-page linter.** Five required fields, one real assertion: **the falsifier and
+the stopping condition must name an observation, not a feeling.** Crude test that catches most of
+it — does the line contain a number, a comparison, or a named artifact? *"I would stop when I am
+satisfied"* fails. *"I would stop when three more sources add nothing new"* passes. It is fifteen
+minutes and it is downstream of a method now, rather than a substitute for one.
 
 ---
 
@@ -75,21 +117,39 @@ picture. Write the number down.
 
 ---
 
-## 3 · Design — *no tool*
+## 3 · Design — the most mature of the three, and the one I called empty
 
 | | |
 |---|---|
 | **artifact** | the design memo: the comparison, the controls, and what each control's failure would do |
-| **agent can carry** | enumerating conditions, proposing controls, finding the confound you named |
+| **agent can carry** | enumerating conditions, proposing controls, finding the confound you named, running the diagnosis |
 | **agent cannot carry** | noticing that your control cannot fail. It will approve a design that must succeed. |
 
-**Build — the null-data dry run.** Before any real data: generate data under the null, run the
-*entire* analysis on it, and confirm it does **not** produce a positive. This is the single highest
--value thing a student can build in this course, and it is an afternoon.
+### Tools, and there are good ones
 
-It is also the operational definition of the stage's *done when*: **a control exists that is
-capable of failing.** If your pipeline returns a result on noise, you have not built a control, you
-have built a result generator — and you would have shipped it.
+| tool | what it does |
+|---|---|
+| **DeclareDesign** (R) | Declare a design as a code object under **MIDA** — Model, Inquiry, Data strategy, Answer strategy — then `diagnose_design()` **simulates it and reports its statistical properties before you run it**. Companions: `randomizr` (assignment), `fabricatr` ("imagining your data before you collect it"), `DesignLibrary` (templates). Covers observational and experimental, causal and descriptive. |
+| **dagitty** (browser + R), **dowhy** (Python) | Draw the causal structure and it tells you what to adjust for — **and what adjusting for would break.** Collider bias becomes a mechanical catch instead of a thing you have to remember. |
+| **Design analysis** (Gelman & Carlin) | Type **S** (sign) and Type **M** (magnitude) errors instead of plain power. Far more useful at small *n* — Type M is exactly the *d* = 9.86-at-*n*-3 failure in our own corpus. |
+| **Specification-curve / multiverse analysis** (Steegen et al. 2016; Simonsohn et al.) — `specr`, `multiverse` (R) | Enumerate every defensible analytic choice and report the whole distribution. The formalisation of researcher degrees of freedom. |
+| **Classical DOE** (Box, Hunter & Hunter) — `pyDOE3`, `statsmodels` | Factorial, fractional factorial, blocking, confounding structure, resolution. |
+| **Power** — G\*Power, `statsmodels.stats.power`, `pingouin.power_*` | Sample size at design time rather than as a post-hoc apology. |
+
+> **A correction worth keeping in the syllabus.** The first version of this file told students to
+> **build a null-data dry run** — generate data under the null, run the whole analysis, confirm it
+> does not produce a positive — and called it the highest-value thing they could build here.
+>
+> That is `diagnose_design()`, with less rigour, ten years late. I proposed it having declared the
+> stage tool-less *without checking*. The exercise is still worth doing deliberately if you are
+> staying in Python and want to feel the mechanism in your hands — but **do it knowing you are
+> reimplementing a known thing, not inventing one.** That distinction is most of what separates
+> learning from wasted evenings, and it is a distinction your agent will never draw for you,
+> because it will happily help you build either.
+
+**The stage's *done when* is unchanged: a control exists that is capable of failing.** If your
+pipeline returns a result on noise, you have not built a control, you have built a result
+generator — and you would have shipped it.
 
 **Ask both questions of every control, not one:**
 
@@ -161,18 +221,57 @@ you residualise a discrepancy away, say out loud what it would mean if it were r
 
 ---
 
-## 7 · Gate — *no tool, deliberately*
+## 7 · Gate — methods aplenty; the kill list is still yours
 
 | | |
 |---|---|
 | **artifact** | your kill list — your own failures, written as checks someone else could run |
 | **host** | `pre-commit`, `pytest` — obvious homes for the checks *once they exist* |
-| **agent can carry** | turning a described failure into a runnable check |
+| **agent can carry** | turning a described failure into a runnable check; running the mechanical detectors |
 | **agent cannot carry** | knowing which failure was yours |
 
-**We do not ship our kill list, in any session.** A kill list you are handed is a checklist. A kill
-list you earned is a memory, and the entry means something because you were there when it cost you.
-A student who leaves with **three of their own** has something better than our fifty-odd.
+### Methods
+
+| method | what it gives you |
+|---|---|
+| **Severe testing** (Mayo, *Statistical Inference as Severe Testing*, 2018) | A claim passes only if it survived a test it would **probably have failed had the claim been false**. This is the principled statement of our own rule below — same idea, better formulation, with a literature behind it. |
+| **Adversarial collaboration** (Kahneman; Mellers, Hertwig & Kahneman 2001) | Two parties who disagree design the test *together* and pre-commit to what each outcome means. The formal protocol for what we do informally. |
+| **Pre-mortem** (Klein, *HBR* 2007) | Assume it already failed; explain why. Fifteen minutes, no tooling, and it belongs in **session 2**, not here. |
+| **Many-analysts** (Silberzahn et al. 2018) | Same data, 29 teams, divergent results. The cheap classroom version is two students, one dataset. |
+
+### The Red Team Challenge, and its numbers
+
+Lakens & Tiokhin ran a **paid red team** on a submission-ready manuscript in 2020. Five reviewers,
+three weeks, $200 each, plus a donation per issue on a severity tier set by a **neutral arbiter**
+(Ruben Arslan): **$100** major · **$20** minor-computational-reproducibility · **$10** minor.
+
+> **107 reports submitted → 18 unique critical issues → 5 major.** Final donation: $660.
+
+Two things to steal, and the second is the one students need:
+
+1. **The arbiter is a distinct role.** Neither the author nor the red team decides what counts.
+   In a classroom that is a third student, and it costs nothing.
+2. **107 → 5.** That is the yield of a real adversarial pass, published, by careful people. Tell
+   students this *before* their first review, because otherwise the first false alarm reads as a
+   finding and the tenth reads as despair. **Most of what an adversarial pass produces does not
+   survive arbitration, and that is the process working, not failing.**
+
+We have the same ratio from the other side: six false alarms in one evening, all ours, the work
+clean every time. Published version, our version, same number.
+
+### Mechanical detectors
+
+**statcheck** (recomputes reported *p*-values from test statistics), **GRIM** and **GRIMMER**
+(whether a reported mean/SD is arithmetically possible for the stated *n*), **SPRITE** (reconstructs
+plausible raw distributions). Free, fast, and — per our prior-art scan — **nobody teaches with
+them**, which is an opening rather than a curiosity.
+
+### And the kill list is still yours
+
+**We do not ship ours, in any session.** A kill list you are handed is a checklist. A kill list you
+earned is a memory, and the entry means something because you were there when it cost you. A
+student who leaves with **three of their own** has something better than our fifty-odd. The methods
+above tell you how to *run* a gate; only your own failures tell you what to put in it.
 
 **Build — the check, and then the check on the check:**
 
@@ -209,8 +308,36 @@ the stage-8 hook the last thing every student builds.
 
 ---
 
+## Sources
+
+Verified 2026-09-08 against primaries, not summaries. Where a search summary and the primary
+disagreed, the primary is what is written above — the Red Team numbers reconcile only from the
+source (a summary gave "18 critical" and "5 major / $660" as if they were the same figure; they are
+different tiers of the same tally).
+
+- Alvesson & Sandberg 2011, *AMR* 36(2):247–271 · Sandberg & Alvesson 2011, *Organization* 18:23–44
+- Swanson 1986, literature-based discovery (fish oil / Raynaud's)
+- DeclareDesign — <https://declaredesign.org/> · CRAN · Blair, Coppock, Humphreys, *APSR*
+- Lakens & Tiokhin, Red Team Challenge 2020 — <https://www.the100.ci/2020/07/01/red-team-part-3/>
+- Mayo 2018, *Statistical Inference as Severe Testing*
+- Steegen et al. 2016 (multiverse) · Gelman & Carlin (Type S/M) · Platt 1964 (strong inference)
+- Klein 2007 (pre-mortem) · Silberzahn et al. 2018 (many analysts)
+- Brodeur et al. 2026, *PNAS* 123(22) — see [prior art](../../docs/prior-art.md)
+
+`SNIPPET` — FINER (Hulley), PICO/PICOT, statcheck/GRIM/GRIMMER/SPRITE and dagitty are named from
+established knowledge and were **not** re-read tonight. Well-known, but check before they go in
+front of a room.
+
+---
+
 ## `OPEN`
 
+- **We should actually adopt two of these before teaching them.** `DeclareDesign` is R and our
+  stack is Python — either accept the R dependency for one session or find the honest Python
+  equivalent. `dagitty` runs in a browser and costs nothing, so that one is close to free.
+- **Run `statcheck`/`GRIM` over our own corpus before recommending them.** Recommending a detector
+  we have never pointed at ourselves is exactly the `known`/`used` distinction this repo exists to
+  respect.
 - **Stage 6 has no build step.** That may be correct — it is the one stage where the library's
   default is the intervention — but it leaves session 3 lighter on construction than the others.
 - **Stage 8 needs session time**, not a bullet. See above.

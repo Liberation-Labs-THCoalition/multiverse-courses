@@ -26,9 +26,11 @@ here. Also carries **the entrustment ladder**: which stages a graduate may hand 
 unsupervised, and which three they never may.
 
 [`tools-by-stage.md`](tools-by-stage.md) — **the selection view.** What to reach for at each of the
-eight stages, and — at the three that have no tool — what the student **builds** instead. The
-finding that shapes the course lives here: *stages 1, 3 and 7 have no tool you can install, but
-they do have a check you can write.*
+eight stages, the methods behind them, and what the student builds themselves. The distinction that
+shapes the course lives here: *the mechanical stages have tools that do the work; the judgment
+stages have tools that structure the judgment and hand it back to you.* It also carries a corrected
+claim — we twice reported stages 1, 3 and 7 as having **no tools**, which was a fact about our
+inventory, not about the field.
 
 [`toolset.md`](toolset.md) — **the procurement view**: cost, credential, install shape, hardware.
 Tools selected on one rule:
