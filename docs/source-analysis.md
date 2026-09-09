@@ -135,8 +135,18 @@ only we can write, and it should be the spine.
 
 *"Teaching Reproducibility and Embracing Variability: From Floating-Point Experiments to
 Replicating Research."* Proc. 3rd ACM Conference on Reproducibility and Replicability,
-Vancouver, Jul 29-31 2025. `10.1145/3736731.3746162` (paywalled; read via abstract, venue
-listing and the companion *Embracing Deep Variability*, ACM REP 2024).
+Vancouver, Jul 29-31 2025. `10.1145/3736731.3746162`.
+
+> **⚠ CORRECTED 2026-09-09.** This header used to say *"paywalled; read via abstract, venue
+> listing and the companion"*, and `toolset.md` called it a *"metadata-only sighting"* where
+> *"the title is doing all the work."* **Both were wrong: the paper is gold open access and the
+> ACM DL merely blocked an automated fetch.** All ten pages have now been read. We had asserted
+> its pedagogy in detail from an abstract while our own legend said `SNIPPET — do not cite` — a
+> hostile audit caught it, and the fix was to go and read the thing.
+>
+> **What it actually is:** a 26-hour course (six 4-hour sessions + one 2-hour; *the abstract says
+> 24 and the body says 26 — an internal inconsistency in their paper*), 20 fourth- and fifth-year
+> CS students at INSA Rennes, Fall 2024, working in **pairs**, 10 groups.
 
 **Structure.** Two halves. First: floating-point associativity — *"how often is
 (x + y) + z = x + (y + z)?"* — as a reproducibility "Hello World", with Docker, GitHub
@@ -150,7 +160,19 @@ replications that extended or challenged the originals.
 by construction.* The floating-point question has an answer you can compute in an afternoon
 and still opens onto compilers, containers and precision. A replication is bounded by the
 paper already existing: you get their number or you do not, and the interesting part is why.
-**Acher does not teach focus. He hands students targets that cannot sprawl.**
+> **⚠ The sentence that used to sit here — *"Acher does not teach focus. He hands students targets
+> that cannot sprawl"* — is DELETED, 2026-09-09. Both halves are contradicted by the paper.**
+>
+> **The targets are supplied but they do sprawl.** The variability space inside them explodes
+> combinatorially — that is the paper's actual thesis, and the word *"Variability"* is in its
+> title. And students *do* exercise focus: the paper explicitly credits them with **"good judgment
+> in selecting focused, tractable subsets."** So it is not bounded-by-construction-instead-of-
+> focus. It is a bounded *entry point* onto an unbounded space, with focus as the student's job.
+>
+> That is a better model than the one we invented for them, and closer to what our own target bank
+> does. What survives untouched: **instructor-curated targets, chosen from a menu of three
+> (§4.1), with the instructors reproducing them first.** That is real practice at a real
+> institution with a real cohort, and it is the part the supplied-target decision leans on.
 
 **Where that puts us — an open tension, not a defect.** Our session 1 asks students to bring
 *their own* curiosity, which is unbounded by construction. That is a real strength (it is

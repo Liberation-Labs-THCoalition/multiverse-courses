@@ -57,8 +57,8 @@ download.
 
 | method | what it does |
 |---|---|
-| **FINER** (Hulley et al., *Designing Clinical Research*) | Feasible · Interesting · Novel · Ethical · Relevant. A question-quality rubric, decades old, and frankly a superset of our one-page. |
-| **PICO / PICOT** | Population · Intervention · Comparison · Outcome (· Time). Forces you to *name the comparison*, which is the thing most first drafts omit. |
+| **FINER** (Cummings, Browner & Hulley, ch. 2 of Hulley et al., *Designing Clinical Research*, **4th ed. 2013, p. 17**; in print since 1988) | Feasible · Interesting · Novel · Ethical · Relevant. It **intersects** our one-page rather than containing it: *Interesting* ≈ curiosity, *Relevant* ≈ stake. It adds two we omit (*Novel*, *Ethical*) plus a feasibility bundle — subjects, expertise, cost, scope, fundability. **It has no falsifier and no stopping condition.** Its "confirms, refutes, or extends" is about refuting *the literature*, not naming what would kill your own claim; its cost/scope bullets are pre-study resource bounds, not a stopping rule. **FINER asks whether the study should exist; our one-page asks what would make you drop it.** |
+| **PICO / PICOT** | Population · Intervention · Comparison · Outcome (· Time). **Prompts** you to name the comparison — it does not force anything, and the *C* is explicitly optional in the original ("the comparison intervention or exposure, *if relevant*"). Worth teaching anyway, because the omission is measured: Huang et al. found **2 of 59** clinical questions carried all four elements, and *C* is the routinely empty slot. |
 | **Problematization** (Alvesson & Sandberg 2011, *AMR* 36(2):247–271; Sandberg & Alvesson 2011, *Organization* 18:23–44) | A published method for generating questions by identifying and **challenging an assumption the literature shares**. Five assumption types to interrogate: in-house, root metaphor, paradigm, ideology, field. |
 | **Strong inference** (Platt 1964, *Science*) | Multiple competing hypotheses, then design the experiment that *excludes* some. Question and design in one move. |
 
@@ -130,7 +130,7 @@ picture. Write the number down.
 | tool | what it does |
 |---|---|
 | **DeclareDesign** (R) | Declare a design as a code object under **MIDA** — Model, Inquiry, Data strategy, Answer strategy — then `diagnose_design()` **simulates it and reports its statistical properties before you run it**. Companions: `randomizr` (assignment), `fabricatr` ("imagining your data before you collect it"), `DesignLibrary` (templates). Covers observational and experimental, causal and descriptive. |
-| **dagitty** (browser + R), **dowhy** (Python) | Draw the causal structure and it tells you what to adjust for — **and what adjusting for would break.** Collider bias becomes a mechanical catch instead of a thing you have to remember. |
+| **dagitty** (browser **and** R, free, no account, runs offline from a downloaded zip), **dowhy** (Python) | Draw the causal structure and it computes minimal sufficient adjustment sets — **and shows you what adjusting for would break.** Biasing paths turn red; force adjustment on a descendant of the exposure and it reports that no valid set exists. Collider bias becomes mechanical. **The authors' own limit, which matters more in a room than anywhere else: it is mechanical *given your DAG*. Whether the collider is in the diagram at all is still something you have to have thought of.** |
 | **Design analysis** (Gelman & Carlin) | Type **S** (sign) and Type **M** (magnitude) errors instead of plain power. Far more useful at small *n*: it tells you that *conditional on reaching significance*, an underpowered study's effect size is inflated — so a huge *d* from a tiny sample is evidence of low power, not of a huge effect. |
 | **Specification-curve / multiverse analysis** (Steegen et al. 2016; Simonsohn et al.) — `specr`, `multiverse` (R) | Enumerate every defensible analytic choice and report the whole distribution. The formalisation of researcher degrees of freedom. |
 | **Classical DOE** (Box, Hunter & Hunter) — `pyDOE3`, `statsmodels` | Factorial, fractional factorial, blocking, confounding structure, resolution. |
@@ -263,14 +263,30 @@ asynchronously.
 
 ### Mechanical detectors
 
-**statcheck** (recomputes reported *p*-values from test statistics; R), **GRIM** and **GRIMMER**
+**statcheck** — recomputes a reported *p*-value from the reported test statistic **and df**, and
+flags mismatches. Handles *t, F, r, z, χ², Q* only, and only in APA style. Canonical implementation
+is an R package (Nuijten & Epskamp), **but there is a free zero-install web app at `statcheck.io`
+that takes PDF/DOCX/HTML**, plus an unofficial Python port on PyPI that lags the R release.
+*(Corrected 2026-09-09 — this row said "R" flatly, which for a Python cohort means "skip it." It is
+a browser tool in thirty seconds.)* It checks **internal consistency only** — never whether the
+analysis was right. Then **GRIM** and **GRIMMER**
 (whether a reported mean/SD is arithmetically possible for the stated *n*), **SPRITE**
 (reconstructs plausible raw distributions). Free, fast, and — per the prior-art scan — **no
 published curriculum teaches with them**, which is an opening rather than a curiosity.
 
 > **GRIM is the build exercise for this stage, and it is the best one in the course.**
-> **`known`, implemented and controls passing 2026-09-08 — not yet run against our own corpus,
-> so not `used`.** It is **fifteen lines of arithmetic** with no
+> **`used` — upgraded 2026-09-09. We ran it over our own published corpus before recommending it,
+> and it found a real defect on the first pass.**
+>
+> *`kv-cloak-defense-paper` reports **7%** confabulation in a table captioned **"50 prompts per
+> model."** At n=50 only even percentages are reachable — 7% would need 3.5 confabulations. The
+> paper's own body says `n=7` and "50–100 prompts each", so the data was right and **the caption's
+> N was wrong**; it shipped in three files. The neighbouring rows (12%, 26%) are reachable at 50,
+> which is exactly why nothing ever looked odd.*
+>
+> That is the argument for this exercise, and we did not have to borrow anyone else's example.
+>
+> It is **fifteen lines of arithmetic** with no
 > dependencies: if *N* observations are integers their total is an integer, so the mean can only be
 > one of *N* values. A reported mean that is not the rounded form of any of them **cannot exist**,
 > whatever the data was. No statistics, no *p*-value, no judgement call.
@@ -360,9 +376,19 @@ different tiers of the same tally).
 - Klein 2007 (pre-mortem) · Silberzahn et al. 2018 (many analysts)
 - Brodeur et al. 2026, *PNAS* 123(22) — see [prior art](../../docs/prior-art.md)
 
-`SNIPPET` — FINER (Hulley), PICO/PICOT, statcheck/GRIM/GRIMMER/SPRITE and dagitty are named from
-established knowledge and were **not** re-read tonight. Well-known, but check before they go in
-front of a room.
+**`SNIPPET` list cleared 2026-09-09.** All five were checked against primaries, and **the debt was
+not cosmetic — two of the five were wrong:**
+
+| source | verdict | what changed |
+|---|---|---|
+| **FINER** | **WRONG** | "superset of our one-page" was false *in both directions* — FINER has no falsifier and no stopping condition, and adds two criteria we lack. Rewritten as an intersection. |
+| **Acher et al.** | **WRONG** | Not paywalled; gold OA, ten pages, now read. The pedagogy sentence we asserted is contradicted by the text. → [source analysis](../../docs/source-analysis.md) |
+| **statcheck** | stretched | "R" was the load-bearing error for a Python cohort — there is a free zero-install web app. |
+| **PICO/PICOT** | stretched | "Forces" fails; the *C* is optional in the original. The omission claim survives and is now measured. |
+| **dagitty** | **supported** | Every checkable assertion held. Added the authors' own limit: mechanical *given your DAG*. |
+
+*A `SNIPPET` flag is not a formality. Two of five named-from-memory claims did not survive contact
+with the source, and one of them was load-bearing in a session.*
 
 ---
 
