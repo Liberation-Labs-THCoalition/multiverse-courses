@@ -26,6 +26,31 @@ and be believed.
 And then the harder half, which most of a session on rigor never reaches: **some defects are not
 in a claim at all**, so no claim-checker will ever see them.
 
+## The clock
+
+240 minutes, not 4 × 60. See [running a session](../../docs/running-a-session.md) for the
+arithmetic and the pairing mechanics.
+
+| | block | min |
+|---|---|---|
+| 0:00 | Opening | 5 |
+| 0:05 | **Hour 1** — build the gate | 50 |
+| 0:55 | **break** — stand up, look at something far away | 5 |
+| 1:00 | **Hour 2** — seeded exercise | 40 |
+| 1:40 | **Hour 3** — defects that do not present as claims | 40 |
+| 2:20 | **break** — *post the handoff pairs before this break, not after* | 5 |
+| 2:25 | **Hour 3½** — the handoff test | 20 |
+| 2:45 | fix what the handoff found | 20 |
+| 3:05 | **Hour 4** — the finding you will defend | 50 |
+| 3:55 | close | 5 |
+
+**Hour 4 is 5 minutes per student.** At 50 minutes that is **ten students maximum** — which is the
+real cohort cap for this session, and it should be stated when the session is scheduled rather than
+discovered at 3:05. Above ten, either run two rooms for hour 4 or drop to 4 minutes and hold the
+line hard.
+
+---
+
 ## Hour 1 — Build the gate out of your own failures
 
 Students have three kills by now, earned in sessions 1–3. This hour turns them into something that

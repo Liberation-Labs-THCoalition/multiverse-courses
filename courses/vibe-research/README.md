@@ -19,6 +19,17 @@ presentation** — with an adversarial gate at every step that they built themse
 Not "here is our pipeline." The transferable claim is: *your team of two needs a gate, and it has
 to be made of your own failures.*
 
+## Running one
+
+[`docs/running-a-session.md`](../../docs/running-a-session.md) — **the clock, the breaks, and the
+pairing mechanics.** 240 minutes is not four blocks of sixty; a realistic "hour" here is **50
+minutes** once you account for two brain breaks, transitions, and pairing. Also the rule that saves
+the most dead air: **never ask a remote room to pair up — pre-assign and post the list at the
+previous break.**
+
+`OPEN` — session 4 has a per-block clock. **Sessions 1–3 do not yet**, and were written against
+60-minute blocks. They need the same pass.
+
 ## Tooling
 
 [`the-pipeline.md`](the-pipeline.md) — **the eight stages, named once.** Everything else points
