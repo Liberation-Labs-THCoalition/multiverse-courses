@@ -18,7 +18,22 @@ is no villain, which is exactly why students do not see it coming.
 
 ---
 
-## The seeded defect
+## There are TWO defects, not one — added 2026-09-09
+
+An agent review found a second one the answer key had missed, and separated them correctly:
+
+**1. Mechanically inert.** `control_passes` is computed (line 103), **printed** (line 114) and
+returned (line 118) — and **nothing ever branches on it.** The module docstring claims *"This gates
+interpretation of the encoding arm."* It gates nothing; it is a printed string. A student who wires
+in the missing `if` has fixed a real thing.
+
+**2. Algebraically inert** — the one below, and **fixing the first does not fix it.**
+
+*That separation is the sharpest framing anyone has produced for this exercise, and it is worth
+teaching explicitly: a control can fail two independent ways, and repairing the visible one leaves
+the structural one untouched.*
+
+## The seeded defect (the algebraic one)
 
 Safeguard 1 validates the encoding features by requiring them to detect **`answerable`** (knowledge
 state) at AUROC > 0.65.
@@ -96,9 +111,20 @@ which one you reported.
 | 25–35 | Full room. Take answers before confirming anything. |
 | 35–40 | The table above, then the generalisation. |
 
-**Do not rescue them at minute 20.** The productive failure is approving v2, and **`PREDICTED`**
-(never observed) most rooms will, because all three required changes are visibly present and
-correctly implemented. Approving it and *then* seeing the `+0.000` is worth more than being told.
+**Do not rescue them at minute 20.** The productive failure is approving v2, because all three
+required changes are visibly present and correctly implemented. Approving it and *then* seeing the
+`+0.000` is worth more than being told.
+
+> **⚠ The `PREDICTED` line that used to sit here — "most rooms will approve v2" — is FALSIFIED for
+> agents, and still untested for humans.**
+> [Ten agents reviewed v2 cold](./AGENT_REVIEW_RESULTS.md). **10/10 rejected it**, and 10/10 named
+> the mechanism. **Assume any student with an agent will have the answer within minutes.**
+>
+> That does not kill the hour, it relocates it. The exercise stops being *"can you find it?"* and
+> becomes **"your agent found it in ninety seconds — now explain why the fix was requested in good
+> faith, why complying produced it, and what you would have asked for instead."** The reviewer was
+> right, the author complied correctly, and the result is broken. That reasoning is the actual
+> lesson and no agent hands it to you.
 
 ---
 

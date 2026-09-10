@@ -115,12 +115,32 @@ Invert it and it answers the question this course actually graduates people on:
 |---|---|---|---|
 | 1 | Question | **never unsupervised** | It will accept any falsifier you propose, including one you would never honour. |
 | 2 | Survey | **distant** — spot-check the citations | Its best stage. The residual risk is a source that does not contain the claim. |
-| 3 | Design | **never unsupervised** | It will approve a design that cannot fail. This is the expensive one. |
+| 3 | Design | **never unsupervised on your OWN design** — but a strong *outside* reviewer | See the correction below. |
 | 4 | Pre-register | **indirect** — you write the commitments, it formats them | The commitment must be yours or it is not a commitment. |
 | 5 | Execute | **distant** | Mechanical, and provenance stamping makes it auditable after the fact. |
 | 6 | Analyse | **indirect** | It runs the test correctly and cannot tell you whether the hypothesis died or the measurement did. |
 | 7 | Gate | **never unsupervised** | It does not know which failures were yours, and a gate built from someone else's failures is a checklist. |
 | 8 | Ship | **distant** | Verify the built artifact against source yourself — one command. |
+
+> ### ⚠ STAGE 3 CORRECTED 2026-09-09 — I tested this and I was wrong
+>
+> This row used to read *"never unsupervised — it will approve a design that cannot fail."*
+> **[Falsified.](../vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md)**
+> Ten agents were handed the seeded-02 revision cold — no hint, just *"review this"* — and
+> **10/10 rejected it and named the mechanism**, nine of them by exercising the failure path rather
+> than reading the code. Pre-registered prediction was ≤2/6. Two blind adjudicators, full agreement.
+>
+> **What survives is narrower and more useful.** Those agents reviewed *someone else's work*, with
+> no stake and no priors. That is not the condition the course warns about. The claim that holds is
+> the one session 2 actually makes: **an agent reviewing the design you built together shares every
+> assumption you gave it.** An outside reviewer with no priors is a different instrument.
+>
+> So the teachable line is not *"don't trust it here"* — it is **"it is a strong adversary on work
+> it did not help you build, and an unreliable one on work it did."** Which is a better thing to
+> teach, and it is now measured rather than asserted.
+>
+> **Still untested, and it is the real question:** does an agent catch this when it *helped write
+> the design?*
 
 **Three "never"s, and they are stages 1, 3 and 7 again** — the same three our tool list came back
 empty on. Not a coincidence, and the corrected version is sharper than the original: these are the
