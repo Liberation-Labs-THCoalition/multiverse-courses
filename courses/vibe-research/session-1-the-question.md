@@ -1,8 +1,8 @@
 # Session 1 — The question you cannot stop thinking about
 
-> **Clock:** [the four clocks](../../docs/session-clocks.md) — S1 needs ~211 min against 201 available. Cuts are listed there, and **pairs must be posted PRE-SESSION** (hour 1's pair exercise precedes any break). Hours 2 and 3 reference materials that **do not exist yet**.
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S1 needs ~211 min against 201 available. Cuts are listed there, and **pairs must be posted PRE-SESSION** (hour 1's pair exercise precedes any break). Hours 2 and 3's materials exist as of 2026-09-29, in a **facilitator pack kept outside this public repo** (the answers are in it).
 
-**Status: `DRAFT`, 2026-08-24.** Four hours. First of four.
+**Status: `DRAFT`, 2026-08-24; hours 2–3 written 2026-09-29 from verified external cases.** Four hours. First of four.
 **Standards covered:** `vr.formulate`, `vr.verify-number`, and the lit-review standard from
 [Course: Question](../../standards/vibe-research/README.md).
 
@@ -85,43 +85,107 @@ harness. You know that. You are here to learn where to point one.
 
 ## Hour 2 — The prediction game, which is pre-registration in miniature
 
-Covers `vr.formulate` 4–5.
+Covers `vr.formulate` 4–5. **40 minutes.** Anyone whose data turned out not to reach their question
+is matched to a pre-made setup **at the break before this hour**, not inside it.
 
-Three surprising claims about model behaviour. Everyone writes down which they think are true
-*before* the reveal. **That is pre-registration**, done in ninety seconds, and the point is that
-it costs nothing and changes everything about how the reveal lands.
+**The game (15 min).** Three short claims about model behaviour, each taken from a published paper.
+Before any reveal, every student writes two things on a card: **true or false**, and **how sure**, as
+a number from 50% to 100%. Ninety seconds, with no agent and no search. **That is
+pre-registration**: a prediction and a confidence, written before the data. It costs nothing, and
+it changes everything about how the reveal lands.
 
-**Why "I was wrong" is the most valuable sentence in research.** The file-drawer problem, the drug
-trial framing. Our own example, and it should be a live one rather than a polished one: *we
-predicted preference training would worsen calibration; the data said the opposite, and the
-falsification was more useful than the confirmation would have been.*
+Then reveal them one at a time. A reveal is not just *true* or *false*. It is **the one thing that
+decides it**, shown from the primary source. The set is chosen so that at least one false claim is
+one that was widely reported as true, and at least one true claim is one that nobody predicted.
 
-**Then the harder half:** each student identifies a **cheaper question that would have to be
-answered first**, and states whether their available data can address their claim at all. A good
-fraction will discover it can't. That discovery is a session-one success, not a failure — and it
-is what the pre-made setups are for.
+**Score calibration, not accuracy.** For each claim: if you were right, your penalty is
+(1 − confidence)²; if you were wrong, it is confidence². The lowest total wins. A confident miss
+costs far more than an honest 60%. Announce the winner and say why. It will usually not be whoever
+got the most right.
+
+> **Pre-registration does not make you right. It makes your wrongness visible — to you, first.**
+
+**"I was wrong", published (8 min).** One case, told straight. A research team wrote down what it
+expected before the data came in, measured the opposite, and published it anyway, with a sentence
+saying so. The point is not the humility. **The point is the second finding the falsification
+bought**, which exists only because the forecast was on paper before the data arrived.
+
+Why is "I was wrong" the most valuable sentence in research? A confirmation tells you what you
+already believed. A falsification written down in advance tells you something you could not have
+learned any other way, and it usually tells you what your instrument was getting wrong.
+
+**Play it on yourself (3 min).** Go back to the one-page from hour 1. Under the claim, write **your
+prediction for your own question** and how sure you are, on the same 50–100% scale as the game.
+Seal it: fold the page, or commit it with a timestamp. **You will read it again in session 3.**
+
+**Then the harder half (14 min).** Each student names a **cheaper question that would have to be
+answered first**, and states whether their available data can address their claim at all: *yes*,
+*no*, or *I cannot tell yet*. A good fraction will discover it can't. That discovery is a
+session-one success, not a failure, and it is what the pre-made setups are for.
+
+*Facilitator note —* **`PREDICTED`**, never observed: the modal miss will be a confident *true* on
+the claim that was widely reported. **Record the confidences, not just the verdicts.** If the room is
+well calibrated from the start, the game needs harder claims, not easier ones.
+
+*The claims, reveals, sources and the "I was wrong" case are in the **facilitator pack**, which is
+deliberately **not in this repository**. The repo is public, and this game only works once.*
 
 ## Hour 3 — Trace a number to its artifact
 
-Covers `vr.verify-number` 0–6. **This is the centrepiece and it is entirely hands-on.**
+Covers `vr.verify-number` 0–6. **This is the centrepiece and it is entirely hands-on.** 50 minutes.
 
-Each student receives a short claim and a pointer to the artifact behind it, and traces it.
-The set is seeded so that each of the five failure modes appears at least once:
+Each student receives a **case card**: one sentence containing a number or a citation, exactly as it
+appeared in print, and a pointer to where it came from. The job is to follow the pointer **all the
+way to the artifact**, meaning the table, the dataset, the court record, or the edit that first
+introduced it, and to write down what is actually there.
 
-| seeded case | what the student should discover |
+Every card is a real defect in real published work, and **most of them are still wrong at the first
+place you will look.** The instructor should say so. Nothing in this hour is hypothetical.
+
+**Two rounds of 13 minutes, one card each, swapped between rounds,** so that every card is traced by
+two people who have not compared notes. Agents are allowed and expected. Note every time your agent
+told you something was verified; the debrief uses it.
+
+**The record sheet** has five lines per card:
+
+1. the claim, as printed
+2. what I actually opened (the URL or file, not the citation)
+3. what it says, quoted
+4. my verdict (*matches*, *disagrees*, *missing*, *impossible*, *superseded*, or *can't tell*) and
+   how sure I am
+5. **what I would have concluded if I had stopped one step earlier**
+
+Line five is the one that teaches. On more than one card, stopping one step early produces a
+confident *matches*.
+
+**Compare across the room (15 min).** First pair the two tracers of each card: where did your
+verdicts differ, and who went one step further? Then sort every card onto the wall by *what kind of
+wrong it was*. **Let the room name the piles.** They will arrive at something close to five failure
+modes:
+
+| what the room finds | the failure mode |
 |---|---|
-| artifact **disagrees** | the cited value isn't what the file says |
-| artifact **missing** | the trail ends; there is no primary |
-| artifact **written from the claim** | the "source" agrees because it was generated from the text |
-| value outside its own **confidence interval** | arithmetically impossible, and visible |
-| a **stale caveat** | the caveat's numbers were superseded by a later correction to the text it caveats |
+| the cited value is not what the artifact says | artifact **disagrees** |
+| the trail ends; there is no primary | artifact **missing** |
+| the "source" agrees because it was written from the claim | artifact **written from the claim** |
+| the number contradicts the paper's own other numbers | **arithmetically impossible** |
+| the number was corrected, but not where you read it | **superseded** |
 
-Every one of these is drawn from a real defect in our own published work in the last fortnight.
-That is the point. **Nothing in this hour is hypothetical, and the instructor should say so.**
+The pattern that emerges, *a plausible number is harder to doubt than an obviously missing one*, is
+the whole reason a gate exists, and it lands far better discovered than asserted. Ask the room:
+**which cards did anyone mark *matches*?** Those are the plausible ones, and they are the ones a
+gate is for.
 
-Compare across the room afterward. The pattern that emerges — *a plausible number is harder to
-doubt than an obviously missing one* — is the whole reason a gate exists, and it lands far better
-discovered than asserted.
+**Close (6 min).** The card that fooled you, or nearly did, is the raw material for your first kill
+entry in hour 4.
+
+*Facilitator note —* **`PREDICTED`**, never observed: the most *matches* verdicts will land on the
+cards where the printed number is faithfully copied from a source that is itself wrong. **Record
+which cards drew them.** If we are wrong about which cards fool people, the set needs a different
+trap.
+
+*The cards, pointers, expected findings and spares are in the **facilitator pack**, not in this
+repository, for the same reason as hour 2.*
 
 ## Hour 4 — Build the lit review, and get two things out of it
 
@@ -214,8 +278,14 @@ on it. Candidates worth drafting from our own corpus, since the defects are alre
 ## Open
 
 - Cohort size, and whether sessions are recorded
-- Whether hour 3's seeded claim set is drawn from our papers verbatim (attribution + our own
-  comfort) or paraphrased
+- ~~Whether hour 3's seeded claim set is drawn from our papers verbatim or paraphrased~~ —
+  **RESOLVED 2026-09-29:** neither. Every card and every game claim is an **external, published,
+  verified** case (Thomas, 2026-09-24: external examples first; the repo is public).
+- **Session 3 should open by reading back the sealed predictions** from hour 2's "play it on
+  yourself". Nothing in session 3 does that yet.
+- **Where the facilitator pack lives.** Pending the public/private repo decision; until then it is
+  kept outside the public repo. Any example used in class must **not** also appear on the course
+  splash page, or the page spoils the class.
 - Where the 60 days start
 - Baba Yaga's two extra riddle types — now a **PR to the campus repo** rather than a request,
   per Thomas 2026-08-24; still Liz's to accept

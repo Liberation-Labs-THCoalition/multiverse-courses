@@ -1,2 +1,9 @@
 __pycache__/
 *.pyc
+
+# Course website build (tools/build_site.py, mkdocs, .github/workflows/pages.yml)
+/_site/
+/site/
+/_staging/
+/mkdocs.yml
+/.venv-site/

@@ -1,8 +1,8 @@
 # Session 2 — Designing something that can fail
 
-> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, and hour 3 has an ordering defect: it asks students to run "their planned test", which hour 4 has not specified yet.
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
 
-**Status: `DRAFT`, 2026-08-25.** Four hours. Second of four.
+**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29 around an external case.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
 your variable does*, *select a control that is capable of failing*.
 
@@ -73,32 +73,57 @@ passed, and the search was still worthless.
 
 ## Hour 3 — A test that cannot reject
 
-Covers `vr.prereg` objectives 0–2, 5.
+Covers `vr.prereg` objectives 0–2, 5. **The centrepiece. 50 minutes.**
 
-**The centrepiece, and the most uncomfortable teaching case we own.**
+**The habit this hour installs:**
 
-A pre-registered design specified a permutation null: shift a mask over the data, recompute the
-statistic, compare. It stated a floor of `p = 1/64 = 0.016`.
+> **Before trusting any test, ask whether it could possibly have rejected, and prove that it could,
+> by building the data that would make it.**
 
-**The mask had period 4. Shifting a period-4 mask gives four distinct masks, not sixty-four.** The
-true floor was `p = 0.25`. The test could not have rejected under *any* data.
+A test that cannot reject produces a perfectly ordinary number. Nothing about the output looks wrong.
+The only way to find out is to try to make the test say *yes*.
 
-Two things make this worth an hour rather than an anecdote:
+**The case (5 min).** One sentence from a published paper, read aloud: a comparison between two
+groups, a row of p-values, and a conclusion drawn from them. Poll the room: *is this evidence for
+the conclusion?* Take the vote and don't discuss it yet.
 
-- **The reviewing agent approved it at 0.92 confidence**, called the null "principled," and issued
-  a required change instructing the author to report the impossible floor. **A reviewer that shares
-  your assumption returns confidence, not coverage** — and an agent reviewing your design shares
-  every assumption you gave it.
-- **The tell was free and arrived before any interpretation**: the output contained nothing but
-  multiples of 0.25.
+**Make it reject (12 min), in pairs, with the paper open.** One question only: **what data would
+have made this test come out the other way?** Build it. Describe it, sketch it, or have your agent
+generate it, then check your agent's answer by running the test on it rather than taking its word.
+Some pairs will find that no such data exists, and they should be able to say *why*.
 
-**The exercise.** Every student runs their planned test on **pure noise** — shuffled labels, random
-data, same pipeline. Two questions: does it ever reject? And **how many distinct values does the
-null actually take?** Count them. A null with a handful of distinct values is not a null with a
-thousand draws.
+**The contrast (8 min).** The same paper also contains a second test, run by the same authors on the
+same data. Repeat the question for that one. **One of the two tests could have come out the other
+way. Only one of them is evidence.** Then read the authors' own sentence about the first test, and
+ask what the reader-facing conclusion claimed that the numbers never could.
 
-**The rule:** before reading any resampling p-value, print the number of unique values in the null.
-It is one line and it would have saved the design above.
+**Your own test (15 min).** Hour 4 writes the formal pre-registration, so this is a draft. Write one
+line: *the test I currently expect to use for my claim.* Then produce two datasets, synthetic, small
+and made with your agent:
+
+1. one that **should** make your test reject, and run the test on it;
+2. one that **should not**, and run the test on it.
+
+If the first one won't reject, however extreme you make it, you have found a test that cannot reject
+before it cost you anything. That is a success. Hour 4 is where you replace it.
+
+**Debrief (7 min).** Which tests in the room could not be made to reject? What was the mechanism in
+each? Keep the list. **Don't name a rule for them.** The room should leave with the question, not a
+checklist item, because the question transfers and the checklist doesn't.
+
+**Close (3 min).** Your agent will review your design in hour 4. It shares every assumption you gave
+it, including the one that says your test works. **A reviewer that shares your assumption returns
+confidence, not coverage.** The only reviewer that doesn't share it is the data you built to break
+the test.
+
+*Facilitator note —* **`PREDICTED`**, never observed: most students' own tests *will* be able to
+reject, and they'll be disappointed. Say plainly that this is the good outcome. The hour pays off for
+the one or two students whose test cannot, and for everyone else it pays off later, the next time a
+result looks clean.
+
+*The case, its pointer, the reveal, and what **not** to use in this hour (one mechanism looks
+tempting and would give away session 4's exercise) are in the **facilitator pack**, not in this
+repository.*
 
 ## Hour 4 — Pre-register, then have your agent attack it
 
@@ -135,22 +160,19 @@ bring both the result *and* the noise-run from hour 3.
 
 ## Open
 
-- Whether hour 3's noise exercise needs a supplied harness or students build it (leaning: build
-  it, it is six lines and building it is the lesson)
-- **RESOLVED 2026-08-25 (Thomas):** no lab specifics. The failure state is reproduced
-  synthetically instead — `exercises/seeded-01-the-approved-analysis/`, a 0.92-confidence review
-  passing a null with an orbit of 4. Same shape, nothing of ours exposed, and students track it
-  down rather than being shown it.
-
-- 🔴 **BLOCKING CONFLICT, found 2026-09-09 by audit. Needs a decision, not an edit.**
-  **This hour teaches seeded-01's answer**, and session 4 hour 2 then runs seeded-01 as a
-  discovery exercise. Same orbit-of-4, same 0.92 confidence, same *"principled"*, same one-line
-  fix. Anyone who took session 2 has been told the answer for a full hour, a month earlier — so
-  session 4's *"most groups defend the analysis"* run-sheet is written for a room the course's own
-  sequence guarantees will not exist.
-
-  Three ways out, all viable, none mine to pick: **(a)** session 2 keeps the teaching case and
-  session 4 gets a different seeded exercise; **(b)** session 2 loses the worked case and session 4
-  keeps the discovery; **(c)** they are never scheduled in the same cohort's path — which only
-  works if the rolling model wins. See the `OPEN` on
-  [arc vs. rolling](../../docs/audit-2026-09-09.md).
+- ~~Whether hour 3's noise exercise needs a supplied harness~~: superseded. The 2026-09-29 hour 3
+  has students build their own two datasets with their agent; no harness is needed.
+- **RESOLVED 2026-08-25 (Thomas):** no lab specifics. The failure state this hour originally used
+  is reproduced synthetically in `exercises/seeded-01-the-approved-analysis/` for session 4, where
+  students track it down rather than being shown it.
+- ✅ **RESOLVED 2026-09-24 (Thomas): option (b).** Session 2 gives up that case, and session 4 keeps
+  seeded-01 as the discovery it was built to be. Option (c) was never available: cohorts are rolling
+  *and prereq-chained*, so every session-4 room has already taken session 2.
+- ✅ **DONE 2026-09-29:** hour 3 is rewritten around an external, published test that cannot reject,
+  one whose mechanism is **not** seeded-01's, and around the *habit* rather than a key (Thomas,
+  2026-09-24: soften the closing rule). **This page must never state seeded-01's specific mechanism
+  or check**: session 4 depends on students working it out. The case itself is in the facilitator
+  pack.
+- **`OPEN`, found 2026-09-29: hour 2's worked case is our own lab's research** (a hybrid model's
+  period-4 mask), which the 2026-08-25 ruling excludes. It needs an external case, and it sits
+  uncomfortably close to seeded-01's mechanism.

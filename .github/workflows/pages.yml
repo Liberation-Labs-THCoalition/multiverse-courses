@@ -1,0 +1,76 @@
+# Build and publish the course website to GitHub Pages (spec: docs/site-spec.md).
+#   /          the splash (splash/, Vite + React)
+#   /course/   the course pages (tools/build_site.py, then MkDocs + Material)
+#
+# Takes effect only once the repo's Pages source is set to "GitHub Actions"
+# (Settings > Pages > Build and deployment > Source). While Pages is set to
+# "Deploy from a branch", this workflow's deploy step cannot publish.
+name: Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deployment at a time; let a running one finish rather than cancel it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Build the splash
+        working-directory: splash
+        run: npm ci && npm run build
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Install the course build dependencies
+        run: pip install -r requirements-site.txt
+
+      - name: Build the course pages
+        run: |
+          python tools/build_site.py
+          mkdocs build --strict
+
+      - name: Assemble _site (splash at the root, course under course/)
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -R splash/dist/. _site/
+          cp -R site _site/course
+
+      - name: Public-build check (no answer keys in the site), and its positive control
+        run: |
+          python tools/check_public_build.py _site
+          python tools/check_public_build.py --self-test _site
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

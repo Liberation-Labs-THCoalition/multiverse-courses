@@ -67,9 +67,9 @@ four facilitators independently arrived at **eight**, for a reason arithmetic mi
 | 0:00 | Opening — **plus course-level orientation** (only session 1 carries it) | 8 |
 | 0:08 | **H1** — curiosity → a claim that can be wrong | 50 |
 | 0:58 | **break** — "back at 1:03" | 5 |
-| 1:03 | **H2** — the prediction game ⚠ *materials do not exist* | 40 |
+| 1:03 | **H2** — the prediction game *materials: facilitator pack (private), 2026-09-29* | 40 |
 | 1:43 | transition | 3 |
-| 1:46 | **H3** — trace a number to its artifact ⚠ *materials do not exist* | 50 |
+| 1:46 | **H3** — trace a number to its artifact *materials: facilitator pack (private), 2026-09-29* | 50 |
 | 2:36 | **break** — post H4 pairs here | 5 |
 | 2:41 | transition | 3 |
 | 2:44 | **H4** — build the review loop, run it to saturation | 50 |
@@ -115,11 +115,11 @@ which is unbounded work inside a fixed block).
   with *"arrive with a two-condition design."* This is a defect fix, not a time cut — **no block in
   the course ever schedules designing one**, and you cannot list what differs between conditions you
   have not written.
-- **H3 — ordering defect.** The exercise says *"run your **planned test** on pure noise"*, but the
-  planned test is specified in **hour 4's** pre-registration, which has not happened yet. Shrink to
-  *"run a permutation null over your ordering labels and print `len(set(null))`"* — the deliverable
-  is the **distinct-value count**, not a working analysis. Have the six-line skeleton written in
-  advance and post it at minute 10 to anyone stuck.
+- **H3 — ordering defect: FIXED 2026-09-29.** The old exercise ran a "planned test" that hour 4
+  had not yet specified. The rewritten hour has students write a one-line *expected* test and build
+  two small synthetic datasets for it (one that should make it reject, one that should not), so
+  nothing depends on hour 4. It fits 50 minutes (5 + 12 + 8 + 15 + 7 + 3). **This doc must not state
+  seeded-01's specific check**: session 4 depends on students discovering it.
 - **H4 −23: the prereg is NOT completable in 50 minutes as written.** Seven bullets spanning
   `vr.prereg` 0–6, including three terms the novice audit names as the drop-out point — *estimator,
   sensitivity analysis, power.* **Power alone can eat 20 minutes** from someone who has never
