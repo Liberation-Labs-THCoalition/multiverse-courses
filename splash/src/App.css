@@ -1,0 +1,369 @@
+@import './components/backgrounds/DotGrid.css';
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0e27;
+  overflow: hidden;
+}
+
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 2rem 0 4rem;
+  margin-top: 4rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* DecryptedText: characters still in noise */
+.hero-title .encrypted {
+  color: #4a5288;
+}
+
+.tagline {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: #a0a0a0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Teaser Section */
+.teaser {
+  text-align: center;
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+
+.teaser-number {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  transition: all 0.3s ease;
+}
+
+.number.glitch {
+  animation: glitch-shake 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #ff6b6b;
+}
+
+@keyframes glitch-shake {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  10% {
+    transform: translate(-2px, 2px);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(-1px, 1px);
+  }
+  60% {
+    transform: translate(1px, -1px);
+  }
+}
+
+.teaser-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.teaser-description {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #d0d0d0;
+}
+
+.teaser-citation {
+  font-size: 0.85rem;
+  color: #808080;
+  font-style: italic;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Sessions Section */
+.sessions {
+  text-align: center;
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+
+.sessions-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #707070;
+  margin-bottom: 1.5rem;
+}
+
+.sessions-strip {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.4;
+  min-height: 3rem;
+}
+
+/* TrueFocus ships display-sized words; fit them to the strip */
+.sessions-strip .focus-container {
+  gap: 0.5em 1.1em;
+}
+
+.sessions-strip .focus-word {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+/* StarBorder sets the container's padding inline; size the inner content instead */
+.cta-button {
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button .inner-content {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  transform: scale(1.02);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid #8b93c9;
+  outline-offset: 4px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  font-size: 0.9rem;
+  color: #606060;
+  border-top: 1px solid #303030;
+  margin-top: 4rem;
+}
+
+/* Outlier Easter Egg */
+/* A shade brighter than the grid's dots: findable by a patient eye, not a beacon */
+.outlier-dot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: #3e4778;
+  border-radius: 50%;
+  top: 35%;
+  right: 15%;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outlier-dot:hover {
+  background: #ffaa00;
+  box-shadow: 0 0 12px rgba(255, 170, 0, 0.6);
+  transform: scale(1.5);
+}
+
+.outlier-dot.hovered {
+  background: #ffaa00;
+}
+
+.outlier-tooltip {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1f3a;
+  border: 1px solid #404060;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  color: #ffaa00;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0 2rem;
+    margin-top: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .teaser {
+    padding: 2rem 0;
+  }
+
+  .teaser-number {
+    min-height: 5rem;
+  }
+
+  .sessions {
+    padding: 2rem 0;
+  }
+
+  .sessions-strip {
+    font-size: 1.25rem;
+    min-height: 2.5rem;
+  }
+
+  .cta {
+    padding: 1.5rem 0;
+  }
+
+  .cta-button .inner-content {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .outlier-dot {
+    top: 30%;
+    right: 10%;
+    width: 5px;
+    height: 5px;
+  }
+
+  .outlier-tooltip {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .teaser-number {
+    font-size: 2.5rem;
+    min-height: 4rem;
+  }
+
+  .teaser-description {
+    font-size: 0.85rem;
+  }
+
+  .teaser-citation {
+    font-size: 0.75rem;
+  }
+
+  .sessions-strip {
+    font-size: 1rem;
+    min-height: 2rem;
+  }
+
+  .cta-button .inner-content {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+  }
+}

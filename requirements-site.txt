@@ -1,0 +1,6 @@
+# Build dependencies for the course pages (tools/build_site.py, then mkdocs build --strict).
+# Pinned to the versions the site was verified with. Keep mkdocs below 2.0: MkDocs 2.0 drops
+# the plugin and theme system that Material for MkDocs needs (Material prints this warning on
+# every build). The splash has its own dependencies in splash/.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
