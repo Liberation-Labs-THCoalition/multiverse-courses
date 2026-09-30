@@ -99,7 +99,7 @@ we know that `d_eff` — the participation ratio we would most naturally demo �
 at n=90 prompts**: 95–98% of layers are still rising between m=80 and m=89, and the value at the
 peak layer moves 14.6 → 39.5 as sample size goes 20 → 89.
 
-The *peak location* is rock solid (layer 21 at every sample size, in both a hybrid and a dense
+The *peak location* is rock solid (the same layer at every sample size, in each
 model). The *magnitude* is substantially a function of how many prompts we ran.
 
 **So: demo the shape, not the number.** If we put "effective dimensionality ≈ 40" on a slide we

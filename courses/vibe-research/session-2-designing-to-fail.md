@@ -2,12 +2,13 @@
 
 > **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
 
-**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29 and hour 2 rewritten 2026-09-30, each around an external case.** Four hours. Second of four.
+**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29, and hours 1 and 2 rewritten 2026-09-30, each around an external case.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
 your variable does*, *select a control that is capable of failing*.
 
 **Walks in with:** a claim with a direction and a falsifier, a verified citation trail, and one
-earned kill from session 1.
+earned kill from session 1, plus a two-condition design for this session's target, drafted as
+pre-work (not yet written: see Open).
 **Walks out with:** a pre-registration their agent has attacked, the break log, and a second kill.
 
 ---
@@ -27,26 +28,70 @@ Every one of these produces clean, publishable-looking output. None is visible i
 
 ## Hour 1 — The confound that got there first
 
-Covers *identify the confounds that separate your conditions before your variable does*.
+Covers *identify the confounds that separate your conditions before your variable does*. **50
+minutes.**
 
-**Open with the number, not the concept.** In a dataset of ours, prompts were assigned to
-conditions by design — grounded versus three flavours of confabulation. Then:
+**If something other than your variable can tell your conditions apart, it can produce your result
+on its own.** That something is a *confound*. The output it produces looks exactly like a finding.
 
-> **`prompt_len` alone classifies the arms at AUROC 0.9523.**
-> 68% of confabulation prompts are longer than *every single* grounded prompt.
+Bring the two-condition design you drafted as pre-work. The last block runs on it.
 
-The two conditions were near-separable **from the prompt text, before the model ran.** Any
-downstream feature correlated with length would have looked like a detector.
+**The case (3 min).** A published result, read aloud: a large dataset whose conditions were
+assigned by design, and the score a model reached on it. Poll the room: *does the score show that
+the model can do the task the dataset was built to test?* Take the vote and don't discuss it yet.
 
-**The exercise.** Students take their own design and list everything that differs between their
-conditions *other than* the variable of interest. Then they rank the list by "could this alone
-produce my predicted result?" Most people find at least one candidate that could. The honest ones
-find that their condition label is partly a *topic* label.
+**What else separates the conditions? (8 min), in pairs, with the first handout.** It gives you
+the instructions that each condition's items were produced under, exactly as printed, and nothing
+else. Before you see a single item, write down:
 
-**The rule to leave with:** residualization removes the *linear part* of a confound. It does not
-remove the fact that your conditions are different populations. We learned that one the expensive
-way — FWL on length was applied, and the design still could not distinguish a detector from a
-prompt-family classifier.
+1. every way the conditions could differ *other than* the thing the dataset is meant to test;
+2. for each one, whether it alone could let a reader get the label right;
+3. the one you would bet on, and why.
+
+Rank the list and commit to it on paper. The next handout tests it.
+
+**Label it blind (6 min), second handout.** Items from the case, each with part of it withheld.
+Label every item on your own, without talking. Then score yourself against the key and put your
+count on the board. The room's pooled count is the number that matters, not anyone's own score.
+
+**The reveal (6 min), third handout.** What the published analysis found. Check it against the list
+you wrote. Then ask the question this hour adds: **what does this do to the headline score?**
+Answer with numbers, not adjectives.
+
+**The rule to leave with (5 min), fourth handout.** If time is short, this block shrinks to the
+rule itself:
+
+> **Adjusting for a difference is not the same as removing it.**
+
+You can filter out the items that show a difference. You can *residualise* it: subtract from your
+measurement the part that the difference predicts, usually by fitting a straight line. Either way
+you remove what that adjustment can see. You do not make your conditions the same population.
+After any adjustment, ask again whether something could still tell your conditions apart.
+
+**Your own design (17 min).** Take your design and write:
+
+- **how each condition is produced:** who or what makes its items, from what, and in what order.
+  Then how each is run: when, on what machine, with which model version and settings. *"It ran
+  differently on my machine"* is not a support issue. It is an uncontrolled variable;
+- **every difference between your conditions other than the variable**, including differences in
+  how they are run and recorded, such as file names, IDs and order;
+- **the rank:** for each difference, *could this alone produce my predicted result?* Most people
+  find at least one that could. The honest ones find that their condition label is partly a
+  *topic* label;
+- **the blind test for your top candidate:** could a reader, or your agent, tell which condition
+  an item came from without the variable? If you plan to adjust for it, what would the adjustment
+  leave behind?
+
+Keep the list. You will need it again today.
+
+*Facilitator note —* **`PREDICTED`**, not piloted: most pairs will write a list of differences and
+no ranking. Push each pair to commit to a ranking, with a reason for the top item, before the second
+handout lands. The hour pays off when the second handout is scored, and only for the pairs who
+ranked first.
+
+*The case, its sources, the handouts, the key, the reveal, the clock, and what **not** to use in
+this hour are in the **facilitator pack**, not in this repository. Learners get full citations for
+every source at the reveal, once their own answers are on paper.*
 
 ## Hour 2 — A control that is capable of failing
 
@@ -215,3 +260,13 @@ bring both the result *and* the noise-run from hour 3.
   is now built on an external, published case whose negative control was reported as passing. Its
   mechanism is unrelated to seeded-01's. The case, its sources and the reveal are in the facilitator
   pack. **Not piloted.**
+- ✅ **DONE 2026-09-30, pending review:** hour 1's earlier worked case also came from the lab's own
+  research, which the 2026-08-25 ruling excludes. Hour 1 is now built on an external, published case
+  whose conditions were assigned by design, and students work on it with their own hands before the
+  reveal. Its mechanism is unrelated to either seeded exercise's. The case, its sources, the key and the reveal are in the facilitator pack. **Not
+  piloted.** Its blind-labelling handout was drawn at random with a recorded seed and has never been
+  run with a room.
+- **Open: hour 1 assumes the design draft is pre-work.** `docs/session-clocks.md` (H1 −15) moves it
+  there: the target and a one-page template are posted about five days ahead, with *"arrive with a
+  two-condition design."* That template and posting do not exist yet. Until they do, a student who
+  arrives without a design does hour 1's last block on a partner's.
