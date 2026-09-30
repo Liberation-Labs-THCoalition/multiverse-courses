@@ -2,7 +2,7 @@
 
 > **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
 
-**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29 around an external case.** Four hours. Second of four.
+**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29 and hour 2 rewritten 2026-09-30, each around an external case.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
 your variable does*, *select a control that is capable of failing*.
 
@@ -50,26 +50,63 @@ prompt-family classifier.
 
 ## Hour 2 — A control that is capable of failing
 
-Covers *select a control that is capable of failing*.
+Covers *select a control that is capable of failing*. **42 minutes.**
 
 **A control you expect to pass is not a control. It is a decoration.**
 
-Worked example, ours, and it is the good kind of story because the control *worked*: testing
-whether a hybrid model's depth profile carries a period-4 signature from its interleaved
-architecture. The control was a **dense model with a sham period-4 mask** — a model with no such
-structure, tested identically.
+A negative control is a run with everything except the thing you think you are measuring, put
+through the identical pipeline. Its whole value is that it *can* come back positive. So the question
+to ask of a control is not "did it pass?" It is **"what would its failure have looked like, and
+would anyone have been able to see it?"**
 
-The dense control came back **significant**. Larger than the real model, opposite sign. Which meant
-the *method* manufactured the structure, and the finding was dead. **That is a control doing its
-job**, and it cost a result we wanted.
+**The case (4 min).** A published claim, read aloud: a striking finding from a large, carefully
+collected sample, and the one sentence in which the authors report their negative control. The
+control is reported as passing. Poll the room: *does the passing control make you more confident in
+the finding?* Take the vote and don't discuss it yet.
 
-**The exercise, in pairs.** For each student's design: what is the control, and *what would it look
-like if the control failed?* If they cannot describe the failure, they do not have a control.
-Then: what would you conclude if the control fails? Write it down now, while it is cheap.
+**What would failure look like? (8 min), in pairs, with the first handout.** It gives you the claim,
+the control sentence exactly as printed, and a table of measurements with one column left blank:
+the controls. Before anything else is handed out, write down:
 
-**A harder variant worth ten minutes:** a positive control proves the *instrument*. It cannot prove
-the *scope*. We ran a positive control inside a directory that did not contain the target — it
-passed, and the search was still worthless.
+1. what the negative control is: what goes through the pipeline, and what is left out;
+2. what its failure would look like **in these columns**, as numbers rather than adjectives;
+3. what you would conclude about the headline if it failed;
+4. whether the published report lets a reader see which of those happened.
+
+Write it now, while it is cheap. Once the next handout lands, you can no longer write it honestly.
+
+**The blank column (8 min), second handout.** It fills in the controls. Check them against what you
+wrote for (2). Then ask the question this hour adds: **what does the control's failure do to my
+headline number?** Answer with the number, not with an adjective.
+
+**What a control's success buys (4 min), third handout.** A later design, with controls built in
+from the start, each of which could have failed. Ask the second question: **what does the control's
+success do to my headline number?** Find out whether anything is left standing, and why you are
+allowed to believe it.
+
+**Your own control (8 min).** Take your own design and, for its control, write:
+
+- what the control is, and what it leaves out;
+- what its failure would look like in your output, as numbers;
+- what its failure does to your headline number;
+- what its success does to it.
+
+Then the question the case turned on: **what is the blank for your pipeline?** It is the run that
+has everything except the thing you think you are measuring. If you cannot describe its failure, you
+do not have a control. If its success is guaranteed, you have a decoration.
+
+**A harder variant (10 min, the first thing to cut).** A positive control proves the *instrument*.
+It cannot prove the *scope*. The last handout shows one positive control run under more than one
+condition. Ask of it, and then of your own: **under what conditions did you check your positive
+control, and are those the conditions your real data lives in?**
+
+*Facilitator note —* **`PREDICTED`**, not piloted: most pairs will write a vague (2) the first time,
+something like "the control would show something". Push for a number in a column. The hour pays off
+when the second handout lands, and only for the pairs who committed on paper first.
+
+*The case, its sources, the handouts, the reveal, the clock, and what **not** to use in this hour
+are in the **facilitator pack**, not in this repository. Learners get full citations for every source
+at the reveal, once their own answers are on paper.*
 
 ## Hour 3 — A test that cannot reject
 
@@ -173,6 +210,8 @@ bring both the result *and* the noise-run from hour 3.
   2026-09-24: soften the closing rule). **This page must never state seeded-01's specific mechanism
   or check**: session 4 depends on students working it out. The case itself is in the facilitator
   pack.
-- **`OPEN`, found 2026-09-29: hour 2's worked case is our own lab's research** (a hybrid model's
-  period-4 mask), which the 2026-08-25 ruling excludes. It needs an external case, and it sits
-  uncomfortably close to seeded-01's mechanism.
+- ✅ **DONE 2026-09-30, pending review:** hour 2's earlier worked case came from the lab's own
+  research, which the 2026-08-25 ruling excludes, and it sat too close to session 4's exercise. Hour 2
+  is now built on an external, published case whose negative control was reported as passing. Its
+  mechanism is unrelated to seeded-01's. The case, its sources and the reveal are in the facilitator
+  pack. **Not piloted.**
