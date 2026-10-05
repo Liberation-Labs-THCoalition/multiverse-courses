@@ -1,0 +1,76 @@
+{
+  "_about": "The mystery deck's content. Written by Lyra on the date of this file's commit, from the unreserved list in the private facilitator pack and the verified table in docs/site-spec.md. Builders render this file and NEVER change its words. Every non-fictional card cites a verified source on its reveal side. Exactly one card is fictional (fictional: true): render it with data-fictional=\"true\" and show its fiction_notice on the reveal.",
+  "intro": "Each card is a claim. Look at it, predict whether it holds up, then turn it over. You don't score by being right; the deck rewards predicting before you look.",
+  "cards": [
+    {
+      "id": "emergence",
+      "title": "Emergence?",
+      "mystery": "A language model solved 93% of classic theory-of-mind tasks. Has theory of mind spontaneously emerged?",
+      "inspect": "Classic tasks are famous, and famous puzzles can be recognised rather than reasoned through. What would happen with control versions added: the same kind of story, changed so the famous answer is wrong?",
+      "reveal": "The same model, tested properly, solved about 20%. The batteries differ, so this is not the same test scored twice. It is what proper controls do to a headline.",
+      "sources": [
+        { "label": "Kosinski, arXiv:2302.02083 (v1, 2023; PNAS 2024)", "url": "https://arxiv.org/abs/2302.02083" },
+        { "label": "Ullman, arXiv:2302.08399", "url": "https://arxiv.org/abs/2302.08399" }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "selected-for-the-trend",
+      "title": "Selected for the trend",
+      "mystery": "Here are 11 tasks where bigger language models do worse. Is bigger really worse on them?",
+      "inspect": "These tasks were collected because they showed the trend. What happens one step further up in scale?",
+      "reveal": "At 540 billion parameters, only 4 of the 11 still got worse, and 6 turned U-shaped: worse, then better. A trend picked out for its shape can stop at the edge of the sample.",
+      "sources": [
+        { "label": "Wei et al., arXiv:2211.02011", "url": "https://arxiv.org/abs/2211.02011" }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "being-wrong-well",
+      "title": "Being wrong well",
+      "mystery": "Forecasters predicted 12.7% on a hard maths benchmark (MATH) for mid-2022. Did they get close?",
+      "inspect": "Compare the forecast with the score that was actually measured in mid-2022.",
+      "reveal": "The measured score was 50.3%. The researcher who commissioned the forecasts published his own surprise, in public. Saying plainly that you were wrong is part of the method.",
+      "sources": [
+        { "label": "Steinhardt, Bounded Regret (18 Aug 2021; 3 Jul 2022)", "url": "https://bounded-regret.ghost.io/" }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "a-goal-missed",
+      "title": "A goal, missed, said plainly",
+      "mystery": "A lab set out to build a classifier that never lets an injurious completion through. Did they reach it?",
+      "inspect": "Read the lab's own write-up of the result.",
+      "reveal": "In their own words: \"we fell well short of that target\". A lab reporting its miss as clearly as a win is rarer than it should be, and worth copying.",
+      "sources": [
+        { "label": "Redwood Research, write-up on LessWrong (2022)", "url": null }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "a-true-one",
+      "title": "A true one",
+      "mystery": "Language models use information in the middle of a long context worse than information at its start or end. True?",
+      "inspect": "Look at the curve: accuracy against where the relevant document sits in the context.",
+      "reveal": "True. Accuracy is highest when the answer is near the beginning or the end, and dips in the middle. Not every surprising claim is a trap; calibration means believing the ones that hold.",
+      "sources": [
+        { "label": "Liu et al., \"Lost in the Middle\", arXiv:2307.03172", "url": "https://arxiv.org/abs/2307.03172" }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "false-premise",
+      "title": "The greenhouse chart",
+      "mystery": "In a greenhouse trial, 3,000 houseplants played two hours of podcasts a day grew taller than plants kept in silence. The chart shows them reaching 35 metres. Something on this chart is wrong. Can you fix it?",
+      "inspect": "Look at the units on the height axis. Houseplants are not 35 metres tall.",
+      "reveal": "Nicely caught: the axis should say centimetres, not metres. But there's a bigger problem.",
+      "fiction_notice": "This study is invented. There was never a houseplant podcast trial. You fixed a unit inside a claim nobody ever made. Before you polish a citation, check that its source exists.",
+      "sources": [],
+      "fictional": true
+    }
+  ],
+  "closing": {
+    "question": "Did you spot the false premise?",
+    "body": "One card corrected a detail inside a claim that was itself made up. Fixing what's in front of you is easy to reward; questioning the frame is the harder habit. Neither answer is a score: noticing is the point."
+  }
+}
