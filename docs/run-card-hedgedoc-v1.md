@@ -17,8 +17,19 @@ a cohort. Everything runs locally; there is no external instance.
 | `vr-<cohort>-s1` ... `vr-<cohort>-s4` | That session's student-facing lesson (exactly as the site renders it), then a final `## Cohort notes` section that starts empty and is edited live in class |
 | `vr-<cohort>-s<n>-slides` | **Stretch goal.** The same lesson as a reveal.js deck (HedgeDoc slide mode) for delivering it live |
 
-- Each cohort gets fresh notes (new aliases). Old cohorts' notes are never overwritten.
-- `<cohort>` looks like `2026-10a`.
+- Each cohort gets fresh notes (new aliases). `<cohort>` looks like `2026-10a`.
+- **Old cohorts' work is ARCHIVED, never overwritten or deleted** (Thomas, 2026-10-04). Students may want to dig back
+  through it, or come back after a life event and pick up where they left off. Across cohorts, the notes become the
+  data for tuning the course once meta-patterns start to show. So:
+  - **Live notes stay live.** A past cohort's notes stay in HedgeDoc, editable, so a returning student continues in
+    place.
+  - **A `vr-past-cohorts` note** lists every past cohort's hub. Each new hub links to it ("Coming back from an earlier
+    cohort? Your notes are here").
+  - **Snapshots:** at the end of each cohort, and whenever wanted, `tools/archive_hedgedoc.py` saves every note of
+    the cohort to a dated snapshot. A later snapshot never overwrites an earlier one.
+  - **Privacy:** the archive holds student work, and this repo is public. Archives are written OUTSIDE the repo
+    (default `../course-cohort-archives/`, a sibling folder) and are never committed. `.gitignore` gets a
+    `cohort-archives/` line as a second fence.
 
 ## Files you create or change (nothing else)
 
@@ -44,6 +55,16 @@ a cohort. Everything runs locally; there is no external instance.
    - Its link comes from one config value in `mkdocs.yml` `extra:` `class_notes: {base_url: "", cohort: ""}`.
    - When `base_url` is empty, the box says "The live class notes link appears here while a cohort is running."
 5. `tools/test_publish_hedgedoc.py`: the tests listed under "Checks".
+6. `tools/archive_hedgedoc.py`, a CLI: `--cohort ID`, `--base-url`, `--out` (default `../course-cohort-archives/`).
+   - Download every note of the cohort with `GET {base}/{alias}/download`: the hub, s1-s4, the slides, and any note
+     linked from the hub or from a session's Cohort notes (students make their own). Also fetch
+     `GET {base}/{alias}/info` for the title and the last-change time.
+   - Write `<out>/<cohort>/<snapshot UTC timestamp>/<alias>.md`, plus a `manifest.json`:
+     - per note: alias, title, bytes, sha256, last change;
+     - per snapshot: cohort id, archived_at, base_url, script version.
+   - Refuse to write inside the repo's working tree.
+   - Also update the `vr-past-cohorts` note: append the cohort's hub link if it is missing; never remove a line.
+7. `.gitignore`: add `cohort-archives/` and `course-cohort-archives/`.
 
 ## How the slide deck is made (stretch goal)
 
@@ -60,7 +81,12 @@ past about 30 lines, leave it long and note it in the report; do not cut content
 4. `docker compose -f hedgedoc/docker-compose.yml up -d`, then `publish_hedgedoc.py --cohort test-001`: every alias is
    published and its download is byte-equal.
 5. Run step 4 again with the same cohort: every alias is reported as existing, and nothing is overwritten.
-6. `git diff --stat`: only the files listed above have changed.
+6. `archive_hedgedoc.py --cohort test-001`: every note of the cohort is in the snapshot, and each file's sha256
+   equals that of a fresh download.
+   - Run it again: a SECOND snapshot folder appears, and the first is byte-identical to before.
+   - Point `--out` inside the repo: it must REFUSE.
+   - `vr-past-cohorts` lists test-001 exactly once after both runs.
+7. `git diff --stat`: only the files listed above have changed, and `git status` shows no archive files.
 
 ## Rules: stop and report instead of improvising
 
