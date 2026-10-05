@@ -42,7 +42,9 @@ REPO = Path(__file__).resolve().parent.parent
 SOLUTIONS_URL = ""
 
 # docs/run-card-hedgedoc-v1.md: the "This cohort's notes" box at the foot of every session
-# page, one config value in mkdocs.yml `extra:` (`class_notes: {base_url, cohort}`). The box
+# page, one config value: CLASS_NOTES_BASE_URL / CLASS_NOTES_COHORT below. They are written into
+# the generated mkdocs.yml `extra:` (`class_notes: {base_url, cohort}`); mkdocs.yml is regenerated
+# on every build, so set them HERE, not there. The box
 # links to that session's live HedgeDoc note, `vr-<cohort>-s<n>`, under base_url. While
 # base_url is empty, the box shows its "appears here while a cohort is running" text. The run
 # card leaves base_url empty for the first run, so no link is built.

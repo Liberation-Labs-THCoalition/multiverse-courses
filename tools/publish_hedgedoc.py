@@ -141,6 +141,14 @@ def key_gate(keys, dirs: list[Path]) -> list[cpb.Finding]:
     for d in dirs:
         found, _ = cpb.check(d, keys)
         findings += found
+        # Lyra review 2026-10-05: cpb.check catches key-NAMED files and copies of KNOWN keys, but
+        # it does not apply the front-matter rule to the files it scans. A staged markdown file
+        # whose front matter says `audience: facilitator` passed this gate. cpb.key_reason is the
+        # same rule check_public_build uses to define a key, imported, not copied.
+        for p in sorted(Path(d).rglob("*.md")):
+            if cpb.key_reason(p) == "front matter":
+                findings.append(cpb.Finding(str(p.relative_to(d)), "front-matter",
+                                            "front matter says audience: facilitator"))
     return findings
 
 

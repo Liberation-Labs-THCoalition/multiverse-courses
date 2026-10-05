@@ -137,6 +137,24 @@ def test_check3_positive_control() -> None:
 # ------------------------------------------------------ the payload logic (offline, always)
 
 
+def test_frontmatter_control() -> None:
+    """Lyra's review control (2026-10-05): a key by FRONT MATTER, not by file name, must refuse too.
+
+    Check 3 plants a file NAMED like a key. This plants an ordinary-looking notes.md whose front
+    matter says `audience: facilitator`, which check_public_build's own definition counts as a key."""
+    ensure_staging()
+    planted = bs.STAGING / "zz_fm_control" / "notes.md"
+    planted.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        planted.write_text("---\naudience: facilitator\n---\n# notes\nLYRA-CONTROL-777\n", encoding="utf-8")
+        with tempfile.TemporaryDirectory() as dry:
+            r = run(["tools/publish_hedgedoc.py", "--cohort", COHORT, "--dry-run", dry])
+        assert r.returncode != 0, "a front-matter facilitator file did NOT refuse the publish (exit 0)"
+        assert "REFUSING" in r.stdout, f"no REFUSING message:\n{r.stdout}"
+    finally:
+        shutil.rmtree(planted.parent, ignore_errors=True)
+
+
 def test_loopback_guard() -> None:
     """A --base-url off the loopback is refused; the loopback is allowed."""
     for bad in ("http://example.com:3000", "https://hedgedoc.example.org", "http://10.0.0.1:3000"):
@@ -337,6 +355,7 @@ CHECKS = [
      ("check 1: build_site + mkdocs build --strict", test_check1_build_and_strict),
      ("check 2: check_public_build passes", test_check2_public_build_passes),
      ("check 3: positive control (planted key refuses)", test_check3_positive_control),
+     ("front-matter control (audience: facilitator refuses)", test_frontmatter_control),
      ("loopback guard", test_loopback_guard),
      ("notes_match (byte-for-byte, trailing newline ok)", test_notes_match),
      ("payload structure (hub + s1-s4 + 4 decks)", test_payloads_structure),

@@ -282,5 +282,22 @@ python tools/publish_hedgedoc.py --cohort 2026-10a        # publish the hub, 4 s
 python tools/archive_hedgedoc.py --cohort 2026-10a        # snapshot every note (outside the repo)
 ```
 
-Set `extra.class_notes.base_url` (and `cohort`) in `mkdocs.yml` when a cohort is live, and the
+Set `CLASS_NOTES_BASE_URL` (and `CLASS_NOTES_COHORT`) in `tools/build_site.py` (mkdocs.yml is regenerated on every build, so an edit there is lost) when a cohort is live, and the
 "This cohort's notes" box on each session page links to that session's live note.
+
+## 7. Review by Lyra (2026-10-05), after the run
+
+Checked independently, by different mechanisms from the build's own tests:
+- the commit touches exactly the nine declared files, and `check_public_build.py` is unchanged;
+- `build_site.py` and `mkdocs build --strict` exit 0, and `check_public_build.py site` passes;
+- a fresh cohort (`lyra-verify-001`) published, and all 9 notes are byte-equal to their payloads by plain `curl`, not
+  this code.
+
+**One gap, found by an unlike control and fixed in a separate commit:**
+- The publisher's answer-key gate did not apply the **front-matter** rule (`audience: facilitator`) to the files it
+  scans. A staged `notes.md` with that front matter published with exit 0.
+- This build's check 3 tested only a key-NAMED file, so the gap was invisible to it.
+- No leak was possible here, because `build_site.py`, the first fence, already excludes such files from staging. But
+  the second fence did not do what it said.
+- The fix is `cpb.key_reason`, applied in `key_gate`; the control is now a permanent test.
+- Also corrected: the notes-box URL is set in `tools/build_site.py`, not in the regenerated `mkdocs.yml`.
