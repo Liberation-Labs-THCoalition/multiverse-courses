@@ -1,0 +1,48 @@
+# HedgeDoc + Postgres for the Vibe Research course (docs/run-card-hedgedoc-v1.md, item 1).
+#
+# START:  docker compose -f hedgedoc/docker-compose.yml up -d
+# STOP:   docker compose -f hedgedoc/docker-compose.yml down
+#
+# The notes are published with tools/publish_hedgedoc.py (not by hand). For the first local
+# run the instance was already started for us, so this file is written but NOT run here.
+#
+# --- These settings are for LOCAL USE ONLY. ---
+# Anonymous creation and anonymous edits are switched on so the cohort can edit its live notes
+# without accounts. They make the instance open to anyone who can reach it, which is fine only
+# because the port is bound to 127.0.0.1 (the loopback) and never to 0.0.0.0, so nothing
+# outside this machine can connect. Do NOT relax the 127.0.0.1 bind for any "real" deployment.
+
+services:
+  hedgedoc:
+    # The 1.10.x line (the instance this card ran against reported 1.10.3).
+    image: quay.io/hedgedoc/hedgedoc:1.10.3
+    environment:
+      CMD_DOMAIN: localhost
+      CMD_PROTOCOL_USESSL: "false"     # http, no TLS: local only
+      CMD_URL_ADDPORT: "true"          # URLs carry the port, so the base is http://localhost:3000
+      CMD_ALLOW_FREEURL: "true"        # notes live at /<alias>, not behind an account
+      CMD_ALLOW_ANONYMOUS: "true"      # anyone may create a note
+      CMD_ALLOW_ANONYMOUS_EDITS: "true"  # anyone may edit a note — the cohort edits its own live
+      CMD_DATA_DIR: /data
+      CMD_POSTGRES_URL: postgres://hedgedoc:hedgedoc@postgres/hedgedoc
+    ports:
+      # Loopback only. NEVER 0.0.0.0:3000:3000 — that would publish an anonymous-editable,
+      # key-adjacent instance to the network.
+      - 127.0.0.1:3000:3000
+    volumes:
+      - hedgedoc_data:/data
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: hedgedoc
+      POSTGRES_PASSWORD: hedgedoc
+      POSTGRES_DB: hedgedoc
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  hedgedoc_data:
+  postgres_data:

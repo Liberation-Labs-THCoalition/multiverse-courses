@@ -41,6 +41,14 @@ REPO = Path(__file__).resolve().parent.parent
 # "Answer keys"). While it is empty, the box is shown without a link.
 SOLUTIONS_URL = ""
 
+# docs/run-card-hedgedoc-v1.md: the "This cohort's notes" box at the foot of every session
+# page, one config value in mkdocs.yml `extra:` (`class_notes: {base_url, cohort}`). The box
+# links to that session's live HedgeDoc note, `vr-<cohort>-s<n>`, under base_url. While
+# base_url is empty, the box shows its "appears here while a cohort is running" text. The run
+# card leaves base_url empty for the first run, so no link is built.
+CLASS_NOTES_BASE_URL = ""
+CLASS_NOTES_COHORT = ""
+
 SITE_NAME = "Vibe Research"
 SITE_URL = "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/"
 GITHUB = "https://github.com/Liberation-Labs-THCoalition/multiverse-courses"
@@ -113,11 +121,13 @@ INSTRUCTORS = [
          "docs/between-sessions-and-tone.md"),
 ]
 
+COHORT_HUB = Page("Cohort hub", "cohort-hub.md")                        # generated, after Home
 HOME = Page("Home", "index.md")                                      # generated
 INTERACTIVE = Page("Interactive pieces (coming)", "interactive-pieces.md")  # generated
 
 NAV = [
     HOME,
+    COHORT_HUB,
     ("Sessions", SESSIONS),
     ("The course spine", SPINE),
     ("Exercises", EXERCISES),
@@ -314,6 +324,21 @@ def solutions_box() -> str:
     return admonition("note", "Solutions and facilitator notes", [body])
 
 
+NOTES_PLACEHOLDER = ("The live class notes link appears here while a cohort is running.")
+
+
+def class_notes_box(cohort: str, session_number: int, base_url: str | None = None) -> str:
+    """The 'This cohort's notes' box at the foot of each session page (run card, item 4):
+    the same pattern as solutions_box, its link coming from the `class_notes` config value.
+    While base_url is empty the box shows its placeholder text and builds no link."""
+    base_url = base_url if base_url is not None else CLASS_NOTES_BASE_URL
+    if not base_url or not cohort:
+        return admonition("note", "This cohort's notes", [NOTES_PLACEHOLDER])
+    note = f"vr-{cohort}-s{session_number}"
+    body = f"[The live class notes for this session]({base_url}/{note})"
+    return admonition("note", "This cohort's notes", [body])
+
+
 def gap_banner(gap: Gap) -> str:
     body = ["This hour is not finished. What will go here, in the session file's own notes:", ""]
     for i, note in enumerate(gap.notes):
@@ -339,7 +364,8 @@ def insert_after_title(body: str, block: str, where: str) -> str:
     return body[:m.end()] + "\n\n" + block + "\n" + body[m.end():]
 
 
-def stage_markdown(page: Page, dest_of: dict[str, str], report: Report, prereq: str | None) -> str:
+def stage_markdown(page: Page, dest_of: dict[str, str], report: Report, prereq: str | None,
+                   session_no: int | None = None) -> str:
     source_text = read(REPO / page.source)
     front, body = split_front_matter(source_text)
     body = outside_code(body, lambda s: separate_lists(
@@ -352,7 +378,7 @@ def stage_markdown(page: Page, dest_of: dict[str, str], report: Report, prereq: 
             if norm(note) not in norm(source_text):
                 raise BuildError(
                     f"GAPS entry for {gap.source} hour {gap.hour}: this note is no longer in the "
-                    f"file:\n    {note[:100]!r}\n  If the hour has been written, delete the entry "
+                    f"file:\n     {note[:100]!r}\n  If the hour has been written, delete the entry "
                     f"from GAPS in tools/build_site.py. Otherwise re-quote the file's own note.")
         heads = list(re.finditer(rf"^##[ \t]+Hour[ \t]+{gap.hour}(?!\w).*$", body, re.M | re.I))
         if len(heads) != 1:
@@ -363,6 +389,8 @@ def stage_markdown(page: Page, dest_of: dict[str, str], report: Report, prereq: 
         extra["status"] = "in-development"
     if page.exercise:
         body = body.rstrip("\n") + "\n\n" + solutions_box() + "\n"
+    if session_no is not None:                 # run card item 4: the notes box on each session
+        body = body.rstrip("\n") + "\n\n" + class_notes_box(CLASS_NOTES_COHORT, session_no) + "\n"
     return with_front_matter(front, body, extra)
 
 
@@ -420,6 +448,37 @@ def stage_interactive() -> str:
     body = "\n".join([f"# {INTERACTIVE.label}", "",
                       admonition("warning", "In development", ["Nothing is built here yet."]), ""])
     return with_front_matter("", body, {"status": "in-development"})
+
+
+COHORT_LINKS = REPO / "docs" / "cohort-links.md"
+LEADING_HTML_COMMENT = re.compile(r"^\s*(?:<!--.*?-->\s*)+", re.S)
+
+
+def cohort_links_section() -> str:
+    """The 'Links' section, rendered from docs/cohort-links.md (run card, item 8 / run
+    notes). The file's leading HTML comment is a maintenance note (how to add a link), not
+    reader content, so it is dropped before the list is embedded."""
+    text = read(COHORT_LINKS) if COHORT_LINKS.is_file() else ""
+    return LEADING_HTML_COMMENT.sub("", text).strip() + "\n"
+
+
+def stage_cohort_hub() -> str:
+    """The site 'Cohort hub' page (run notes): links to the four session pages and a
+    'Links' section rendered from docs/cohort-links.md. Labels and links only — no prose."""
+    base = posixpath.dirname(COHORT_HUB.dest) or "."
+    sessions = [f"- [{p.label}]({posixpath.relpath(p.dest, base)})" for p in SESSIONS]
+    return "\n".join([
+        f"<!-- Generated by tools/build_site.py. Links only. -->",
+         "",
+        f"# {COHORT_HUB.label}",
+         "",
+         "## Sessions",
+         "",
+        *sessions,
+         "",
+        cohort_links_section().rstrip("\n"),
+         "",
+     ])
 
 
 # ------------------------------------------------------------------------------ mkdocs.yml
@@ -485,6 +544,9 @@ extra:
   status:
     in-development: In development
   solutions_url: {solutions_url}
+  class_notes:
+    base_url: {class_notes_base_url}
+    cohort: {class_notes_cohort}
 validation:
   nav:
     omitted_files: warn
@@ -501,7 +563,9 @@ nav:
 
 def write_mkdocs_yml() -> None:
     head = MKDOCS_TEMPLATE.format(site_name=q(SITE_NAME), site_url=q(SITE_URL),
-                                  docs_dir=q(STAGING.name), solutions_url=q(SOLUTIONS_URL))
+                                  docs_dir=q(STAGING.name), solutions_url=q(SOLUTIONS_URL),
+                                  class_notes_base_url=q(CLASS_NOTES_BASE_URL),
+                                  class_notes_cohort=q(CLASS_NOTES_COHORT))
     write(MKDOCS_YML, head + "\n".join(nav_yaml(NAV)) + "\n")
 
 
@@ -556,12 +620,15 @@ def main() -> int:
         for page in pages:
             if page is HOME:
                 text = stage_home(dest_of, report)
+            elif page is COHORT_HUB:
+                text = stage_cohort_hub()
             elif page is INTERACTIVE:
                 text = stage_interactive()
             elif page.code:
                 text = stage_code(page)
             else:
                 prereq = None
+                session_no = None
                 if page.source in sessions:
                     i = sessions[page.source]
                     if i == 0:
@@ -570,7 +637,8 @@ def main() -> int:
                         prev = SESSIONS[i - 1]
                         link = posixpath.relpath(prev.dest, posixpath.dirname(page.dest))
                         prereq = f"**Prerequisite:** [{prev.label}]({link})"
-                text = stage_markdown(page, dest_of, report, prereq)
+                    session_no = i + 1
+                text = stage_markdown(page, dest_of, report, prereq, session_no)
             write(STAGING / page.dest, text)
         write_mkdocs_yml()
     except BuildError as err:
@@ -582,6 +650,7 @@ def main() -> int:
     for trail, page in entries:
         where = " / ".join(trail + (page.label,))
         origin = page.source or ("generated from " + f"{COURSE}/README.md" if page is HOME
+                                 else "generated (Cohort hub)" if page is COHORT_HUB
                                  else "generated placeholder")
         print(f"    {where:<58} {origin}")
     print(f"  links: {report.internal} re-pointed at staged pages, {report.github} sent to GitHub, "
@@ -594,6 +663,10 @@ def main() -> int:
     boxes = sum(p.exercise for p in pages)
     print(f"  solutions box: {boxes} exercise pages; solutions_url = "
           f"{SOLUTIONS_URL or '(empty: the box is shown without a link)'}")
+    notes = sum(1 for p in pages if p.source in sessions)
+    base = CLASS_NOTES_BASE_URL or "(empty: the box shows 'appears while a cohort is running')"
+    print(f"  notes box: {notes} session pages; class_notes.base_url = {base}, "
+          f"cohort = {CLASS_NOTES_COHORT or '(empty)'}")
     for src, n in report.lists_separated.items():
         print(f"  lists separated from a preceding paragraph: {src} x{n}")
     return 0

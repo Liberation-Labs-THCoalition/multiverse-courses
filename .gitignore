@@ -7,3 +7,9 @@ __pycache__/
 /_staging/
 /mkdocs.yml
 /.venv-site/
+
+# Cohort archives (tools/archive_hedgedoc.py): student work, written OUTSIDE the repo by
+# default (../course-cohort-archives/). These are a second fence — if an archive is ever
+# pointed inside the tree it must never be committed.
+cohort-archives/
+course-cohort-archives/
