@@ -4,6 +4,7 @@ import DecryptedText from './components/textAnimations/DecryptedText'
 import CountUp from './components/textAnimations/CountUp'
 import TrueFocus from './components/textAnimations/TrueFocus'
 import StarBorder from './components/animations/StarBorder'
+import Deck from './components/Deck'
 import './App.css'
 
 // The teaser counts up to this in the big number, holds, then glitches to GLITCH_TO.
@@ -56,6 +57,12 @@ export default function App() {
     'Reading What Came Back',
     'The Gate and the Room'
   ]
+
+    // The "See how: play the deck" button scrolls to the deck section below.
+  const scrollToDeck = () => {
+    const el = document.getElementById('deck')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 
   return (
     <div className="app">
@@ -133,7 +140,18 @@ export default function App() {
               </p>
             </div>
           )}
+            {showGlitch && (
+              <div className="teaser-deck-cta fade-in">
+                <button type="button" className="teaser-deck-btn" onClick={scrollToDeck}>
+                  See how: play the deck
+                </button>
+              </div>
+            )}
         </section>
+
+          {/* Mystery deck: the teaser, made playable. It is always on the page for
+              visitors who scroll; the "See how: play the deck" button jumps here. */}
+          <Deck />
 
         {/* Sessions section */}
         <section className="sessions">

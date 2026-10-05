@@ -13,6 +13,15 @@
 - `TextAnimations/CountUp` - Numeric counter animation
 - `TextAnimations/TrueFocus` - Cycling text focus effect
 - `Animations/StarBorder` - Animated star border effect
+- `Components/Stack` - Draggable card stack; used for the mystery deck's fanned
+  "peek" of the upcoming cards. Copied verbatim from
+  `src/content/Components/Stack/{Stack.jsx,Stack.css}` on `main`
+  (https://github.com/DavidHDev/react-bits/blob/main/src/content/Components/Stack/Stack.jsx).
+  It is a send-to-back / auto-cycle gallery; the deck's controlled navigation (prev/next
+  buttons, arrow keys, the "card N of 6" counter, the closing panel, and the per-card
+  inspect → commit → reveal flow) lives in `src/components/Deck.jsx`, and the reveal flip is
+  a plain-CSS 3D transform (not motion). Uses the `motion` (framer-motion) package already
+  a dependency of this app, so it adds no new dependency.
 
 All components are used under the MIT License.
 

@@ -214,6 +214,36 @@
   outline-offset: 4px;
 }
 
+
+/* Teaser -> deck handoff: the "See how: play the deck" button, under the counter */
+.teaser-deck-cta {
+  margin-top: 1.5rem;
+}
+
+.teaser-deck-btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+  background: #1a1f3a;
+  border: 1px solid #8b93c9;
+  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.teaser-deck-btn:hover {
+  transform: scale(1.02);
+  background: #232a52;
+}
+
+.teaser-deck-btn:focus-visible {
+  outline: 2px solid #8b93c9;
+  outline-offset: 4px;
+}
 /* Footer */
 .footer {
   text-align: center;
