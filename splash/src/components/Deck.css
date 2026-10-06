@@ -32,6 +32,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+  /* Vertical drags still scroll the page and pinches still zoom; horizontal drags go to the
+     deck's swipe handlers. Without this, a phone browser may claim the gesture and cancel
+     the pointer events. */
+  touch-action: pan-y pinch-zoom;
 }
 
 /* React Bits Stack, fanned behind the active card: the "rest of the deck".
@@ -46,7 +50,8 @@
   pointer-events: none;
   opacity: 0.5;
   z-index: 0;
-  transform: translate(6%, 8%) scale(0.94);
+  /* left: 50% with -50% centres it behind the active card; the 6% left over lets it peek out on the right. */
+  transform: translate(-44%, 8%) scale(0.94);
 }
 
 .deck-peek .card {

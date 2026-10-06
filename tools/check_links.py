@@ -1,56 +1,60 @@
 #!/usr/bin/env python3
-"""Check internal links in the built course site and the built splash.
+"""Check internal links in the course site and the splash, as GitHub Pages serves them.
 
-    python tools/check_links.py [SITE_DIR SPLASH_DIR]
-    python tools/check_links.py --self-test
+    python tools/check_links.py                 # assemble splash/dist + site/ like pages.yml, then check
+    python tools/check_links.py --tree _site    # check a tree that is already assembled
+    python tools/check_links.py --self-test     # the planted-link controls
 
-Every internal ``href``/``src`` in the built course site (default ``site/``) and
-the built splash (default ``splash/dist/``) is resolved against its built directory
-and checked for existence on disk. A broken internal target is reported, and the
-exit status is 1.
+The check runs on the DEPLOYED layout, not on each build alone. `.github/workflows/pages.yml` copies
+`splash/dist/` to the root of `_site/` and `site/` to `_site/course/`, and Pages serves `_site/` under the
+project path `/multiverse-courses/`. That path is read from `SITE_URL` in `tools/build_site.py`, minus the
+course mount, so it is configuration and is never inferred from the links being checked. (The first version
+inferred it from the links, which let a broken root-absolute link vouch for itself. Found in review,
+2026-10-05.)
 
-What counts as internal, external, or not-a-file-link:
-    - external: carries a scheme (``http``, ``https``, ``mailto``, ``tel``, ...),
-     or is protocol-relative (``//host``). These are NOT fetched; they are listed
-     only, as the card requires.
-    - fragment: a bare in-page anchor (``#section``). It is not a link to a file and
-     is ignored.
-    - internal: a relative (``./x``, ``../x``) or root-absolute (``/x``) path. A
-     relative link resolves against the HTML file's own directory. A root-absolute
-     one is resolved against the built directory, and also with the deployment base
-     stripped: a site built for a sub-path (MkDocs with a ``site_url``) emits links
-     like ``/multiverse-courses/course/cohort-hub/`` that live locally at
-     ``site/cohort-hub/`` -- correct for the deployed site, so neither kind is a
-     false positive. A query string and a fragment are stripped. The target is OK
-     when it exists as a file, or as a directory holding an ``index.html`` /
-     ``index.htm`` (so a link like ``/course/`` is fine). Otherwise it is broken.
+How each `href` / `src` is judged:
+- external: has a scheme (`https:`, `mailto:`, ...) or starts `//host`. Listed, never fetched. The one
+  exception is a full URL into this project (`https://<origin>/multiverse-courses/...`): that is our own site
+  written out in full, so it is checked like the root-absolute path it names.
+- a bare fragment or query (`#x`, `?x`): an in-page anchor, skipped.
+- relative (`x`, `./x`, `../x`): resolved against the page's own directory in the tree.
+- root-absolute (`/x`): must start with the project path. The rest is resolved from the tree's root. A
+  root-absolute link outside the project path is BROKEN: on Pages it leaves this site.
+- A target is OK when it is a file, or a directory holding index.html / index.htm, AND it is inside the tree.
+  A path that climbs out of the tree is BROKEN even if the file exists on this disk.
+- Percent-escapes are decoded before the lookup (`a%20b.html` is the file `a b.html`).
 
---self-test is the positive control: it copies a built directory into a temporary
-folder, plants a page that links to a file that does not exist, and shows the
-checker failing on the copy while the real build still passes. It never writes to
-a real build.
+Not checked: `srcset`, CSS `url()`, and letter case on case-insensitive disks (Windows). Pages is
+case-sensitive, so run it on Linux (CI or MTH) to catch case errors.
 
-Exit status: 0 no broken internal links (or a self-test that behaved); 1 one or
-more broken internal links, or a self-test that did not behave; 2 a built
-directory is missing, so the check could not run.
+--self-test plants each kind of link above in a temporary assembled copy, broken and valid alike, and requires
+every verdict to come out as expected. It never writes to a real build.
+
+Exit status: 0 no broken internal links (or a self-test that behaved); 1 broken links (or a self-test that did
+not behave); 2 the check could not run (a build directory or SITE_URL is missing).
 """
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import shutil
 import sys
 import tempfile
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_SITE = REPO / "site"
 DEFAULT_SPLASH = REPO / "splash" / "dist"
+BUILD_SITE = REPO / "tools" / "build_site.py"
+COURSE_MOUNT = "course"  # pages.yml: cp -R site _site/course
 HTML_EXT = {".html", ".htm"}
 INDEX_NAMES = ("index.html", "index.htm")
 # A link that begins with "<scheme>:" or "//" is external (or not a path to a file).
 EXTERNAL = re.compile(r"^(?:[a-z][a-z0-9+.-]*:|//)", re.I)
+SITE_URL_RE = re.compile(r"""^SITE_URL\s*=\s*["']([^"']+)["']""", re.M)
 
 
 class LinkCollector(HTMLParser):
@@ -62,90 +66,85 @@ class LinkCollector(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         for name, value in attrs:
-            if value is None:
-                continue
-            if name in ("href", "src"):
+            if value is not None and name in ("href", "src"):
                 self.links.append(value.strip())
 
 
-def is_external(link: str) -> bool:
-    return bool(EXTERNAL.match(link))
+def pages_location(build_site: Path = BUILD_SITE) -> tuple[str, str]:
+    """(origin, project path) of the deployed site, from SITE_URL in build_site.py.
+
+    SITE_URL is the course's URL (https://host/multiverse-courses/course/). The project path is that path
+    without the course mount. Raises ValueError when SITE_URL is missing or doesn't end in the mount, so a
+    changed layout stops the check instead of silently mis-resolving every link."""
+    match = SITE_URL_RE.search(build_site.read_text(encoding="utf-8"))
+    if not match:
+        raise ValueError(f"no SITE_URL in {build_site}")
+    url = urlsplit(match.group(1))
+    path = url.path if url.path.endswith("/") else url.path + "/"
+    mount = f"/{COURSE_MOUNT}/"
+    if not path.endswith(mount):
+        raise ValueError(f"SITE_URL's path {path!r} does not end in {mount!r}: has pages.yml's layout changed?")
+    return f"{url.scheme}://{url.netloc}", path[: len(path) - len(mount) + 1]
 
 
-def path_segments(path_part: str) -> list[str]:
-    """Path segments of a link, without empty segments and '.' ('..' is kept)."""
-    return [p for p in path_part.split("/") if p not in ("", ".")]
+def assemble(splash: Path, site: Path, dest: Path) -> Path:
+    """The deployed tree, built the way pages.yml builds it: the splash at the root, the course under course/."""
+    shutil.copytree(splash, dest)
+    shutil.copytree(site, dest / COURSE_MOUNT, dirs_exist_ok=True)
+    return dest
 
 
-def detect_base(root_abs_links: list[str]) -> str:
-    """The deployment base: the path prefix shared by every root-absolute link."""
-    seg_lists = [path_segments(l) for l in root_abs_links]
-    if not seg_lists:
-        return ""
-    common: list[str] = []
-    for i in range(min(len(s) for s in seg_lists)):
-        head = seg_lists[0][i]
-        if all(s[i] == head for s in seg_lists):
-            common.append(head)
-        else:
-            break
-    return "/" + "/".join(common) + "/" if common else ""
+def in_project(path: str, prefix: str) -> bool:
+    return path.startswith(prefix) or path + "/" == prefix
 
 
-def resolves(root: Path, html_file: Path, link: str, base: str) -> bool:
-    """True when an internal link points at a real file or an index-bearing dir."""
-    path_part = link.split("#", 1)[0].split("?", 1)[0]
-    if link.startswith("#") or not path_part:
-        return True     # a bare fragment / query: an in-page anchor, not a file
-    if path_part.startswith("/"):
-        remainder = path_part[len(base):] if base and path_part.startswith(base) else ""
-        candidates = [(root / (remainder or ".")).resolve(),
-                      (root / path_part.lstrip("/")).resolve()]
+def target_ok(tree: Path, page: Path, link: str, prefix: str) -> bool:
+    """True when an internal link names an existing file, or a directory with an index, inside the tree."""
+    path = unquote(link.split("#", 1)[0].split("?", 1)[0])
+    if not path:
+        return True  # '#x' or '?x': an in-page anchor, not a file
+    if path.startswith("/"):
+        if not in_project(path, prefix):
+            return False  # on Pages this leaves the project's site
+        target = tree / path[len(prefix):]
     else:
-        candidates = [(html_file.parent / path_part).resolve()]
-    for candidate in candidates:
-        if candidate.is_file():
-            return True
-        if candidate.is_dir() and any((candidate / name).is_file() for name in INDEX_NAMES):
-            return True
-    return False
+        target = page.parent / path
+    target = Path(os.path.normpath(target))  # '..' is resolved by name, never through the local disk
+    if target != tree and tree not in target.parents:
+        return False  # climbs out of the deployed tree
+    if target.is_file():
+        return True
+    return target.is_dir() and any((target / name).is_file() for name in INDEX_NAMES)
 
 
-def check_dir(root: Path) -> tuple[list[str], list[str], int]:
-    """Return (broken, external, html_count) for one built directory."""
+def check_tree(tree: Path, origin: str, prefix: str) -> tuple[list[str], list[str], int]:
+    """Return (broken, external, html_count) for one assembled tree."""
+    tree = Path(os.path.normpath(tree.resolve()))
     broken: list[str] = []
     external: set[str] = set()
-    html_files = sorted(p for p in root.rglob("*") if p.suffix.lower() in HTML_EXT)
-
-    # First pass: gather the internal links so the deployment base can be detected
-    # before root-absolute ones are resolved (second pass).
-    per_file: dict[Path, list[str]] = {}
-    root_abs: list[str] = []
-    for html in html_files:
+    pages = sorted(p for p in tree.rglob("*") if p.suffix.lower() in HTML_EXT and p.is_file())
+    for page in pages:
+        where = page.relative_to(tree).as_posix()
         try:
-            raw = html.read_bytes().decode("utf-8-sig")
-        except (UnicodeDecodeError, OSError):
+            text = page.read_bytes().decode("utf-8-sig")
+        except (OSError, UnicodeDecodeError) as exc:
+            broken.append(f"{where}: (page unreadable: {type(exc).__name__})")
             continue
-        parser = LinkCollector()
-        try:
-            parser.feed(raw)
-        except Exception:
-            continue
-        links = [l for l in parser.links if l]
-        per_file[html] = links
-        for link in links:
-            if not is_external(link) and link.split("#", 1)[0].startswith("/"):
-                root_abs.append(link)
-    base = detect_base(root_abs)
-
-    for html, links in per_file.items():
-        for link in links:
-            if is_external(link):
+        collector = LinkCollector()
+        collector.feed(text)
+        for link in collector.links:
+            if not link:
+                continue
+            if link.startswith(origin + "/") and in_project(urlsplit(link).path, prefix):
+                link_to_check = link[len(origin):]  # this project, written as a full URL
+            elif EXTERNAL.match(link):
                 external.add(link)
                 continue
-            if not resolves(root, html, link, base):
-                broken.append(f"{html.relative_to(root).as_posix()}: {link}")
-    return broken, sorted(external), len(html_files)
+            else:
+                link_to_check = link
+            if not target_ok(tree, page, link_to_check, prefix):
+                broken.append(f"{where}: {link}")
+    return broken, sorted(external), len(pages)
 
 
 def report(broken: list[str], external: list[str], html_count: int, label: str) -> int:
@@ -164,47 +163,60 @@ def report(broken: list[str], external: list[str], html_count: int, label: str) 
     return 0
 
 
-def self_test(site: Path, splash: Path) -> int:
-    print("check_links.py: self-test on a temporary copy (real builds are not touched)")
-    source = splash if splash.is_dir() else site
-    if not source.is_dir():
-        print("  cannot self-test: no built directory to copy")
-        return 2
-    ok = True
-    with tempfile.TemporaryDirectory(prefix="check-links-selftest-") as tmp:
-        copy = Path(tmp) / "site"
-        shutil.copytree(source, copy)
+def plants(origin: str, prefix: str) -> list[tuple[str, str, str, bool]]:
+    """(what it is, page in the tree, tag to plant, must it be reported?). Broken and valid kinds alike: a
+    checker that reports everything would fail the valid rows, and one that reports nothing the broken rows."""
+    return [
+        ("relative link to a missing file", "index.html",
+         '<a href="definitely-missing-file.html">x</a>', True),
+        ("root-absolute link outside the project path", "index.html",
+         '<a href="/no-such-page/">x</a>', True),
+        ("root-absolute link inside the project path, to a missing page", "index.html",
+         f'<a href="{prefix}{COURSE_MOUNT}/no-such-page/">x</a>', True),
+        ("full URL into this project, to a missing page", f"{COURSE_MOUNT}/index.html",
+         f'<a href="{origin}{prefix}{COURSE_MOUNT}/no-such-page/">x</a>', True),
+        ("relative link climbing out of the tree to a file that exists on disk", "index.html",
+         '<a href="../outside.html">x</a>', True),
+        ("one broken root-absolute image (src, not href)", "index.html",
+         '<img src="/missing-image.png" alt="">', True),
+        ("VALID: relative link from the course up to the splash", f"{COURSE_MOUNT}/index.html",
+         '<a href="../index.html">x</a>', False),
+        ("VALID: root-absolute link to the course", "index.html",
+         f'<a href="{prefix}{COURSE_MOUNT}/">x</a>', False),
+        ("VALID: full URL to another project on the same origin (external)", "index.html",
+         f'<a href="{origin}/another-project/">x</a>', False),
+    ]
 
-        # 1) The unmodified copy must pass.
-        baseline_broken, _, _ = check_dir(copy)
-        ok = ok and not baseline_broken
-        print(f"    {'ok   ' if not baseline_broken else 'FAIL'}  control: the unmodified copy "
-              f"{'is clean' if not baseline_broken else f'is NOT clean ({len(baseline_broken)} broken)'}")
 
-        # 2) Plant a page that links to a missing file; the check must fail.
-        planted = copy / "planted-broken-link.html"
-        planted.write_text(
-            "<!doctype html><html><body>"
-            "<a href=\"definitely-missing-file.html\">x</a></body></html>",
-            encoding="utf-8",
-        )
-        planted_broken, _, _ = check_dir(copy)
-        caught = any("definitely-missing-file.html" in b for b in planted_broken)
-        ok = ok and caught
-        print(f"    {'ok   ' if caught else 'FAIL'}  planted broken link is reported "
-              f"({'caught' if caught else 'NOT caught'})")
-
-        # 3) Remove the plant; the copy must pass again.
-        planted.unlink()
-        after_broken, _, _ = check_dir(copy)
-        ok = ok and not after_broken
-        print(f"    {'ok   ' if not after_broken else 'FAIL'}  clean again after removal")
-
-    if ok:
-        print("self-test PASSED: the clean copy passes and the planted link fails the check.")
-        return 0
-    print("self-test FAILED: see the FAIL rows above.")
-    return 1
+def self_test(tree: Path, origin: str, prefix: str) -> int:
+    print("check_links.py: self-test on a temporary assembled copy (real builds are not touched)")
+    (tree.parent / "outside.html").write_text("<!doctype html><p>outside the tree</p>", encoding="utf-8")
+    baseline, _, _ = check_tree(tree, origin, prefix)
+    ok = not baseline
+    print(f"    {'ok  ' if ok else 'FAIL'}  control: the unmodified copy is "
+          f"{'clean' if ok else f'NOT clean ({len(baseline)} broken)'}")
+    for what, rel, tag, must_report in plants(origin, prefix):
+        page = tree / rel
+        original = page.read_bytes()
+        html = original.decode("utf-8-sig")
+        planted_html = html.replace("</body>", tag + "</body>", 1) if "</body>" in html else html + tag
+        page.write_text(planted_html, encoding="utf-8")
+        try:
+            broken, _, _ = check_tree(tree, origin, prefix)
+        finally:
+            page.write_bytes(original)
+        reported = len(broken) > len(baseline)
+        good = reported == must_report
+        ok = ok and good
+        verdict = "reported" if reported else "passed"
+        print(f"    {'ok  ' if good else 'FAIL'}  {what}: {verdict}")
+    after, _, _ = check_tree(tree, origin, prefix)
+    clean_again = after == baseline
+    ok = ok and clean_again
+    print(f"    {'ok  ' if clean_again else 'FAIL'}  the copy is back to its baseline after the plants")
+    print("self-test PASSED: every planted link got the expected verdict." if ok
+          else "self-test FAILED: see the FAIL rows above.")
+    return 0 if ok else 1
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -212,27 +224,39 @@ def main(argv: list[str] | None = None) -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(errors="backslashreplace")
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("dirs", nargs="*",
-                        help="built directories to check (default: site/ and splash/dist/)")
+    parser.add_argument("--site", type=Path, default=DEFAULT_SITE, help="the built course site (default: site/)")
+    parser.add_argument("--splash", type=Path, default=DEFAULT_SPLASH,
+                        help="the built splash (default: splash/dist/)")
+    parser.add_argument("--tree", type=Path, help="check an already-assembled tree (pages.yml's _site) instead")
     parser.add_argument("--self-test", action="store_true",
-                        help="positive control on a temporary copy; does not touch real builds")
+                        help="the planted-link controls, on a temporary copy; does not touch real builds")
     args = parser.parse_args(argv)
 
-    if args.self_test:
-        return self_test(DEFAULT_SITE, DEFAULT_SPLASH)
+    try:
+        origin, prefix = pages_location()
+    except (OSError, ValueError) as exc:
+        print(f"check_links.py: cannot locate the deployed site: {exc}", file=sys.stderr)
+        return 2
 
-    targets = [Path(d) for d in args.dirs] if args.dirs else [DEFAULT_SITE, DEFAULT_SPLASH]
-    missing = [d for d in targets if not d.is_dir()]
+    if args.tree is not None and not args.self_test:
+        if not args.tree.is_dir():
+            print(f"check_links.py: no such tree: {args.tree}", file=sys.stderr)
+            return 2
+        broken, external, count = check_tree(args.tree, origin, prefix)
+        return report(broken, external, count, f"{args.tree} as served at {origin}{prefix}")
+
+    missing = [d for d in (args.splash, args.site) if not d.is_dir()]
     if missing:
         for d in missing:
             print(f"check_links.py: no such built directory: {d}", file=sys.stderr)
         return 2
-
-    status = 0
-    for d in targets:
-        broken, external, count = check_dir(d)
-        status = max(status, report(broken, external, count, str(d)))
-    return status
+    with tempfile.TemporaryDirectory(prefix="check-links-") as tmp:
+        tree = assemble(args.splash, args.site, Path(tmp) / "_site")
+        if args.self_test:
+            return self_test(tree, origin, prefix)
+        broken, external, count = check_tree(tree, origin, prefix)
+        return report(broken, external, count,
+                      f"{args.splash} + {args.site}, assembled like pages.yml, as served at {origin}{prefix}")
 
 
 if __name__ == "__main__":

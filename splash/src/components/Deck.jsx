@@ -46,10 +46,11 @@ function freshState() {
 }
 
 // The next card, shown fanned behind the active one via React Bits' Stack. Read-only:
-// it is the "rest of the deck", not a control.
+// it is the "rest of the deck", not a control. It repeats the card's words, so it carries
+// the same data-fictional marker as the card itself.
 function PreviewCard({ card }) {
   return (
-    <div className="peek">
+    <div className="peek" data-fictional={card.fictional ? 'true' : 'false'}>
       <div className="peek-title">{card.title}</div>
       <div className="peek-mystery">{card.mystery}</div>
     </div>
@@ -248,13 +249,14 @@ export default function Deck() {
   const next = useCallback(() => goTo(index + 1), [goTo, index]);
   const prev = useCallback(() => goTo(index - 1), [goTo, index]);
 
-  // Arrow keys navigate when the deck (or anything in it) holds focus.
+  // The left and right arrow keys navigate when the deck (or anything in it) holds focus.
+  // Up and down are left to the page, so they still scroll it.
   const onKeyDown = useCallback(
     e => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (e.key === 'ArrowRight') {
         e.preventDefault();
         next();
-       } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         prev();
        }
@@ -276,6 +278,10 @@ export default function Deck() {
     if (Math.abs(dx) < 40 || Math.abs(dx) <= Math.abs(dy)) return;
     if (dx < 0) next();
     else prev();
+   };
+  // The browser took the gesture (a scroll, say): forget it, so it can't count as a swipe.
+  const onPointerCancel = () => {
+    swipeStart.current = null;
    };
 
   // The fanned "rest of the deck" behind the active card (React Bits Stack).
@@ -305,6 +311,7 @@ export default function Deck() {
       className="deck-stage"
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
+      onPointerCancel={onPointerCancel}
       ref={swipeRef}
      >
       {index < TOTAL ? (
@@ -347,9 +354,12 @@ export default function Deck() {
        </div>
      )}
 
-     {/* The reveal is announced to screen readers when it appears. */}
+     {/* The reveal is announced to screen readers when it appears, and on the invented
+         study the announcement includes the fiction notice: it is the point of that card. */}
      <div className="sr-only" role="status" aria-live="polite" ref={announce}>
-      {card && state.revealed ? `${card.title}. ${card.reveal}` : ''}
+      {card && state.revealed
+        ? `${card.title}. ${card.reveal}${card.fictional ? ` ${card.fiction_notice}` : ''}`
+        : ''}
      </div>
     </section>
   );

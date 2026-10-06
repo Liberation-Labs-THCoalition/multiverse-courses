@@ -388,3 +388,52 @@ Other notes:
 All seven checks pass; the deck renders the final content unchanged, the fiction is marked for both
 humans and scrapers (`data-fictional="true"` + a visible `fiction_notice` + the `llms.txt` line),
 and no new dependency was added.
+
+---
+
+## 6. Review (Lyra, 2026-10-05)
+
+I checked this on Windows from a git bundle of `c02be3a`, re-running everything rather than reading the claims.
+
+**Confirmed:**
+- `cards.json` is the same blob as master `4d8c920` (`dce9b7c9`).
+- All 14 changed files are on the card's list, and no dependency was added.
+- The splash rebuilds to the same content hashes as the build on MTH (`index-Kkon889I.js`, `index-ZgnLGi4j.css`).
+- `Stack.jsx` and `Stack.css` are byte-identical to React Bits `main` (MIT, recorded in `THIRD_PARTY.md`).
+- Neither the added lines nor the built bundle contain instructions to models. The bundle grep's control string was
+  found, so the grep could have caught one.
+- In `Deck.jsx` and the screenshots: the reveal waits for a commit, there is no score anywhere, `data-fictional` is
+  on the card, and the fiction notice is visible.
+- **§5's point 1 was my error, not the agent's.** I branched the build from `origin/master` and left the clone's
+  `master` at `aa00db1`, so checks 1 and 7 compared against a stale ref. The agent reported it and used the right
+  baseline. Future run cards pin the baseline by commit, not by branch name.
+
+**Fixed in the review commit:**
+1. **`check_links.py` failed open on the breakage its control never planted.** It inferred the deployment base from
+   the links being checked, which caused two failures:
+   - A root-absolute link outside that base resolved to the build root, which has an `index.html`. So
+     `/no-such-page/` passed, and so did a lone broken `<img src="/x.png">` on the splash.
+   - A relative link that climbed out of the build passed whenever the file existed on the local disk.
+
+   The self-test planted only a relative link, which never reaches either path.
+   - **Rewritten:** it now checks the tree as `pages.yml` assembles it (splash at the root, course under `course/`),
+     with the project path read from `SITE_URL`.
+   - Full URLs into our own site are now checked, not listed. They are 20 of the first version's 37 "externals", and
+     20 + 17 = 37.
+   - The self-test now plants 9 kinds of link, broken and valid alike, and every one gets the expected verdict. The
+     real tree passes.
+2. **Desktop layout.** The "rest of the deck" preview hung off the right of the active card (`left: 50%` with no
+   `-50%`). It now sits behind the card and peeks out. The card's checks covered phone widths only, where the
+   preview is hidden.
+3. **Screen readers** heard the fictional card's reveal without its fiction notice. The announcement now includes it,
+   since the notice is the point of that card.
+4. **Arrow keys:** Up and Down no longer turn cards, so they scroll the page again. The card asked only for ← →.
+5. **The preview** repeats a card's words, so it now carries the same `data-fictional` marker.
+6. **Touch:** the stage now has `touch-action: pan-y pinch-zoom`, so phone browsers hand horizontal swipes to the
+   deck and pinch-zoom still works. A cancelled pointer now clears a half-finished swipe. **Not yet tried on a real
+   phone.**
+
+**After the fixes:**
+- `npm run build`, `build_site.py`, `mkdocs build --strict` and `check_public_build.py site` all pass.
+- `check_links.py --self-test` passes 9 of 9 plants plus the baseline.
+- `check_links.py` passes on the real tree.
