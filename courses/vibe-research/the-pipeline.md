@@ -125,7 +125,7 @@ Invert it and it answers the question this course actually graduates people on:
 > ### ⚠ STAGE 3 CORRECTED 2026-09-09 — I tested this and I was wrong
 >
 > This row used to read *"never unsupervised — it will approve a design that cannot fail."*
-> **[Falsified.](../vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md)**
+> **Falsified** (the full results are in the facilitator materials).
 > Ten agents were handed the seeded-02 revision cold — no hint, just *"review this"* — and
 > **10/10 rejected it and named the mechanism**, nine of them by exercising the failure path rather
 > than reading the code. Pre-registered prediction was ≤2/6. Two blind adjudicators, full agreement.

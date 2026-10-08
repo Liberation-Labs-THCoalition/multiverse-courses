@@ -309,7 +309,7 @@ published curriculum teaches with them**, which is an opening rather than a curi
 > **Free preprint:** <https://peerj.com/preprints/2064/> — send students this one, not the paywall.
 > Check their implementations against [`rsprite2::GRIM_test`](https://lukaswallrich.github.io/rsprite2/reference/GRIM_test.html).
 >
-> Facilitator reference implementation (do **not** distribute): `tools/grim_reference.py`.
+> Facilitators have a reference implementation in the private facilitator repository (do **not** distribute it).
 
 ### And the kill list is still yours
 
