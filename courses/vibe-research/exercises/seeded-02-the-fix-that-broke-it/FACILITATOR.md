@@ -117,7 +117,7 @@ required changes are visibly present and correctly implemented. Approving it and
 
 > **⚠ The `PREDICTED` line that used to sit here — "most rooms will approve v2" — is FALSIFIED for
 > agents, and still untested for humans.**
-> [Ten agents reviewed v2 cold](./AGENT_REVIEW_RESULTS.md). **10/10 rejected it**, and 10/10 named
+> [Ten agents reviewed v2](./AGENT_REVIEW_RESULTS.md), five of them with no hint at all. **10/10 rejected it**, and 10/10 named
 > the mechanism. **Assume any student with an agent will have the answer within minutes.**
 >
 > That does not kill the hour, it relocates it. The exercise stops being *"can you find it?"* and

@@ -126,9 +126,11 @@ Invert it and it answers the question this course actually graduates people on:
 >
 > This row used to read *"never unsupervised — it will approve a design that cannot fail."*
 > **Falsified** (the full results are in the facilitator materials).
-> Ten agents were handed the seeded-02 revision cold — no hint, just *"review this"* — and
-> **10/10 rejected it and named the mechanism**, nine of them by exercising the failure path rather
-> than reading the code. Pre-registered prediction was ≤2/6. Two blind adjudicators, full agreement.
+> Ten agents were handed the seeded-02 revision: five cold, with no hint beyond *"review this"*,
+> and five with the exercise's own prompt, which hints hard. **10/10 rejected it and named the
+> mechanism**, nine of them by exercising the failure path rather than reading the code. The
+> pre-registered prediction for the no-hint arm was ≤2/6; it caught 5 of 5. Two blind adjudicators,
+> full agreement.
 >
 > **What survives is narrower and more useful.** Those agents reviewed *someone else's work*, with
 > no stake and no priors. That is not the condition the course warns about. The claim that holds is
