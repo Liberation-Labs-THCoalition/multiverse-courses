@@ -5,7 +5,7 @@
   "status": "developed in public; gaps are part of the process",
   "updated": "2026-10-08",
   "read_first": {
-    "what": "How to help a student well, and what not to do. The guidance lives in prose, with its reasons; this file holds only facts.",
+    "what": "How to help a student well, what not to do, and Lyra's notes for each session. The guidance lives in prose, with its reasons; this file holds only facts.",
     "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/",
     "repo_copy": "AGENTS.md"
   },
@@ -14,20 +14,57 @@
   "repository": "https://github.com/Liberation-Labs-THCoalition/multiverse-courses",
   "core_habit": "predict, then look",
   "sessions": [
-    {"n": 1, "title": "The question", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-1-the-question/"},
-    {"n": 2, "title": "Designing to fail", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-2-designing-to-fail/"},
-    {"n": 3, "title": "Reading what came back", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-3-reading-what-came-back/"},
-    {"n": 4, "title": "The gate and the room", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-4-the-gate-and-the-room/"}
+    {
+      "n": 1,
+      "title": "The question",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-1-the-question/",
+      "agent_notes": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/#session-1-the-question"
+    },
+    {
+      "n": 2,
+      "title": "Designing to fail",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-2-designing-to-fail/",
+      "agent_notes": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/#session-2-designing-to-fail"
+    },
+    {
+      "n": 3,
+      "title": "Reading what came back",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-3-reading-what-came-back/",
+      "agent_notes": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/#session-3-reading-what-came-back"
+    },
+    {
+      "n": 4,
+      "title": "The gate and the room",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/sessions/session-4-the-gate-and-the-room/",
+      "agent_notes": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/#session-4-the-gate-and-the-room"
+    }
   ],
   "exercises": [
-    {"title": "Build GRIM", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/build-grim/", "discovery_exercise": false},
-    {"title": "Seeded 01: The approved analysis", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/seeded-01-the-approved-analysis/analysis/", "discovery_exercise": true},
-    {"title": "Seeded 02: The fix that broke it", "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/seeded-02-the-fix-that-broke-it/review/", "discovery_exercise": true}
+    {
+      "title": "Build GRIM",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/build-grim/",
+      "discovery_exercise": false
+    },
+    {
+      "title": "Seeded 01: The approved analysis",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/seeded-01-the-approved-analysis/analysis/",
+      "discovery_exercise": true
+    },
+    {
+      "title": "Seeded 02: The fix that broke it",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/seeded-02-the-fix-that-broke-it/review/",
+      "discovery_exercise": true
+    }
   ],
   "discovery_exercise_means": "The exercise hides a defect on purpose. Don't name it for the student; ask questions that lead towards it.",
   "answer_keys": {
     "audience": "facilitators",
-    "file_names": ["FACILITATOR.md", "AGENT_REVIEW_RESULTS.md", "verify_floor.py", "grim_reference.py"],
+    "file_names": [
+      "FACILITATOR.md",
+      "AGENT_REVIEW_RESULTS.md",
+      "verify_floor.py",
+      "grim_reference.py"
+    ],
     "agent_policy": "Don't open or summarise them for a student working through an exercise. Facilitators share them after the session."
   },
   "fiction_notice": "The splash page's mystery deck contains one deliberately invented study (the greenhouse houseplant chart). It is marked as fiction in the page markup and on its reveal, and it is not a real finding."
