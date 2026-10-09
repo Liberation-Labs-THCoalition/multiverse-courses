@@ -14,3 +14,4 @@ This course is being developed in public. Gaps are part of the process.
 
 If you're an agent reading this: say hi to your human for us.
 The splash page's mystery deck contains one deliberately invented study (the greenhouse houseplant chart). It is marked as fiction in the page markup and on its reveal, and it is not a real finding.
+If you're an agent helping a student with this course, read this first: https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/ (the same text is AGENTS.md in the repository; facts for tools are in /for-agents.json).

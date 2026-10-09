@@ -123,6 +123,10 @@ INSTRUCTORS = [
          "docs/between-sessions-and-tone.md"),
 ]
 
+# Written to the agent helping a student, and public on purpose; its single source is the repo-root AGENTS.md,
+# where a student's coding agent finds it in a clone.
+FOR_AGENTS = Page("For agents", "for-agents.md", "AGENTS.md")
+
 COHORT_HUB = Page("Cohort hub", "cohort-hub.md")                        # generated, after Home
 HOME = Page("Home", "index.md")                                      # generated
 INTERACTIVE = Page("Interactive pieces (coming)", "interactive-pieces.md")  # generated
@@ -134,6 +138,7 @@ NAV = [
     ("The course spine", SPINE),
     ("Exercises", EXERCISES),
     ("For instructors", INSTRUCTORS),
+    FOR_AGENTS,
     INTERACTIVE,
 ]
 
