@@ -5,7 +5,7 @@ until this is accepted. Written against [`REVIEW_2026-09-03_balance.md`](REVIEW_
 
 **Unchanged and still `SETTLED`:** four sessions (Thomas, 2026-08-25), ~60 days, four hours
 each. Prerequisite is the Multiverse agentic coursework, so **every student arrives with a
-long-horizon agent**. Names are proposals; Liz changes whatever she likes.
+long-horizon agent**. Names are proposals; Liz changes whatever they like.
 
 **Unchanged and load-bearing:** every kill stays. The rigour is the good part and it was
 expensive to learn. What changes is where it points.

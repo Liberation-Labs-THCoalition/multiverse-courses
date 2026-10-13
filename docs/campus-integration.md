@@ -102,7 +102,7 @@ sting, which is what collection mechanics run on — but the name has to be some
 doctrine it should be a *system*, not a metaphor (property 3). A student *doing* the collection
 beats a student *reading* that their notes are like a collection.
 
-**This is Liz's call, not ours.** Options to put to her rather than pick:
+**This is Liz's call, not ours.** Options to put to them rather than pick:
 
 - Keep it in Baba Yaga's idiom — she transforms the rude into household objects and speaks in
   riddles. A failure mode you have survived is a riddle you can now answer.
@@ -127,7 +127,7 @@ a name over a flag today it was `agni-open` pointing at a private repo.
 **RESOLVED 2026-08-24 (Thomas):** we have **PR permissions on the campus repo, including for
 agents**, and Liz is loose with creative control. So the first two questions are no longer
 requests — they are **pull requests**, which is the right shape: proposed in-world, visible, and
-hers to accept or decline. The third (naming) stays a courtesy question and the answer is still
+theirs to accept or decline. The third (naming) stays a courtesy question and the answer is still
 Liz.
 
 **Licensing resolved:** the course will be property of the Multiverse and the revenue accrues to

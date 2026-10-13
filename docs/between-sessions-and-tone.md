@@ -47,7 +47,7 @@ is the part worth agreeing first.
 >
 > The underlying psychology stands — an earned entry carries the memory of the sting, which is
 > what collection mechanics run on. **The name and the mechanic are Liz's call.** Options are
-> put to her in [`campus-integration.md`](campus-integration.md) §3 rather than picked here.
+> put to them in [`campus-integration.md`](campus-integration.md) §3 rather than picked here.
 >
 > Section 2 is kept below rather than deleted, because the reasoning is still the argument for
 > *why* some earned-collection mechanic belongs here.
