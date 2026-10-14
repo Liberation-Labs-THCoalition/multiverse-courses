@@ -17,8 +17,14 @@ By the end, a student can take a curiosity — supplied here, their own in the a
 full research cycle with their agent — **lit review → design → execution → analysis →
 presentation** — with an adversarial gate at every step that they built themselves.
 
-Not "here is our pipeline." The transferable claim is: *your team of two needs a gate, and it has
-to be made of your own failures.*
+Not "here is our pipeline." The transferable claim is the one at the centre of the outline:
+
+> **A gate is what lets you commit. You are not here to learn to doubt everything — you are here to
+> learn to believe something on purpose, and to build the instrument that makes that belief worth
+> other people's time.**
+
+Your team of two needs a gate, and it is made of your own failures, so that what survives it is
+worth believing.
 
 ## Running one
 
@@ -92,9 +98,10 @@ Adversarial gating is not a module. It is the thing every session ends with, bec
 [the current spec](../../docs/source-analysis.md) puts it at every step and our August draft
 wrongly had it as a closing principle.
 
-Every session: **do the stage → try to break your own output → write down the failure mode you
-found → add it to your gate.** By the last session the student has a small, personal, earned kill
-list, and has watched it catch something.
+Every session: **do the stage → say what you now believe → try to break it → keep what survives,
+and write down what didn't.** By the last session the student has a finding they can defend, and a
+small, personal, earned kill list that is its warrant. They have watched the list catch something,
+and watched something survive it.
 
 ## Outcomes, in the Multiverse's own competency-verb style
 
@@ -114,14 +121,17 @@ Written to match the house format at ascending Bloom levels — see
 - synthesise a review gate that catches what *you* cannot see, and demonstrate it firing
 - synthesise a division of labour with your agent: what it checks, what you check, what neither can
 
+**defend**
+- defend a finding: state what you believe, the warrant for it, and what would unseat it
+
 ## Session sketch — `DRAFT`, argue with it
 
 | # | working title | stage | ends with |
 |---|---|---|---|
-| 1 | **The question you cannot stop thinking about** | curiosity → testable claim; lit review with an agent | a pre-registration with a named unwanted outcome |
-| 2 | **Designing something that can fail** | design; confounds; controls; power | a design your agent tried to break, and the break log |
+| 1 | **The question you cannot stop thinking about** | curiosity → testable claim; lit review with an agent | a claim that could come out the other way, a verified citation trail, and a first kill |
+| 2 | **Designing something that can fail** | design; confounds; controls; power | a pre-registration your agent tried to break, the break log, and a second kill |
 | 3 | **[Running it, and reading what came back](session-3-reading-what-came-back.md)** | execution + analysis | a result *and* an honest account of what it does not support |
-| 4 | **[The gate, and the room](session-4-the-gate-and-the-room.md)** | gating; presentation; what to do when you were wrong | your own kill list, and a five-minute honest talk |
+| 4 | **[The gate, and the room](session-4-the-gate-and-the-room.md)** | gating; presentation; what to do when you were wrong | a defended finding, with your kill list as its warrant, and a five-minute honest talk |
 
 **Four sessions, not three.** The gap between *running it* and *the gate* is where the course actually lives — folding 4 into 3 would compress the two things students cannot get anywhere else (what a result does not support, and what to do when you were wrong) into a coda on an analysis session. They are the subject, not the wrap-up.
 

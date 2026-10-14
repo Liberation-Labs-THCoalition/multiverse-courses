@@ -45,6 +45,10 @@ read the school's current curriculum.
 - [Build a review gate out of your own failures](./gate/build-a-review-gate-out-of-your-own-failures.md)
 - Demonstrate your gate catching something you could not see unaided
 - Divide verification labour with a long-horizon agent
+- `PROPOSED` 2026-10-14, for Liz: **Defend a finding with a gate that could have killed it.** State what
+  you now believe, show the gate that could have killed it and didn't, and say what would still
+  unseat it. Every other standard here guards against believing something false; this one makes the
+  course end on something believed. Session 4's talk is graded on exactly this.
 
 ---
 

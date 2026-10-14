@@ -31,7 +31,7 @@ stage" against a stage list that does not exist.
 | 3 | **Design** | the comparison, the controls, the thing that would refute you | a control exists that is *capable* of failing |
 | 4 | **Pre-register** | lock the analysis, including the outcome you do not want | it is timestamped somewhere you cannot edit |
 | 5 | **Execute** | run it, capture provenance as you go | the artifact records what produced it |
-| 6 | **Analyse** | read what came back, separate dead hypothesis from broken measurement | the limits section is written |
+| 6 | **Analyse** | read what came back, separate dead hypothesis from broken measurement | a verdict is written: what I now believe, and its limits |
 | 7 | **Gate** | check it with something that can fail | the gate fires on a known-bad input |
 | 8 | **Ship** | write it, deposit it, make it reachable by someone who is not you | a stranger can retrieve it and re-run it |
 
