@@ -28,8 +28,9 @@ minutes** once you account for two brain breaks, transitions, and pairing. Also 
 the most dead air: **never ask a remote room to pair up — pre-assign and post the list at the
 previous break.**
 
-`OPEN` — session 4 has a per-block clock. **Sessions 1–3 do not yet**, and were written against
-60-minute blocks. They need the same pass.
+`DRAFT` — all four sessions have a per-block clock in [the four clocks](../../docs/session-clocks.md)
+(2026-09-09, provisional). Session 1's page took its cuts on 2026-10-14. Sessions 2 and 3 still run
+over (247 and 252 minutes against 201) until theirs are applied.
 
 ## Tooling
 

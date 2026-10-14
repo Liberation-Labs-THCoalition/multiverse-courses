@@ -14,7 +14,7 @@ unmarked, that is a bug — flag it.
 | | what | status |
 |---|---|---|
 | **1. Meetup** | Weekly AI welfare / consciousness research reading + conversation group. Free. | `SETTLED` that it happens; `OPEN` on who runs it and how readings are chosen → [`meetup/`](meetup/) |
-| **2. Vibe Research** | 3–4 four-hour intensives over ~60 days. How to build a research pipeline and work with a dedicated long-horizon agent: lit review → design → execution → analysis → presentation, with adversarial gating at every step. | `DRAFT` → [`courses/vibe-research/`](courses/vibe-research/) |
+| **2. Vibe Research** | Four four-hour intensives, fortnightly (about 56 days per cohort). How to build a research pipeline and work with a dedicated long-horizon agent: lit review → design → execution → analysis → presentation, with adversarial gating at every step. | `DRAFT` → [`courses/vibe-research/`](courses/vibe-research/) |
 | **3. Accelerator** | Starting next year. Match people already doing research with mentors from Liz's network and compute from the school. | `OPEN` → [`accelerator/`](accelerator/) |
 
 ## The one thing to know before editing
