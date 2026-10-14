@@ -278,27 +278,26 @@ published curriculum teaches with them**, which is an opening rather than a curi
 > **`used` — upgraded 2026-09-09. We ran it over our own published corpus before recommending it,
 > and it found a real defect on the first pass.**
 >
-> *`kv-cloak-defense-paper` reports **7%** confabulation in a table captioned **"50 prompts per
-> model."** At n=50 only even percentages are reachable — 7% would need 3.5 confabulations. The
-> paper's own body says `n=7` and "50–100 prompts each", so the data was right and **the caption's
-> N was wrong**; it shipped in three files. The neighbouring rows (12%, 26%) are reachable at 50,
-> which is exactly why nothing ever looked odd.*
+> *One of our own papers reported a confabulation rate in a table whose caption gave the number of
+> prompts per model. The check said that rate could not exist at that sample size. The paper's own
+> body gave a different sample size, so the data was right and **the caption's N was wrong**; it
+> shipped in three files. The neighbouring rows passed, which is exactly why nothing ever looked
+> odd.* (The numbers, and why they fail, are in the exercise's facilitator notes: tell the story
+> after the room has built the check, not before.)
 >
 > That is the argument for this exercise, and we did not have to borrow anyone else's example.
 >
-> It is **fifteen lines of arithmetic** with no
-> dependencies: if *N* observations are integers their total is an integer, so the mean can only be
-> one of *N* values. A reported mean that is not the rounded form of any of them **cannot exist**,
-> whatever the data was. No statistics, no *p*-value, no judgement call.
+> It is **fifteen lines of arithmetic** with no dependencies. Working out *why* it works is the
+> exercise, so this page does not say; the method is in the facilitator notes. No statistics, no
+> *p*-value, no judgement call.
 >
 > A student writes it in an hour, and walks out owning a working error detector they can point at
 > real published papers. That is the entire philosophy of this course in one exercise: **they build
 > the instrument, then use it on something real.**
 >
-> Teach the limits in the same hour, because they are where the thinking is. GRIM applies **only**
-> to integer-valued measures, and it goes blind once *N* ≥ 10^decimals — at two decimals it has no
-> power above *N* = 100. An inconsistency says the reported *set* cannot co-exist; it does not say
-> **which** number is wrong, and it is not evidence of misconduct.
+> Teach the limits in the same hour, because they are where the thinking is. The limits questions
+> and their answers are in the exercise's facilitator notes; students work them out after the code
+> runs.
 >
 > **Why it lands:** Brown & Heathers tested 71 eligible articles and found that **about half (36)
 > contained at least one impossible mean**, with 16 carrying multiple. A student who has just

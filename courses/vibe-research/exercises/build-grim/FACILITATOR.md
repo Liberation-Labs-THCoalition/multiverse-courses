@@ -118,3 +118,25 @@ fast if it is used to make accusations it cannot support.
 Then the bridge to hour 1: *this one was handed to you, fully specified, with its controls
 attached. The next one you build has to come from a failure of your own — and nobody will hand you
 the controls.*
+
+---
+
+## Moved here from the public Tools by stage page (2026-10-14)
+
+That page stated the method and the limits, which students are meant to work out. Its text, kept
+here for facilitators:
+
+**The method.** If *N* observations are integers their total is an integer, so the mean can only be
+one of *N* values. A reported mean that is not the rounded form of any of them **cannot exist**,
+whatever the data was.
+
+**The story, for after the room has built the check.** `kv-cloak-defense-paper` reported **7%**
+confabulation in a table captioned **"50 prompts per model."** At n=50 only even percentages are
+reachable: 7% would need 3.5 confabulations. The paper's own body says `n=7` and "50–100 prompts
+each", so the data was right and **the caption's N was wrong**; it shipped in three files. The
+neighbouring rows (12%, 26%) are reachable at 50, which is exactly why nothing ever looked odd.
+
+**The limits, in one paragraph** (the full answers are above): GRIM applies **only** to
+integer-valued measures, and it goes blind once *N* ≥ 10^decimals; at two decimals it has no power
+above *N* = 100. An inconsistency says the reported *set* cannot co-exist; it does not say
+**which** number is wrong, and it is not evidence of misconduct.
