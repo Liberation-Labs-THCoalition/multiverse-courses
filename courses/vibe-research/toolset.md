@@ -398,8 +398,9 @@ did not fix it, because they shared the vocabulary.** Session 1 gets this as a l
 Floating-Point Experiments to Replicating Research"*
 ([10.1145/3736731.3746162](https://doi.org/10.1145/3736731.3746162), gold OA). Someone has already
 published the pedagogy for the exact thing we are building a session around. **Read it before
-writing that session.** Not yet read — ACM DL blocked automated fetching, so this is a metadata-
-only sighting and the title is doing all the work in that sentence.
+writing that session.** *(Corrected 2026-10-14: this line used to say the paper was unread and a
+"metadata-only sighting". It is gold open access, and all ten pages have been read; what it
+actually covers is in [the source analysis](../../docs/source-analysis.md).)*
 
 ## Original to-do (kept — the pass above covers categories, not sessions)
 
