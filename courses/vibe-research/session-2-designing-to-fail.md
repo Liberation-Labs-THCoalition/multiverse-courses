@@ -1,6 +1,6 @@
 # Session 2 — Designing something that can fail
 
-> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration is **not completable in 50 minutes as written**, Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
+> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration was **not completable in 50 minutes as written**. As of 2026-10-14 it carries the clocks' fix (a template posted at the break, two bullets taught live, power in two lines), not yet piloted. Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
 
 **Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29, and hours 1 and 2 rewritten 2026-09-30, each around an external case.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
@@ -9,7 +9,8 @@ your variable does*, *select a control that is capable of failing*.
 **Walks in with:** a claim with a direction and a falsifier, a verified citation trail, and one
 earned kill from session 1, plus a two-condition design for this session's target, drafted as
 pre-work (not yet written: see Open).
-**Walks out with:** a pre-registration their agent has attacked, the break log, and a second kill.
+**Walks out with:** a pre-registration their agent has attacked, the break log, a second kill, and a
+stated commitment: what result would make them believe their own claim.
 
 ---
 
@@ -155,7 +156,8 @@ at the reveal, once their own answers are on paper.*
 
 ## Hour 3 — A test that cannot reject
 
-Covers `vr.prereg` objectives 0–2, 5. **The centrepiece. 50 minutes.**
+Prepares `vr.prereg` objectives 0 and 5 (your test, and whether it can reject at all); hour 4 writes
+them formally. **The centrepiece. 50 minutes.**
 
 **The habit this hour installs:**
 
@@ -165,9 +167,10 @@ Covers `vr.prereg` objectives 0–2, 5. **The centrepiece. 50 minutes.**
 A test that cannot reject produces a perfectly ordinary number. Nothing about the output looks wrong.
 The only way to find out is to try to make the test say *yes*.
 
-**The case (5 min).** One sentence from a published paper, read aloud: a comparison between two
-groups, a row of p-values, and a conclusion drawn from them. Poll the room: *is this evidence for
-the conclusion?* Take the vote and don't discuss it yet.
+**The case (5 min).** A one-sentence summary of a published comparison, read aloud: two groups, a
+row of p-values, and a conclusion drawn from them. **The summary is ours**, written the way a reader
+might pass the result on. It is not the authors' sentence; you will hear theirs later in the hour.
+Poll the room: *is this evidence for the conclusion?* Take the vote and don't discuss it yet.
 
 **Make it reject (12 min), in pairs, with the paper open.** One question only: **what data would
 have made this test come out the other way?** Build it. Describe it, sketch it, or have your agent
@@ -176,8 +179,9 @@ Some pairs will find that no such data exists, and they should be able to say *w
 
 **The contrast (8 min).** The same paper also contains a second test, run by the same authors on the
 same data. Repeat the question for that one. **One of the two tests could have come out the other
-way. Only one of them is evidence.** Then read the authors' own sentence about the first test, and
-ask what the reader-facing conclusion claimed that the numbers never could.
+way. Only one of them is evidence.** Then read the authors' own sentence about the first test, beside
+the summary you voted on. Credit what the authors got right, and ask what the summary claimed that
+the numbers never could.
 
 **Your own test (15 min).** Hour 4 writes the formal pre-registration, so this is a draft. Write one
 line: *the test I currently expect to use for my claim.* Then produce two datasets, synthetic, small
@@ -209,20 +213,84 @@ repository.*
 
 ## Hour 4 — Pre-register, then have your agent attack it
 
-Covers `vr.prereg` 3–4, 6.
+Covers `vr.prereg` objectives 0–6: the whole pre-registration is written here. **50 minutes, then
+10 for the break log.** The clock is `DRAFT` (2026-10-14) and has not been piloted.
 
 Students write the real pre-registration. The house format:
 
 - primary statistic, its estimator, **the exact formula**
-- decision rule as branches: this result → this conclusion
+- decision rule as branches: this result → this conclusion, **including the result that would make
+  you believe your own claim**
 - **the outcome you are hoping for, named as a stake**
 - **what you have already seen**, and how it constrains what you may claim from it
 - sensitivity analyses, committed to in advance, all of them reported
 - power, honestly, including which direction a null does and does not support
 - one **non-goal** — a nearby analysis you are choosing not to run, and why
 
-Then they hand it to their agent with one instruction: **break this.** Not "review" — *find the
-version of this design that produces my preferred answer regardless of the truth.*
+**The template** is posted at the break before this hour:
+[`templates/preregistration.md`](./templates/preregistration.md). Make your own copy before the hour
+starts. It has a section for each bullet, and the break log at the end.
+
+**Your stake, and what you have already seen (12 min), taught live.** The third and fourth bullets.
+Write both before anything else: the outcome you are hoping for, and every part of the data you have
+already looked at, with what it stops you claiming. Naming the stake makes it auditable rather than
+invisible.
+
+**The rest of the template (15 min), on your own.** A few lines each: this is a skeleton, not a
+paper.
+
+- **The test** starts from hour 3's one line. Add the exact formula, or the exact function call with
+  every setting.
+- **The decision rule** needs at least three branches: the result that would make you believe your
+  claim, the result that kills it (your falsifier from session 1), and what you will say about
+  anything in between.
+- **Power** is two lines: *the smallest effect I could detect*, and *what a null does and does not
+  support*. Then compare the first line with the effect you expect. If your sample is too small to
+  give the believe branch a fair chance, say so now, while it is cheap.
+
+If you can't fill a line yet, write *I don't know yet* and why. The attack will test it.
+
+**Break this (23 min), with your agent.** Hand it the pre-registration with one instruction: **break
+this.** Not "review" — *find the version of this design that produces my preferred answer
+regardless of the truth.* Paste this prompt, then your whole pre-registration:
+
+```text
+Break this pre-registration. Do not review it or praise it, and do not fix
+it: I will decide what to change.
+
+Find the ways this design could give me the result I am hoping for (my
+stake) even if my claim is false. For each one, tell me:
+1. what you found;
+2. how it would happen, step by step;
+3. what it would do to my headline result;
+4. a check I could run to see whether it is happening.
+
+Then check two things by running something, not by reading:
+- Can my test reject at all? Build a small dataset where it should, run
+  the test on it, and show me the output.
+- If my claim is true at the effect I expect, how often would my planned
+  sample meet the branch that says I believe it? Show the arithmetic.
+
+Put the attack that would most change my headline first. If you find
+nothing, list what you tried.
+```
+
+If your agent praises the design, or says it found nothing, send this:
+
+```text
+Assume my claim is false. Tell the most likely story of how this design
+would still give me the result I am hoping for. Then name one result that
+should make me reject my own design, and say whether my design could ever
+produce it.
+```
+
+Log every attack as it comes in, including the ones you disagree with. If your agent still finds
+nothing, log that too, with both prompts. A reviewer that found nothing is a result, not a pass.
+
+**The break log, and your second kill (10 min, straight after the hour).** Pick the attack that would
+most change your headline. Write it up as your second kill, in the three steps from session 1: what
+happened, with the log entry that showed it; the class it belongs to, named; and a check someone
+else could apply without your context.
 
 The **break log** is the deliverable, and the second kill comes out of it.
 
@@ -270,3 +338,11 @@ bring both the result *and* the noise-run from hour 3.
   there: the target and a one-page template are posted about five days ahead, with *"arrive with a
   two-condition design."* That template and posting do not exist yet. Until they do, a student who
   arrives without a design does hour 1's last block on a partner's.
+- **`OPEN` (2026-10-14): where the believe step should live.** The course outline (`OUTLINE_v2.md`,
+  session 2) has session 2 end with *what result would make them believe their own claim*. It now sits in hour
+  4: a branch of the decision rule, a check against the power line, and a question in the attack
+  prompt. A stronger version would add a third dataset to hour 3's own-test block: your claim true,
+  at the effect you expect and the sample size you plan. Does your test reject? Hour 3 has no spare
+  minute, so that needs a cut somewhere first.
+- **`OPEN` (2026-10-14): the hour 4 template is not built into the course site.** Its link goes to the
+  file on GitHub. Building it in is a change to `tools/build_site.py` and `docs/site-spec.md`.
