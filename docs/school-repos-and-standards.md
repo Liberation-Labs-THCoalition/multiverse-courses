@@ -67,6 +67,10 @@ our own `CONTRIBUTING.md`.
 only primary for that course remains the class page (<https://themultiverse.school/classes/193>),
 already captured in [`source-analysis.md`](source-analysis.md) §1.
 
+**Superseded 2026-10-14:** Thomas sent the course's own pages from the school's docs site, with Intro to Agents'. What
+they teach is in the [course README](../courses/vibe-research/README.md)'s prerequisite paragraph. The copies we
+scoped against are kept privately.
+
 *(Third time in two days a name has outrun the artifact: `agni-open` pointing at a private repo,
 my own "bestiary" colliding with an existing mechanic, and now a course repo that is empty. The
 check costs one API call.)*

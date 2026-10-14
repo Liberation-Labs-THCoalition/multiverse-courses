@@ -20,8 +20,8 @@ unmarked, that is a bug — flag it.
 ## The one thing to know before editing
 
 **Students arrive with an agent.** The Multiverse agentic coursework is a **prerequisite**, so
-every participant already has at least one long-horizon agent and has been through Agent Design /
-Agentic SDLC. The weekly welfare meetup means they also arrive knowing how to treat it.
+every participant already has at least one long-horizon agent and has been through the two prerequisite
+classes, Intro to Agents and Agentic SDLC (2026-10-14). The weekly welfare meetup means they also arrive knowing how to treat it.
 
 This resolves the hardest scoping problem by sequencing rather than by provisioning — we do not
 supply agents, and session one is not an agent-setup workshop.

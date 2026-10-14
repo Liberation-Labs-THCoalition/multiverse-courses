@@ -240,7 +240,8 @@ invisible.
 paper.
 
 - **The test** starts from hour 3's one line. Add the exact formula, or the exact function call with
-  every setting.
+  every setting. Your agent can write the formula. You should be able to say in one sentence what
+  number it produces, and which direction counts for your claim.
 - **The decision rule** needs at least three branches: the result that would make you believe your
   claim, the result that kills it (your falsifier from session 1), and what you will say about
   anything in between.
@@ -252,7 +253,8 @@ If you can't fill a line yet, write *I don't know yet* and why. The attack will 
 
 **Break this (23 min), with your agent.** Hand it the pre-registration with one instruction: **break
 this.** Not "review" — *find the version of this design that produces my preferred answer
-regardless of the truth.* Paste this prompt, then your whole pre-registration:
+regardless of the truth.* It is the Evil Genie Test from Agentic SDLC, pointed at your own design:
+the genie grants the result you are hoping for, and your claim is still false. How? Paste this prompt, then your whole pre-registration:
 
 ```text
 Break this pre-registration. Do not review it or praise it, and do not fix

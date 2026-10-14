@@ -4,10 +4,20 @@
 
 **Names are ours to propose.** Liz has creative latitude over the campus. To save them time, we present finished names rather than options, and they change whatever they like. Everything below is a proposal, not a claim.
 
-**Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: Multiverse agentic coursework, so
-**every student arrives with an agent of their own.** We do **not** assume they have run a paired ablation: the school's
-agent classes no longer include one, and Liz judged it too much to expect and likely to intimidate people (2026-10-13).
-What else the prerequisite guarantees is `OPEN` until we have read the school's current curriculum.
+**Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: two of the school's agent classes,
+**Intro to Agents** (Agent 101) and **Agentic SDLC** (Thomas, 2026-10-14), so **every student arrives with an agent of
+their own.** Read against both curricula on 2026-10-14, students arrive able to:
+
+- work in Claude Code, with skills, subagents and scheduled runs, and keep their work in git;
+- build an agent in Python with tools (web search among them), retrieval, notes it carries between runs, and a swarm;
+- write tests for an agent's behaviour and a pre-commit hook, and run the Evil Genie Test on a goal;
+- compare two things side by side, once: Intro to Agents' chunking comparator, judged afterwards by chunk statistics
+  and by reading samples.
+
+They do **not** arrive with predictions written before a run, controls, outcome measures or statistics, so the course
+teaches those from the start. Nor do we assume they have run a paired ablation: the school's agent classes no longer
+include one, and Liz judged it too much to expect and likely to intimidate people (2026-10-13). `OPEN`, Liz's call:
+whether the prerequisite is checked at enrolment or taken on trust.
 
 ---
 
@@ -148,6 +158,11 @@ include a paired ablation, and Liz judged it too much to expect and likely to in
 Keep the idea and drop the exam. Comparing two runs that differ in one thing is the heart of a test worth running, so
 the course still teaches it, as something students learn here rather than something they must already know or
 perform cold:
+
+**Where it starts from.** Students have compared two things side by side once already: Intro to Agents' chunking
+comparator sets two chunking strategies next to each other and asks afterwards which did better. That is the familiar
+half. The course adds two moves: write the prediction before the run, and judge on an outcome the claim depends on
+rather than on a description of the outputs.
 
 - **Predict first.** Before anything runs, the student writes down what they expect to change and what they expect
   to stay the same.

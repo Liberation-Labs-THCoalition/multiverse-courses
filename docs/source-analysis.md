@@ -10,6 +10,10 @@ something I have said so rather than filled the gap.
 Source: <https://themultiverse.school/classes/193> (also `/166`, `/182` — recurring offering),
 fetched 2026-08-22.
 
+> **2026-10-14:** this section was written in August from the public class page. The course's own pages, which Thomas
+> sent on 10-14, no longer include paired runs. The current reading of both prerequisite classes is the
+> [course README](../courses/vibe-research/README.md)'s prerequisite paragraph.
+
 | | |
 |---|---|
 | format | One-day intensive, online |

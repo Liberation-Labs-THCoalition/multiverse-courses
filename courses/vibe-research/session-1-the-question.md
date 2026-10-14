@@ -35,7 +35,8 @@ day: it is much easier to sort out early.
 
 **Bring**
 
-- **Your agent**, the one from the school's agent classes, ready to use during the call.
+- **Your agent**, ready to use during the call. For most people that is your Claude Code setup from Agentic SDLC;
+  one you built in Intro to Agents works too.
 - **A place to write that keeps a timestamp**: a doc with version history, a notes file in a git
   repository, or a message to yourself. In hour 2 you will seal a prediction there.
 - **Four hours.** Two short breaks are built in.

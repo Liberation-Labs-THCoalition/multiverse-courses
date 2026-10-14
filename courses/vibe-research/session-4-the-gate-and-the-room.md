@@ -16,6 +16,9 @@ A gate is not a quality filter you install at the end. **It is your own history 
 written down in a form that fires automatically.** Every entry costs someone something to learn.
 That is what makes it worth having and what makes it hard to fake.
 
+You have built one before. In Agentic SDLC, a pre-commit hook stops code going in that fails a check you wrote. A
+gate does the same for claims, and your own mistakes write its checks.
+
 And it is **for** something. The course README says *a gate is a prosthesis, not a virtue* — a
 prosthesis lets you reach further than you otherwise could. Nobody builds one to admire it. Three
 sessions have made you hard to fool. This one is where that buys you the right to say something

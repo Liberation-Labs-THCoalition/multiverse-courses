@@ -17,6 +17,9 @@ Start from the one line you wrote in hour 3.
 - **Estimator**, the rule that turns your data into that number:
 - **The exact formula**, or the exact function call with every setting:
 
+Your agent can write the formula. You should be able to say in one sentence what number it produces, and which
+direction counts for your claim.
+
 ## 2. The decision rule, as branches
 
 - **I will believe my claim if:**

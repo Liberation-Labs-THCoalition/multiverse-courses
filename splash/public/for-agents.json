@@ -13,6 +13,12 @@
   "llms_txt": "https://liberation-labs-thcoalition.github.io/multiverse-courses/llms.txt",
   "repository": "https://github.com/Liberation-Labs-THCoalition/multiverse-courses",
   "core_habit": "predict, then look",
+  "prerequisites": {
+    "classes": ["Intro to Agents (Agent 101)", "Agentic SDLC"],
+    "students_arrive_with": ["Claude Code with skills, subagents and scheduled runs", "git", "Python agents with tools, retrieval, notes and swarms", "tests for agent behaviour", "pre-commit hooks", "the Evil Genie Test", "one side-by-side comparison, judged afterwards (chunking strategies)"],
+    "students_arrive_without": ["predictions written before a run", "controls", "outcome measures", "statistics"],
+    "read": "2026-10-14"
+  },
   "sessions": [
     {
       "n": 1,
