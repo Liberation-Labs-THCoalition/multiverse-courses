@@ -394,7 +394,7 @@ did not fix it, because they shared the vocabulary.** Session 1 gets this as a l
 
 ### One more thing, and it is for the syllabus rather than the toolset
 
-**Acher, Gotlieb, Spieker & Lyan 2025**, *"Teaching Reproducibility and Embracing Variability: From
+**Acher, Gotlieb, Spieker & Le Bartz Lyan 2025**, *"Teaching Reproducibility and Embracing Variability: From
 Floating-Point Experiments to Replicating Research"*
 ([10.1145/3736731.3746162](https://doi.org/10.1145/3736731.3746162), gold OA). Someone has already
 published the pedagogy for the exact thing we are building a session around. **Read it before
