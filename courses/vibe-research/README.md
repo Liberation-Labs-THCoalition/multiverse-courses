@@ -182,11 +182,15 @@ Still true and worth pinning above the door:
 Quoting "effective dimensionality ≈ 40" would teach students to cite an artifact in the same hour
 we teach them not to. ([details](../../docs/source-analysis.md) §3)
 
-**Teach from live failures, including current ones.** The most convincing material is not our
-best results, it is a real week: a null that could not reject under any data, an analysis
-projected at 122.8 hours because of a matrix decomposition, a mechanism claim retracted from our
-own published paper. Being wrong in public on a Tuesday *is* the method working, and students
-should see that before they see a clean result.
+**Teach from real failures, in a form students can trace.** The most convincing material is not a
+clean result, it is a real failure: a null that could not reject under any data, an analysis that
+would have taken days because of one matrix decomposition, a claim retracted from a published paper.
+Being wrong in public *is* the method working, and students should see that before they see a clean
+result. But each teaching case has to be one a student can check: a published paper, a retraction,
+a dataset they can rerun. Our own lab's failures belong in facilitator notes, told as testimony
+("this happened to us"), not as cases students are asked to reason from. *(Revised 2026-10-14: this
+line used to point at our own week as the material, and sessions 3 and 4 were built from it; see the
+round-2 audit.)*
 
 ## Open
 
