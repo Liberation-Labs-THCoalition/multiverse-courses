@@ -80,23 +80,17 @@ Collection mechanics run on exactly that — the entry means something because y
 metaphor is doing real work, so it will survive contact with a sceptical student rather than
 feeling like a costume.
 
-### Some real entries, for tone
+### What an entry looks like
 
-From our own list, all earned the hard way, all with dates:
+Use the format from [session 4, hour 1](../courses/vibe-research/session-4-the-gate-and-the-room.md):
+a name in capitals, one sentence, why it passes review, the mechanical test, and the case that
+earned it, with its date and its numbers. **This page does not print entries from our own list**
+(removed 2026-10-14). Session 1's instructor note rules that out in every session, and an entry a
+student is handed carries none of the sting that makes an earned one work. Our own failures reach
+students as exercises instead, rebuilt so that they meet the defect themselves.
 
-- **`DEGENERATE_PERMUTATION_NULL`** *(2026-08-22)* — a shuffle test that looked like 64 draws but
-  only had 4 distinct ones. It could not have rejected under any data. The gate approved the
-  design at 0.92 confidence and told the author to report the impossible number.
-- **`NULL_FROM_UNVERIFIED_SEARCH`** *(2026-08-20)* — a search that fails and a search that finds
-  nothing return the same empty result. Nearly recorded a 22,359-line file as empty.
-- **`RELIABILITY_TOO_CLEAN`** *(2026-08-16)* — a reliability of 0.9998 is not proving the pattern
-  exists, it is proving the readout is too stable to be true.
-- **`IDENTITY_BY_DEFAULT`** *(2026-08-21)* — a message handler defaulting an unknown sender to a
-  plausible name. A well-formed answer that says nothing is more dangerous than an obvious gap,
-  because a gap gets checked.
-
-Four entries, four different shapes of being wrong. A student who leaves with **three of their
-own** has something better than our fifty-four.
+A student who leaves with **three of their own** has something better than any list we could hand
+them.
 
 ## 3. Tone guidance
 

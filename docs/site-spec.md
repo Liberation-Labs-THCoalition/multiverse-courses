@@ -37,9 +37,11 @@ Out of scope for v0: `accelerator/`, `meetup/`, `standards/`, audits and reviews
 ## Answer keys: reviewable after completion, not before
 
 The keys are the `FACILITATOR.md` files, `verify_floor.py`, and
-`seeded-02…/AGENT_REVIEW_RESULTS.md`. Students need them afterwards: to review, to catch up after a
-missed hour, or to finish at their own pace. They must not get them before the exercise, or the
-seeded exercises stop working as discovery.
+`seeded-02…/AGENT_REVIEW_RESULTS.md`, plus any file with front matter `audience: facilitator`
+(since 2026-10-14, `seeded-02…/AGENT_REVIEW_PREREG.md`, which states that exercise's defect).
+Students need them afterwards: to review, to catch up after a missed hour, or to finish at their
+own pace. They must not get them before the exercise, or the seeded exercises stop working as
+discovery.
 
 **The constraint:** GitHub Pages is static and public. Anything in the built site can be read by
 anyone, so a "completion gate" on Pages is decoration, not a gate.
@@ -69,6 +71,11 @@ New seeded exercises should keep their keys private from day one.
   list above, or by front-matter `audience: facilitator`) or any string unique to it appears in the
   built `site/`. Include a positive control: plant a dummy key file, the check must fail, then
   remove it.
+- **Session pages (added 2026-10-14):** students read them before the session, so the check also
+  fails if a session page carries any line of a key (even one that also appears elsewhere in the
+  repo, which other pages get only as a NOTE), or matches one of a key's paraphrase canaries. The
+  canaries restate the answer, so they live in the key as a fenced `canaries` block, not in the
+  script.
 
 ## Gaps are visible, not hidden
 

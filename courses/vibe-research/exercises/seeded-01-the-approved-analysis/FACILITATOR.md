@@ -2,8 +2,8 @@
 
 **Do not give students this file.** Give them `analysis.py` and `review.md`.
 
-**Runs in:** ~40 minutes. Session 2 (*Designing something that can fail*), or session 4 as the
-opener for building a kill list.
+**Runs in:** ~40 minutes, in session 4, hour 2 (see *In session 4* below). Session 2 gave it up on
+2026-09-24 so that session 4 keeps it as a discovery (session 2's `Open` list).
 
 **Requires:** Python + numpy. Nothing else. No GPU, no network, no accounts.
 
@@ -90,6 +90,26 @@ always wrong — it is wrong *here* because the schedule's period divides the sh
 to construct a case where the same null is both structure-respecting and non-degenerate. (Period
 and series length coprime is one route. Random offsets within a cycle is another.)
 
+## In session 4
+
+*Moved here from the session 4 page on 2026-10-14. That page is public and students can read it
+before the session, so it no longer states any of this.*
+
+**Why it belongs in session 4 rather than in session 2.** Every individual claim in that review is
+defensible. The null *is* structure-respecting. There *are* 63 draws. 63 draws *would* give 1/64
+resolution — if they were distinct. Nothing checks distinctness **because no line item asks.** The
+defect lives in the relation between two true statements, and a checklist that verifies claims one
+at a time cannot see it by construction.
+
+That is the bridge to hour 3, and students should feel the bridge rather than be told about it.
+
+- **Hour 3.** The page's table of right values fastened to the wrong thing used to carry this
+  exercise as a row: `63 draws, correct | resolution 1/64 — true only if distinct`. It now carries
+  a different example. Once the room has found the defect, put this row on the board yourself.
+- **Hour 4.** The page tells instructors to say plainly what our own gate did, in the same breath as
+  the part where the gate works. The words it used: **our gate approved a degenerate null at 0.92
+  confidence and told the author to report an impossible number.**
+
 ## Provenance, for the facilitator
 
 **This is a synthetic reconstruction of a real failure**, rebuilt so it can be shared. A
@@ -134,3 +154,29 @@ own reviews will be too unless they build the missing checks deliberately.
   looking fine on the first.
 - **Session 4 tie-in:** this exercise generates the first entry in a student's own kill list.
   The rule they wrote in step 4 is the entry.
+
+## Spoiler canaries
+
+*Added 2026-10-14.* `tools/check_public_build.py` fails the site build if any line below matches a
+session page. They paraphrase the defect, so they live here with the answer and nowhere public.
+Each line is a regular expression, matched without regard to case against the page's visible text
+with its whitespace collapsed; a line starting with `#` is a comment. Keep them precise. A canary
+that fires on ordinary prose will get deleted, and then it guards nothing.
+
+```canaries
+# the null's orbit, and its size
+\bnull\b.{0,80}\borbit\b|\borbit\b.{0,80}\bnull\b
+\borbit\b.{0,30}\b(?:4|four)\b
+# how many of the draws are distinct
+\b(?:4|four)\s+distinct\s+(?:values?|ones?|labell?ings?|draws?|shifts?|permutations?)\b
+\bdraws?\b.{0,60}\bdistinct\b|\bdistinct\b.{0,60}\bdraws?\b
+\bif\s+they\s+were\s+distinct\b
+\bonly\s+if\s+distinct\b
+# the resolution the review claims, and the true floor
+\b1\s*/\s*64\b
+\b16\s*/\s*64\b
+\bfloor\b.{0,30}\b0\.250*\b
+# the condition, and the name for it
+\bperiod\b.{0,40}\bdivides?\b
+\bdegenerate\s+(?:permutation\s+)?nulls?\b
+```

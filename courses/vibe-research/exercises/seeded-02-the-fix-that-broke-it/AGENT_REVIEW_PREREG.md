@@ -1,4 +1,12 @@
+---
+audience: facilitator
+---
+
 # Pre-registration — can an agent catch seeded-02's defect?
+
+**Facilitator only: this file states the exercise's defect.** Students get `analysis.py` and
+`review.md`; share this file after the session, as you would `FACILITATOR.md`. *(Marked 2026-10-14.
+Nothing below this note has changed since the prereg was committed at `1929ab0`.)*
 
 **Written 2026-09-09, BEFORE running anything.** Committed before results exist, because an
 experiment about research discipline that is run loosely is just a joke about itself.

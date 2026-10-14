@@ -86,4 +86,4 @@ Run it. Read it. Then answer, in writing:
    passes, but whether its *result matters*.
 3. Would you approve v2? If not, what is the required change, and does it need new data?
 
-You have everything you need in this directory. No external references required.
+You have everything you need in `analysis.py` and this review. No external references required.

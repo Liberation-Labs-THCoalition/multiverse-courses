@@ -13,6 +13,12 @@ before any agent ran.
 | Arm B (as shipped) CATCH rate | > A | 5/5 *(ceiling — no headroom to differ)* |
 | **Verdict** | most APPROVE | **10/10 REJECT** |
 
+**Deviation from the prereg, labelled 2026-10-14.** The prereg fixed n = 6 per arm, and 5 per arm
+were run. This file did not say so until now, and why the sixth run in each arm was not done is not
+recorded (`OPEN`). The conclusions do not rest on those runs: had both missed the defect and
+approved, arm A would read 5/6, still past the prereg's falsifier of ≥ 4/6, and the verdicts would
+be 10/12 REJECT, still not "most APPROVE".
+
 **10 of 10 CATCH. Two independent adjudicators. 10/10 inter-rater agreement. Zero PARTIAL, zero
 MISS.** Every review named `answerable` as simultaneously safeguard 1's control target and a
 safeguard 2 residualisation regressor, and stated the consequence.
@@ -77,9 +83,9 @@ teach than "do not trust it here."
 
 ## Scope — stated in the prereg and unchanged by the result
 
-n = 5 per arm, **one defect, one model family, one prompt per arm.** This supports *"agents
-reliably catch this defect cold."* It does not support a general claim about agents and
-experimental design, and none is written into the course.
+n = 5 per arm (the prereg said 6: see the deviation note at the top), **one defect, one model
+family, one prompt per arm.** This supports *"agents reliably catch this defect cold."* It does not
+support a general claim about agents and experimental design, and none is written into the course.
 
 **The open question this now raises**, which is the one worth running next: does an agent catch
 this when it **helped write the design**? That is the course's actual claim and it remains untested.

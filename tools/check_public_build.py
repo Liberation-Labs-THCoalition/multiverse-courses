@@ -13,7 +13,10 @@ The check fails if any file in the site
   1. is named like a key (FACILITATOR.md, FACILITATOR/index.html, verify_floor.py, ...);
   2. is a byte-for-byte copy of a key, under any name;
   3. links to a key (an href or src whose last path segment is a key's name); or
-  4. contains a distinctive string of a key.
+  4. contains a distinctive string of a key;
+and if any session page (sessions/ in the MkDocs output, course/sessions/ when deployed)
+  5. contains a line of a key, even one that is not distinctive (reported as "spoiler"); or
+  6. matches one of a key's paraphrase canaries (reported as "canary").
 
 A distinctive string is a line of a key that is at least MIN_CHARS letters and digits long
 once markup, spacing and punctuation are dropped, and that occurs in no other file tracked in
@@ -25,11 +28,22 @@ A key line that also occurs in another repo file is not distinctive. It is repor
 instead: a key line repeated in a student-facing page is a spoiler there, although it is not
 a leak of the key file.
 
+SESSION PAGES (2026-10-14). Students read the session pages before the session, so on a session
+page that NOTE is a failure (rule 5). If it is the key that quotes the session page, reword the
+key's copy. A line matcher cannot see a paraphrase, so a key may also carry canaries (rule 6): a
+fenced block whose info string is `canaries`, holding one regular expression per line (a line
+starting with # is a comment). Each is matched, ignoring case, against the visible text of every
+session page with its whitespace collapsed. Canaries restate the answer, so they live in the key
+beside it, never in this script. Pages outside sessions/ keep the NOTE.
+
 --self-test copies the site to a temporary folder and never touches SITE_DIR. It checks that
 the copy passes, then plants a key four ways, one at a time: a verbatim copy under the key's
 own name; the key rendered to HTML under a neutral name; one short line of it inside an
 existing page; and a dummy key recognised only by its front matter. Each plant must fail the
-check, and the copy must pass again once the plant is removed.
+check, and the copy must pass again once the plant is removed. Then, from a synthetic key and
+a lesson that shares one of its lines, it plants that shared line in a session page and a
+paraphrase that only a canary can see in a session page (each must fail, by its own rule
+alone), and both in a page outside sessions/ (which must pass).
 
 This script deliberately does not import tools/build_site.py: a check that shared the
 builder's idea of what is public would share its blind spots.
@@ -45,6 +59,10 @@ key text is ever needed. Names, copies and links are checked as before.
 
 In this mode, a key line that has since been repeated in a public page FAILS. With no plaintext there is no way to
 tell "shared" from "leaked"; that is stricter, and correct for a spoiler.
+
+Rules 5 and 6 need the keys' plaintext (lines that were already shared when the file was written are not
+fingerprinted, and canaries are regular expressions), so they do not run in this mode. The summary line says so: it
+reports 0 shared lines and 0 canaries checked.
 
 The self-test plants a synthetic key, fingerprinted the same way, so the positive control still exercises the real
 matcher.
@@ -94,6 +112,11 @@ JS_ESCAPE = re.compile(r"\\u([0-9a-fA-F]{4})")
 MARKUP_EXT = {".html", ".htm", ".xml", ".svg"}
 JSON_EXT = {".json", ".map", ".webmanifest"}
 
+# Rules 5 and 6. Site-relative paths: sessions/... in the MkDocs output (site/), course/sessions/... once deployed
+# (_site/, with the splash at the root).
+SESSION_PAGE = re.compile(r"^(?:course/)?sessions/")
+CANARY_BLOCK = re.compile(r"^```canaries[ \t]*\n(.*?)^```[ \t]*$", re.M | re.S)
+
 
 def norm(text: str) -> str:
     """Letters and digits only, lowercased."""
@@ -134,6 +157,7 @@ class Key:
     shared: list[tuple[str, list[str]]] = field(default_factory=list)  # (line, other files)
     # fingerprint mode: anchor hash -> [(line length, full hash)]; no plaintext anywhere
     fingerprints: dict[str, list[tuple[int, str]]] = field(default_factory=dict)
+    canaries: list[tuple[str, re.Pattern]] = field(default_factory=list)   # (source, compiled): rule 6
 
     def n_lines(self) -> int:
         return len(self.distinctive) if self.distinctive else sum(len(v) for v in self.fingerprints.values())
@@ -168,6 +192,21 @@ def key_reason(path: Path) -> str | None:
     return None
 
 
+def canaries_of(rel: str, text: str) -> list[tuple[str, re.Pattern]]:
+    """A key's paraphrase canaries: each line of its ```canaries blocks, as a regular expression."""
+    found = []
+    for block in CANARY_BLOCK.findall(text):
+        for raw in block.split("\n"):
+            src = raw.strip()
+            if not src or src.startswith("#"):
+                continue
+            try:
+                found.append((src, re.compile(src, re.I)))
+            except re.error as e:
+                raise ValueError(f"{rel}: canary {src!r} is not a valid regular expression ({e})") from e
+    return found
+
+
 def discover(repo: Path, site: Path | None = None, use_git: bool = True) -> list[Key]:
     """Find the keys, and split each key's lines into distinctive and shared."""
     skip = {site.resolve()} if site else set()
@@ -194,6 +233,7 @@ def discover(repo: Path, site: Path | None = None, use_git: bool = True) -> list
             corpus[path.relative_to(repo).as_posix()] = norm(md_visible(text))
     for key in keys:
         text = read_text(key.path) or ""
+        key.canaries = canaries_of(key.rel, text)
         visible = md_visible(text) if key.path.suffix.lower() == ".md" else text
         done = set()
         for line in visible.split("\n"):
@@ -273,7 +313,7 @@ def fingerprint_hits(blob: str, index) -> dict[str, int]:
 @dataclass
 class Finding:
     file: str
-    kind: str      # name | copy | link | text
+    kind: str      # name | copy | link | text | spoiler | canary
     detail: str
 
 
@@ -318,11 +358,20 @@ def site_forms(path: Path, data: bytes) -> tuple[str | None, str]:
     return text, "\x00".join(norm(f) for f in forms)
 
 
-def check(site: Path, keys: list[Key]) -> tuple[list[Finding], int]:
+def page_text(path: Path, text: str) -> str:
+    """What a reader sees of a page, with its whitespace collapsed: what canaries are matched against."""
+    if os.path.splitext(path.name.lower())[1] in MARKUP_EXT:
+        text = html.unescape(TAG.sub(" ", text))
+    return " ".join(text.split())
+
+
+def check(site: Path, keys: list[Key]) -> tuple[list[Finding], int, int]:
+    """Findings, files scanned, and session pages scanned (rules 5 and 6 run only on those)."""
     findings: list[Finding] = []
     by_hash = {h: k for k in keys for h in k.hashes}
     index = text_index(keys)
     files = sorted(p for p in site.rglob("*") if p.is_file())
+    sessions = 0
     for path in files:
         rel = path.relative_to(site).as_posix()
         part = next((p for p in rel.split("/") if named_like_key(p)), None)
@@ -349,7 +398,20 @@ def check(site: Path, keys: list[Key]) -> tuple[list[Finding], int]:
             for krel, count in fingerprint_hits(blob, index).items():
                 findings.append(Finding(rel, "text", f"{count} line(s) found only in {krel} "
                                                      f"(matched by fingerprint)"))
-    return findings, len(files)
+        if SESSION_PAGE.match(rel):
+            sessions += 1
+            seen = page_text(path, text)
+            for key in keys:
+                shared = [line for line, _ in key.shared if norm(line) in blob]
+                if shared:
+                    findings.append(Finding(rel, "spoiler", f"{len(shared)} line(s) of {key.rel} on a session page "
+                                                            f"(not unique to the key, still a spoiler here), "
+                                                            f"e.g. {shared[0][:90]!r}"))
+                fired = [m.group(0) for _, rx in key.canaries for m in [rx.search(seen)] if m]
+                if fired:
+                    findings.append(Finding(rel, "canary", f"{len(fired)} of the paraphrase canaries in {key.rel} "
+                                                           f"fire, e.g. on {fired[0][:60]!r}"))
+    return findings, len(files), sessions
 
 
 # ------------------------------------------------------------------------------ self-test
@@ -378,25 +440,29 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
         copy = Path(tmp) / "site"
         shutil.copytree(site, copy)
 
-        baseline, _ = check(copy, keys)
+        baseline, _, _ = check(copy, keys)
         rows.append((not baseline, "control: the unmodified copy",
                      "clean" if not baseline else f"NOT clean: {len(baseline)} findings; "
                                                   f"the site already leaks"))
 
         # `want`: detectors that must fire. `forbid`: detectors that must NOT, which proves a
         # plant really is invisible to names and hashes, so the text detector alone caught it.
+        # An empty `want` with every kind forbidden is a plant that must PASS.
         def case(label, plant, unplant, want: set[str], forbid: frozenset = frozenset(),
                  keys_=keys):
             plant()
-            found, _ = check(copy, keys_)
+            found, _, _ = check(copy, keys_)
             unplant()
-            after, _ = check(copy, keys_)
+            after, _, _ = check(copy, keys_)
             kinds = {f.kind for f in found}
             ok = want <= kinds and not (kinds & forbid) and not after
             n = len(found)
-            detail = (f"caught ({', '.join(sorted(kinds)) or 'nothing'}; {n} finding"
-                      f"{'' if n == 1 else 's'})"
-                      f"{', clean after removal' if not after else ', NOT clean after removal'}")
+            if want or found:
+                detail = (f"caught ({', '.join(sorted(kinds)) or 'nothing'}; {n} finding"
+                          f"{'' if n == 1 else 's'})")
+            else:
+                detail = "passes, as it should"
+            detail += ", clean after removal" if not after else ", NOT clean after removal"
             rows.append((ok, label, detail))
 
         blind = frozenset({"name", "copy"})
@@ -440,6 +506,47 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
             case("D: dummy key recognised only by its front matter",
                  lambda: spot.write_text(render_html(dummy_body, True), encoding="utf-8"),
                  lambda: spot.unlink(), want={"text"}, forbid=blind, keys_=fake_keys)
+
+        # Rules 5 and 6, from a synthetic key and a lesson that shares one of its lines. The shared line is not
+        # distinctive, so only rule 5 can see it; the paraphrase shares no line with the key, so only a canary can.
+        lesson_repo = Path(tmp) / "repo-with-lesson"
+        secret = "The secret: a heron hid nineteen pebbles under the third footbridge."
+        paraphrase = "Under the third footbridge: 19 pebbles, and a heron watching."
+        (lesson_repo / "exercise").mkdir(parents=True)
+        (lesson_repo / "exercise" / "FACILITATOR.md").write_text(
+            "# Synthetic facilitator notes (self-test only)\n\n" + secret + "\n"
+            "No page of this course mentions herons, pebbles or footbridges anywhere else.\n\n"
+            "```canaries\n# sees the paraphrase, not the secret\n\\b19\\s+pebbles\\b\n```\n", encoding="utf-8")
+        (lesson_repo / "lesson.md").write_text("# A lesson (self-test only)\n\n" + secret + "\n", encoding="utf-8")
+        lesson_keys = discover(lesson_repo, use_git=False)
+
+        def inject(target: Path, md: str):
+            original = target.read_bytes()
+            snippet = render_html(md, True).split("<article>")[1].split("</article>")[0]
+            marker = b"</article>" if b"</article>" in original else b"</body>"
+            return (lambda: target.write_bytes(original.replace(marker, snippet.encode() + marker, 1)),
+                    lambda: target.write_bytes(original))
+
+        lessons = [p for p in pages if SESSION_PAGE.match(p.relative_to(copy).as_posix())]
+        outside = next((p for p in pages if not SESSION_PAGE.match(p.relative_to(copy).as_posix())), None)
+        got = [(k.rel, len(k.shared), len(k.canaries)) for k in lesson_keys]
+        if got != [("exercise/FACILITATOR.md", 1, 1)]:
+            rows.append((False, "E-G: synthetic key with a shared line and a canary",
+                         f"key discovery did not give 1 shared line and 1 canary: {got}"))
+        elif not lessons or outside is None:
+            rows.append((False, "E-G: session pages and one other page",
+                         f"the copy has {len(lessons)} session pages under sessions/ and "
+                         f"{'no' if outside is None else 'one'} other page; rules 5 and 6 cannot be tested"))
+        else:
+            target = lessons[0]
+            where = target.relative_to(copy).as_posix()
+            every = frozenset({"name", "copy", "link", "text", "spoiler", "canary"})
+            case(f"E: a shared key line inside {where}", *inject(target, secret),
+                 want={"spoiler"}, forbid=every - {"spoiler"}, keys_=lesson_keys)
+            case(f"F: a paraphrase only a canary sees, inside {where}", *inject(target, paraphrase),
+                 want={"canary"}, forbid=every - {"canary"}, keys_=lesson_keys)
+            case(f"G: both, inside {outside.relative_to(copy).as_posix()} (must pass)",
+                 *inject(outside, secret + "\n\n" + paraphrase), want=set(), forbid=every, keys_=lesson_keys)
 
     for ok, label, detail in rows:
         print(f"  {'ok  ' if ok else 'FAIL'}  {label:<58} -> {detail}")
@@ -512,13 +619,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--keys-dir", help="with --write-fingerprints: a private checkout holding the keys")
     args = parser.parse_args(argv)
 
-    if args.write_fingerprints:
-        return write_mode(Path(args.keys_dir) if args.keys_dir else None)
     site = Path(args.site).resolve()
-    if not site.is_dir():
-        print(f"check_public_build.py: no site at {site}", file=sys.stderr)
+    try:
+        if args.write_fingerprints:
+            return write_mode(Path(args.keys_dir) if args.keys_dir else None)
+        if not site.is_dir():
+            print(f"check_public_build.py: no site at {site}", file=sys.stderr)
+            return 2
+        keys = discover(REPO, site)
+    except ValueError as e:   # a canary that is not a valid regular expression
+        print(f"check_public_build.py: {e}", file=sys.stderr)
         return 2
-    keys = discover(REPO, site)
     mode = "repo"
     if not keys and FINGERPRINTS.is_file():
         keys, mode = load_fingerprints(), "fingerprints"
@@ -539,12 +650,20 @@ def main(argv: list[str] | None = None) -> int:
     if args.self_test:
         return self_test(site, keys) if mode == "repo" else self_test_fingerprints(site, keys)
 
-    findings, scanned = check(site, keys)
+    findings, scanned, sessions = check(site, keys)
     shared = [(k, line, others) for k in keys for line, others in k.shared]
+    n_canaries = sum(len(k.canaries) for k in keys)
+    print(f"session pages: {sessions}, each checked for {len(shared)} key lines that are not unique to a key "
+          f"and {n_canaries} paraphrase canaries"
+          + (" (fingerprint mode carries neither)" if mode == "fingerprints" else ""))
+    if sessions == 0:
+        print("check_public_build.py: no session pages under sessions/ or course/sessions/, so rules 5 and 6 "
+              "cannot fire. Has the site layout changed?", file=sys.stderr)
+        return 2
     if shared:
         print(f"NOTES (not failures): {len(shared)} key lines also occur in other repo files, so "
               f"they are not unique to a key. Where that other file is student-facing, the line is "
-              f"a spoiler there.")
+              f"a spoiler there; on a session page it fails the check (see 'spoiler' below).")
         for k in keys:
             counts: dict[str, int] = {}
             for _, others in k.shared:
@@ -561,7 +680,9 @@ def main(argv: list[str] | None = None) -> int:
         for f in findings:
             print(f"  [{f.kind}] {f.file}: {f.detail}")
         return 1
-    print(f"PASS: no answer key, and no line found only in one, in {scanned} files under {site}")
+    print(f"PASS: no answer key, and no line found only in one, in {scanned} files under {site}; "
+          + (f"no key line and no canary on its {sessions} session pages" if shared or n_canaries
+             else "the session-page rules had nothing to check"))
     return 0
 
 

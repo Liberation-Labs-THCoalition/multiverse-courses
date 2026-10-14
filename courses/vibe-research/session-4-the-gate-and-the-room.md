@@ -92,16 +92,9 @@ in that directory — **do not read them aloud, and do not hand them out.**
 Students get an analysis and a methods review that passes it at **0.92 confidence**, praises its
 permutation null as *principled*, and instructs the author to report an exact p-value.
 
-The null's orbit is **4**. The test cannot reject at α = 0.05 under **any** dataset. Not
-underpowered — incapable.
-
-**Why it belongs here rather than in session 2.** Every individual claim in that review is
-defensible. The null *is* structure-respecting. There *are* 63 draws. 63 draws *would* give 1/64
-resolution — if they were distinct. Nothing checks distinctness **because no line item asks.** The
-defect lives in the relation between two true statements, and a checklist that verifies claims one
-at a time cannot see it by construction.
-
-That is the bridge to hour 3, and students should feel the bridge rather than be told about it.
+What the defect is, why the exercise runs in this session rather than in session 2, and how it
+leads into hour 3 are in the facilitator notes, not here. Students find the defect themselves, and
+this page is open to them before the session.
 
 ## Hour 3 — Defects that do not present as claims *(40 minutes)*
 
@@ -112,7 +105,7 @@ A gate checks statements. But some defects live in *positions*, not statements:
 | the value | the attachment |
 |---|---|
 | `d = 9.86` correct, `n = 3` correct | *"our most robust findings"* — false only in conjunction |
-| 63 draws, correct | *resolution 1/64* — true only if distinct |
+| `0.8`, correct | *"80% of users"* — true only if it was counted over users, not visits |
 | a real distinctiveness number | fastened to a conclusion the **other** number supports |
 | a real field name | attached to the **adjacent** field's value |
 
@@ -268,9 +261,9 @@ Underclaiming is not the safe error. It is the error that looks like rigour.
 
 If the error goes in a quieter file, a later slide, an appendix — you have priced it lower than it
 cost. Put it where the finding is. This applies to the instructors first: if we are running an hour
-on a gate we built, we say plainly that **our gate approved a degenerate null at 0.92 confidence
-and told the author to report an impossible number**, and we say it in the same breath as the part
-where the gate works.
+on a gate we built, we say plainly that **our own gate approved an analysis with hour 2's defect, at
+0.92 confidence**, we name the defect in the words the room found for it, and we say it in the same
+breath as the part where the gate works.
 
 ## Assessment
 
