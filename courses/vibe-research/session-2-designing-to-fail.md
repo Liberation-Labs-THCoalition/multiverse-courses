@@ -306,7 +306,8 @@ The gate-sparring companion, now with two kills to work against. Students run th
 and log what it challenged.
 
 **Homework:** execute a pilot — smallest version of your design that could produce a signal — and
-bring both the result *and* the noise-run from hour 3.
+bring the result *and* both synthetic runs from hour 3: the one that should reject and the one that
+should not.
 
 ## Open
 
