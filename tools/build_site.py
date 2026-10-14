@@ -75,7 +75,7 @@ class Page:
 COURSE = "courses/vibe-research"
 S01 = f"{COURSE}/exercises/seeded-01-the-approved-analysis"
 S02 = f"{COURSE}/exercises/seeded-02-the-fix-that-broke-it"
-S03 = f"{COURSE}/exercises/seeded-03-the-finding-that-was-residualised-away"
+S03 = f"{COURSE}/exercises/seeded-03-the-prompt-that-made-no-difference"
 
 SESSIONS = [
     Page("Session 1: The question", "sessions/session-1-the-question.md",
@@ -114,14 +114,14 @@ EXERCISES = [
         Page("analysis.py", "exercises/seeded-02-the-fix-that-broke-it/analysis.md",
              f"{S02}/analysis.py", code=True, exercise=True),
     ]),
-    ("Seeded 03: The finding that was residualised away", [
+    ("Seeded 03: The prompt that made no difference", [
         # review.md first: it is the write-up, and its task hands the student the other two.
         # data.csv is a code page so that its file is staged beside analysis.py, which reads it.
-        Page("Review", "exercises/seeded-03-the-finding-that-was-residualised-away/review.md",
+        Page("Review", "exercises/seeded-03-the-prompt-that-made-no-difference/review.md",
              f"{S03}/review.md", exercise=True),
-        Page("analysis.py", "exercises/seeded-03-the-finding-that-was-residualised-away/analysis.md",
+        Page("analysis.py", "exercises/seeded-03-the-prompt-that-made-no-difference/analysis.md",
              f"{S03}/analysis.py", code=True, exercise=True),
-        Page("data.csv", "exercises/seeded-03-the-finding-that-was-residualised-away/data.md",
+        Page("data.csv", "exercises/seeded-03-the-prompt-that-made-no-difference/data.md",
              f"{S03}/data.csv", code=True, exercise=True),
     ]),
 ]

@@ -114,7 +114,7 @@ past about 30 lines, leave it long and note it in the report; do not cut content
 
 ## Rules: stop and report instead of improvising
 
-- **Never** open, copy or publish any `FACILITATOR.md`, `verify_floor.py`, `AGENT_REVIEW_RESULTS.md` or
+- **Never** open, copy or publish any `FACILITATOR.md`, `verify_*.py`, `AGENT_REVIEW_RESULTS.md` or
   `grim_reference.py`, or any file with `audience: facilitator`.
 - **Never** edit lesson text, write new lesson content, or add bios, testimonials or "about" text. You write code,
   config, the notes box and the hub's short labels only.
