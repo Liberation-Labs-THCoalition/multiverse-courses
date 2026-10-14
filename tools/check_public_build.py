@@ -43,26 +43,32 @@ existing page; and a dummy key recognised only by its front matter. Each plant m
 check, and the copy must pass again once the plant is removed. Then, from a synthetic key and
 a lesson that shares one of its lines, it plants that shared line in a session page and a
 paraphrase that only a canary can see in a session page (each must fail, by its own rule
-alone), and both in a page outside sessions/ (which must pass).
+alone), and both in a page outside sessions/ (which must pass). Last, H: a synthetic key known
+only by its fingerprint must be caught beside the repo's own keys (see FINGERPRINT MODE).
 
 This script deliberately does not import tools/build_site.py: a check that shared the
 builder's idea of what is public would share its blind spots.
 
-FINGERPRINT MODE (2026-10-08). The keys live in a private repo, so they cannot be in this one. When the repo holds
-no keys, the check reads tools/key_fingerprints.json instead. For every distinctive line it stores an 8-byte hash of
-the first ANCHOR_CHARS normalised characters and a 16-byte hash of the whole normalised line, plus the sha256 of each
-key file.
+FINGERPRINT MODE (2026-10-08). The keys live in a private repo, so they cannot be in this one. The check reads
+tools/key_fingerprints.json instead. For every distinctive line it stores an 8-byte hash of the first ANCHOR_CHARS
+normalised characters and a 16-byte hash of the whole normalised line, plus the sha256 of each key file.
+
+MERGED (2026-10-14). The file is read whenever it exists, and merged with the keys found in the repo. It used to be
+read only when the repo held no keys at all, so a single key left behind would have switched every fingerprint off,
+silently. A stored key whose file is still in the repo, byte for byte, is dropped, and the plaintext rules cover it.
+Any other stored key is checked by fingerprint: one that has left the repo, or one whose file here has changed since
+the fingerprint file was written (until the file is rewritten).
 
 The rule is the same: a site file fails when a distinctive line is a substring of its normalised text. Every
 ANCHOR_CHARS window of the page is hashed once and looked up, and a hit is confirmed on the full-length hash, so no
 key text is ever needed. Names, copies and links are checked as before.
 
-In this mode, a key line that has since been repeated in a public page FAILS. With no plaintext there is no way to
-tell "shared" from "leaked"; that is stricter, and correct for a spoiler.
+For a key checked by fingerprint, a key line that has since been repeated in a public page FAILS. With no plaintext
+there is no way to tell "shared" from "leaked"; that is stricter, and correct for a spoiler.
 
 Rules 5 and 6 need the keys' plaintext (lines that were already shared when the file was written are not
-fingerprinted, and canaries are regular expressions), so they do not run in this mode. The summary line says so: it
-reports 0 shared lines and 0 canaries checked.
+fingerprinted, and canaries are regular expressions), so they do not run for a key checked only by fingerprint. The
+summary line says how many keys that is.
 
 The self-test plants a synthetic key, fingerprinted the same way, so the positive control still exercises the real
 matcher.
@@ -274,6 +280,16 @@ def load_fingerprints(path: Path = FINGERPRINTS) -> list[Key]:
     return keys
 
 
+def merge_keys(found: list[Key], stored: list[Key]) -> list[Key]:
+    """The keys found in the repo, plus each stored (fingerprinted) key whose file is not here byte for byte.
+
+    A stored key whose file is still here unchanged is dropped: the plaintext rules cover it, including the NOTE for a
+    line shared with another file. Any other stored key stays, whether its file has left the repo or has changed since
+    the fingerprint file was written."""
+    here = {h for k in found for h in k.hashes}
+    return found + [k for k in stored if not (k.hashes & here)]
+
+
 def write_fingerprints(keys: list[Key], path: Path = FINGERPRINTS) -> None:
     out = {"version": 1, "hash": "blake2b", "min_chars": MIN_CHARS, "anchor_chars": ANCHOR_CHARS,
            "note": "Hashes of the answer keys' distinctive lines; the keys themselves are in the private repo.",
@@ -467,9 +483,12 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
 
         blind = frozenset({"name", "copy"})
         planted = copy / "selftest-planted"
+        # A key recognised only by its front matter has an ordinary file name, so its own name cannot trip the name
+        # detector: expect "name" only from a key-named source (until 2026-10-14 this case always expected it).
         case("A: key copied verbatim, under its own name",
              lambda: (planted.mkdir(), shutil.copy2(source.path, planted / source.path.name)),
-             lambda: shutil.rmtree(planted), want={"name", "copy", "text"})
+             lambda: shutil.rmtree(planted),
+             want={"copy", "text"} | ({"name"} if named_like_key(source.path.name) else set()))
 
         neutral = copy / "selftest-notes" / "index.html"
         rendered = render_html(read_text(source.path) or "", source.path.suffix.lower() == ".md")
@@ -547,6 +566,26 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
                  want={"canary"}, forbid=every - {"canary"}, keys_=lesson_keys)
             case(f"G: both, inside {outside.relative_to(copy).as_posix()} (must pass)",
                  *inject(outside, secret + "\n\n" + paraphrase), want=set(), forbid=every, keys_=lesson_keys)
+
+        # H: the merge with the fingerprint file. A key known only by its fingerprint is still checked while other
+        # keys are in the repo, and a stored key whose file is here unchanged gives way to the plaintext.
+        gone_repo = Path(tmp) / "repo-key-gone"
+        gone_line = "Moved to the private repo: the lighthouse keeper counted eleven gulls at dawn."
+        (gone_repo / "exercise").mkdir(parents=True)
+        (gone_repo / "exercise" / "FACILITATOR.md").write_text(
+            "# Departed facilitator notes (self-test only)\n\n" + gone_line + "\n", encoding="utf-8")
+        gone_plain = discover(gone_repo, use_git=False)
+        gone_stored = [fingerprint_key(k) for k in gone_plain]
+        merged = merge_keys(keys, gone_stored)            # its file has left; this repo's keys remain
+        unchanged = merge_keys(gone_plain, gone_stored)   # its file is still here, byte for byte
+        label = "H: a key known only by its fingerprint, beside the repo's own"
+        if len(merged) != len(keys) + 1 or len(unchanged) != 1:
+            rows.append((False, label, f"the merge kept {len(merged) - len(keys)} of 1 departed key and "
+                                       f"{len(unchanged) - 1} of 0 unchanged ones"))
+        else:
+            departed = copy / "selftest-departed.html"
+            case(label, lambda: departed.write_text(render_html(gone_line, True), encoding="utf-8"),
+                 lambda: departed.unlink(), want={"text"}, forbid=blind, keys_=merged)
 
     for ok, label, detail in rows:
         print(f"  {'ok  ' if ok else 'FAIL'}  {label:<58} -> {detail}")
@@ -626,36 +665,46 @@ def main(argv: list[str] | None = None) -> int:
         if not site.is_dir():
             print(f"check_public_build.py: no site at {site}", file=sys.stderr)
             return 2
-        keys = discover(REPO, site)
-    except ValueError as e:   # a canary that is not a valid regular expression
+        found = discover(REPO, site)
+        stored = load_fingerprints() if FINGERPRINTS.is_file() else []
+    except ValueError as e:   # a malformed canary, or a fingerprint file written with other settings
         print(f"check_public_build.py: {e}", file=sys.stderr)
         return 2
-    mode = "repo"
-    if not keys and FINGERPRINTS.is_file():
-        keys, mode = load_fingerprints(), "fingerprints"
+    # Always merged (2026-10-14). The fingerprint file used to be read only when the repo held no keys at all, so a
+    # single key left behind would have switched every fingerprint off, silently.
+    keys = merge_keys(found, stored)
+    by_fp = keys[len(found):]
     if not keys:
         print("check_public_build.py: found NO answer keys in the repo and no fingerprint file, so this check "
               "cannot fail." + ("" if args.allow_no_keys else " Pass --allow-no-keys if that is expected."))
         return 0 if args.allow_no_keys else 2
     total = sum(k.n_lines() for k in keys)
-    where = "in the repo" if mode == "repo" else f"by fingerprint ({FINGERPRINTS.relative_to(REPO).as_posix()})"
+    fp_file = FINGERPRINTS.relative_to(REPO).as_posix()
+    if not by_fp:
+        where = "in the repo"
+    elif not found:
+        where = f"by fingerprint ({fp_file})"
+    else:
+        where = f"({len(found)} in the repo, {len(by_fp)} known only by fingerprint in {fp_file})"
     print(f"check_public_build.py: {len(keys)} answer keys {where}, {total} distinctive strings")
+    fp_ids = {id(k) for k in by_fp}
     for k in keys:
-        print(f"  {k.rel:<80} by {k.why:<12} {k.n_lines():>3} distinctive, "
+        how = "fingerprint" if id(k) in fp_ids else k.why
+        print(f"  {k.rel:<80} by {how:<12} {k.n_lines():>3} distinctive, "
               f"{len(k.shared):>2} shared")
     if total == 0:
         print("check_public_build.py: no key has a distinctive string; only names and copies "
               "could be caught.", file=sys.stderr)
         return 2
-    if args.self_test:
-        return self_test(site, keys) if mode == "repo" else self_test_fingerprints(site, keys)
+    if args.self_test:   # plant from a repo key if one has lines to plant; case H covers the fingerprints beside it
+        return self_test(site, keys) if any(k.distinctive for k in found) else self_test_fingerprints(site, keys)
 
     findings, scanned, sessions = check(site, keys)
     shared = [(k, line, others) for k in keys for line, others in k.shared]
     n_canaries = sum(len(k.canaries) for k in keys)
     print(f"session pages: {sessions}, each checked for {len(shared)} key lines that are not unique to a key "
           f"and {n_canaries} paraphrase canaries"
-          + (" (fingerprint mode carries neither)" if mode == "fingerprints" else ""))
+          + (f" (the {len(by_fp)} keys known only by fingerprint carry neither)" if by_fp else ""))
     if sessions == 0:
         print("check_public_build.py: no session pages under sessions/ or course/sessions/, so rules 5 and 6 "
               "cannot fire. Has the site layout changed?", file=sys.stderr)
