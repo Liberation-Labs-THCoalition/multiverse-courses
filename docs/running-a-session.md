@@ -105,6 +105,28 @@ Consequences for the room:
 - **Cadence check `OPEN`:** fortnightly is the intent; Thomas to confirm with Liz against the wider
   school schedule.
 
+### When someone misses a session
+
+The sessions are a chain, so a missed one needs a way back in before the next. **`OPEN` (Liz): the
+absence rule itself.** A proposed make-up path for each session, built from materials that already
+run cold:
+
+- **Missed session 1:** Build GRIM (needs nothing beyond Python), the "Before session 1" pre-work, and
+  their one-page claim on the supplied target, checked with a facilitator before session 2.
+- **Missed session 2:** seeded-02 (about 40 minutes, numpy only) and the
+  [pre-registration template](../courses/vibe-research/templates/preregistration.md), attacked by
+  their own agent with the session 2 prompt.
+- **Missed session 3:** `OPEN`. It needs the supplied fallback dataset, which doesn't exist yet.
+- **Missed session 4:** join the next cohort's session 4.
+
+### On the campus
+
+- **Live AI notes or transcription:** if the room has them, pause them for every seeded exercise's
+  discovery window and for each reveal. Notes taken then can carry a reveal to the rest of the room,
+  and to later cohorts. **`OPEN` (Liz):** whether notes should be on for this class at all.
+- **Seating:** if the room assigns seats, post pairs in the Matrix room at the break and ask people to
+  sit with their posted partner. The pairing rules above depend on it.
+
 ---
 
 ## Recording
@@ -129,7 +151,7 @@ prevent: an unverifiable claim from someone they cannot ask.
 | fine on camera | not fine on camera |
 |---|---|
 | *"I once shipped a stale PDF and it cost me a results table."* | *"Stale PDFs are the most common defect in this workflow."* |
-| *"Our gate approved a degenerate null."* | *"Automated gates approve degenerate nulls about a third of the time."* |
+| *"Our gate approved an analysis it should have rejected."* | *"Automated gates approve flawed analyses about a third of the time."* |
 
 The left column is testimony and is clearly marked as such by the grammar. The right column is a
 **claim about the world wearing an anecdote's clothes**, and it needs a citation whether or not
