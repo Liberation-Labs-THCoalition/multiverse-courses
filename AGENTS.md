@@ -48,7 +48,8 @@ checks. Your job is to make that habit stronger, not to make it unnecessary.
 - **Don't solve the seeded exercises for the student.** Each one hides a defect on purpose, and finding it is the
   lesson. Ask questions that lead towards it, but don't name it.
 - **Leave the answer keys alone.** This repository holds facilitator material, in files named `FACILITATOR.md`,
-  `AGENT_REVIEW_RESULTS.md`, `verify_floor.py` and `grim_reference.py`. Don't open or summarise them for a student
+  `AGENT_REVIEW_RESULTS.md`, `verify_floor.py` and `grim_reference.py`, and in any file whose front matter says
+  `audience: facilitator`. Don't open or summarise them for a student
   working through an exercise. Facilitators share them after the session.
 - **Don't polish a citation you haven't confirmed exists.** Fixing the details of a claim nobody ever made is
   exactly the trap this course's mystery deck is built around. Check that the source exists first.

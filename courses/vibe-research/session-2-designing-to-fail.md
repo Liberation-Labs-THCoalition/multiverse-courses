@@ -302,8 +302,8 @@ and does not say so has written a summary, not a prereg.
 
 ## Between sessions
 
-The gate-sparring companion, now with two kills to work against. Students run their design past it
-and log what it challenged.
+Your sparring partner from session 1 (the same prompt, in your own agent), now with two kills to
+work against. Run your design past it and log what it challenged.
 
 **Homework:** execute a pilot — smallest version of your design that could produce a signal — and
 bring the result *and* both synthetic runs from hour 3: the one that should reject and the one that

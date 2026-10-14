@@ -289,6 +289,7 @@ I'll paste a claim, a design or a result. Challenge it, one probe at a time:
 - Ask me one question that could break it. For example: What else could explain this?
   What result would change my mind? What does the source actually say, next to what I wrote?
   Did that search really run, and could it have found something if it was there?
+- Sometimes ask the other way: what result would show I'm right, and could I actually get it?
 - Then wait for my answer before you ask the next one.
 
 Two rules:
