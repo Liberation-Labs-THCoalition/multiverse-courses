@@ -246,6 +246,13 @@ write. Your agent will find papers forever — that is what it is for, and it is
 no opinion about when you have enough. **Saturation is the opinion.** Without it you are not
 reviewing a literature, you are being fed one.
 
+**One swing (3 min).** Look at the saturated set and ask what every paper in it assumes. Write the
+claim that would be true if that assumption were wrong, as a sixth line under your one-page. Make it
+as big as you like: it is parked, not tested, and it is yours to take further, to the accelerator
+if you want. Questions found this way tend to be more interesting than the gaps a review points at,
+and gap-spotting is an agent's native mode, so this line has to come from you. (The method has a
+name, problematization; [Tools by stage](tools-by-stage.md), stage 1, has more.)
+
 **Now open the prediction you sealed in hour 2.** If the review settled the question, score your
 prediction with the game's rule. If it did not, write down what would settle it.
 
