@@ -5,12 +5,13 @@
     python tools/check_public_build.py --self-test [SITE_DIR]   positive control
 
 Spec: docs/site-spec.md, "Answer keys". Keys are found by walking the repo, not from a list
-of paths: every FACILITATOR.md, verify_floor.py and AGENT_REVIEW_RESULTS.md; grim_reference.py
+of paths: every FACILITATOR.md, verify_*.py and AGENT_REVIEW_RESULTS.md; grim_reference.py
 (build-grim's working solution, marked "FACILITATOR REFERENCE ONLY"); and any markdown file
 whose front matter says `audience: facilitator`.
 
 The check fails if any file in the site
-  1. is named like a key (FACILITATOR.md, FACILITATOR/index.html, verify_floor.py, ...);
+  1. is named like a key (FACILITATOR.md, FACILITATOR/index.html, verify_floor.py,
+     verify_effect.py, ...);
   2. is a byte-for-byte copy of a key, under any name;
   3. links to a key (an href or src whose last path segment is a key's name); or
   4. contains a distinctive string of a key;
@@ -104,6 +105,10 @@ FINGERPRINTS = REPO / "tools" / "key_fingerprints.json"
 
 KEY_NAMES = {"facilitator.md", "verify_floor.py", "agent_review_results.md", "grim_reference.py"}
 KEY_STEMS = {name.split(".")[0] for name in KEY_NAMES}
+# Every verify_*.py is a key, not only verify_floor.py: a verify script recomputes an answer, and
+# seeded-03's verify_effect.py also holds the data generator. Same rule in tools/build_site.py.
+VERIFY_SCRIPT = re.compile(r"^verify_\w+\.py$", re.I)
+VERIFY_STEM = re.compile(r"^verify_\w+$", re.I)
 FACILITATOR_AUDIENCE = re.compile(r"^audience:\s*['\"]?facilitator['\"]?\s*$", re.M | re.I)
 FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 # Build output, dependencies and caches: never part of the key search or the corpus.
@@ -147,7 +152,8 @@ def digests(data: bytes) -> set[str]:
 
 def named_like_key(name: str) -> bool:
     low = name.lower()
-    return bool(low) and (low in KEY_NAMES or low.split(".")[0] in KEY_STEMS)
+    stem = low.split(".")[0]
+    return bool(low) and (low in KEY_NAMES or stem in KEY_STEMS or bool(VERIFY_STEM.match(stem)))
 
 
 # ----------------------------------------------------------------------------------- keys
@@ -189,7 +195,7 @@ def tracked(root: Path) -> list[Path] | None:
 
 
 def key_reason(path: Path) -> str | None:
-    if path.name.lower() in KEY_NAMES:
+    if path.name.lower() in KEY_NAMES or VERIFY_SCRIPT.match(path.name):
         return "file name"
     if path.suffix.lower() == ".md":
         m = FRONT_MATTER.match(read_text(path) or "")

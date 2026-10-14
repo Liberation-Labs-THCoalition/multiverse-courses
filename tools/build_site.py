@@ -75,6 +75,7 @@ class Page:
 COURSE = "courses/vibe-research"
 S01 = f"{COURSE}/exercises/seeded-01-the-approved-analysis"
 S02 = f"{COURSE}/exercises/seeded-02-the-fix-that-broke-it"
+S03 = f"{COURSE}/exercises/seeded-03-the-finding-that-was-residualised-away"
 
 SESSIONS = [
     Page("Session 1: The question", "sessions/session-1-the-question.md",
@@ -112,6 +113,16 @@ EXERCISES = [
              f"{S02}/review.md", exercise=True),
         Page("analysis.py", "exercises/seeded-02-the-fix-that-broke-it/analysis.md",
              f"{S02}/analysis.py", code=True, exercise=True),
+    ]),
+    ("Seeded 03: The finding that was residualised away", [
+        # review.md first: it is the write-up, and its task hands the student the other two.
+        # data.csv is a code page so that its file is staged beside analysis.py, which reads it.
+        Page("Review", "exercises/seeded-03-the-finding-that-was-residualised-away/review.md",
+             f"{S03}/review.md", exercise=True),
+        Page("analysis.py", "exercises/seeded-03-the-finding-that-was-residualised-away/analysis.md",
+             f"{S03}/analysis.py", code=True, exercise=True),
+        Page("data.csv", "exercises/seeded-03-the-finding-that-was-residualised-away/data.md",
+             f"{S03}/data.csv", code=True, exercise=True),
     ]),
 ]
 
@@ -169,11 +180,14 @@ GAPS = [
 
 # ------------------------------------------------------------------------- keys and scope
 
-# docs/site-spec.md: the keys are the FACILITATOR.md files, verify_floor.py and
+# docs/site-spec.md: the keys are the FACILITATOR.md files, the verify scripts and
 # AGENT_REVIEW_RESULTS.md, plus anything with front matter `audience: facilitator`.
 # grim_reference.py is added: it is build-grim's working solution ("FACILITATOR REFERENCE
 # ONLY. DO NOT GIVE THIS FILE TO STUDENTS").
 KEY_NAMES = {"facilitator.md", "verify_floor.py", "agent_review_results.md", "grim_reference.py"}
+# Every verify_*.py is a key, not only verify_floor.py: a verify script recomputes an answer
+# (seeded-03's verify_effect.py also holds the data generator). Same rule in check_public_build.py.
+VERIFY_SCRIPT = re.compile(r"^verify_\w+\.py$", re.I)
 FACILITATOR_AUDIENCE = re.compile(r"^audience:\s*['\"]?facilitator['\"]?\s*$", re.M | re.I)
 
 # Out of scope for v0 (docs/site-spec.md): never staged.
@@ -209,7 +223,8 @@ def split_front_matter(text: str) -> tuple[str, str]:
 
 def is_key(rel: str) -> bool:
     """An answer key, by the spec's list of names or by front matter."""
-    if posixpath.basename(rel).lower() in KEY_NAMES:
+    name = posixpath.basename(rel)
+    if name.lower() in KEY_NAMES or VERIFY_SCRIPT.match(name):
         return True
     path = REPO / rel
     if path.suffix.lower() == ".md" and path.is_file():
