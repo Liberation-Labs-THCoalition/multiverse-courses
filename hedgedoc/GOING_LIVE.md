@@ -5,8 +5,9 @@ runs its systems, which we don't know yet, so this records what would change und
 
 ## Demo (today)
 
-- The instance runs on MTH, bound to `127.0.0.1:3000` (anonymous editing is on, so it is never exposed).
-- To show it from another machine, tunnel it: `ssh -L 3000:127.0.0.1:3000 madame-trash-heap`, then open
+- The instance runs on one of our lab machines, bound to `127.0.0.1:3000` (anonymous editing is on, so it is
+  never exposed).
+- To show it from another machine, forward port 3000 from the host over SSH, then open
   `http://localhost:3000/vr-lyra-verify-001-hub`.
 - Session notes are `.../vr-lyra-verify-001-s1` to `-s4`; each ends in an empty **Cohort notes** section.
 - The decks are `...-s1-slides` and so on. Open one and use the editor's **Slide Mode**.
@@ -35,7 +36,7 @@ runs its systems, which we don't know yet, so this records what would change und
 The publisher then needs the auth piece; the rest of the pipeline is unchanged.
 
 **If we host it ourselves:**
-- HTTPS through the Cloudflare tunnel (MTH's transport of record);
+- HTTPS through a Cloudflare tunnel;
 - `CMD_PROTOCOL_USESSL=true` and a real `CMD_DOMAIN`;
 - `CMD_ALLOW_ANONYMOUS=false`, with a sign-in provider (GitHub OAuth is the least friction for this course);
 - `CMD_DEFAULT_PERMISSION=limited`;

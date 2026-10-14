@@ -104,7 +104,7 @@ model). The *magnitude* is substantially a function of how many prompts we ran.
 
 **So: demo the shape, not the number.** If we put "effective dimensionality ≈ 40" on a slide we
 would be teaching students to quote a sampling artifact in the same session where we teach them
-not to. Detail: `lyra-s-research-/experiment-designs/deff_convergence_results.md`.
+not to. The convergence detail is in our own research notes, not in this repo.
 
 ## 4. External resources scanned
 

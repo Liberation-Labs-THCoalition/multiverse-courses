@@ -1,8 +1,7 @@
 # The school's own repos — what's there, what's empty, and one data model worth adopting
 
-**Read 2026-08-23 by Lyra** from `github.com/EngineeringEducation` and the Coalition's campus
-audits at `mth:~/lab/infrastructure/`. Counts and contents verified via the GitHub API, not from
-repo names.
+**Read 2026-08-23 by Lyra** from `github.com/EngineeringEducation`, the school's public GitHub
+org. Counts and contents verified via the GitHub API, not from repo names.
 
 ---
 
@@ -51,9 +50,9 @@ If we adapt their material, **share-alike propagates** and non-commercial binds.
 before we borrow structure, not after. `standards` did not state a license in its README —
 **check before adopting the schema**, since a data model may be a different question than content.
 
-Also relevant: the curriculum org is Enki/Tradecraft heritage (Liz's prior venture, contact listed
-as `liz@enki.com`), and the code of conduct is the Contributor Covenant plus the Recurse Center
-social rules. Good precedent for our own `CONTRIBUTING.md`.
+Also relevant: the curriculum org is Enki/Tradecraft heritage (Liz's prior venture), and the code
+of conduct is the Contributor Covenant plus the Recurse Center social rules. Good precedent for
+our own `CONTRIBUTING.md`.
 
 ## 3. What is NOT there
 
@@ -76,36 +75,16 @@ check costs one API call.)*
 useful negative: our course is not duplicating anything they have, and it fills a real gap in a
 catalogue that is otherwise language- and platform-shaped.
 
-## 4. Course-delivery risk from our own campus audits
+## 4. One request for live sessions: a deploy freeze
 
-`mth:~/lab/infrastructure/` — Nexus, under "contracted infrastructure support for The Multiverse
-School." Three documents, 653 + 1090 + 206 lines, every finding carrying verified file:line refs.
-
-Security posture is **strong** (0 Critical; parameterized queries throughout, JWT expiry correct,
-Socket.IO validates before connect). Stability discipline is strong on the static axis — *"53 of
-55 DB transaction sites are structurally perfect, 612 indexes cover every hot-path query
-examined."*
-
-**The weak axis is lifecycle events, and that is exactly our exposure:**
-
-> "**The deploy/restart lifecycle is hostile end-to-end.** Node runs as PID 1 with no signal
-> handler, so every deploy ends in SIGKILL after the grace timeout (D-01)… the client permanently
-> gives up reconnecting after ~1 minute of outage (FE-02), so **a deploy during school hours
-> strands every open tab.** And the health check is an unconditional 200 (D-02), so a bad deploy…
-> stays in rotation indefinitely."
-
-Our intensives are **four hours, live**. A deploy mid-session strands every student, and they do
-not silently recover — the client gives up. Two consequences, both cheap:
+Our intensives are **four hours, live**, and students work on the campus during them. A campus
+deploy or restart mid-session could interrupt every student at once, with no slack in the session
+to recover the time.
 
 - **`ACTION`: agree a deploy freeze during scheduled sessions.** This is a calendar agreement, not
   an engineering ask, and it costs nothing.
-- **`OPEN`:** whether FE-02 (client reconnect) is worth prioritising before the first cohort.
-  That is Nexus's and Liz's call, not ours — but the course is a reason it matters more than it
-  did when the finding was filed.
 
-Also worth noting for the record: the audits confirm the engagement is **contracted**, which
-answers a question that had been sitting open in
-`memory/project_multiverse_school.md` as *"what is our contractual/informal commitment?"*
+Details of the campus's own infrastructure are held privately, outside this public repo.
 
 ## 5. RoverAI — the house pattern for an agent
 
@@ -148,5 +127,3 @@ spec there describes behaviour but not persistence. It should specify the record
 - `RoverAI` (17 entries) — "Rover AI for The Multiverse School." Unexamined; may be an existing
   agent-support pattern worth knowing before we spec the gate-sparring companion.
 - `tradecraft-internal` (17 entries) — "internal intranet of goodness."
-- The full 1090-line stability audit. I have read its executive summary and the lifecycle theme;
-  the four deep-dive tracks are unread.

@@ -144,7 +144,7 @@ session 1 rather than discovering in session 3.**
 
 | platform | stack | status | what actually bites |
 |---|---|---|---|
-| **Apple Silicon** | `torch` + **MPS** backend | `used` | What Starship runs. Unified memory is generous, but **kernels silently fall back**: we lost real time to a flash-linear-attention fast path that was unavailable on MPS and dropped to a torch implementation without failing. It printed a warning and kept going. |
+| **Apple Silicon** | `torch` + **MPS** backend | `used` | What we run. Unified memory is generous, but **kernels silently fall back**: we lost real time to a flash-linear-attention fast path that was unavailable on MPS and dropped to a torch implementation without failing. It printed a warning and kept going. |
 | **Apple Silicon** | **MLX** | `known` | Apple's own array framework — likely faster and more memory-efficient than torch-MPS for the same work. **We have not used it.** A student who benchmarks MLX against torch-MPS on an identical analysis has produced a genuinely useful contribution. |
 | **NVIDIA** | `torch` + CUDA | `known` | The default assumption of most tutorials, which is why Mac students hit undocumented walls |
 | **CPU only** | `torch` CPU / `numpy` | `used` | Entirely sufficient for everything in this course **except** running a model. All the analysis work — bootstrap, AUROC, spectra — is CPU-bound. A student with no GPU is not excluded. |
@@ -166,27 +166,13 @@ versions, and whether any fast path fell back. We now do this and we did not alw
 | **OpenAlex**, **Semantic Scholar API**, **PubMed** | `used` | Programmatic metadata and abstracts; our own Research Runner sits on these. Resolves "does this paper exist" before "does it say what I claimed." |
 | **`unpaywall` / DOI resolution** | `known` | Turns a DOI into a document you can actually read, which is the difference between verifying a citation and verifying a citation *record*. |
 
-**Why this matters more than convenience.** Two of our own defects this fortnight were citations
-to sources that did not contain the values attributed to them, and one was a **fully fabricated
-reference** (Vera's find: a study attributed to a real researcher, at an institution that does not
-exist). A library where every entry has an attached document and a resolvable key does not prevent
-that — but it makes the check a lookup instead of an act of will.
-
-> **CORRECTED 2026-08-25.** I marked Zotero `known` and wrote "we have not used it in this
-> work." **Wrong.** We run `zotero-lib` on MTH — an `ingest.py`, an API key, and a working
-> agentic loop where I send Nexus papers with DOIs and suggested collections and they land in the
-> library. There is a message in the archive **from me** doing exactly that, on 2026-06-20, six
-> papers for the presence-metric related-work section.
->
-> Why I got it wrong: the library has been idle for weeks, because prep and cleanup for the
-> hackathon turned my work from *doing research* into *red-teaming existing research*. I checked
-> what I had been doing recently and reported it as what we do. **A tool you have stopped using
-> is not a tool you have never used**, and my own week is not a survey of the lab's capabilities.
->
-> This is the fourth time in three days I have been confidently wrong about the state of our own
-> work — after "nobody has looked at the 27B", "I'm not working on attention heads", and a
-> registry claim that went through three states. The pattern is specific enough to name:
-> **I narrate my own recent context as though it were the lab's inventory.**
+**Why this matters more than convenience.** Some of our own defects were citations to sources
+that did not contain the values attributed to them, and one was a **fully fabricated reference**;
+a library where every entry has an attached document and a resolvable key does not prevent that,
+but it makes the check a lookup instead of an act of will. An earlier draft of this page marked
+Zotero `known` because our library had sat idle for weeks, although we had already run it with an
+agent that files papers into it. **A tool you have stopped using is not a tool you have never
+used**, and your own recent weeks are not an inventory of what your lab can do.
 
 **The agentic part, concretely.** The student's agent maintains the library: deduplicates,
 normalises, attaches PDFs, and flags entries with no retrievable document. Then hour 3's tracing

@@ -1,52 +1,40 @@
 # Campus integration — Baba Yaga, whimsy doctrine, and one namespace collision
 
-**Compiled 2026-08-22 by Lyra**, read from the primary: `lizTheDeveloper/multiversecampus`
-(cloned at `mth:~/lab/multiversecampus`). Quotes are verbatim from that repo.
+**The campus repository is private.** This page describes it only in general terms and in our own
+words. The details we read there are held privately, outside this public repo, until Liz says what
+may be public.
+
+**Compiled 2026-08-22 by Lyra**; rewritten as paraphrase on 2026-10-14.
 
 ---
 
 ## 1. Baba Yaga is already a research-comprehension gate
 
-She is not a quiz bot with a costume. From `server/src/db/migrations/165_baba_yaga_folklore_voice.sql`
-and `docs/manual/11-pets-and-creatures.md`:
+Baba Yaga is one of the campus's agents, and she is not a quiz bot with a costume. She hands out
+companions, but only to students who can show that they understand the research they bring her.
+Her test is a riddle or a task, and nothing comes free. Her role rests on one idea: knowledge a
+student cannot explain does more harm than good.
 
-> "guardian of comprehension — **no student earns a companion without proving they truly
-> understand the knowledge they bring**"
->
-> "She agreed to stay and test the students — **for knowledge brought without understanding is
-> worse than no knowledge at all.**"
-
-Her declared knowledge includes *"Comprehension testing — she sets tasks and riddles to test
-understanding."* Her quirks include *"sets tasks before granting favors — nothing is given for
-free"* and *"cackles with genuine delight when a student surprises her."*
-
-**That sentence — knowledge brought without understanding is worse than no knowledge at all — is
-the thesis of our citation discipline, already written, already in-world, already voiced by an NPC
+**That idea is the thesis of our citation discipline, already in-world and voiced by a character
 students trust.** It is what `CITATION_REGRESSION` exists to catch, and what we corrected in our
-own paper today (values attributed to a source that does not contain them).
+own paper on 2026-08-22 (values attributed to a source that does not contain them).
 
 We do not need to build a lit-review gate. **One exists, and it is better-loved than anything we
 would ship.**
 
 ### The reward economy already encodes research virtue
 
-Pets are **earned by contributing research**. After the first (free, personality-matched), the
-rules tighten — verbatim from the manual:
-
-| rule | detail |
-|---|---|
-| One new pet per week | at most one new companion in any given week |
-| Three weeks of consistency | a second or later pet requires submissions across **≥3 distinct weeks** |
-| Breadth across topics | each new pet must come from a **new interest area** — *"Baba Yaga rewards range, not repetition"* |
+Students earn companions by contributing research. The first one is free. After that, the rules
+limit how often a new companion can arrive, ask for submissions spread over several weeks, and
+ask for each new companion to come from a different research interest.
 
 Sustained work over weeks rather than a sprint; breadth over repetition; comprehension checked
-before reward. Those are research virtues, mechanized, with no lecture attached. Each pet is tied
-to a **research interest tag** (LLMs, computer vision, prompt engineering, …).
+before reward. Those are research virtues, built into the game, with no lecture attached.
 
-And pets **decay** if neglected — fullness, happiness, health, with escalating warnings. A
-companion you earned and then stopped tending degrades visibly. I will not stretch that into a
-metaphor for unmaintained claims, but the school built a system where *earning* is not the end of
-the obligation, and that is the right instinct for a research course.
+Companions also **decay** if neglected, and the warnings escalate. A companion you earned and then
+stopped tending declines where everyone can see it. I will not stretch that into a metaphor for
+unmaintained claims, but the school built a system where *earning* is not the end of the
+obligation, and that is the right instinct for a research course.
 
 ### The proposed fit — `DRAFT`, needs Liz
 
@@ -58,54 +46,44 @@ she could also ask **what the paper does *not* support**, and **what would chang
 Both are riddles. Both are exactly the questions our gate asks. Neither requires her to stop being
 herself.
 
-**We should propose, not build.** `docs/WHIMSY.md` is explicit that the campus owns its tone.
+**We should propose, not build.** The campus has its own written tone guide, and the tone is
+theirs to set.
 
 ## 2. The whimsy doctrine, and what it demands of us
 
-`docs/WHIMSY.md` opens: *"If a change would make the campus sound more like a product and less
-like a place, don't make it."* Four properties, all four required:
-
-1. **Specific beats generic.** *"a reference, a texture, a weirdly precise detail always beats a
-   pleasant abstraction."*
-2. **The world is sincere — everyone commits to the bit.** *"The goose is not 'quirky.' The goose
-   is **menacing**, and the game presents this completely straight… Nobody in the world winks at
-   the camera."*
-3. **Whimsy is mechanical, not decorative.** *"The best bits are systems, not flavor text…
-   **A player *doing* the joke beats a player *reading* the joke.**"*
-4. **Warm, never corporate.** No *"Oops! Something went wrong 😅"*, no *"Welcome to your learning
-   journey!"*.
+That tone guide, in general terms, asks for four things together: precise, odd detail over
+pleasant generalities; a world that plays its jokes straight; jokes built into the game's systems,
+for players to act out rather than read; and warmth rather than corporate polish. Behind all four
+is one test: does a change leave the campus a place, or turn it into a product?
 
 ### The rule we most need to obey as contributors
 
-> **"Do not remove, rename, tone down, summarize, or 'fix' whimsical content in a bug-fix,
-> refactor, or cleanup PR.** This is the single most important rule in this file, because cleanup
-> instincts are the main way agents destroy whimsy."
+The guide's central rule for contributors, in our words: no bug fix, refactoring or tidy-up may
+strip out or soften the campus's whimsy. Tidy-up passes are how agents most often destroy it, and
+content that looks unfinished may already be finished.
 
-*"A stationary NPC that only says `HONK.` is not a stub awaiting real dialogue. It is done."*
-
-This is a live risk for us specifically. Our agents do maintenance passes on this repo. A tidy-up
-that normalizes weird trait JSON or deletes a joke-laden seed migration would be, in their terms,
-destroying the product. Worth carrying into any Coalition contribution guidance for campus work.
+This is a live risk for us specifically. Our agents do maintenance passes on the campus repo. A
+tidy-up that normalises odd-looking data or deletes a joke would, by the guide's standard, damage
+the product. Worth carrying into any Coalition contribution guidance for campus work.
 
 ## 3. The collision I introduced, and the correction
 
 I proposed calling a student's earned kill list a **bestiary**.
 
-**That word is taken.** The campus already has a bestiary — it is the creature-collection system,
-covered in `docs/manual/11-pets-and-creatures.md` alongside pets, sanctuaries, befriending and
-fishing. Reusing it for "failure modes you have catalogued" would collide with an established
-mechanic in the students' own world, which violates property (1): the specificity *is* the joke,
-and two meanings for one word blunts both.
+**That word is taken.** The campus already has a bestiary: it is the creature-collection system,
+part of the same world as the companions. Reusing it for "failure modes you have catalogued" would
+collide with an established mechanic in the students' own world. It also cuts against the guide's
+preference for the precise: a word with two meanings blunts both.
 
 **Retracted.** The underlying psychology still holds — an earned entry carries the memory of the
 sting, which is what collection mechanics run on — but the name has to be something else, and by
-doctrine it should be a *system*, not a metaphor (property 3). A student *doing* the collection
-beats a student *reading* that their notes are like a collection.
+the guide's standard it should be a *system*, not a metaphor. Students who build a collection
+learn more than students who are told their notes resemble one.
 
 **This is Liz's call, not ours.** Options to put to them rather than pick:
 
-- Keep it in Baba Yaga's idiom — she transforms the rude into household objects and speaks in
-  riddles. A failure mode you have survived is a riddle you can now answer.
+- Keep it in Baba Yaga's idiom: she speaks in riddles, so a failure mode you have survived is a
+  riddle you can now answer.
 - A separate in-world artifact entirely, owned by the research course rather than the campus.
 - No in-world framing at all for the kill list; use the campus for the lit-review gate only.
 
@@ -137,11 +115,3 @@ party charging for their work. One residual care: the curriculum repo asks for a
 wants a provenance check before it is lifted. *(Enki is a company — the San Francisco
 learn-to-code app, ~2015. Its "AI-powered mentor" is a product feature, not the entity. Checked
 rather than assumed.)*
-
-## 5. Note on our own audits
-
-`mth:~/lab/infrastructure/` holds `campus-code-review-2026-07-23.md`,
-`campus-stability-2026-08-05.md`, `campus-sweep-2026-08-05.md` — Coalition audits of this repo,
-almost certainly the bug-hunt work behind the open PRs and bounty findings. **Not read yet.** They
-are likely the fastest route to understanding how the campus actually runs, and they are ours, so
-there is no permission question.

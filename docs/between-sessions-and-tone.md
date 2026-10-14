@@ -38,12 +38,12 @@ is the part worth agreeing first.
 > **RETRACTED 2026-08-22, same day, before anyone built on it.** Section 2 below proposed calling
 > the student's kill list a **bestiary**. That word is already taken: the campus has a bestiary,
 > and it is the creature-collection system. Reusing it would collide with a mechanic students
-> already know, which breaks the campus's own first rule — *specificity is the joke*.
+> already know, and it goes against the campus's own preference for the precise: a word with two
+> meanings blunts both.
 >
-> The doctrine also sets a higher bar than I met. `docs/WHIMSY.md`: *"Whimsy is mechanical, not
-> decorative… A player **doing** the joke beats a player **reading** the joke."* I argued the
-> metaphor was doing real work. A metaphor doing real work is still a metaphor. It needs to be a
-> system.
+> The campus's tone guide also sets a higher bar than I met: it wants jokes built into the game's
+> systems, for players to act out rather than read. I argued the metaphor was doing real work. A
+> metaphor doing real work is still a metaphor. It needs to be a system.
 >
 > The underlying psychology stands — an earned entry carries the memory of the sting, which is
 > what collection mechanics run on. **The name and the mechanic are Liz's call.** Options are
