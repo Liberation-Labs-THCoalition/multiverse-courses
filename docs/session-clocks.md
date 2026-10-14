@@ -39,10 +39,12 @@ transitions and zero for overrun** — the 19 minutes the house explicitly budge
 
 ---
 
-## Cohort cap: **8**, not 10 — and the evidence is session 4's own
+## Cohort size: **target 8, hard cap 10**
 
-`README.md` and session 4 say **ten, hard**, derived from hour 4 at five minutes per student. All
-four facilitators independently arrived at **eight**, for a reason arithmetic misses:
+**This is the one place the number lives;** other pages link here. An earlier derivation of "ten,
+hard" from session 4 hour 4 at five minutes per student did not add up (10 × 5 = 50 minutes, in a
+45-minute hour). All four facilitators independently arrived at **eight**, for a reason arithmetic
+misses:
 
 - **Session 2** — hour 3 has every student running code against a live model API. At ~4–5 min of
   help per stuck student and a third of the room stuck, ten students is ~15 minutes of facilitator
@@ -54,7 +56,7 @@ four facilitators independently arrived at **eight**, for a reason arithmetic mi
 - **Session 3 adds: prefer an even number**, so the hour-4½ exchange pairs cleanly.
 
 **Cap 10 hard, target 8, make it even. If you are given 10, get a second pair of hands for session
-2 hour 3.**
+2 hour 3, and run session 4's hour 4 as two rooms or hold each talk to four minutes.**
 
 ---
 

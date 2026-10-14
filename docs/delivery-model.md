@@ -33,7 +33,7 @@ own syllabus.
 |---|---|---|---|
 | **Workbook** | async, reference, any time | definitions, worked examples, templates, mechanical how-to | Reference material read once at speed beats reference material narrated to ten people at the pace of the slowest |
 | **Campus agents** | async, interactive, between sessions | background delivery, project help, **gate-sparring**, the between-session partner | An agent is *good* at this, and it is available at 11pm on a Tuesday when the facilitator is not |
-| **Live session** | synchronous, 4h, capped at 8 | judgment moves, pairing, the seeded reveals, the defence | Only what actually needs a room |
+| **Live session** | synchronous, 4h, target 8, hard cap 10 ([why](session-clocks.md)) | judgment moves, pairing, the seeded reveals, the defence | Only what actually needs a room |
 
 ### What moves to the workbook, immediately
 
