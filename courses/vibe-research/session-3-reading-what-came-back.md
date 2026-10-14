@@ -1,184 +1,342 @@
 # Session 3 — Running it, and reading what came back
 
-> **Clock:** [the four clocks](../../docs/session-clocks.md) — S3 needs **252 min against 201**. Hour 2 is the single worst block in the course (72 against 50). The header promises three deliverables and the body budgets time for one.
+> **Clock:** this session's clock is on this page, [below](#the-clock): 201 minutes of content in a
+> 240-minute session, rebuilt 2026-10-14 and not yet piloted. [The four clocks](../../docs/session-clocks.md)
+> still shows this session's old plan (252 minutes against 201) and the cuts it needed. For session 3,
+> this page replaces it.
 
-**Status: `DRAFT`, 2026-08-25.** Four hours. Third of four.
-**Standards covered:** *report what a result does not support*, *choose an estimator that survives
-your sample size*, *distinguish a failed hypothesis from a failed measurement*.
+**Status: `DRAFT`, 2026-08-25; rebuilt 2026-10-14 around published cases and a new discovery
+exercise.** Four hours. Third of four.
+**Standards covered:** *distinguish a per-sample statistic from a rank-bounded one*, *reconcile a
+result with the estimator that produced it*, `vr.verify-number` objective 2, and *verify that a search
+which returned nothing actually ran*, from [Course: Execution and Analysis](../../standards/vibe-research/README.md).
+Two objectives this session teaches are not written as standards yet; they are marked `PROPOSED` in
+hours 3 and 4.
 
-**Walks in with:** a pre-registration their agent has attacked, the break log, two earned kills.
-**Walks out with:** a result, an honest account of what it does not support, and a third kill.
+**Walks in with:** a pre-registration their agent has attacked, the break log, two kills, and the
+pilot from session 2's homework, with both synthetic runs from session 2 hour 3.
+**Walks out with:** a result, an honest account of what it does not support, **a verdict on whether
+they have something** (what they now believe, and its limits), the check for the one thing they nearly
+explained away, and a third kill.
 
 ---
 
 ## The one idea
 
-Sessions 1 and 2 taught doubt about a *number* and about a *design*. Session 3 is the hardest one:
-**your design was fine, your run was clean, and the thing you are looking at still is not what you
-think it is.**
+Sessions 1 and 2 taught you to doubt a *number* and a *design*. Session 3 is where your own data
+comes back, and the job changes from doubting to **reading**.
 
-Three ways that happens, one hour each:
+Your design can be fine and your run clean, and the number in front of you can still be something
+other than what you think it is:
 
-1. **The estimator did not survive your sample size.** The number is real and it is measuring `n`.
-2. **The statistic is not the thing its name says.** You computed A and reported it as B.
-3. **The hypothesis died and something else showed up.** This is the good case, and students
-   consistently mishandle it.
+1. **It can be measuring your sample size.** Some statistics move when you collect more, even when
+   nothing else changes.
+2. **It can be a different statistic from the one its name promises.** You computed A and reported
+   it as B.
+3. **What you set aside can matter as much as what you kept.** Every analysis explains some things
+   away. Each of those is a decision, and it can be wrong in either direction.
 
-## Hour 1 — The estimator that was measuring your sample size
+The first two make you careful. The third is the reason to be careful at all: **care is how you find
+things, not only how you avoid being wrong.** Hour 4 puts the day together: what your result does not
+support, and what you now believe.
 
-Open with the number.
+## The clock
 
-> We measured `d_eff` — a spread statistic — across models and reported it as an architectural
-> finding. Then we bootstrapped it for confidence intervals, and **the point estimates fell
-> outside their own intervals.** Bias −12.5, about −32%.
+*`DRAFT`, 2026-10-14. Not piloted: every timing here is a prediction.*
 
-The cause is one sentence: **resampling with replacement leaves roughly 63% distinct samples, so
-the bootstrap replicate is estimating a different quantity than the original.** For a statistic
-bounded by `n`, changing the effective `n` changes the estimand.
+| clock | block | min |
+|---|---|---|
+| 0:00 | Opening. Orientation and hour 1's pairs are posted the night before; confirm them, don't brief | 5 |
+| 0:05 | **Hour 1** — the number that was measuring your sample size | 48 |
+| 0:53 | **break**, "back at 0:58". Post any change to hour 3's pairs | 5 |
+| 0:58 | **Hour 2** — the statistic that is not what its name says | 45 |
+| 1:43 | transition | 3 |
+| 1:46 | **Hour 3** — would you sign it? *(the discovery hour)* | 50 |
+| 2:36 | **break**, "back at 2:41". Post hour 4's new pairs and the template | 5 |
+| 2:41 | transition | 3 |
+| 2:44 | **Hour 4** — the limits section first, then the verdict | 48 |
+| 3:32 | **Hour 4½** — the third kill (straight on, no transition) | 10 |
+| 3:42 | overrun buffer, **unspent** | 13 |
+| 3:55 | close | 5 |
 
-Give them the rule as a classifier they can apply in ten seconds without running anything:
+**201 minutes of content** (48 + 45 + 50 + 48 + 10). The buffer is not a block: nothing is scheduled
+into it.
 
-> **A statistic that is a per-sample quantity averaged over samples converges fast. A statistic
-> that is a property of the sample's spectrum or rank is bounded by `n` and does not.**
->
-> **Safe:** projection onto a fixed direction, norm, kurtosis of elements, dot products, any mean
-> of a per-item score. *Measured drift under 1% across a 4.5× range of n.*
-> **Unsafe:** `d_eff`, participation ratio, stable rank (**all three circulating definitions**),
-> effective rank, explained-variance ratios, kurtosis of singular values. *71–116% and climbing.*
+**Pairs.** Hours 1 to 3 run in the same pre-assigned pairs, posted before the session (hour 1's pair
+work comes before any break). Hour 4's exchange needs a reader who hasn't seen your work all day, so
+hour 4 gets new pairs, posted at the second break. One named room per pair; the facilitator takes any
+odd one out. See [running a session](../../docs/running-a-session.md).
 
-**Exercise.** Students list every statistic in their own analysis and sort it into the two
-columns. Then, for anything in the unsafe column, they answer: *are the groups I am comparing
-matched on `n`?* If not, the comparison is dimensionality.
+**Commit, then reveal.** Every hour has a step where you write your answer down before anything is
+revealed. Online, that means sending it to the facilitator (a direct message is fine) before the next
+handout is posted. During those steps your agent and search stay closed. That's an honour rule, and
+it's part of the exercise.
 
-**Teach the fix, not just the ban.** m-out-of-n subsampling *without* replacement at fixed m; or
-dimension-matching; or switch to a per-sample statistic. An unsafe estimator is not forbidden — it
-is forbidden *across unmatched groups*.
+---
+
+## Hour 1 — The number that was measuring your sample size
+
+Covers *distinguish a per-sample statistic from a rank-bounded one* (taught here more widely: from any
+statistic that moves with a count) and *reconcile a result with the estimator that produced it*.
+**48 minutes.**
+
+Some numbers measure the world. Some also measure how much of it you looked at, and the second kind
+looks exactly like the first.
+
+**The case (4 min).** A published finding, read aloud: places that stand out on a map of one health
+measure, and what they have in common. Poll the room: *what explains it?* Take the vote and don't
+discuss it yet.
+
+**Sort the eight (8 min), on your own, agent and search closed.** The first handout is a results
+summary from one simulated step-by-step pilot: eight statistics, each with its number. For each one,
+write:
+
+1. **safe to report as-is**, or **needs care**;
+2. if it needs care, **which count moves it**: questions, runs, samples per question, or prompts tried;
+3. how sure you are, from 50% to 100%.
+
+Send it to the facilitator. That's your prediction.
+
+**Make them move (12 min), in pairs, with your agents.** The second handout is a prompt. Your agent
+builds a pilot in which nothing about the model changes, with true values you can see, and computes
+all eight statistics at 10, 30, 100 and 300 questions, many times over, plus several values of any
+other count a statistic depends on. Read its code before you believe its table: does it run, and are
+the true values the ones you asked for? Then put the table next to your sort.
+
+**The reveal (6 min), third handout.** The key, a published source for every statistic, and the rest
+of the case.
+
+**The rule, and the fix (4 min).**
+
+> **An average, over items, of something each item has on its own is safe: more items only make it
+> steadier. A number that describes the set as a whole, or that leans on a second count (runs,
+> samples, tries), can move when that count grows, even when nothing about the world has changed.**
+
+A statistic that needs care isn't banned. It's unsafe when the counts behind it differ. Three fixes,
+best first:
+
+- **compare at the same counts:** cut the bigger group down to the smaller one's size, or fix every
+  count in advance and keep it the same for everything you compare;
+- **switch to an average:** each group's own number with its interval, rather than one number picked
+  or built from the whole set;
+- **report the counts with the number**, so a reader can see what it was measuring.
+
+And the other way round: a small group's big number isn't noise just because the group is small. Its
+interval tells you how much of it the size can explain.
+
+**Your own pilot (11 min).** List every statistic in your pilot, starting with your
+pre-registration's primary statistic. Sort each one the same way. For each that needs care: are the
+groups you compare the same size, in every count that matters? If not, write down which fix you'll
+use. If everything in your pilot is an average, look at what you planned next: a breakdown by
+subgroup, the best of several prompts, a spread across samples. That's where the care column fills
+up.
+
+**Close (3 min).** One line each in the chat: the statistic in your work most likely to be measuring a
+count, and which count.
+
+*Facilitator note —* **`PREDICTED`**, not piloted: most people will fill in a column for every
+statistic and leave the count blank. Push for the count, not just the column.
+
+*The case, the eight statistics and their key, the prompt, the sources, the clock and what **not** to
+use in this hour are in the **facilitator pack**, not in this repository. Learners get full citations
+for every source at the reveal, once their own answers are on paper.*
 
 ## Hour 2 — The statistic that is not what its name says
 
-Open with the collision.
+Covers `vr.verify-number` objective 2 (*identify the estimator the artifact used, and confirm the
+citing text names the same one*) and *reconcile a result with the estimator that produced it*.
+**45 minutes.**
 
-> **"Stable rank" means three different things in active use**, and we had all three in one lab at
-> once: ‖A‖²_F/‖A‖²₂ = **1.29**; (Σs)²/Σs² = **25.12**; ‖A‖_*/‖A‖_F = **5.01** — on the same
-> matrix. The third squared is exactly the second. Two collaborators compared them for a week.
+People name a statistic after what they think it means. The name is what travels; the formula is what
+was computed. When two results share a name and not a formula, comparing them compares the formulas.
 
-The general form: **people name a statistic after what they think it means; the formula is what
-actually propagates.**
+**The case (4 min).** Two scores for the same task on the same test set, read aloud. Poll the room:
+*which is better?* Take the vote and don't discuss it yet.
 
-**The live exercise — 40 minutes, and it is the best one in the session.** Students hand their
-agent a statistic *by name only* and ask it to implement it. Then they hand it the formula. Then
-they diff. Where the two disagree is a name doing work the formula does not support.
+**What's inside the name (7 min), in pairs, agents and search closed.** The first handout defines the
+statistic in one paragraph, the way it's usually written. Before that definition can run on real text,
+someone has to make choices. List every choice that could change the number, rank them by how much you
+think each could move it, and bet on the biggest. Send your list in.
 
-**Then the harder half.** Have them check their own preprocessing against their own statistic. A
-worked case, from our own bench this week:
+**Name, then settings (12 min), in pairs, with your agents.** The second handout has four short
+pieces of output and the reference texts they're scored against, written for this exercise. Ask your
+agent for the score **by name only**. Then ask it to compute the score again, changing one setting at a time, and to
+print every number beside its settings. Note whether your agent ran code or estimated. Both happen.
 
-> A spectrum was computed on a **mean-centered** matrix; the norm reported alongside it was
-> computed on the **uncentered** one. So the shape measure was blind to a mean shift *by
-> construction*, while the magnitude measure saw it. We nearly reported "shape is invariant" as a
-> finding about the model. It was a finding about line 288 versus line 295.
+**The reveal (6 min), third handout.** What the two numbers in the poll were, and the published paper
+that explains them.
 
-Ask: *what did your preprocessing remove before your statistic looked?*
+**The rule (3 min).**
 
-## Hour 3 — The hypothesis died, and that is the interesting hour
+> **A statistic's name is a promise. Its formula is what you computed. Report the formula with the
+> number.**
 
-Students arrive expecting this hour to be about disappointment. It is not.
+**Your own statistics (11 min).** Open the "exact formula" line of your pre-registration. For each
+statistic in your pilot:
 
-**Worked case, start to finish, from a real evening.** We predicted that two readouts disagreeing
-was a signal of *how hard a state is to maintain*. Prediction was pre-specified so it could fail:
-one axis should be silent, the other should carry.
+1. write the exact formula, **including the rule that decides an answer counts as correct**: how the
+   final answer is pulled out of the response, and what is normalised first (case, spaces,
+   punctuation, number formats);
+2. **predict** whether your agent, given only the statistic's name, will compute the same number;
+3. have it implement the statistic from the name alone, run both versions on your pilot, and compare.
 
-| what happened | |
-|---|---|
-| the prediction | failed — the "silent" axis was 5–7× larger than the one that should have carried |
-| the statistic | **also broken** — one term was 20× smaller than the other, so the "discordance" measure was the larger term wearing a label |
-| the preprocessing | a centering mismatch that could have explained everything — **tested, and it survived**, accounting for ~40% |
-| what fell out unasked | **two independent replications** of prior results, through a statistic the original work never used |
+Where the two disagree, the name was doing work your formula doesn't support. Then the harder
+question: **what did your preprocessing remove before your statistic looked?**
 
-**Four outcomes from one dead hypothesis.** Teach that shape explicitly, because students discard
-runs that do this.
+This is the kind of comparison the course assesses (see [Assessment tie-in](#assessment-tie-in)):
+two analysis choices on the same data, predicted first.
 
-**The rule for the write-up:** a dead hypothesis and a broken measurement are different results and
-must be reported differently. *"The prediction failed"* is a finding. *"My statistic was not
-measuring what I named it"* is a repair. Conflating them lets a real null hide behind a fixable bug
-— and lets a bug get published as a null.
+**Close (2 min).**
 
-### The other direction, which costs more to miss
+*Facilitator note —* **`PREDICTED`**, not piloted: pairs will list the obvious choices first and
+rank them wrongly. The settings run is where the ranking gets tested, and only for pairs who committed
+to one.
 
-Everything above is about not believing something false. The rest of this hour is about **not
-discarding something true**, which no amount of scepticism will do for you.
+*The case, the handouts, the scores computed for the second handout, the sources, the clock and what
+**not** to use in this hour are in the **facilitator pack**, not in this repository.*
 
-**The discrepancy you are about to explain away.** From this lab, 2026-05: we had data showing a
-gap between two conditions — honest answers about common things versus honest answers about rare
-things. The gap was inconvenient. It was being treated as a confound, something to residualise out
-and mention in the limitations. Thomas asked one question about it. The data rearranged, and the
-"confound" turned out to be the finding — retrieval difficulty was the thing the geometry was
-tracking all along.
+## Hour 3 — Would you sign it?
 
-Nothing about that was caught by rigour. Rigour was what was about to bury it.
+`PROPOSED` objective (2026-10-14), not yet a written standard: *judge what an analysis set aside: say
+what it would mean if it were real, then test the explanation with a check you predicted first,
+whichever way it comes out*. **The discovery hour. 50 minutes.**
 
-> **Before you residualise a discrepancy out, say aloud what it would mean if it were real.**
-> If the answer is interesting, it is a hypothesis, not a nuisance. You are allowed to run it.
+Everything so far today has been about not believing something false. This hour adds the other
+direction: **not throwing away something true**. Scepticism protects you from the first mistake and
+does nothing about the second. Only a check does, and a check can come out either way.
 
-**And immediately, the check that has to travel with it.** From the same store, 2026-07-07: in a
-single session a paper was inflated (0.969 led instead of the defensible 0.707, twelve convergences
-claimed where three held), a token list was cherry-picked 10-of-41 to build a narrative, and an
-echo check shipped with a directional bug. Every one caught by the gate, none by the author.
+> **When an analysis explains something away, yours or anyone's, say what it would mean if it were
+> real. Then write down what the explanation predicts, and check it.** If the explanation survives,
+> you've learned it was right. If it doesn't, you may have a finding.
 
-> **The excitement of convergence is a confound on judgment, and it is strongest when the thing
-> you want to be true actually might be true.**
+**The case (5 min).** A measurement from the history of science, read aloud up to the moment of
+decision: an instrument that reads too high, everywhere, and the people who built it. Poll the room:
+*what would you do with the excess?* Take the vote. The answer comes at the end of the hour.
 
-That is the honest pair, and students should hold both:
+**The exercise (2 + 25 min), in pairs, with your agents.** Go to your pair's room and open
+[*The prompt that made no difference*](exercises/seeded-03-the-prompt-that-made-no-difference/review.md)
+(in a clone: `exercises/seeded-03-the-prompt-that-made-no-difference/`). It is a careful analysis of a
+step-by-step pilot, with its data and its write-up. Your task is at the end of the write-up: decide
+whether you would sign its conclusion and its recommendation. It has four steps, of about 5, 3, 12
+and 5 minutes. **Step 2 is the one that matters: both predictions written down before you check
+anything.** One of you shares a screen and drives an agent; the other keeps the written predictions.
+
+Your agents may give you a verdict quickly. That's fine. The hour isn't "what did the agent say?"
+It's the prediction you wrote first, and whether you can explain what the check showed.
+
+**Debrief: Look and Check (8 min), whole room.** Each pair gives one row: what they looked at, what
+they ran, and what it showed. Then the table those rows fill in:
 
 | | the move | the failure it prevents | the failure it invites |
 |---|---|---|---|
-| **Look** | say what the discrepancy would mean if real | burying a finding as a nuisance | chasing noise you like |
+| **Look** | say what the set-aside thing would mean if it were real | burying a finding as a nuisance | chasing noise you like |
 | **Check** | run it as a claim that can fail | publishing what you hoped | burying it again |
 
-Neither one is the safe one. **Scepticism has a cost and it is paid in findings you never made.**
+Neither one is the safe one. **Scepticism has a cost, and it is paid in findings you never made.**
 
-## Hour 4 — Writing the limits section first
+**The reveal (5 min).** What the people in the opening case actually did, and the answer to the poll.
 
-**The limits section is not the apology at the end. It is the part that makes the rest citable.**
+**Your own (5 min).** In your own pilot, find one thing you were about to explain away: a subgroup
+that behaves differently, a result you were going to call noise, a pattern you had already put in
+your limits. Write three lines:
 
-Give them a real one, from an artifact of ours, and have them mark which limit is load-bearing:
+1. what it would mean if it were real;
+2. the check that could kill it, and the result that would;
+3. what you predict that check will show, and how sure you are.
 
-> - **One scalar per layer.** This tests a 90-prompt mean profile — 64 numbers. The effect could
->   live in per-prompt variance, in the raw spectra, or in the Jacobians, none of which is in this
->   artifact. This rules out a *gross* effect in the mean profile. **Nothing more.**
-> - **29 null draws**, floor p = 0.034. Underpowered for a subtle effect.
-> - **One model, one prompt set, one fit.**
+That's your homework, and it may be your finding.
 
-Then the sting, which is the point of the hour:
+*Facilitator note —* **`PREDICTED`**, never observed: some pairs will stop as soon as their agent
+gives a verdict. Ask for the prediction they wrote before it, and for the explanation after it. Name
+it out loud when a pair turns an explanation into a claim that could fail.
 
-> **A finding travels. Its limits section does not.**
+*The opening case, its sources and its reveal, and what **not** to use in this hour are in the
+**facilitator pack**. The exercise's own facilitator notes, with its answer, are kept privately and
+shared after the session.*
 
-You can write a correct, complete, honest set of limits, put them in the same file as the result,
-and watch the result be cited for something the limits explicitly exclude — sometimes within days.
-Not by careless people. By people who read the finding, which is what a finding is *for*.
+## Hour 4 — Write the limits section first, then say what you believe
 
-The mechanism has been measured. Greenberg (2009) reconstructed the full citation network behind a
-single biomedical claim: **242 papers, 675 citations, and 220,553 citation paths supporting it.**
-He identifies how the belief acquired authority it had not earned — **bias** (citing only
-supportive work), **amplification** (citing reviews as if they were evidence), and **invention**
-(citing papers for claims they do not make). The qualifications did not survive the journey; the
-claim did.
+Covers *verify that a search which returned nothing actually ran*, applied to a null result, and a
+`PROPOSED` objective (2026-10-14): *state what a result does not support, and what you now believe*.
+**48 minutes.**
+
+**The limits section isn't the apology at the end. It's the part that makes the rest citable**, and
+it's the part least likely to travel with your result.
+
+**The case (4 min).** A short published text, read aloud, and one sentence of the kind that later cited
+it. Poll the room: *does the text support the sentence?* Take the vote and don't discuss it yet.
+
+**Write its limits (5 min), in pairs, agents and search closed.** The first handout gives the text.
+Write its limits section in three lines: what it does not support. Send it in.
+
+**The reveal (5 min), second handout.** How the text was cited, counted by people who went and looked.
+
+> **A finding travels. Its limits section doesn't.**
+
+The same mechanism has been measured across a whole literature. Greenberg (2009) reconstructed the
+citation network behind one biomedical claim: **242 papers, 675 citations, and 220,553 citation paths
+supporting it.** He shows how the belief gained authority it hadn't earned: **bias** (citing the
+supportive work and not the critical work), **amplification** (citing reviews and other papers that
+had no data on the claim, as if they were evidence for it), and **invention** (a hypothesis turned
+into a fact by citation alone).
 
 > Greenberg, *BMJ* 2009;339:b2680 · free full text: <https://pmc.ncbi.nlm.nih.gov/articles/PMC2714656/>
 
-**So the limits section is not a disclaimer, and writing it is not defensive.** It is the only part
-of your paper that constrains what the next person is allowed to build on top of you — and it is
-the part least likely to be read. Write it as though it will be the only thing that survives,
-knowing it probably will not be.
+So writing the limits section isn't defensive. It's the only part of your work that tells the next
+person what they're *not* allowed to build on top of it. Write it as if it will be the only thing that
+survives, knowing it probably won't be.
 
-*Facilitator note:* this is the hour to tell an "I did this" story if you have one — a result of
-your own that got cited past its limits, or a citation you yourself made too generously. The
-published network above carries the point for anyone taking this asynchronously, but a first-person
-account lands harder in a room. **Check your own numbers before you tell it**: a true event
-fastened to an invented detail is the exact defect of session 4, hour 3.
+**Your limits section, first (10 min), on your own.** Use the template,
+[`templates/limits-and-verdict.md`](./templates/limits-and-verdict.md), posted at the break. Write the
+limits for your own result **before** you write the result: for each limit, the claim it rules out.
+Put the one that matters most first.
 
-**Exercise.** Students write the limits section for their own result *before* writing the result.
-Then they hand the limits section alone to another group and ask: **"what would you now be entitled
-to claim?"** The gap between that answer and what they wanted to claim is the session's deliverable.
+**Hand it over (10 min), with your new partner.** Give your partner your limits section **and nothing
+else**. They write one answer: *what would you now be entitled to claim?* Then compare it with what
+you wanted to claim. **The gap is this hour's deliverable.** Either your limits rule out something you
+were about to claim, or your partner found a claim your limits don't rule out. Then swap.
+
+**Say what you believe (12 min), on your own.** The verdict, in the template:
+
+1. **What I now believe**, in one sentence, with a direction, and a number with its interval. *"Nothing
+   yet"* is allowed, if you say why.
+2. **Which branch of my decision rule** (from session 2's pre-registration) the result landed in.
+3. **Did the hypothesis fail, or the measurement?** *"The prediction failed"* is a finding. *"My
+   statistic wasn't measuring what I named it"* is a repair. Report them differently: mixing them up
+   lets a real null hide behind a fixable bug, and lets a bug get published as a null.
+4. **If the result is null: could my test have seen the effect I predicted?** Session 2 had you build
+   data that should make your test reject. Build it again at the effect you predicted and the size you
+   ran. If the test can't see that, your null isn't a no. It's a silence.
+5. **What it does not support:** the first line of your limits section.
+6. **What would change my mind.**
+7. **What I might be under-claiming.** After two sessions of killing things, it's easy to undersell
+   the next one. Check that too.
+
+**Close (2 min).** Your verdict sentence, one line, in the chat.
+
+*Facilitator note —* **`PREDICTED`**, not piloted: the hand-over produces the biggest surprise of the
+day for most people, because their partner claims something their limits never ruled out. Leave time
+for the swap.
+
+*The case, its handouts and sources, the clock and what **not** to use in this hour are in the
+**facilitator pack**, not in this repository.*
+
+## Hour 4½ — The third kill
+
+**10 minutes, straight after hour 4.**
+
+Pick the thing from today that would most have changed your verdict if you had missed it: a statistic
+that was measuring a count, a name doing a formula's work, the discrepancy you nearly explained away,
+or the limit your partner didn't read. **A kill can point either way.** A finding you nearly threw out
+counts as much as a claim you nearly believed.
+
+Write it in the template, in the three steps from session 1:
+
+1. what happened, with the artifact that showed it;
+2. the class it belongs to, named;
+3. a check someone else could apply without your context.
+
+That's your third kill. Session 4 builds your gate out of all three.
 
 ## Assessment tie-in
 
@@ -190,11 +348,24 @@ explanation, not on the run.
 
 ## Between sessions
 
-Run your analysis a second time with `n` halved. Anything that moves more than its confidence
-interval was measuring your sample size. Bring the diff.
+1. **Run the check you wrote at the end of hour 3**, on your own data. Write your prediction first,
+   run it, and bring the result whichever way it went. If it holds, it may be the finding you defend
+   in session 4.
+2. **Finish the template:** the limits section, the verdict and the third kill.
+3. **Your sparring partner** (session 1's prompt, in your own agent), now with three kills. Give it
+   your verdict and ask it both ways: what would break this, and what would show I'm right?
 
-## `OPEN`
+## Open
 
-- Hour 3's worked case is ours and recent. Decide whether to name the collaborator who produced the
-  reframe that started it, or present it anonymously. **Ask them first** — it is their idea, and
-  the good version of the story has them being right before we had the instrument.
+- **`OPEN`: which data session 3 runs on.** Students bring the pilot from session 2's homework; the
+  [target bank](./the-target-bank.md) gives session 3 its own question (step-by-step). Hour 3's
+  exercise is a step-by-step pilot, so the bank's question is met there either way.
+- **`OPEN`: a fallback dataset for anyone without a pilot.** None exists yet. Until it does: hours 1
+  and 2 on a partner's pilot, and hour 4 on your own verdict about the hour 3 exercise's result.
+- **`OPEN`: whether hour 2's "your own statistics" block is the first comparison done together in
+  class**, which the [course README](./README.md) leaves open.
+- **`DRAFT` (2026-10-14): session 3 does not return to session 1's sealed prediction.** Session 1 opens
+  it in its own hour 4. Session 3's verdict works from session 2's pre-registration instead.
+- **`OPEN`: whether Build GRIM is set between sessions 3 and 4.**
+- **Not piloted.** No cohort has run this session. The hour 3 exercise has never been run with
+  students or with agents, and every timing above is a prediction.
