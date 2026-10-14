@@ -137,7 +137,7 @@ kept in the (private) facilitator pack. Otherwise the page every student sees fi
 | Being wrong well | "Forecasters predicted 12.7% on a hard maths benchmark for mid-2022." | the measured score | 50.3%. The forecaster published his own surprise (Steinhardt, bounded-regret, 2021/2022) | verified |
 | A goal, missed, said plainly | "Goal: a classifier that never produces an injurious completion." | the lab's own write-up | "we fell well short of that target" (Redwood Research, 2022) | verified (secondary: the lab's post) |
 | A true one (no gotcha) | "Models use information in the middle of a long context worse than at the ends." | the curve | true (Liu et al., *Lost in the Middle*, arXiv 2307.03172) | verified |
-| Serendipity / null → insight | e.g. a null result or accident that opened a field | — | — | **NEEDS SOURCING**; do not ship unverified |
+| Serendipity / null → insight | e.g. a null result or accident that opened a field | — | — | **NEEDS SOURCING**; do not ship unverified. Not Penzias & Wilson: session 3 hour 3 reserves it (2026-10-14) |
 
 Rule: every card cites its source on the reveal side; no card ships without a verified source.
 

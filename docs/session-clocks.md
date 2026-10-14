@@ -53,7 +53,7 @@ misses:
   error*, so someone else must look. At 8 you read every student's output; **at 10 you are
   sampling, in an exercise whose thesis is that sampling does not work.**
 - **Session 4** — 10 × 5 min assumes zero handover between speakers. Real cap 8–9.
-- **Session 3 adds: prefer an even number**, so the hour-4½ exchange pairs cleanly.
+- **Session 3 adds: prefer an even number**, so hour 4's hand-over pairs cleanly.
 
 **Cap 10 hard, target 8, make it even. If you are given 10, get a second pair of hands for session
 2 hour 3, and run session 4's hour 4 as two rooms or hold each talk to four minutes.**
@@ -132,6 +132,10 @@ which is unbounded work inside a fixed block).
 ---
 
 ## Session 3 — Reading what came back
+
+> **Superseded 2026-10-14.** Session 3 was rebuilt, and its clock now lives on
+> [its own page](../courses/vibe-research/session-3-reading-what-came-back.md#the-clock): 201 minutes of
+> content in 240, not yet piloted. The plan below is the old one, kept for the record.
 
 *Needs **252** as written — 51 over. Hour 2 is the single worst block in the course.*
 

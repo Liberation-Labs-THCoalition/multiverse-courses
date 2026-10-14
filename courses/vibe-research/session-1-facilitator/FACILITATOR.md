@@ -126,8 +126,8 @@ still lists the delivery platform as named nowhere.)*
   shown whether the question is already answered, students open the prediction they sealed in
   hour 2 and score it with the game's rule if the review settled the question. This replaces the
   old promise that they would "read it again in session 3", which nothing in session 3 kept, and
-  which hour 4 would have answered weeks earlier anyway. Whether session 3 also comes back to it
-  is `OPEN`, and is left to whoever rebuilds session 3.
+  which hour 4 would have answered weeks earlier anyway. Session 3, rebuilt on 2026-10-14, does
+  not come back to it.
 - **`PREDICTED`**, never observed; this course has not run. We expect students to under-estimate
   saturation and to be startled by how early it arrives on a well-formed question. **Record what
   actually happens.** The reasoning behind the prediction is the part to trust: on a badly-formed

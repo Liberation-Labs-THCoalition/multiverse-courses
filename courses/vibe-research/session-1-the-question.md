@@ -335,7 +335,7 @@ Save the records with your one-page. They show what you tested and what held up.
   verified** case (Thomas, 2026-09-24: external examples first; the repo is public).
 - ~~Session 3 should open by reading back the sealed predictions~~ — **changed 2026-10-14:** the
   sealed prediction from hour 2 is opened in hour 4 of this session, when the review answers it.
-  Whether session 3 also returns to it is `OPEN`, for the session-3 rebuild.
+  Session 3 (rebuilt 2026-10-14) does not return to it.
 - **Where the facilitator pack lives.** Pending the public/private repo decision; until then it is
   kept outside the public repo. Any example used in class must **not** also appear on the course
   splash page, or the page spoils the class.

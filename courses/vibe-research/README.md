@@ -35,8 +35,8 @@ the most dead air: **never ask a remote room to pair up — pre-assign and post 
 previous break.**
 
 `DRAFT` — all four sessions have a per-block clock in [the four clocks](../../docs/session-clocks.md)
-(2026-09-09, provisional). Session 1's page took its cuts on 2026-10-14. Sessions 2 and 3 still run
-over (247 and 252 minutes against 201) until theirs are applied.
+(2026-09-09, provisional). Session 1's page took its cuts on 2026-10-14, and session 3 was rebuilt the same day with its clock
+on its own page (201 minutes). Session 2 still runs over (247 against 201) until its cuts are applied.
 
 ## Tooling
 
@@ -130,7 +130,7 @@ Written to match the house format at ascending Bloom levels — see
 |---|---|---|---|
 | 1 | **The question you cannot stop thinking about** | curiosity → testable claim; lit review with an agent | a claim that could come out the other way, a verified citation trail, and a first kill |
 | 2 | **Designing something that can fail** | design; confounds; controls; power | a pre-registration your agent tried to break, the break log, and a second kill |
-| 3 | **[Running it, and reading what came back](session-3-reading-what-came-back.md)** | execution + analysis | a result *and* an honest account of what it does not support |
+| 3 | **[Running it, and reading what came back](session-3-reading-what-came-back.md)** | execution + analysis | a result, what it does not support, a verdict on what you now believe, and a third kill |
 | 4 | **[The gate, and the room](session-4-the-gate-and-the-room.md)** | gating; presentation; what to do when you were wrong | a defended finding, with your kill list as its warrant, and a five-minute honest talk |
 
 **Four sessions, not three.** The gap between *running it* and *the gate* is where the course actually lives — folding 4 into 3 would compress the two things students cannot get anywhere else (what a result does not support, and what to do when you were wrong) into a coda on an analysis session. They are the subject, not the wrap-up.

@@ -37,7 +37,12 @@ read the school's current curriculum.
 - [Bound an inquiry so it can end](./execution/bound-an-inquiry-so-it-can-end.md)
 - Verify that a search which returned nothing actually ran
 - Reconcile a result with the estimator that produced it
-- Distinguish a per-sample statistic from a rank-bounded one
+- Distinguish a per-sample statistic from a rank-bounded one (`PROPOSED` 2026-10-14, for Liz: widen it to any
+  statistic that moves with a count, which is what session 3 hour 1 now teaches)
+- `PROPOSED` 2026-10-14, for Liz: **Judge what an analysis set aside.** Say what it would mean if it were real,
+  then test the explanation with a check you predicted first, whichever way it comes out. (Session 3 hour 3.)
+- `PROPOSED` 2026-10-14, for Liz: **State what a result does not support, and what you now believe.** (Session 3
+  hour 4.)
 
 ---
 ## Course: The Gate
