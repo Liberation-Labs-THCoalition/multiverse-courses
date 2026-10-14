@@ -108,7 +108,9 @@ That is the bridge to hour 3, and students should feel the bridge rather than be
   a different example. Once the room has found the defect, put this row on the board yourself.
 - **Hour 4.** The page tells instructors to say plainly what our own gate did, in the same breath as
   the part where the gate works. The words it used: **our gate approved a degenerate null at 0.92
-  confidence and told the author to report an impossible number.**
+  confidence and told the author the test had 1/64 resolution, when its floor was 0.25.** *(Corrected
+  2026-10-14: the old words said "told the author to report an impossible number". The exact p it asked
+  for, 0.7500, can be reported; what cannot exist is the 1/64 resolution.)*
 
 ## Provenance, for the facilitator
 

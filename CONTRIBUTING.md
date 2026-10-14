@@ -26,7 +26,7 @@ If you cannot find the primary, write what you actually have:
 
 **Added 2026-09-08.** Some students take this remotely and asynchronously. They cannot raise a
 hand. So a lab anecdote in learner-facing text — *"we hit that five times in three days," "our gate
-approved a degenerate null"* — reaches them as an assertion they can neither interrogate nor
+approved an analysis it should have rejected"* — reaches them as an assertion they can neither interrogate nor
 verify, from people they have never met. In a live room a facilitator expands it in ten seconds.
 Async, it is either dead weight or name-dropping.
 
@@ -60,7 +60,8 @@ freely, **and do not let a war story turn into a rate.** See
 Two things this rule does **not** forbid:
 
 - **Naming our own defects in facilitator notes**, including embarrassing ones. Session 4 tells
-  facilitators to say plainly that our gate approved a degenerate null. Keep that. A room being
+  facilitators to say plainly what our own gate approved (seeded-01's facilitator notes give the
+  words). Keep that. A room being
   taught to gate should hear that the people who built the gate failed it.
 - **Published work, ours or anyone's.** If it has a citation a student can follow, it is a source,
   not an anecdote.

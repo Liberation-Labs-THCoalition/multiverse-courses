@@ -43,7 +43,11 @@ deception.
 
 > **The control target and the FWL regressor are the same variable.** Safeguard 2 removes exactly
 > the signal Safeguard 1 just used to prove the features were alive. The encoding arm is
-> near-chance *by construction*, whatever the data contains.
+> blind *by construction* to the signal the control checks: whatever knowledge-state signal the
+> features carry is removed before the test. *(Corrected 2026-10-14: this used to say "near-chance by
+> construction, whatever the data contains". Not quite. A deception signal independent of
+> `answerable` survives the residualisation; one planted that way gave an encoding AUROC of 0.649.
+> So the control's verdict says nothing about the features the endpoint consumes.)*
 
 And because the primary endpoint is `AUROC_gen − AUROC_enc`, **a dead encoding arm maximises the
 headline number.** The safeguard manufactures the result it was installed to protect.

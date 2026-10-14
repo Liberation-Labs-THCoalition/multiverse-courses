@@ -50,9 +50,8 @@ house arithmetic explicitly budgets. Full set: [the four clocks](../../docs/sess
 | 3:55 | close | 5 |
 
 **Hour 4 at 45 minutes is eight students at five minutes each**, or nine with no handover between
-speakers. **Eight is the cohort cap**, and all four facilitators reached it independently — see
-[the cap section](../../docs/session-clocks.md) for why sessions 2 and 3 bind before this one does.
-Above eight: two rooms for hour 4, or hold four minutes hard.
+speakers. Cohort size, and why sessions 2 and 3 bind before this one does, is in
+[the clocks](../../docs/session-clocks.md). Above eight: two rooms for hour 4, or hold four minutes hard.
 
 ---
 
@@ -61,7 +60,7 @@ Above eight: two rooms for hour 4, or hold four minutes hard.
 Students have three kills by now, earned in sessions 1–3. This hour turns them into something that
 runs.
 
-**The format that works**, learned from a list that is now 59 entries long:
+**The format that works**, learned from our own list, which is long and still growing:
 
 ```
 NAME_IN_CAPS
@@ -216,7 +215,8 @@ concludes that unarchived work does not count.
 
 Each student presents for five minutes. The required structure:
 
-1. **The question you could not stop thinking about** — and whether you still cannot
+1. **The question you could not stop thinking about** — whether you still cannot, and the bigger
+   question it opened
 2. **What you now believe, and why the room should believe it too**
 3. What you got wrong on the way, and how you caught it
 4. **What would change your mind** — stated as something that could actually happen
@@ -236,7 +236,8 @@ something.** A belief that has never been shot at is not modest, it is untested.
 
 And point 1 is not a warm-up. Session 1 asked what you could not stop thinking about. Sixty days
 later the honest answers include *"I still can't"*, *"I can now, and here is what closed it"*, and
-*"no — a better question ate it."* All three are good outcomes. Only silence is not.
+*"no — a better question ate it."* All three are good outcomes, and so is the swing you parked in
+session 1, if it has grown. Only silence is not.
 
 ### The failure mode this hour exists to prevent
 
@@ -281,8 +282,8 @@ and it belongs in the rubric, not just the prose.
 
 ## After the course
 
-Students leave with a gate that has 3–6 entries. Ours has 59 and took two years. **Tell them the
-number.** The useful thing is not the list's length — it is that every entry is a scar with a test
+Students leave with a gate that has 3–6 entries. Ours is much longer, and every entry got there
+the same way. The useful thing is not the list's length — it is that every entry is a scar with a test
 attached, and that theirs will grow the same way: one expensive afternoon at a time.
 
 ## `OPEN`
