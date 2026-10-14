@@ -5,8 +5,9 @@
 **Names are ours to propose.** Liz has creative latitude over the campus and their bandwidth is stretched, so we present finished names rather than options and they change whatever they like. Everything below is a proposal, not a claim.
 
 **Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: Multiverse agentic coursework, so
-**every student arrives with a long-horizon agent** and has already run a paired ablation as an
-assessment.
+**every student arrives with an agent of their own.** We do **not** assume they have run a paired ablation: the school's
+agent classes no longer include one, and Liz judged it too much to expect and likely to intimidate people (2026-10-13).
+What else the prerequisite guarantees is `OPEN` until we have read the school's current curriculum.
 
 ---
 
@@ -127,16 +128,29 @@ Written to match the house format at ascending Bloom levels — see
 
 > ⚠ **Spoiler discipline.** The defect used to be described here in full. **It is a discovery exercise, and this is a student-reachable file** — the answer now lives only in that directory's `FACILITATOR.md`. Do not restate it in any file a student can open. Same rule for `seeded-02` and for the target bank's reveals; see [the audit](../../docs/audit-2026-09-09.md).
 
-## Assessment — adopt theirs
+## Assessment — one comparison, predicted first
 
-The Multiverse SDLC course assesses by **paired runs with one variable changed**. That is a
-controlled experiment used as an exam, students will already have done one, and it is
-*literally our subject matter*. Adopting it is continuity, not imitation.
+~~The Multiverse SDLC course assesses by paired runs with one variable changed … students will already have done
+one … Adopting it is continuity, not imitation.~~ **Superseded 2026-10-13:** the school's agent classes no longer
+include a paired ablation, and Liz judged it too much to expect and likely to intimidate people.
 
-Our version: **run your analysis twice, once with your gate and once without.** The ungated run
-should let something through that the gated run catches. If it does not, either your gate is not
-doing anything or you have not yet found a real failure mode — and *that* conversation is the
-assessment.
+Keep the idea and drop the exam. Comparing two runs that differ in one thing is the heart of a test worth running, so
+the course still teaches it, as something students learn here rather than something they must already know or
+perform cold:
+
+- **Predict first.** Before anything runs, the student writes down what they expect to change and what they expect
+  to stay the same.
+- **The agent runs both.** Same task, one thing changed: an analysis with the gate and without it (session 4), or two
+  analysis choices on the same data (session 3). The mechanics are the agent's job.
+- **Grade the prediction and the explanation, not the run.** Did they say beforehand what should differ, and can
+  they explain what did? If the ungated run lets nothing through that the gated run catches, either the gate is not
+  doing anything or they have not yet found a real failure mode, and *that* conversation is the assessment.
+- **The first one is done together in class**, start to finish, before anyone does one alone. `OPEN`: which
+  session's clock it goes in (session 2 hour 3, or the start of session 3).
+- On student-facing pages it is a *comparison*, never an *ablation*.
+
+If Liz would rather drop it entirely, session 4 still has the kill list and the talk, and session 3 has its
+limits-first exercise. `OPEN`, Liz's call.
 
 ## Carried forward from the August draft
 

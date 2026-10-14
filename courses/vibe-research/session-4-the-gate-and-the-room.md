@@ -274,7 +274,9 @@ where the gate works.
 
 ## Assessment
 
-Paired runs, one variable changed — plus the kill list and the talk.
+One comparison, predicted first: write down what your gate should catch, then have your agent run
+your analysis with the gate and without it. Graded on the prediction and the explanation, not on
+the run. Plus the kill list and the talk.
 
 - The **kill list** is graded on whether each entry has a real `EARNED` case.
 - The **talk** is graded on **point 2**: is the belief warranted, and does the student know what

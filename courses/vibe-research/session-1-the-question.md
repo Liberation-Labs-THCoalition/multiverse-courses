@@ -14,9 +14,9 @@ provided** for those who arrive without one.
 
 ## What students walk in with
 
-An agent. Agent Design and Agentic SDLC are prerequisites, so every learner already has a
-long-horizon agent, has run a paired ablation as an assessment, and has been through the weekly
-welfare meetup. **Session one does not set anything up.** It starts with the work.
+An agent of your own, from the school's agent classes. That is the only thing we assume. You do
+not need to have run a formal experiment before: this course is where you learn to design one.
+**Session one does not set anything up.** It starts with the work.
 
 ## What they walk out with
 
@@ -69,13 +69,12 @@ start, by the version of you who was not yet invested.
 
 ### You already know how to do this
 
-Your prerequisite courses taught you to build and test an automation. When you did that, you wrote
-the acceptance test **first** — you knew what "working" looked like before you wrote a line. That
-is the same muscle. The only difference is that almost nobody writes an acceptance test for a
-*question*.
+If you have built an agent, you have already done the core of this. Somewhere along the way you
+decided what "working" would look like, and you checked for it. That is the same muscle. The only
+difference is that almost nobody writes that check for a *question*.
 
-That transfer is the whole reason the prerequisite exists. You are not here to learn to build a
-harness. You know that. You are here to learn where to point one.
+That transfer is the whole reason the prerequisite exists. You are not here to learn to build an
+agent. You have one. You are here to learn where to point it.
 
 **Pair exercise, two passes.** Swap pages.
 

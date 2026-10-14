@@ -13,8 +13,9 @@ from `EngineeringEducation/standards/python/` — see
 **Offered upstream, not assumed.** Naming, course boundaries, and whether this belongs in the
 school's repo or ours are Liz's call.
 
-Prerequisite: the Multiverse agentic coursework. Every learner arrives owning a long-horizon
-agent and has already run a paired ablation as an assessment.
+Prerequisite: the Multiverse agentic coursework. Every learner arrives owning an agent. No prior
+ablation is assumed (Liz, 2026-10-13); what else the prerequisite guarantees is `OPEN` until we have
+read the school's current curriculum.
 
 ---
 ## Course: Question

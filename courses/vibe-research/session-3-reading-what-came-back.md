@@ -182,9 +182,11 @@ to claim?"** The gap between that answer and what they wanted to claim is the se
 
 ## Assessment tie-in
 
-Paired runs, one variable changed — the Multiverse SDLC convention. Here the changed variable
-should be **an analysis choice, not a data choice**: same data, two estimators, or same data with
-and without a preprocessing step. Students report both and say which is right and why.
+One comparison, predicted first. Before anything runs, write down what you expect to differ
+between two **analysis choices on the same data**: two estimators, or the same data with and
+without a preprocessing step. Then have your agent run both. Report both, say which you think is
+right and why, and say whether your prediction held. You are graded on the prediction and the
+explanation, not on the run.
 
 ## Between sessions
 
