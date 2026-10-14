@@ -118,7 +118,8 @@ best first:
 - **compare at the same counts:** cut the bigger group down to the smaller one's size, or fix every
   count in advance and keep it the same for everything you compare;
 - **switch to an average:** each group's own number with its interval, rather than one number picked
-  or built from the whole set;
+  or built from the whole set. (An interval is the range the true value plausibly sits in, given how
+  much data you have. Your agent can compute it; ask it to show how.)
 - **report the counts with the number**, so a reader can see what it was measuring.
 
 And the other way round: a small group's big number isn't noise just because the group is small. Its
@@ -220,6 +221,10 @@ step-by-step pilot, with its data and its write-up. Your task is at the end of t
 whether you would sign its conclusion and its recommendation. It has four steps, of about 5, 3, 12
 and 5 minutes. **Step 2 is the one that matters: both predictions written down before you check
 anything.** One of you shares a screen and drives an agent; the other keeps the written predictions.
+
+The write-up uses some statistics vocabulary. In plain words, it compares answers as if they were all
+the same length, so that a longer answer can't look better just by being longer. Ask your agent to
+explain any term in one sentence; that is part of the work, not a detour.
 
 Your agents may give you a verdict quickly. That's fine. The hour isn't "what did the agent say?"
 It's the prediction you wrote first, and whether you can explain what the check showed.
