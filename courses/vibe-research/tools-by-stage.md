@@ -123,7 +123,7 @@ picture. Write the number down.
 |---|---|
 | **artifact** | the design memo: the comparison, the controls, and what each control's failure would do |
 | **agent can carry** | enumerating conditions, proposing controls, finding the confound you named, running the diagnosis |
-| **agent cannot carry** | noticing that your control cannot fail. It will approve a design that must succeed. |
+| **agent cannot carry** | deciding what each control's failure would mean for your claim. Ask it to show that every control can fail, then make that call yourself. |
 
 ### Tools, and there are good ones
 
@@ -207,7 +207,7 @@ unique values first. Read the log's *tail*, not its head.
 
 | tool | status | what it closes |
 |---|---|---|
-| **pingouin** | `known`, **installed 2026-09-08** (0.6.1) — demo-able, but not used in the work this course draws on | Reports effect sizes **with confidence intervals by default**, and Hedges' *g* directly. Cohen's *d* at small *n* is upward-biased by roughly `1 − 3/(4df−1)`; at *n* = 3 that is about 20%, and a bare *d* with no interval hides both the bias and the width. A library whose default output includes the corrected statistic and its CI makes that error **harder to make than to avoid** — which is a better safeguard than remembering. |
+| **pingouin** | `known`, **installed 2026-09-08** (0.6.1) — demo-able, but not used in the work this course draws on | Reports effect sizes **with confidence intervals by default**, and Hedges' *g* directly. Cohen's *d* at small *n* is biased upward: the small-sample correction multiplies it by *J* = `1 − 3/(4df−1)`, which at 3 per group (df = 4) is 0.8, so *d* overstates *g* by 25%. A bare *d* with no interval hides both the bias and the width. A library whose default output includes the corrected statistic and its CI makes that error **harder to make than to avoid** — which is a better safeguard than remembering. |
 | **statsmodels**, **scipy.stats** | `used` | What we use. Powerful, and entirely willing to let you report an uncorrected *d* at n=3 without comment. |
 | **`scipy.stats.bootstrap`** | `used` | Resampling with BCa. **Teach the trap**: refit any residualisation *inside* each replicate, or the interval comes out too narrow. |
 | **jamovi** + **jmv** | `known` | GUI with a reproducible syntax trail — a real option for non-programmers. |
@@ -308,7 +308,8 @@ published curriculum teaches with them**, which is an opening rather than a curi
 > **Free preprint:** <https://peerj.com/preprints/2064/> — send students this one, not the paywall.
 > Check their implementations against [`rsprite2::GRIM_test`](https://lukaswallrich.github.io/rsprite2/reference/GRIM_test.html).
 >
-> Facilitators have a reference implementation in the private facilitator repository (do **not** distribute it).
+> Facilitators have a reference implementation, `grim_reference.py`. The site build leaves it out, but it is in
+> the repository, so do **not** point students at it before the exercise.
 
 ### And the kill list is still yours
 
