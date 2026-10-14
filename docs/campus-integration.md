@@ -22,19 +22,10 @@ own paper on 2026-08-22 (values attributed to a source that does not contain the
 We do not need to build a lit-review gate. **One exists, and it is better-loved than anything we
 would ship.**
 
-### The reward economy already encodes research virtue
+### Comprehension before reward
 
-Students earn companions by contributing research. The first one is free. After that, the rules
-limit how often a new companion can arrive, ask for submissions spread over several weeks, and
-ask for each new companion to come from a different research interest.
-
-Sustained work over weeks rather than a sprint; breadth over repetition; comprehension checked
-before reward. Those are research virtues, built into the game, with no lecture attached.
-
-Companions also **decay** if neglected, and the warnings escalate. A companion you earned and then
-stopped tending declines where everyone can see it. I will not stretch that into a metaphor for
-unmaintained claims, but the school built a system where *earning* is not the end of the
-obligation, and that is the right instinct for a research course.
+Students earn companions from her by contributing research she has checked. That puts comprehension
+before reward, with no lecture attached.
 
 ### The proposed fit — `DRAFT`, needs Liz
 
@@ -51,10 +42,7 @@ theirs to set.
 
 ## 2. The whimsy doctrine, and what it demands of us
 
-That tone guide, in general terms, asks for four things together: precise, odd detail over
-pleasant generalities; a world that plays its jokes straight; jokes built into the game's systems,
-for players to act out rather than read; and warmth rather than corporate polish. Behind all four
-is one test: does a change leave the campus a place, or turn it into a product?
+The campus has its own tone guide, and its tone is Liz's to set.
 
 ### The rule we most need to obey as contributors
 
@@ -70,8 +58,7 @@ the product. Worth carrying into any Coalition contribution guidance for campus 
 
 I proposed calling a student's earned kill list a **bestiary**.
 
-**That word is taken.** The campus already has a bestiary: it is the creature-collection system,
-part of the same world as the companions. Reusing it for "failure modes you have catalogued" would
+**That word is taken.** The campus already uses it for one of its own systems. Reusing it for "failure modes you have catalogued" would
 collide with an established mechanic in the students' own world. It also cuts against the guide's
 preference for the precise: a word with two meanings blunts both.
 
@@ -94,7 +81,7 @@ a name over a flag today it was `agni-open` pointing at a private repo.
 
 - Whether Baba Yaga can carry two extra riddle types for course participants
   (*what does this paper not support?* / *what would change your mind?*)
-- Whether course submissions can register as research contributions in the existing pet economy
+- Whether course submissions can count as research contributions on campus
 - Who owns any new in-world naming — assumed Liz, confirm
 - ~~Whether `github.com/EngineeringEducation` holds course-side material we have not seen~~
   **ANSWERED 2026-08-24, by me rather than by Liz:** it is classical software-engineering
@@ -103,7 +90,7 @@ a name over a flag today it was `agni-open` pointing at a private repo.
   [`school-repos-and-standards.md`](school-repos-and-standards.md).
 
 **RESOLVED 2026-08-24 (Thomas):** we have **PR permissions on the campus repo, including for
-agents**, and Liz is loose with creative control. So the first two questions are no longer
+agents**, and Liz sets the campus's creative direction. So the first two questions are no longer
 requests — they are **pull requests**, which is the right shape: proposed in-world, visible, and
 theirs to accept or decline. The third (naming) stays a courtesy question and the answer is still
 Liz.

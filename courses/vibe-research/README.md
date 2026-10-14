@@ -2,7 +2,7 @@
 
 **Status: `DRAFT`.** Structure proposed 2026-08-22. **Session count SETTLED at 4** (Thomas, 2026-08-25) — *"stick with 4 until someone says otherwise."* Dates still `OPEN`.
 
-**Names are ours to propose.** Liz has creative latitude over the campus and their bandwidth is stretched, so we present finished names rather than options and they change whatever they like. Everything below is a proposal, not a claim.
+**Names are ours to propose.** Liz has creative latitude over the campus. To save them time, we present finished names rather than options, and they change whatever they like. Everything below is a proposal, not a claim.
 
 **Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: Multiverse agentic coursework, so
 **every student arrives with an agent of their own.** We do **not** assume they have run a paired ablation: the school's

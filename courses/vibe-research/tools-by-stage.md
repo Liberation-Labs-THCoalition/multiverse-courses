@@ -173,7 +173,8 @@ sentence is a defence, not an inference, and this is the stage where it does the
 | **AsPredicted** | `known` | Eight questions, right weight for a short session — **but there is no password field on the sign-in page at all.** An agent has nothing to authenticate with, and coauthor approval is a human email loop. Structurally human-in-the-path. |
 | **a dated, pushed commit in your own repo** | `used` | What we actually do, and **the recommended path for a live session.** Weaker than OSF — you can rewrite history — so teach the weakness alongside it. `git tag` it and the weakness mostly closes. |
 
-**Build — the prereg template, plus the split-sample drill.** Reproduce a result on half a randomly
+**Build — the prereg template, plus the split-sample drill.** The template is
+[`templates/preregistration.md`](./templates/preregistration.md). For the drill: reproduce a result on half a randomly
 split sample, commit your alternative model, *then* receive the second half. It is the cheapest
 honest test of commitment-before-evidence we know of, and it fits inside one hour.
 (Mechanism from Bauer et al. 2025 — see [prior art](../../docs/prior-art.md).)

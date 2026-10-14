@@ -217,7 +217,9 @@ sentence.
   not 5** (two students on one case means the second copies), each **one number, one named
   artifact, ≤2 files, traceable cold in under 18 minutes.**
 - The six-line noise-run skeleton (session 2 H3), held in reserve.
-- The prereg template as a fillable file + the agent-attack prompt, verbatim.
+- ~~The prereg template as a fillable file + the agent-attack prompt, verbatim.~~ **Done 2026-10-14:**
+  [`templates/preregistration.md`](../courses/vibe-research/templates/preregistration.md); the prompt is
+  in session 2, hour 4. Not yet piloted.
 - **A glossary card**, posted not read: AUROC, confound, residualisation/FWL, permutation null,
   p-floor, alpha, estimator, power, confidence interval. *All used, none defined.*
 
