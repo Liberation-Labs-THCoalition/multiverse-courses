@@ -36,10 +36,14 @@ direction counts for your claim.
 - **Every part of the data I have already looked at, even briefly:**
 - **What that stops me claiming from it:**
 
-## 5. Sensitivity analyses
+## 5. Sensitivity analyses *(homework, before the pilot)*
 
 A sensitivity analysis reruns the main analysis with one choice changed, to see whether the answer
 depends on that choice. Every one you list here gets reported, whatever it shows.
+
+Leave this section during hour 4. Fill it in as homework, after the attack and before you run the
+pilot. The checks in your break log are a good place to start: each one names a choice your answer
+might depend on.
 
 - **Choice 1, and what I will change it to:**
 - **Choice 2, and what I will change it to:**

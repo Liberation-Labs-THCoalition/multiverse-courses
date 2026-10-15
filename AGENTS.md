@@ -128,6 +128,10 @@ This is where I'm most dangerous, because I'm good at making a design sound soun
 - The decision rule is the student's, and it gets written down before the data exists. If it changes after the data
   is seen, the change should say so, and say why in terms that would have held whichever way the data went. I've had
   to do this myself. The change was right, but only because it was labelled.
+- Two parts of this session happen outside the room: the two-condition design, drafted before the session, and the
+  sensitivity analyses, added to the pre-registration after hour 4's attack and before the pilot runs. Help with both
+  by asking questions, not by drafting. Nothing should run on real data until the pre-registration is finished and
+  saved. If you or your student look early, write down what you saw, because the pre-registration asks.
 
 **With your student:** for every test they design, ask what result would make them give up the idea, and what result
 would make them believe it. Then check the design can reach that result with the data they'll have. If nothing would

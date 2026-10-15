@@ -95,39 +95,99 @@ which is unbounded work inside a fixed block).
 
 ## Session 2 — Designing to fail
 
-*Needs **247** as written — 46 over. The worst session, and the worst block is hour 4.*
+*Re-timed 2026-10-15 from the page as it stands: **200 against 201**, counting each hour at the
+length its heading states. On 2026-09-09 it needed **247**, 46 over. Three fixes since then (hour 3
+rewritten 2026-09-29, hour 1's design draft moved to pre-work 2026-09-30, hour 4's template and
+skeleton 2026-10-14) and one `PROPOSED` cut on 2026-10-15 closed the gap. Not piloted: every number
+here is a prediction.*
 
 | clock | block | min |
 |---|---|---|
-| 0:00 | Opening | 5 |
+| 0:00 | Opening — hour 1 pairs already posted | 5 |
 | 0:05 | **H1** — the confound that got there first | 50 |
 | 0:55 | **break** — "back at 1:00" | 5 |
-| 1:00 | **H2** — a control capable of failing | 42 |
-| 1:42 | transition | 3 |
-| 1:45 | **H3** — a test that cannot reject *(the centrepiece)* | 50 |
-| 2:35 | **break** — "back at 2:40", **post H4 template here** | 5 |
-| 2:40 | **H4** — pre-register, then have your agent attack it | 50 |
-| 3:30 | **H4½** — the break log, and name the second kill | 10 |
-| 3:40 | overrun buffer — **unspent** | 15 |
+| 1:00 | transition | 3 |
+| 1:03 | **H2** — a control capable of failing | 42 |
+| 1:45 | transition | 3 |
+| 1:48 | **H3** — a test that cannot reject *(the centrepiece)* | 50 |
+| 2:38 | **break** — "back at 2:43", **post H4 template here** | 5 |
+| 2:43 | transition | 3 |
+| 2:46 | **H4** — pre-register, then have your agent attack it | 48 |
+| 3:34 | **H4½** — the break log, and name the second kill (continuous, no transition) | 10 |
+| 3:44 | overrun buffer — 10, plus the one spare minute | 11 |
 | 3:55 | close | 5 |
 
-**Cuts required, and two are structural:**
+**Where the 200 comes from.** Line numbers are
+[`session-2-designing-to-fail.md`](../courses/vibe-research/session-2-designing-to-fail.md) as of
+2026-10-15. Each hour's heading states its length, and each block inside it states its own.
 
-- **H1 −15: move the design draft to pre-work.** Post the target + one-page template ~5 days out
-  with *"arrive with a two-condition design."* This is a defect fix, not a time cut — **no block in
-  the course ever schedules designing one**, and you cannot list what differs between conditions you
-  have not written.
+| block | heading says | line | its blocks | they add to |
+|---|---|---|---|---|
+| H1 | 50 | :54–55 | 3 + 8 + 6 + 6 + 5 + 17 (:62–94) | **45** ⚠ |
+| H2 | 42 | :121 | 4 + 8 + 8 + 4 + 8 + 10 (:130–166) | 42 |
+| H3 | 50 | :182 | 5 + 12 + 8 + 15 + 7 + 3 (:192–222) | 50 |
+| H4 | 48 | :239 | 12 + 13 + 23 (:258, :263, :280) | 48 |
+| H4½ | 10 | :239, :318 | 10 | 10 |
+| **total** | **200** | | | **195** |
+
+Before the 2026-10-15 cut, the same count gave **202 by headings** (hour 4 at 50 = 12 + 15 + 23), one
+over, and 197 by blocks.
+
+- ⚠ **`OPEN`: hour 1's heading says 50 and its blocks add to 45.** The hour's own clock is in the
+  facilitator pack, outside this repository, and this re-timing did not consult it. Someone who
+  holds the pack should say what the other 5 minutes are. If they are four handouts changing hands,
+  keep 50. If they are slack, the session is 195, and the spare minutes join the buffer rather than
+  becoming a block.
+- **The table that stood here on 2026-09-09 did not meet the house arithmetic either:** one
+  transition, a 15-minute buffer, and 202 content minutes. It is replaced above.
+- **The 247 is only partly traceable.** The two cuts named below account for 38 of its 46 minutes
+  (15 + 23). The run sheet that gave the other 8 is not in this repository.
+
+**Cuts, and where each stands:**
+
+- **H1 −15: move the design draft to pre-work. APPLIED in two halves.** The hour stopped drafting a
+  design when it was rewritten on 2026-09-30: it now opens with *"Bring the two-condition design you
+  drafted as pre-work"* (:60), and its last block (17 min, :94) works on that draft. But until
+  2026-10-15 no page told a student to draft one. Session 1's homework asks for two other things
+  (`session-1:325–331`), and session 2 had no pre-work section. **`PROPOSED` 2026-10-15:** a *Before
+  session 2* section (:18–37) asks for four lines (the claim, the two conditions, the items, the
+  measurement), says not to run anything yet, and posts the hour 1 pairs in advance. The four lines
+  stand in for the one-page template, which was never written. **Still `OPEN`:** which target the
+  design is for, which waits on whether targets rotate within a cohort's arc, and who posts it, and
+  where, about five days out. It is still a defect fix rather than a time cut: without the pre-work,
+  hour 1's last block has nothing to work on, and drafting in the room takes the 15 minutes back.
 - **H3 — ordering defect: FIXED 2026-09-29.** The old exercise ran a "planned test" that hour 4
   had not yet specified. The rewritten hour has students write a one-line *expected* test and build
   two small synthetic datasets for it (one that should make it reject, one that should not), so
   nothing depends on hour 4. It fits 50 minutes (5 + 12 + 8 + 15 + 7 + 3). **This doc must not state
   seeded-01's specific check**: session 4 depends on students discovering it.
-- **H4 −23: the prereg is NOT completable in 50 minutes as written.** Seven bullets spanning
+- **H4 −23: the prereg is NOT completable in 50 minutes as written. APPLIED 2026-10-14.** Seven bullets spanning
   `vr.prereg` 0–6, including three terms the novice audit names as the drop-out point — *estimator,
   sensitivity analysis, power.* **Power alone can eat 20 minutes** from someone who has never
-  computed one. Post the template at the 2:35 break; teach only bullets 3–4 live; write the rest as
+  computed one. Post the template at the second break; teach only bullets 3–4 live; write the rest as
   a **skeleton**, with power reduced to two honest lines — *the smallest effect I could detect* and
-  *what a null does and does not support.*
+  *what a null does and does not support.* On the page: template at the break (:254), bullets 3–4
+  taught live (:258), skeleton (:263), power in two lines (:273). That brought hour 4 to 50
+  (12 + 15 + 23).
+- **H4 −2: sensitivity analyses to homework. `PROPOSED`, applied 2026-10-15.** The 15-minute
+  skeleton still covered five template sections, and two of them, sensitivity analysis and power,
+  are the drop-out terms above, for students who arrive with **no statistics** (the prerequisites
+  teach none; see the course README). Sensitivity analyses (`vr.prereg` objective 4) now come after
+  the attack, as homework, before the pilot runs (:249, :338; template section 5). They are still
+  committed before any real data, and the break log's checks give a student something concrete to
+  start from. The skeleton keeps the test, the decision rule, power and the non-goal, in **13
+  minutes** (:263–276). **Moved, not deleted.** Power stays in the room because the believe branch
+  depends on it. If 13 minutes proves tight in a pilot, move the power arithmetic next, into the
+  attack, which already asks the agent for it (:299). Don't move the believe branch.
+
+**Still `OPEN` for session 2:**
+
+- Hour 1's five unassigned minutes (above).
+- **Hour 1 pairs must be posted pre-session**, as in session 1: hour 1 pairs up before any break.
+  The page now says so (:37); *where* it is posted is open, as it is for session 1.
+- **The believe step.** The page's own Open list wants a third synthetic dataset in hour 3: the claim
+  true, at the effect you expect and the sample you plan. One spare minute does not pay for it, so it
+  still needs a cut somewhere first.
 
 ---
 
@@ -222,7 +282,8 @@ sentence.
 - Session 1 H2's three claims + answers; session 1 H3's seeded claim set — **~10 distinct cases,
   not 5** (two students on one case means the second copies), each **one number, one named
   artifact, ≤2 files, traceable cold in under 18 minutes.**
-- The six-line noise-run skeleton (session 2 H3), held in reserve.
+- ~~The six-line noise-run skeleton (session 2 H3), held in reserve.~~ **Superseded 2026-09-29:**
+  hour 3 no longer has a noise run; students build their own two datasets with their agent.
 - ~~The prereg template as a fillable file + the agent-attack prompt, verbatim.~~ **Done 2026-10-14:**
   [`templates/preregistration.md`](../courses/vibe-research/templates/preregistration.md); the prompt is
   in session 2, hour 4. Not yet piloted.

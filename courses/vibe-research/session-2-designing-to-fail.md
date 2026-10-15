@@ -1,18 +1,40 @@
 # Session 2 — Designing something that can fail
 
-> **Clock:** [the four clocks](../../docs/session-clocks.md) — S2 needs **247 min against 201**, the worst in the course. Hour 4's pre-registration was **not completable in 50 minutes as written**. As of 2026-10-14 it carries the clocks' fix (a template posted at the break, two bullets taught live, power in two lines), not yet piloted. Hour 3's old ordering defect (running a "planned test" that hour 4 had not yet specified) is fixed as of 2026-09-29: hour 3 uses a one-line *expected* test, and hour 4 formalises it.
+> **For facilitators:** this session's timings and cuts are in [the four clocks](../../docs/session-clocks.md).
+> Re-timed from this page on 2026-10-15: **200 content minutes against the 201 available**, not yet piloted.
 
-**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29, and hours 1 and 2 rewritten 2026-09-30, each around an external case.** Four hours. Second of four.
+**Status: `DRAFT`, 2026-08-25; hour 3 rewritten 2026-09-29, and hours 1 and 2 rewritten 2026-09-30, each around an external case; re-timed 2026-10-15.** Four hours. Second of four.
 **Standards covered:** `vr.prereg`, *identify the confounds that separate your conditions before
 your variable does*, *select a control that is capable of failing*.
 
 **Walks in with:** a claim with a direction and a falsifier, a verified citation trail, and one
 earned kill from session 1, plus a two-condition design for this session's target, drafted as
-pre-work (not yet written: see Open).
+pre-work (see *Before session 2*, below).
 **Walks out with:** a pre-registration their agent has attacked, the break log, a second kill, and a
 stated commitment: what result would make them believe their own claim.
 
 ---
+
+## Before session 2
+
+*`DRAFT`, 2026-10-15. Not piloted. Anything the school still has to decide is marked `OPEN`.*
+
+**Pre-work (about 15 minutes): a two-condition design.** This session's target is posted about five
+days before the session. `OPEN`: where it is posted. Draft a design for it and bring it: hour 1's last
+block runs on it, and hours 2 and 3 come back to it.
+
+Write a line or two for each:
+
+- **The claim it tests**, in one sentence, with the direction you expect.
+- **The two conditions:** the one thing you change between them, which is your variable, and what
+  each condition is.
+- **The items:** what goes into each condition, where the items come from, and roughly how many.
+- **The measurement:** the number you will record, and which direction would support your claim.
+
+A rough draft is enough: hour 1 is built to take it apart. **Don't run anything yet.** If you try
+something out anyway, write down what you looked at, because hour 4 asks.
+
+Your partner for hour 1 is posted before the session, as in session 1. `OPEN`: where it is posted.
 
 ## The one idea
 
@@ -213,8 +235,9 @@ repository.*
 
 ## Hour 4 — Pre-register, then have your agent attack it
 
-Covers `vr.prereg` objectives 0–6: the whole pre-registration is written here. **50 minutes, then
-10 for the break log.** The clock is `DRAFT` (2026-10-14) and has not been piloted.
+Covers `vr.prereg` objectives 0–3, 5 and 6. Objective 4, the sensitivity analyses, is finished as
+homework, after the attack and before the pilot runs. **48 minutes, then 10 for the break log.** The
+clock is `DRAFT` (2026-10-14, trimmed 2026-10-15) and has not been piloted.
 
 Students write the real pre-registration. The house format:
 
@@ -223,7 +246,8 @@ Students write the real pre-registration. The house format:
   you believe your own claim**
 - **the outcome you are hoping for, named as a stake**
 - **what you have already seen**, and how it constrains what you may claim from it
-- sensitivity analyses, committed to in advance, all of them reported
+- sensitivity analyses, committed to in advance, all of them reported *(homework: after the attack,
+  before the pilot)*
 - power, honestly, including which direction a null does and does not support
 - one **non-goal** — a nearby analysis you are choosing not to run, and why
 
@@ -236,8 +260,9 @@ Write both before anything else: the outcome you are hoping for, and every part 
 already looked at, with what it stops you claiming. Naming the stake makes it auditable rather than
 invisible.
 
-**The rest of the template (15 min), on your own.** A few lines each: this is a skeleton, not a
-paper.
+**The rest of the template (13 min), on your own.** A few lines each: this is a skeleton, not a
+paper. Leave section 5, the sensitivity analyses, for homework: the attack will show you which
+choices your answer might depend on.
 
 - **The test** starts from hour 3's one line. Add the exact formula, or the exact function call with
   every setting. Your agent can write the formula. You should be able to say in one sentence what
@@ -248,6 +273,7 @@ paper.
 - **Power** is two lines: *the smallest effect I could detect*, and *what a null does and does not
   support*. Then compare the first line with the effect you expect. If your sample is too small to
   give the believe branch a fair chance, say so now, while it is cheap.
+- **One non-goal** is a line: a nearby analysis you are choosing not to run, and why.
 
 If you can't fill a line yet, write *I don't know yet* and why. The attack will test it.
 
@@ -307,9 +333,17 @@ and does not say so has written a summary, not a prereg.
 Your sparring partner from session 1 (the same prompt, in your own agent), now with two kills to
 work against. Run your design past it and log what it challenged.
 
-**Homework:** execute a pilot — smallest version of your design that could produce a signal — and
-bring the result *and* both synthetic runs from hour 3: the one that should reject and the one that
-should not.
+**Homework:**
+
+1. **Finish your pre-registration before you run anything.** Fill in section 5, the sensitivity
+   analyses. A sensitivity analysis reruns your main analysis with one choice changed, to see
+   whether the answer depends on that choice. Name two such choices, and what you will change each
+   one to. The checks in your break log are a good place to start: each one names a choice like
+   that. Every analysis you list gets reported, whatever it shows. Save the finished file somewhere
+   that keeps a timestamp before the pilot runs.
+2. **Execute a pilot** — smallest version of your design that could produce a signal — and bring
+   the result *and* both synthetic runs from hour 3: the one that should reject and the one that
+   should not.
 
 ## Open
 
@@ -337,10 +371,12 @@ should not.
   reveal. Its mechanism is unrelated to either seeded exercise's. The case, its sources, the key and the reveal are in the facilitator pack. **Not
   piloted.** Its blind-labelling handout was drawn at random with a recorded seed and has never been
   run with a room.
-- **Open: hour 1 assumes the design draft is pre-work.** `docs/session-clocks.md` (H1 −15) moves it
-  there: the target and a one-page template are posted about five days ahead, with *"arrive with a
-  two-condition design."* That template and posting do not exist yet. Until they do, a student who
-  arrives without a design does hour 1's last block on a partner's.
+- **`OPEN`, narrowed 2026-10-15: the pre-work's target and posting.** Hour 1 assumes the design
+  draft is pre-work (`docs/session-clocks.md`, H1 −15). The instruction a student sees is now on this
+  page (*Before session 2*), with four lines in place of the clocks' one-page template, which was
+  never written. Still undecided: which target the design is for, which waits on whether targets
+  rotate within a cohort's arc, and who posts it, and where, about five days ahead. Until it is
+  posted, a student who arrives without a design does hour 1's last block on a partner's.
 - **`OPEN` (2026-10-14): where the believe step should live.** The course outline (`OUTLINE_v2.md`,
   session 2) has session 2 end with *what result would make them believe their own claim*. It now sits in hour
   4: a branch of the decision rule, a check against the power line, and a question in the attack
