@@ -107,6 +107,8 @@ After any adjustment, ask again whether something could still tell your conditio
 
 Keep the list. You will need it again today.
 
+**Read-out (5 min).** Each of you reads out your top-ranked difference, one line each.
+
 *Facilitator note —* **`PREDICTED`**, not piloted: most pairs will write a list of differences and
 no ranking. Push each pair to commit to a ranking, with a reason for the top item, before the second
 handout lands. The hour pays off when the second handout is scored, and only for the pairs who

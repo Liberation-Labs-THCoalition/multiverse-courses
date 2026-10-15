@@ -123,21 +123,20 @@ here is a prediction.*
 
 | block | heading says | line | its blocks | they add to |
 |---|---|---|---|---|
-| H1 | 50 | :54–55 | 3 + 8 + 6 + 6 + 5 + 17 (:62–94) | **45** ⚠ |
-| H2 | 42 | :121 | 4 + 8 + 8 + 4 + 8 + 10 (:130–166) | 42 |
-| H3 | 50 | :182 | 5 + 12 + 8 + 15 + 7 + 3 (:192–222) | 50 |
-| H4 | 48 | :239 | 12 + 13 + 23 (:258, :263, :280) | 48 |
-| H4½ | 10 | :239, :318 | 10 | 10 |
-| **total** | **200** | | | **195** |
+| H1 | 50 | :54–55 | 3 + 8 + 6 + 6 + 5 + 17 + 5 (:62–110) | 50 |
+| H2 | 42 | :123 | 4 + 8 + 8 + 4 + 8 + 10 (:132–168) | 42 |
+| H3 | 50 | :184 | 5 + 12 + 8 + 15 + 7 + 3 (:194–224) | 50 |
+| H4 | 48 | :241 | 12 + 13 + 23 (:260, :265, :282) | 48 |
+| H4½ | 10 | :241, :320 | 10 | 10 |
+| **total** | **200** | | | **200** |
 
 Before the 2026-10-15 cut, the same count gave **202 by headings** (hour 4 at 50 = 12 + 15 + 23), one
 over, and 197 by blocks.
 
-- ⚠ **`OPEN`: hour 1's heading says 50 and its blocks add to 45.** The hour's own clock is in the
-  facilitator pack, outside this repository, and this re-timing did not consult it. Someone who
-  holds the pack should say what the other 5 minutes are. If they are four handouts changing hands,
-  keep 50. If they are slack, the session is 195, and the spare minutes join the buffer rather than
-  becoming a block.
+- ~~`OPEN`: hour 1's heading says 50 and its blocks add to 45.~~ **Resolved 2026-10-15 (Lyra, from the
+  private pack's clock):** the other 5 minutes are a scheduled read-out, each student reading out their
+  top-ranked difference. Hour 1 keeps 50, and the session is 200. The read-out is now on the student
+  page too, so the page's blocks add to 50.
 - **The table that stood here on 2026-09-09 did not meet the house arithmetic either:** one
   transition, a 15-minute buffer, and 202 content minutes. It is replaced above.
 - **The 247 is only partly traceable.** The two cuts named below account for 38 of its 46 minutes
@@ -166,23 +165,23 @@ over, and 197 by blocks.
   sensitivity analysis, power.* **Power alone can eat 20 minutes** from someone who has never
   computed one. Post the template at the second break; teach only bullets 3–4 live; write the rest as
   a **skeleton**, with power reduced to two honest lines — *the smallest effect I could detect* and
-  *what a null does and does not support.* On the page: template at the break (:254), bullets 3–4
-  taught live (:258), skeleton (:263), power in two lines (:273). That brought hour 4 to 50
+  *what a null does and does not support.* On the page: template at the break (:256), bullets 3–4
+  taught live (:260), skeleton (:265), power in two lines (:275). That brought hour 4 to 50
   (12 + 15 + 23).
 - **H4 −2: sensitivity analyses to homework. `PROPOSED`, applied 2026-10-15.** The 15-minute
   skeleton still covered five template sections, and two of them, sensitivity analysis and power,
   are the drop-out terms above, for students who arrive with **no statistics** (the prerequisites
   teach none; see the course README). Sensitivity analyses (`vr.prereg` objective 4) now come after
-  the attack, as homework, before the pilot runs (:249, :338; template section 5). They are still
+  the attack, as homework, before the pilot runs (:251, :340; template section 5). They are still
   committed before any real data, and the break log's checks give a student something concrete to
   start from. The skeleton keeps the test, the decision rule, power and the non-goal, in **13
-  minutes** (:263–276). **Moved, not deleted.** Power stays in the room because the believe branch
+  minutes** (:265–278). **Moved, not deleted.** Power stays in the room because the believe branch
   depends on it. If 13 minutes proves tight in a pilot, move the power arithmetic next, into the
-  attack, which already asks the agent for it (:299). Don't move the believe branch.
+  attack, which already asks the agent for it (:301). Don't move the believe branch.
 
 **Still `OPEN` for session 2:**
 
-- Hour 1's five unassigned minutes (above).
+- ~~Hour 1's five unassigned minutes~~: resolved (above). They are the read-out.
 - **Hour 1 pairs must be posted pre-session**, as in session 1: hour 1 pairs up before any break.
   The page now says so (:37); *where* it is posted is open, as it is for session 1.
 - **The believe step.** The page's own Open list wants a third synthetic dataset in hour 3: the claim

@@ -46,8 +46,7 @@ previous break.**
 
 `DRAFT` — all four sessions have a per-block clock in [the four clocks](../../docs/session-clocks.md)
 (2026-09-09, provisional). Session 1's page took its cuts on 2026-10-14, and session 3 was rebuilt the same day with its clock
-on its own page (201 minutes). Session 2 was re-timed on 2026-10-15 at 200 against 201, with its cuts applied
-and one open question about hour 1.
+on its own page (201 minutes). Session 2 was re-timed on 2026-10-15 at 200 against 201, with its cuts applied.
 
 ## Tooling
 
