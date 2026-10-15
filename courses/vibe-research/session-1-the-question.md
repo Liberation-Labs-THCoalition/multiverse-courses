@@ -47,6 +47,8 @@ day: it is much easier to sort out early.
   room alongside. `OPEN`: where the links are posted, and when.
 - Your partner for hour 1 is posted before the session, so nobody has to find one on the day.
   `OPEN`: where it is posted.
+- Optional: the [agent kit](https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit), two small Claude Code hooks that keep your predictions and kill list in front
+  of your agent between sessions. Read them before you install them.
 - Check that your agent can search the web and show you where its answers came from. Hours 3 and 4
   lean on that.
 

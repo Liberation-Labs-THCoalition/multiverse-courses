@@ -19,6 +19,11 @@
     "students_arrive_without": ["predictions written before a run", "controls", "outcome measures", "statistics"],
     "read": "2026-10-14"
   },
+  "agent_kit": {
+    "what": "Two optional Claude Code hooks: one puts the student's newest predictions and kill list into the agent's context at session start; one reminds the agent to ask for a prediction before running a script. Never blocking, no network. Offer, don't install unasked.",
+    "url": "https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit",
+    "tested": "2026-10-14, live in Claude Code 2.1.299: a planted code word reached the session context and the reminder fired"
+  },
   "sessions": [
     {
       "n": 1,
