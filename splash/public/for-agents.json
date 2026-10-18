@@ -20,9 +20,9 @@
     "read": "2026-10-14"
   },
   "agent_kit": {
-    "what": "Two optional Claude Code hooks: one puts the student's newest predictions and kill list into the agent's context at session start; one reminds the agent to ask for a prediction before running a script. Never blocking, no network. Offer, don't install unasked.",
+    "what": "Three optional tools. Two Claude Code hooks: one puts the student's predictions and kill list into the agent's context at session start, in full, or with a note saying what was left out and where the full file is; one reminds the agent to ask for a prediction before running a script. And a git pre-commit check that refuses a commit changing a committed prediction unless it adds a REVISION: line. No network. Offer, don't install unasked.",
     "url": "https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit",
-    "tested": "2026-10-14, live in Claude Code 2.1.299: a planted code word reached the session context and the reminder fired"
+    "tested": "2026-10-14, live in Claude Code 2.1.299: a planted code word reached the session context and the reminder fired; 2026-10-18: the git check, 23 tests in throwaway repos plus mutants; the session hook, 5 tests, and live in Claude Code 2.1.301 a 200-line file arrived whole"
   },
   "sessions": [
     {

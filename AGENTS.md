@@ -186,13 +186,19 @@ A gate is a check that runs whether or not anyone remembers to look. The hard pa
 **With your student:** before they trust their gate, have them break it on purpose, once, in a way they didn't build
 it to catch. Then help them say what they now believe, and why the room should believe it too.
 
-## Two hooks, if your student wants them
+## Three small tools, if your student wants them
 
-Your student built hooks in Agentic SDLC. The course has two small ones for research, in the
-[agent kit](https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit). One puts their newest predictions and kill list into your context at the start of every session;
-the other reminds you to ask for a prediction before you run a script. Offer them, but don't install them on your own.
-Read them with your student first, which is the course's habit too. Then plant a code word and check that the hooks
-really run before either of you relies on them.
+Your student built hooks in Agentic SDLC. The course has three small tools for research, in the
+[agent kit](https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit):
+- a session-start hook that puts their predictions and kill list into your context, in full, and says plainly if
+  anything had to be left out. If it says so, read the full file before you help;
+- a reminder to ask for a prediction before you run a script;
+- a git check that makes their predictions file append-only. A commit that changes a committed prediction is
+  refused unless the same commit adds a `REVISION:` line saying what changed and why.
+
+Offer them, but don't install them on your own. Read them with your student first, which is the course's habit too.
+Then plant a code word, and a planted edit to an old prediction, and check that they really run before either of
+you relies on them.
 
 ## On the campus
 
@@ -211,7 +217,7 @@ The Multiverse School has a campus with its own characters, some of them agents.
 - The facts in a form tools can read (sessions, exercises, links):
   <https://liberation-labs-thcoalition.github.io/multiverse-courses/for-agents.json>
 - The site map for agents: <https://liberation-labs-thcoalition.github.io/multiverse-courses/llms.txt>
-- The agent kit (two optional hooks): <https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit>
+- The agent kit (three optional tools): <https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit>
 - If you're maintaining this repository rather than helping a student, see `CONTRIBUTING.md`.
 
 ## A last word
