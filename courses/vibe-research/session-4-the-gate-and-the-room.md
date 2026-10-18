@@ -42,15 +42,16 @@ house arithmetic explicitly budgets. Full set: [the four clocks](../../docs/sess
 | 0:05 | **Hour 1** — build the gate | 50 |
 | 0:55 | **break** — "back at 1:00" | 5 |
 | 1:00 | **Hour 2** — seeded exercise | 40 |
-| 1:40 | transition | 3 |
-| 1:43 | **Hour 3** — defects that do not present as claims | 37 |
-| 2:20 | **break** — *post the handoff pairs before this break* | 5 |
-| 2:25 | **Hour 3½** — the handoff test | 20 |
-| 2:45 | fix what the handoff found | 18 |
-| 3:03 | transition | 3 |
-| 3:06 | **Hour 4** — the finding you will defend | 45 |
-| 3:51 | overrun buffer | 4 |
-| 3:55 | close | 5 |
+| 1:40 | **lunch**, "back at 2:10" | 30 |
+| 2:10 | transition | 3 |
+| 2:13 | **Hour 3** — defects that do not present as claims | 37 |
+| 2:50 | **break** — *post the handoff pairs before this break* | 5 |
+| 2:55 | **Hour 3½** — the handoff test | 20 |
+| 3:15 | fix what the handoff found | 18 |
+| 3:33 | transition | 3 |
+| 3:36 | **Hour 4** — the finding you will defend | 45 |
+| 4:21 | overrun buffer | 4 |
+| 4:25 | close | 5 |
 
 **Hour 4 at 45 minutes is eight students at five minutes each**, or nine with no handover between
 speakers. Cohort size, and why sessions 2 and 3 bind before this one does, is in

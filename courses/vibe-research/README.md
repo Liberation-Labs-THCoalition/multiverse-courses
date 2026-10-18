@@ -39,7 +39,7 @@ worth believing.
 ## Running one
 
 [`docs/running-a-session.md`](../../docs/running-a-session.md) — **the clock, the breaks, and the
-pairing mechanics.** 240 minutes is not four blocks of sixty; a realistic "hour" here is **50
+pairing mechanics.** 240 minutes (plus a 30-minute lunch) is not four blocks of sixty; a realistic "hour" here is **50
 minutes** once you account for two brain breaks, transitions, and pairing. Also the rule that saves
 the most dead air: **never ask a remote room to pair up — pre-assign and post the list at the
 previous break.**

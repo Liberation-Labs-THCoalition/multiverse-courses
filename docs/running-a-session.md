@@ -8,7 +8,8 @@ pairing overhead**.
 
 ## The arithmetic nobody had done
 
-A four-hour session is **240 minutes**. It is not four blocks of sixty.
+A four-hour session is **240 minutes**. The Multiverse day runs 10:00 to 2:30 PST: those 240 minutes plus a
+30-minute lunch straight after hour 2. It is not four blocks of sixty.
 
 | | minutes |
 |---|---|

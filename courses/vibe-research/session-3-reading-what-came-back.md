@@ -50,14 +50,15 @@ support, and what you now believe.
 | 0:05 | **Hour 1** — the number that was measuring your sample size | 48 |
 | 0:53 | **break**, "back at 0:58". Post any change to hour 3's pairs | 5 |
 | 0:58 | **Hour 2** — the statistic that is not what its name says | 45 |
-| 1:43 | transition | 3 |
-| 1:46 | **Hour 3** — would you sign it? *(the discovery hour)* | 50 |
-| 2:36 | **break**, "back at 2:41". Post hour 4's new pairs and the template | 5 |
-| 2:41 | transition | 3 |
-| 2:44 | **Hour 4** — the limits section first, then the verdict | 48 |
-| 3:32 | **Hour 4½** — the third kill (straight on, no transition) | 10 |
-| 3:42 | overrun buffer, **unspent** | 13 |
-| 3:55 | close | 5 |
+| 1:43 | **lunch**, "back at 2:13" | 30 |
+| 2:13 | transition | 3 |
+| 2:16 | **Hour 3** — would you sign it? *(the discovery hour)* | 50 |
+| 3:06 | **break**, "back at 3:11". Post hour 4's new pairs and the template | 5 |
+| 3:11 | transition | 3 |
+| 3:14 | **Hour 4** — the limits section first, then the verdict | 48 |
+| 4:02 | **Hour 4½** — the third kill (straight on, no transition) | 10 |
+| 4:12 | overrun buffer, **unspent** | 13 |
+| 4:25 | close | 5 |
 
 **201 minutes of content** (48 + 45 + 50 + 48 + 10). The buffer is not a block: nothing is scheduled
 into it.

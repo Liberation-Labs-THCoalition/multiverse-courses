@@ -15,7 +15,8 @@ four different clocks is not a course, and that is exactly what the cross-check 
 
 ## The house arithmetic
 
-240 wall minutes. **Not four blocks of sixty.**
+**270 wall minutes: 10:00 to 2:30 PST.** That is the 240-minute plan below plus a 30-minute lunch straight after
+hour 2 (added 2026-10-18, when the class page set the day). **Not four blocks of sixty.**
 
 | | min |
 |---|---|
@@ -24,6 +25,7 @@ four different clocks is not a course, and that is exactly what the cross-check 
 | Transitions (3 × 3) | 9 |
 | Overrun buffer | 10 |
 | Close | 5 |
+| Lunch, straight after hour 2 | 30 |
 | **Content available** | **201** |
 
 **A block that cannot be done in 50 minutes is cut or split.** And **the buffer is not a block** —
@@ -70,14 +72,15 @@ misses:
 | 0:08 | **H1** — curiosity → a claim that can be wrong | 50 |
 | 0:58 | **break** — "back at 1:03" | 5 |
 | 1:03 | **H2** — the prediction game *materials: facilitator pack (private), 2026-09-29* | 40 |
-| 1:43 | transition | 3 |
-| 1:46 | **H3** — trace a number to its artifact *materials: facilitator pack (private), 2026-09-29* | 50 |
-| 2:36 | **break** — post H4 pairs here | 5 |
-| 2:41 | transition | 3 |
-| 2:44 | **H4** — build the review loop, run it to saturation | 50 |
-| 3:34 | **H4½** — the kill entry (continuous, no transition) | 11 |
-| 3:45 | overrun buffer | 10 |
-| 3:55 | close | 5 |
+| 1:43 | **lunch**, "back at 2:13" | 30 |
+| 2:13 | transition | 3 |
+| 2:16 | **H3** — trace a number to its artifact *materials: facilitator pack (private), 2026-09-29* | 50 |
+| 3:06 | **break** — post H4 pairs here | 5 |
+| 3:11 | transition | 3 |
+| 3:14 | **H4** — build the review loop, run it to saturation | 50 |
+| 4:04 | **H4½** — the kill entry (continuous, no transition) | 11 |
+| 4:15 | overrun buffer | 10 |
+| 4:25 | close | 5 |
 
 **Cuts required:** H1 −6 (fold the acceptance-test transfer into the finishability teach; debrief
 5→3; analogy 6→5). H2 −5 (drop the drug-trial framing; move setup-reassignment to the break).
@@ -108,14 +111,15 @@ here is a prediction.*
 | 0:55 | **break** — "back at 1:00" | 5 |
 | 1:00 | transition | 3 |
 | 1:03 | **H2** — a control capable of failing | 42 |
-| 1:45 | transition | 3 |
-| 1:48 | **H3** — a test that cannot reject *(the centrepiece)* | 50 |
-| 2:38 | **break** — "back at 2:43", **post H4 template here** | 5 |
-| 2:43 | transition | 3 |
-| 2:46 | **H4** — pre-register, then have your agent attack it | 48 |
-| 3:34 | **H4½** — the break log, and name the second kill (continuous, no transition) | 10 |
-| 3:44 | overrun buffer — 10, plus the one spare minute | 11 |
-| 3:55 | close | 5 |
+| 1:45 | **lunch**, "back at 2:15" | 30 |
+| 2:15 | transition | 3 |
+| 2:18 | **H3** — a test that cannot reject *(the centrepiece)* | 50 |
+| 3:08 | **break** — "back at 3:13", **post H4 template here** | 5 |
+| 3:13 | transition | 3 |
+| 3:16 | **H4** — pre-register, then have your agent attack it | 48 |
+| 4:04 | **H4½** — the break log, and name the second kill (continuous, no transition) | 10 |
+| 4:14 | overrun buffer — 10, plus the one spare minute | 11 |
+| 4:25 | close | 5 |
 
 **Where the 200 comes from.** Line numbers are
 [`session-2-designing-to-fail.md`](../courses/vibe-research/session-2-designing-to-fail.md) as of
@@ -246,15 +250,16 @@ over, and 197 by blocks.
 | 0:05 | **H1** — build the gate from your own failures | 50 |
 | 0:55 | **break** — "back at 1:00" | 5 |
 | 1:00 | **H2** — the seeded exercise | 40 |
-| 1:40 | transition | 3 |
-| 1:43 | **H3** — defects that do not present as claims | 37 |
-| 2:20 | **break** — **post handoff pairs here** | 5 |
-| 2:25 | **H3½** — the handoff test | 20 |
-| 2:45 | fix what the handoff found | 18 |
-| 3:03 | transition | 3 |
-| 3:06 | **H4** — the finding you will defend | 45 |
-| 3:51 | overrun buffer | 4 |
-| 3:55 | close | 5 |
+| 1:40 | **lunch**, "back at 2:10" | 30 |
+| 2:10 | transition | 3 |
+| 2:13 | **H3** — defects that do not present as claims | 37 |
+| 2:50 | **break** — **post handoff pairs here** | 5 |
+| 2:55 | **H3½** — the handoff test | 20 |
+| 3:15 | fix what the handoff found | 18 |
+| 3:33 | transition | 3 |
+| 3:36 | **H4** — the finding you will defend | 45 |
+| 4:21 | overrun buffer | 4 |
+| 4:25 | close | 5 |
 
 **H4 at 45 minutes is 8 students at 5 minutes, or 9 at 5 with no handover.** This is the arithmetic
 that sets the course cap — see above. Above 8, run two rooms for H4 or hold 4 minutes hard.
