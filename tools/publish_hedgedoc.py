@@ -139,7 +139,7 @@ def key_gate(keys, dirs: list[Path]) -> list[cpb.Finding]:
     detection as tools/check_public_build.py, imported -- not copied."""
     findings: list[cpb.Finding] = []
     for d in dirs:
-        found, _ = cpb.check(d, keys)
+        found = cpb.check(d, keys)[0]   # check() returns (findings, files, pages); the gate needs the findings
         findings += found
         # Lyra review 2026-10-05: cpb.check catches key-NAMED files and copies of KNOWN keys, but
         # it does not apply the front-matter rule to the files it scans. A staged markdown file

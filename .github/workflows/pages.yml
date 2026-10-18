@@ -46,6 +46,12 @@ jobs:
           python tools/build_site.py
           mkdocs build --strict
 
+      - name: Publisher tests (the HedgeDoc key gate refuses planted keys; it crashed instead from 10-14 to 10-18)
+        run: python tools/test_publish_hedgedoc.py
+
+      - name: Curriculum export (the same key gate, plus a positive control that must catch two plants)
+        run: python tools/export_curriculum.py "$RUNNER_TEMP/curriculum-export"
+
       - name: Assemble _site (splash at the root, course under course/)
         run: |
           rm -rf _site

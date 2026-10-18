@@ -88,7 +88,7 @@ SESSIONS = [
          f"{COURSE}/session-4-the-gate-and-the-room.md"),
 ]
 # Session 1's prerequisite lies outside this course. Wording from courses/vibe-research/README.md.
-FIRST_PREREQUISITE = "Multiverse agentic coursework"
+FIRST_PREREQUISITE = "the school's Intro to Agents and Agentic SDLC"
 
 SPINE = [
     Page("The pipeline", "spine/the-pipeline.md", f"{COURSE}/the-pipeline.md"),
