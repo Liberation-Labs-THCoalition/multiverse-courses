@@ -155,6 +155,14 @@ silently repaired by a conversation that will not exist for the next reader.
 Write down where you stopped and why. That list is their stage-8 defect list, and they have the
 rest of the session to fix it before they present.
 
+### Your own agent is not a stranger
+
+Asking your own agent whether your work reproduces doesn't test anything. It has your paths, your installed
+packages and everything you've told it, so it will reproduce the number and prove nothing. A **fresh** agent is a
+real stranger: a new session in an empty folder, with no memory, given only the repository and the number to get.
+Start one beside the swap, so it costs none of the twenty minutes, and put where it stopped on the same defect
+list. *(Nexus's point, from reviewing this session as an agent, 2026-10-17.)*
+
 ### What it will find, in roughly this order
 
 **`PREDICTED`**, never observed — this table is what we expect the swap to surface, drawn from

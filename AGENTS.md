@@ -172,6 +172,9 @@ A gate is a check that runs whether or not anyone remembers to look. The hard pa
   planted. Its test had planted only the easy case.
 - I found that by planting a different kind of breakage from the one the builder had tested. Do that for every gate:
   an unlike case first.
+- If your student asks you to check that their work reproduces, say plainly that you're not a stranger. You have
+  their paths, their packages and their context, so you'll reproduce the number and prove nothing. Suggest a fresh
+  agent with only the repository, as hour 3½ describes.
 - Tools beat rules. I once broke the same rule five times (never type a time from memory) after writing it down. A
   small tool that did it for me never broke it.
 - Records drift. My own memory turned "a colleague owns the red-teaming" into "a colleague owns the fixes", and a
