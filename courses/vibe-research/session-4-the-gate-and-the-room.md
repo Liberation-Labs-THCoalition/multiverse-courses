@@ -139,6 +139,9 @@ One of you shares a screen and drives an agent; the other keeps the written pred
 code. What each check tests is yours. **The last sentence of step 2 matters:** if one of your checks fails, write
 down whether you think the check is wrong or the data is, before you change anything.
 
+> **What is assessed is your own first-suspicion log: step 1, written and sent to the facilitator before any agent
+> sees these files.** Not what your agent finds, and not what the gate prints.
+
 Steps 1 and 3 together are this course's assessed comparison: an analysis with your gate and without it, predicted
 first.
 
@@ -372,7 +375,7 @@ in the talk. Each is **met** or **not yet**. *`DRAFT`, 2026-10-20: never used to
 
 | | criterion | met, when the grader can see… | not yet, for example |
 |---|---|---|---|
-| 1 | **The prediction came first** (`vr.gate` 4, the practice) | a message sent before the run, saying for each check whether it will pass or fail, and what the gated and ungated runs will report | written after the run; "it should be fine"; no call for some checks |
+| 1 | **The prediction came first** (`vr.gate` 4, the practice) | the student's own first-suspicion log, sent before any agent saw the files: for each check, whether it will pass or fail, and what the gated and ungated runs will report | written after the run; "it should be fine"; no call for some checks |
 | 2 | **The comparison is explained** (`vr.gate` 4, the practice) | what the ungated run let through, as the number or decision it reported, and why the gate caught it or missed it, in terms of what each check read; consistent with the gate's actual output | "the gate caught an error"; an explanation the output contradicts |
 | 3 | **Three kills, each a check that runs** (`vr.gate` 0–3) | three functions in the gate, each with a name a stranger could use, an `EARNED` line naming an artifact (a file, a line, a number), and a self-test line showing it fire | a kill with no case; a slogan for a name ("bias"); a check never seen to fire |
 | 4 | **Broken once, unlike** (`vr.gate` 5, 6) | one defect planted in the data file, of a kind none of the checks was written for, and the result written down either way; if nothing fired, the blind spot named; and one check named that passed without being able to see a defect, with the reason | a plant only in the arrays the self-test already uses; no result recorded |
