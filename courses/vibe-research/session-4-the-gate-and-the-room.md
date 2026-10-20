@@ -99,7 +99,7 @@ What the defect is, why the exercise runs in this session rather than in session
 leads into hour 3 are in the facilitator notes, not here. Students find the defect themselves, and
 this page is open to them before the session.
 
-## Hour 3 — Defects that do not present as claims *(40 minutes)*
+## Hour 3 — Defects that do not present as claims *(37 minutes)*
 
 **This is the newest material and the least settled. Teach it as an open problem.**
 
@@ -301,6 +301,7 @@ attached, and that theirs will grow the same way: one expensive afternoon at a t
 ## `OPEN`
 
 - ~~Hour 3 has no exercise with a known-good answer... decide whether it shrinks to 40 minutes.~~
-  **RESOLVED 2026-09-08.** Hour 3 is now 40 minutes and the freed 20 go to **hour 3½, the handoff
+  **RESOLVED 2026-09-08.** Hour 3 is now 40 minutes (37 in the corrected clock above, which is the one to
+  run by) and the freed 20 go to **hour 3½, the handoff
   test** — which is the exercise-with-a-known-good-answer that hour 3 lacked, sitting immediately
   after it. The answer is known because either the stranger reproduced the number or they did not.
