@@ -28,7 +28,7 @@ does not rewrite it.
 | Home | new short `index.md`: what the course is, who it is for, "this course is being developed in public". Wording comes from `courses/vibe-research/README.md`; do not invent claims |
 | Sessions 1-4 | `courses/vibe-research/session-1-the-question.md` … `session-4-the-gate-and-the-room.md`, in order; each page states its prerequisite (the previous session) |
 | The course spine | `the-pipeline.md`, `the-target-bank.md`, `toolset.md`, `tools-by-stage.md` |
-| Exercises | `exercises/build-grim/README.md`, `exercises/seeded-01-the-approved-analysis/` (`review.md`, `analysis.py` shown as a code page), `exercises/seeded-02-the-fix-that-broke-it/` (`review.md`, `analysis.py`), `exercises/seeded-03-the-prompt-that-made-no-difference/` (`review.md`, `analysis.py`, and `data.csv` as a code page so it downloads beside `analysis.py`; added 2026-10-14) |
+| Exercises | `exercises/build-grim/README.md`, `exercises/seeded-01-the-approved-analysis/` (`review.md`, `analysis.py` shown as a code page), `exercises/seeded-02-the-fix-that-broke-it/` (`review.md`, `analysis.py`), `exercises/seeded-03-the-prompt-that-made-no-difference/` (`review.md`, `analysis.py`, and `data.csv` as a code page so it downloads beside `analysis.py`; added 2026-10-14), `exercises/seeded-04-all-checks-passed/` (`review.md`, then `gate.py`, `analysis.py` and `data.csv` as code pages, so all three download together; added 2026-10-20, session 4's rebuild) |
 | For instructors | `docs/running-a-session.md`, `docs/session-clocks.md`, `docs/delivery-model.md`, `docs/between-sessions-and-tone.md` |
 
 Out of scope for v0: `accelerator/`, `meetup/`, `standards/`, audits and reviews (`docs/audit-*`,
@@ -37,7 +37,8 @@ Out of scope for v0: `accelerator/`, `meetup/`, `standards/`, audits and reviews
 ## Answer keys: reviewable after completion, not before
 
 The keys are the `FACILITATOR.md` files, the verify scripts (`verify_*.py`: `verify_floor.py`, and
-since 2026-10-14 seeded-03's `verify_effect.py`, which also holds that exercise's data generator),
+since 2026-10-14 seeded-03's `verify_effect.py`, which also holds that exercise's data generator, and since
+2026-10-20 seeded-04's `verify_gate.py`, likewise),
 `seeded-02…/AGENT_REVIEW_RESULTS.md`, and any file with front matter `audience: facilitator` (since
 2026-10-14, `seeded-02…/AGENT_REVIEW_PREREG.md`, which states that exercise's defect). Seeded-03's keys
 have never been in this repository: they are kept privately from day one, and the gate knows them by

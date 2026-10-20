@@ -76,6 +76,7 @@ COURSE = "courses/vibe-research"
 S01 = f"{COURSE}/exercises/seeded-01-the-approved-analysis"
 S02 = f"{COURSE}/exercises/seeded-02-the-fix-that-broke-it"
 S03 = f"{COURSE}/exercises/seeded-03-the-prompt-that-made-no-difference"
+S04 = f"{COURSE}/exercises/seeded-04-all-checks-passed"
 
 SESSIONS = [
     Page("Session 1: The question", "sessions/session-1-the-question.md",
@@ -123,6 +124,19 @@ EXERCISES = [
              f"{S03}/analysis.py", code=True, exercise=True),
         Page("data.csv", "exercises/seeded-03-the-prompt-that-made-no-difference/data.md",
              f"{S03}/data.csv", code=True, exercise=True),
+    ]),
+    ("Seeded 04: All checks passed", [
+        # review.md first: it is the results note, and its task hands the student the other three.
+        # gate.py imports analysis.py and both read data.csv, so all three are code pages: each file
+        # is staged beside the others for download. (Added 2026-10-20, session 4's rebuild.)
+        Page("Review", "exercises/seeded-04-all-checks-passed/review.md",
+             f"{S04}/review.md", exercise=True),
+        Page("gate.py", "exercises/seeded-04-all-checks-passed/gate.md",
+             f"{S04}/gate.py", code=True, exercise=True),
+        Page("analysis.py", "exercises/seeded-04-all-checks-passed/analysis.md",
+             f"{S04}/analysis.py", code=True, exercise=True),
+        Page("data.csv", "exercises/seeded-04-all-checks-passed/data.md",
+             f"{S04}/data.csv", code=True, exercise=True),
     ]),
 ]
 

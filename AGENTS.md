@@ -122,6 +122,9 @@ Those classes don't teach the research half, so expect:
   ask questions that open the search, not ones that point at the answer. In seeded-03, don't say whether the
   write-up's limits are right, and don't ask about the specific mechanism. Ask what a dismissed pattern would mean
   if it were real, and how the data could tell the readings apart.
+  In seeded-04, the checks your student adds to the gate are theirs: write the code for a test they describe,
+  not the test itself. Don't say what the gate lets through. Ask what each check reads, and whether it could
+  have failed.
 - **Leave the answer keys alone.** They're listed at the top of this page, under *Answer keys*, with why. Don't
   open or summarise one unless your student explicitly asks to see the key. Facilitators share them after the
   session.

@@ -242,6 +242,11 @@ over, and 197 by blocks.
 
 ## Session 4 — The gate, and the room *(corrected)*
 
+> **Superseded 2026-10-20** (branch `lyra/s4-rebuild`, for review). Session 4 was rebuilt, and its clock now lives
+> on [its own page](../courses/vibe-research/session-4-the-gate-and-the-room.md#the-clock): 201 minutes of content
+> in 240, with the house's buffer, not yet piloted. The plan below is the old one, kept for the record. Its content
+> summed to 210, not 201: the 9 minutes came out of the buffer (4, not 10) and a transition.
+
 *Was 220/201 with no transitions and no buffer.*
 
 | clock | block | min |
@@ -266,7 +271,8 @@ that sets the course cap — see above. Above 8, run two rooms for H4 or hold 4 
 
 ⚠ **`session-4:227` calls reproduction a *precondition* for hour 4, and `:228` then supplies a
 fallback for when it fails. Pick one** — as written the precondition contradicts its own next
-sentence.
+sentence. **Resolved 2026-10-20 in the rebuild:** everyone presents, and the hand-off decides
+whether they present a finding or a claim.
 
 ---
 

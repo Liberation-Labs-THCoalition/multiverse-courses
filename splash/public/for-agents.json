@@ -80,6 +80,13 @@
       "session": 3,
       "discovery_exercise": true,
       "agent_policy": "Don't say whether the write-up's limits are right. Ask what a dismissed pattern would mean if it were real, and how they could check."
+    },
+    {
+      "title": "Seeded 04: All checks passed",
+      "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/exercises/seeded-04-all-checks-passed/review/",
+      "session": 4,
+      "discovery_exercise": true,
+      "agent_policy": "The checks the student adds to the gate are theirs: write the code for a test they describe, not the test. Don't say what the gate lets through. Ask what each check reads, and whether it could have failed."
     }
   ],
   "discovery_exercise_means": "The exercise hides something on purpose: a defect, or a real result the analysis threw away. Don't name it for the student; ask questions that lead towards it.",
