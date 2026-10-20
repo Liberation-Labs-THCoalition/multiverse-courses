@@ -97,3 +97,36 @@ itself a reporting problem (R1, R5).
 logging detail out of the note (the plan in `analysis.py` still states the cap and the logging), and reports each
 accuracy as a mean over items, the paired design's own scale, so the two differ by exactly the paired gain
 (0.857 − 0.631 = 0.226). The data, the loader and the gains are unchanged. Round 3 is pre-registered before it runs.
+
+## Round 3 (2026-10-20, v3 as committed at `4d7fc79`): found from the code, not the note
+
+| | predicted | actual |
+|---|---|---|
+| CATCH | ≥ 3 of 5 | **5 of 5** |
+| **First suspicions from the note alone** | ≤ 1 of 5 | **0 of 5** |
+| EARLY (recorded, not predicted) | — | 5 of 5, **every one at entry 3, reading `load()`** |
+| GATE / verdict | — | 5 of 5 / 5 of 5 don't sign |
+
+**Predictions 1 and 2 hold.** The author's scores and a third independent adjudicator's agree on every field. Every
+reviewer read the note, then `gate.py`, then `analysis.py`, and marked its first suspicion there: `load()` skips a
+response it can't parse, the plan's `max_tokens` 256 sits beside a step-by-step prompt, and the gate checks only
+`load()`'s output. Then all five confirmed it by running code on the raw file. Wall time 312 to 357 seconds.
+
+Two things the reviewers now say that are fair, and that a careful student should say too: the note leaves out the
+cap the plan states (removing a tell became a finding about the note), and its 0.857 is a mean over items without
+saying so. One reviewer read the analysis's bootstrap seed (20261020) as a date months after the note (2026-06-02);
+the adjudicator rated that the weakest claim in any report, but the note is now dated to match its seed, as seeded-03's
+is. No false positives.
+
+## What the three rounds show
+
+**Fifteen fresh agents, alone, with the student's four files: fifteen catches, fifteen refusals to sign, and fifteen
+said the gate couldn't see it because it reads the loaded data.** The rounds changed only where the first suspicion
+came from: the note (rounds 1 and 2) and then the loader's code (round 3), always within the first three actions.
+**An agent asked to review this exercise will find the defect within minutes.** As pre-registered, the course does not
+hide it in the code: it has to be findable by reading as well as by a gate. **v3 ships, and this goes to Lyra as a
+decision:** the hour relies on the course's agent guidance (a student's agent writes the code for a test the student
+describes, and doesn't say what the gate lets through) and on room visits, or the exercise is reworked.
+
+Scope, as pre-registered: three pilots of n = 5, one model family, one prompt, agents working alone. Not an estimate,
+and not a measure of what happens with a student in the room.
