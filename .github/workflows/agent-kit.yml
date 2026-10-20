@@ -1,0 +1,35 @@
+# Run the agent kit's tests (courses/vibe-research/agent-kit/hooks/test_hooks.py) on every push and pull request.
+#
+# The kit is student-facing: students install these hooks in their own projects, on their own machines. Its tests
+# build throwaway git repositories and make real commits through the real pre-commit hook, so they need only Python
+# and git. They run on Linux and on Windows, because the kit's past bugs were Windows bugs (a cp1252 console pipe,
+# CRLF line endings).
+#
+# Kept apart from pages.yml on purpose: a failing hook test should fail loudly, not hold up a site deploy.
+name: Agent kit
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-hooks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Agent kit hook tests
+        run: python courses/vibe-research/agent-kit/hooks/test_hooks.py
