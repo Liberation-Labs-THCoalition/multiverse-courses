@@ -155,8 +155,8 @@ and what this exercise's gate let through.
 
 **Close (2 min).** One line each in the chat: the kill of yours that fired, or the kind of defect your gate can't see.
 
-*Facilitator note —* **`PREDICTED`**, not piloted: most pairs will finish step 2 with every check green and stop
-there. Step 4 is where the hour happens. Visit during it.
+*Facilitator note —* **`PREDICTED`**, not piloted: a pair whose checks all pass will want to stop after step 3. For
+them, step 4 is where the hour happens. Visit during it.
 
 *The case, its sources and its reveal, the hour's clock and what **not** to use in it are in the **facilitator
 pack**. The exercise's own facilitator notes, with its answer and the script that checks it, are kept with the
@@ -196,14 +196,13 @@ The generalisation, which came from a collaborator and is better than our versio
 > **Nobody flags "she" as a claim requiring a source, because it doesn't read as an assertion — it reads as grammar.
 > The problem isn't which lookups fail. It's which things register as needing a lookup at all.**
 
-So: *of*, *vs*, a count in brackets beside a number, a colon between a field name and a list, a pronoun, a citation
-key next to a sentence. Slots shaped like syntax. **A claim-checker cannot fire on them because they never enter the
+So: *of*, *vs*, a colon between a field name and a list, a pronoun, a citation key next to a sentence. Slots shaped
+like syntax. **A claim-checker cannot fire on them because they never enter the
 set of things considered checkable.**
 
 **The idea (5 min).** The table and the quote, above.
 
-**The board (2 min).** Hours 1 and 2 each had one of these. Once the room has found them, the facilitator puts their
-rows on the board.
+**The board (2 min).** The facilitator adds today's own examples to the table.
 
 **Your own (15 min), on your own, with your agent.** Take one paragraph of your own write-up: your session 3 verdict,
 or the draft of your talk. Mark every **attachment**: every place two verified things are joined. Then check only the
@@ -287,10 +286,10 @@ to work is the person who wrote it, after they have forgotten everything.
 
 *Facilitator note:* Brodeur et al. (IZA Discussion Paper 17645, 2025) gave teams of three a published social-science
 article and its authors' own replication package, and asked them to reproduce a few of its numbers in a day. **94%
-of human-only teams and 91% of AI-assisted teams did; 37% of the teams told to guide an AI minimally did.** The
-twelve studies were chosen because they had known coding errors, so this says nothing about how often published work
-is wrong. What it does say: a package written for strangers still stopped some human teams, and stopped most of the
-minimally guided AI ones.
+of human-only teams and 91% of AI-assisted teams did; 37% of the teams told to guide an AI minimally did.** All
+twelve studies had known coding errors, so this says nothing about how often published work is wrong. What it does
+say: a package written for strangers still stopped some human teams, and stopped most of the minimally guided AI
+ones.
 
 **What Brodeur establishes is the problem, not this remedy.** They measured no swaps, no checklists, and no training.
 That twenty minutes of swapping helps is **our expectation, and `PREDICTED`**.
@@ -338,8 +337,8 @@ All three are good outcomes, and so is the swing you parked in session 1, if it 
 
 Three sessions have trained you to pull claims down. The easy error now is to bury the next one because burying is
 what you have been doing, not because it is weak. Session 3's verdict asked what you might be under-claiming. Ask it
-again before you write your talk: *am I burying this because it is weak, or because I have spent four sessions
-burying things?*
+again before you write your talk: *am I burying this because it is weak, or because I have spent the whole
+course burying things?*
 
 Underclaiming is not the safe error. It is the error that looks like rigour.
 
