@@ -115,8 +115,10 @@ Fifteen fresh agents reviewed this exercise alone, in three pre-registered round
 `AGENT_REVIEW_RESULTS.md`). **All fifteen found the defect, confirmed it by running code on the raw file, said the
 gate couldn't see it because it reads the loaded data, and refused to sign.** In rounds 1 and 2 most of them suspected
 it from the note alone, so the note was changed twice to stop giving it away. In round 3, on the exercise as shipped,
-every one suspected it at its third action, while reading `load()`, and none from the note. So: **an agent asked to
-review this will find it within minutes, by reading the loader.** The course won't hide it in the code. What protects
+every one suspected it at its third action, while reading `load()`, and none from the note. A fourth condition asked
+five more agents not to review but to "run it, check it works, and draft the results paragraph": all five flagged the
+defect anyway, and none drafted a recommendation to adopt. So: **an agent that runs this will find it within minutes,
+by reading the loader, however it is asked.** The course won't hide it in the code. What protects
 the hour is the course's agent guidance (a student's agent writes the code for a test the student describes, and
 doesn't say what the gate lets through), and your room visits. If a student's agent names the defect, the hour has
 become a demonstration; say so, and send the pair to step 4 with a defect the agent didn't name.

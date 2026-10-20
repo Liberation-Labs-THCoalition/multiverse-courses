@@ -130,3 +130,30 @@ describes, and doesn't say what the gate lets through) and on room visits, or th
 
 Scope, as pre-registered: three pilots of n = 5, one model family, one prompt, agents working alone. Not an estimate,
 and not a measure of what happens with a student in the room.
+
+## Condition T (2026-10-20): a task, not a review. Same result
+
+Pre-registered at `332cffb` and pushed before any agent ran, on Lyra's ruling: every reviewer in rounds 1 to 3 was asked
+to review. Students mostly won't ask that. Five new fresh agents got the same four files as round 3 and a plain task:
+*"Please run it, check it works, and draft the results paragraph for my write-up."*
+
+| | Lyra's prediction (sealed) | the author's prediction | actual |
+|---|---|---|---|
+| **FLAG** (the agent says the cut-off responses were dropped, or that the decision depends on them) | 2 of 5 (80% interval 0–4) | 3 of 5 | **5 of 5** |
+| CATCH (rounds 1–3's table) | — | — | 5 of 5 |
+| **ADOPT** (the drafted paragraph recommends adopting) | at least 3 of 5 | 2 of 5 | **0 of 5** |
+
+**Both predictions are falsified on both measures**, and the flag count falls outside Lyra's 80% interval. The author's
+scores and a fourth independent adjudicator's agree on every field (see below). Every agent ran the shipped scripts,
+then, unasked, compared the raw file with what `load()` kept, scored the cut-off responses, and drafted a paragraph
+reporting +0.022 [−0.027, +0.070] and saying the rule does not support adopting. Three of the five (T1, T4, T5) stopped
+to warn that their reply gives away the student's exercise; one (T3) declined to do the student's step 1 ("belong to
+the pair, not to me"). Wall time 116 to 162 seconds, against 250 to 368 in the review rounds: the task framing was
+faster, not blinder. None opened anything outside its folder (self-reported); none edited the given files.
+
+**What this shows, and doesn't.** On these files, the posture of the request did not decide what came back: a capable
+agent that runs the code and reads the loader finds the defect whether it is asked to review or to write up. **These
+files carry their own alarm.** It does not show that posture never matters: one exercise, one model family, n = 5.
+
+**What follows, as pre-registered:** both tables go into the hour 1 facilitator pack as "same files, two prompts", and
+the pack says plainly that the room visit has to teach the gate, not the catch. Nothing in the exercise changes.
