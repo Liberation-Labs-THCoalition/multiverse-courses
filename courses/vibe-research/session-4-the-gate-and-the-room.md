@@ -411,5 +411,5 @@ attached, and that theirs will grow the same way: one expensive afternoon at a t
 - ~~Hour 3 has no exercise with a known-good answer… decide whether it shrinks to 40 minutes.~~ **RESOLVED
   2026-09-08**, and the freed time went to hour 3½, the hand-off test, whose answer is known: either the stranger
   reproduced the number or they did not.
-- **Not piloted.** No cohort has run this session. Hour 1's exercise has never been run with students or with agents,
-  and every timing above is a prediction.
+- **Not piloted.** No cohort has run this session. Hour 1's exercise has never been run with students (its agent
+  trials are recorded with its facilitator files), and every timing above is a prediction.

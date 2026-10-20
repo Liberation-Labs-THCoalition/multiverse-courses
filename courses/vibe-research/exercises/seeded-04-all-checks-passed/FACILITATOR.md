@@ -16,7 +16,9 @@ audience: facilitator
 **Do not give students this file or `verify_gate.py`.** Give them `review.md`, `analysis.py`, `gate.py` and
 `data.csv`.
 
-**Status: `DRAFT`, 2026-10-20. Never run with students or with agents.** Every "pairs will…" below is `PREDICTED`.
+**Status: `DRAFT`, 2026-10-20. Never run with students.** Run by 20 fresh agents working alone, pre-registered: three
+review rounds of five and one task round of five (`AGENT_REVIEW_RESULTS.md`). Every "pairs will…" below is
+`PREDICTED`.
 
 **Runs in:** session 4, hour 1: 28 of the hour's 50 minutes (the hour's clock is in the session 4 facilitator pack).
 **Requires:** Python and numpy. No network, no GPU, no accounts. `python gate.py` takes about a second.
