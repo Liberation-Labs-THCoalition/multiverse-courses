@@ -25,7 +25,7 @@ import analysis  # noqa: E402
 
 PLANNED_PROMPTS = {"direct", "step_by_step"}
 PLANNED_ITEMS = 160
-COLUMNS = ("item", "steps", "prompt", "sample", "tokens", "finish", "answer", "gold", "correct")
+COLUMNS = ("item", "steps", "prompt", "sample", "tokens", "response_end", "answer", "gold", "correct")
 
 
 # ------------------------------------------------------------------------------ checks
@@ -59,15 +59,14 @@ def correct_is_binary(d):
     return [f"{int(bad.sum())} scores are not 0 or 1"] if bad.any() else []
 
 
-def correct_matches_answer(d):
-    """CORRECT_MATCHES_ANSWER
-    The score agrees with the answer: correct is 1 exactly when the answer equals the gold answer.
-    WHY IT PASSES REVIEW: the score column is what gets averaged; nobody re-grades by hand.
+def answer_in_response(d):
+    """ANSWER_IN_RESPONSE
+    Every graded answer appears in the response it was extracted from.
+    WHY IT PASSES REVIEW: an extractor that grabs the wrong number still returns a number.
     EARNED: inherited from the team's template.
     """
-    regraded = np.array([float(int(a) == int(g)) for a, g in zip(d["answer"], d["gold"])])
-    bad = regraded != d["correct"]
-    return [f"{int(bad.sum())} scores disagree with their answers"] if bad.any() else []
+    bad = [i for i, (a, text) in enumerate(zip(d["answer"], d["response_end"])) if str(a) not in text]
+    return [f"{len(bad)} answers not found in their responses"] if bad else []
 
 
 def no_duplicate_responses(d):
@@ -109,7 +108,7 @@ CHECKS = [
     columns_present,
     planned_prompts,
     correct_is_binary,
-    correct_matches_answer,
+    answer_in_response,
     no_duplicate_responses,
     both_prompts_every_item,
     items_match_plan,
@@ -146,9 +145,9 @@ def plant_score_of_two(d):
     return d
 
 
-def plant_flipped_score(d):
+def plant_wrong_extraction(d):
     d = _copy(d)
-    d["correct"][0] = 1.0 - d["correct"][0]
+    d["answer"][0] = d["answer"][0] + 7777
     return d
 
 
@@ -169,7 +168,7 @@ PLANTS = {
     columns_present: ("the gold column removed", plant_missing_column),
     planned_prompts: ('one prompt spelled "step-by-step"', plant_misspelt_prompt),
     correct_is_binary: ("one score set to 2", plant_score_of_two),
-    correct_matches_answer: ("one score flipped", plant_flipped_score),
+    answer_in_response: ("one answer replaced by a number not in its response", plant_wrong_extraction),
     no_duplicate_responses: ("one response copied", plant_duplicate_row),
     both_prompts_every_item: ("one item's step-by-step responses removed", plant_item_missing_one_prompt),
     items_match_plan: ("one item removed", plant_item_missing),

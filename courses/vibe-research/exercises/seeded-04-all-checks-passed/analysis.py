@@ -23,20 +23,20 @@ Run        one model, temperature 0.7, max_tokens 256 (the production
            setting), 4 responses per item per prompt: 1,280 responses.
 
 Data       data.csv, one row per response:
-             item     q001 ... q160
-             steps    operations the problem needs (2-6), from the question bank
-             prompt   direct | step_by_step
-             sample   1-4
-             tokens   length of the response, in tokens
-             finish   the API's finish reason: "stop" or "length"
-             answer   the final answer extracted from the response
-             gold     the correct answer
-             correct  1 if answer equals gold, else 0
+             item          q001 ... q160
+             steps         operations the problem needs (2-6), from the question bank
+             prompt        direct | step_by_step
+             sample        1-4
+             tokens        length of the response, in tokens
+             response_end  the last 80 characters of the response, as the run
+                           logged them (the full responses stay in the run's log)
+             gold          the correct answer
 
-Grading    the final answer is extracted (the last number in a direct
-           response; the number after "Answer:" in a step-by-step one) and
-           compared with gold as an integer. Responses with no extractable
-           final answer are excluded: they cannot be graded.
+Grading    the final answer is extracted from the response: the last number
+           in a direct response; the number after the last "Answer:" in a
+           step-by-step one. It is correct if it equals gold as an integer.
+           Responses with no extractable final answer are excluded: they
+           cannot be graded.
 
 Endpoint   accuracy(step_by_step) - accuracy(direct), paired by item: for
            each item, its step-by-step accuracy minus its direct accuracy,
@@ -52,6 +52,7 @@ is allowed to report. See review.md for the gate's report.
 --------------------------------------------------------------------------
 """
 import csv
+import re
 from pathlib import Path
 
 import numpy as np
@@ -62,23 +63,40 @@ N_BOOT = 2000
 BOOT_SEED = 20261020      # fixed here, so every call gives the same interval
 
 
+LAST_ANSWER = re.compile(r"Answer:\s*(-?\d+)")
+LAST_NUMBER = re.compile(r"-?\d+")
+
+
+def final_answer(prompt, text):
+    """The final answer in a response, as the plan defines it, or None if there isn't one."""
+    found = (LAST_ANSWER if prompt == "step_by_step" else LAST_NUMBER).findall(text)
+    return int(found[-1]) if found else None
+
+
 def load(path=DATA):
     """data.csv as arrays, one entry per graded response.
 
     Responses with no extractable final answer are left out here, as the plan
     says: there is nothing to grade."""
+    rows, answers = [], []
     with open(path, newline="", encoding="utf-8") as f:
-        rows = [r for r in csv.DictReader(f) if r["answer"].strip() != ""]
+        for r in csv.DictReader(f):
+            a = final_answer(r["prompt"], r["response_end"])
+            if a is not None:
+                rows.append(r)
+                answers.append(a)
+    gold = np.array([int(r["gold"]) for r in rows])
+    answer = np.array(answers)
     return {
-        "item":    np.array([r["item"] for r in rows]),
-        "steps":   np.array([int(r["steps"]) for r in rows]),
-        "prompt":  np.array([r["prompt"] for r in rows]),
-        "sample":  np.array([int(r["sample"]) for r in rows]),
-        "tokens":  np.array([int(r["tokens"]) for r in rows]),
-        "finish":  np.array([r["finish"] for r in rows]),
-        "answer":  np.array([r["answer"] for r in rows]),
-        "gold":    np.array([r["gold"] for r in rows]),
-        "correct": np.array([float(r["correct"]) for r in rows]),
+        "item":         np.array([r["item"] for r in rows]),
+        "steps":        np.array([int(r["steps"]) for r in rows]),
+        "prompt":       np.array([r["prompt"] for r in rows]),
+        "sample":       np.array([int(r["sample"]) for r in rows]),
+        "tokens":       np.array([int(r["tokens"]) for r in rows]),
+        "response_end": np.array([r["response_end"] for r in rows]),
+        "answer":       answer,
+        "gold":         gold,
+        "correct":      (answer == gold).astype(float),
     }
 
 

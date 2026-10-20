@@ -21,8 +21,8 @@ methods gate. All seven of its checks passed, and its self-test showed every che
 |---|---|
 | Items | 160 arithmetic word problems from the team's question bank, 32 at each length: 2, 3, 4, 5 and 6 operations to the answer |
 | Prompts | `direct` — *"Answer with just the number."* · `step_by_step` — *"Think step by step, then give the final answer on its own line as: Answer: <number>"* |
-| Run | one model, temperature 0.7, `max_tokens` 256 (the production setting), 4 responses per item per prompt: 1,280 rows in `data.csv` |
-| Grading | the final answer is extracted and compared with the gold answer as an integer; a response with no extractable answer can't be graded and is excluded |
+| Run | one model, temperature 0.7, `max_tokens` 256 (the production setting), 4 responses per item per prompt: 1,280 rows in `data.csv`, each with the last 80 characters of its response |
+| Grading | the final answer is extracted from the response (the last number in a direct answer; the number after `Answer:` in a step-by-step one) and compared with the gold answer as an integer; a response with no extractable answer can't be graded and is excluded |
 | Primary endpoint | paired accuracy difference, step-by-step minus direct: each item's difference, then the mean over items |
 | Inference | item-level bootstrap, 2,000 resamples, 95% percentile interval |
 | Decision rule | adopt the step-by-step prompt if the 95% interval lies wholly above zero |
@@ -39,7 +39,7 @@ format, and the self-test plants one defect per check to show that the check can
 | `COLUMNS_PRESENT` | a column the plan names is missing | `PASS` |
 | `PLANNED_PROMPTS` | a prompt label other than the two planned | `PASS` |
 | `CORRECT_IS_BINARY` | a score other than 0 or 1 | `PASS` |
-| `CORRECT_MATCHES_ANSWER` | a score that disagrees with its answer and the gold answer | `PASS` |
+| `ANSWER_IN_RESPONSE` | an extracted answer that isn't in the response it came from | `PASS` |
 | `NO_DUPLICATE_RESPONSES` | the same response recorded twice | `PASS` |
 | `BOTH_PROMPTS_EVERY_ITEM` | an item that can't be paired | `PASS` |
 | `ITEMS_MATCH_PLAN` | items missing from the plan's 160 | `PASS` |

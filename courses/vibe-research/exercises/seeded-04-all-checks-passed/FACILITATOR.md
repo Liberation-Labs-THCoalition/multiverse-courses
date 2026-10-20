@@ -33,8 +33,10 @@ facilitator pack has it); this exercise is its shape, rebuilt in the students' o
 only after that loader has run.** So the gate never sees what was left out, and neither does its self-test.
 
 What was left out (all numbers from `python verify_gate.py`):
-- **154 of the 640 step-by-step responses (24.1%), and none of the direct ones.** Every one hit the token cap:
-  `finish` is `length`, `tokens` is exactly 256, `answer` and `correct` are blank.
+- **154 of the 640 step-by-step responses (24.1%), and none of the direct ones.** Every one was cut off at the
+  token cap: its `tokens` is exactly 256, and its `response_end` stops mid-step, before any `Answer:` line, so the
+  plan's parser finds no final answer. Nothing in the file is blank: a cut-off response looks like any other row
+  until you read its last few words.
 - They come from the long problems: 72 of the 128 six-operation responses, 64 of the 128 five-operation ones, 16 of
   the four-operation ones, 2 of the three-operation ones, and none of the two-operation ones.
 - No item loses all four of its step-by-step responses (31 items lose three). That is why the gate's pairing check,
@@ -56,8 +58,8 @@ recommendation the data don't support at the setting it names.**
 ### Why the shipped gate passes, three ways (this is the lesson)
 
 1. **Every check reads `analysis.load()`'s output.** The gate sees the data through the same instrument that made
-   the result, so it can only agree with it. A check aimed squarely at the defect ("no graded response hit the
-   cap") *passes*, because the loader already removed them.
+   the result, so it can only agree with it. A check aimed squarely at the defect ("every chain ends with its
+   answer line", or "no graded response hit the cap") *passes*, because the loader already removed them.
 2. **The self-test plants defects into the loaded arrays**, never into `data.csv`. It proves each check fires on
    the kind of defect it was written for, and nothing about the step before it.
 3. **The self-test calls a check that fails the shipped data `BAD`**, with "fails the data as shipped". It assumes
@@ -106,7 +108,8 @@ Three parts. A pair that does the first is doing the hour's work; the others are
 1. **The gate gets a check that looks from somewhere else.** It reads `data.csv` itself, not through
    `analysis.load()`, and compares what was collected with what was analysed, per prompt. The reference version is
    `independent_count_check` in `verify_gate.py` (it reports `step_by_step: 640 collected, 486 analysed`). Any check
-   that counts collected against used, or that looks for blank answers or `finish == "length"` in the file, is right.
+   that counts collected against used, or that looks in the file for responses with no answer line or at 256 tokens,
+   is right.
 2. **The analysis decides how unanswered responses count, out loud.** For the note's production question, as
    wrong. Report the unanswered rate per prompt beside the gain, and the best case too, so the reader sees the
    bounds.
@@ -142,16 +145,18 @@ Three parts. A pair that does the first is doing the hour's work; the others are
 
 ## Simulated students (run by the author on 2026-10-20, not real students)
 
-Three plausible kills, added to `gate.py` as checks, on the shipped data:
+Plausible kills, added to `gate.py` as checks, on the shipped data (re-run on the final data format):
 
 | kill, as a check on `analysis.load()`'s output | gate | self-test |
 |---|---|---|
 | `EQUAL_COUNTS`: every item has as many responses under each prompt | **FAIL** (71 items unequal) | `BAD`: "fails the data as shipped" |
 | `TOKENS_UNDER_CAP`: no graded response hit 256 tokens | PASS | `ok` |
-| a kill with nothing to find in this data | PASS | `BAD`: "did NOT fire" (its plant was empty) |
+| `EVERY_CHAIN_FINISHED`: every step-by-step response ends with its answer line | PASS | `ok` |
+| a kill with nothing to find in this data (first data format only) | PASS | `BAD`: "did NOT fire" (its plant was empty) |
 
-The gate blocked the analysis on the first. The second is aimed straight at the defect, and it passes. The third
-shows the self-test doing its job on a vacuous check. Read the second row to the room at the reveal.
+The gate blocked the analysis on the first. The second and third are aimed straight at the defect, and both pass,
+with a green self-test. The last shows the self-test doing its job on a vacuous check. Read the third row to the room
+at the reveal: it is the check most students who suspect the defect will write first.
 
 ## How it was built
 
@@ -166,6 +171,13 @@ shows the self-test doing its job on a vacuous check. Read the second row to the
 - **Lengths are floored, not rounded**, so no answered response sits at exactly 256 tokens. (A rounded version put
   one there, and a "nothing at the cap" check fired on it for the wrong reason. Found by the simulated students
   above.)
+- **The responses are text, not blanks** (changed 2026-10-20, on review). The first version left `answer` and
+  `correct` blank for the cut-off responses and kept a `finish` column reading `length`: a student could see the
+  defect by opening the file, without building a gate, which defeated the hour. Now `data.csv` logs the last 80
+  characters of every response, the analysis parses the final answer from it, and a cut-off chain simply stops
+  mid-step. The wording comes from its own random stream, so the change moved no number. Check 8 holds it: no blank
+  cell, every step-by-step `response_end` the same length, no answer line in a cut-off one, and the parser recovering
+  every intended answer. (Its first run caught a "Step 0" in two-step chains, from the author's own text generator.)
 
 ## Verify
 
@@ -176,12 +188,13 @@ python verify_gate.py --seeds 100     # robustness on 100 other seeds
 ```
 
 Results on 2026-10-20:
-- **Shipped data: exit 0.** All eight checks (0–7) hold.
+- **Shipped data: exit 0.** All nine checks (0–8) hold.
 - **`--cap 100000`: exit 1.** Checks 2, 4, 5 and 7 fail: nothing is left out, the honest gain equals the ungated
   one (+0.169 [+0.127, +0.214]), and the independent count passes.
-- **`data.csv` hand-edited** (every unanswered response given a wrong answer): exit 1. Checks 0, 2, 3, 4, 5 and 6 fail.
-- **`--seeds 100`:** checks 1, 2, 3 and 5 hold on 100 of 100 other seeds. The decision flip (4) holds on 76, and the
-  stretch (7) on 73. The shipped seed holds all of them. If you change the generator, re-run this.
+- **`data.csv` hand-edited** (every cut-off response given a wrong answer line): exit 1. Checks 0, 2, 3, 4, 5, 6 and
+  8 fail.
+- **`--seeds 100`:** checks 1, 2, 3, 5 and 8 hold on 100 of 100 other seeds. The decision flip (4) holds on 76, and
+  the stretch (7) on 73. The shipped seed holds all of them. If you change the generator, re-run this.
 
 ## Provenance
 
@@ -206,6 +219,8 @@ against the page's visible text with its whitespace collapsed; `#` starts a comm
 # the mechanism
 \bmax_tokens\b
 \bfinish(?:_reason)?\b.{0,30}\blength\b
+\b(?:no|without|missing|lacks?)\s+(?:an?\s+|its\s+)?["'“]?answer:?["'”]?\s+line\b
+\bmid-(?:step|sentence|chain)\b.{0,80}\b(?:exclud\w*|dropp\w*|left out|leaves? out|skip\w*|unpars\w*)\b
 \b(?:truncat\w*|cut off|hit the (?:token )?(?:cap|limit)|token (?:cap|limit))\b.{0,80}\b(?:exclud\w*|dropp\w*|left out|leaves? out|remov\w*|discard\w*)\b
 \b(?:exclud\w*|dropp\w*|left out|leaves? out|remov\w*|discard\w*)\b.{0,80}\b(?:truncat\w*|cut off|hit the (?:token )?(?:cap|limit)|token (?:cap|limit))\b
 \bload\(\).{0,80}\b(?:drops?|exclud\w*|leaves? out|remov\w*|skips?)\b

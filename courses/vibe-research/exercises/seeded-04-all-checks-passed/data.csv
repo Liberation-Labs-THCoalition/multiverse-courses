@@ -1,1281 +1,1281 @@
-item,steps,prompt,sample,tokens,finish,answer,gold,correct
-q001,3,direct,1,3,stop,5038,5028,0
-q001,3,direct,2,3,stop,5028,5028,1
-q001,3,direct,3,3,stop,5027,5028,0
-q001,3,direct,4,1,stop,5028,5028,1
-q001,3,step_by_step,1,110,stop,5026,5028,0
-q001,3,step_by_step,2,141,stop,5128,5028,0
-q001,3,step_by_step,3,116,stop,5027,5028,0
-q001,3,step_by_step,4,78,stop,5028,5028,1
-q002,5,direct,1,2,stop,6467,6458,0
-q002,5,direct,2,2,stop,6458,6458,1
-q002,5,direct,3,3,stop,6558,6458,0
-q002,5,direct,4,3,stop,6458,6458,1
-q002,5,step_by_step,1,224,stop,6458,6458,1
-q002,5,step_by_step,2,205,stop,6458,6458,1
-q002,5,step_by_step,3,240,stop,6458,6458,1
-q002,5,step_by_step,4,227,stop,6458,6458,1
-q003,2,direct,1,3,stop,6330,6330,1
-q003,2,direct,2,4,stop,6330,6330,1
-q003,2,direct,3,3,stop,6330,6330,1
-q003,2,direct,4,1,stop,6330,6330,1
-q003,2,step_by_step,1,84,stop,6330,6330,1
-q003,2,step_by_step,2,120,stop,6330,6330,1
-q003,2,step_by_step,3,60,stop,6330,6330,1
-q003,2,step_by_step,4,82,stop,6330,6330,1
-q004,4,direct,1,2,stop,2740,2740,1
-q004,4,direct,2,2,stop,2740,2740,1
-q004,4,direct,3,4,stop,2740,2740,1
-q004,4,direct,4,1,stop,2740,2740,1
-q004,4,step_by_step,1,236,stop,2740,2740,1
-q004,4,step_by_step,2,202,stop,2740,2740,1
-q004,4,step_by_step,3,231,stop,2740,2740,1
-q004,4,step_by_step,4,188,stop,2740,2740,1
-q005,4,direct,1,4,stop,6582,6582,1
-q005,4,direct,2,4,stop,6582,6582,1
-q005,4,direct,3,4,stop,6582,6582,1
-q005,4,direct,4,2,stop,6582,6582,1
-q005,4,step_by_step,1,214,stop,6582,6582,1
-q005,4,step_by_step,2,113,stop,6582,6582,1
-q005,4,step_by_step,3,132,stop,6582,6582,1
-q005,4,step_by_step,4,174,stop,6582,6582,1
-q006,5,direct,1,4,stop,4426,4426,1
-q006,5,direct,2,4,stop,4426,4426,1
-q006,5,direct,3,1,stop,4416,4426,0
-q006,5,direct,4,4,stop,4436,4426,0
-q006,5,step_by_step,1,256,length,,4426,
-q006,5,step_by_step,2,256,length,,4426,
-q006,5,step_by_step,3,256,length,,4426,
-q006,5,step_by_step,4,241,stop,4426,4426,1
-q007,6,direct,1,3,stop,7159,7150,0
-q007,6,direct,2,4,stop,7150,7150,1
-q007,6,direct,3,1,stop,7159,7150,0
-q007,6,direct,4,4,stop,7141,7150,0
-q007,6,step_by_step,1,232,stop,7150,7150,1
-q007,6,step_by_step,2,256,length,,7150,
-q007,6,step_by_step,3,199,stop,7150,7150,1
-q007,6,step_by_step,4,256,length,,7150,
-q008,4,direct,1,4,stop,554,554,1
-q008,4,direct,2,2,stop,554,554,1
-q008,4,direct,3,2,stop,554,554,1
-q008,4,direct,4,4,stop,545,554,0
-q008,4,step_by_step,1,113,stop,554,554,1
-q008,4,step_by_step,2,167,stop,554,554,1
-q008,4,step_by_step,3,127,stop,554,554,1
-q008,4,step_by_step,4,201,stop,554,554,1
-q009,6,direct,1,2,stop,6275,6275,1
-q009,6,direct,2,1,stop,6275,6275,1
-q009,6,direct,3,1,stop,6275,6275,1
-q009,6,direct,4,3,stop,6375,6275,0
-q009,6,step_by_step,1,246,stop,6275,6275,1
-q009,6,step_by_step,2,256,length,,6275,
-q009,6,step_by_step,3,224,stop,6275,6275,1
-q009,6,step_by_step,4,200,stop,6275,6275,1
-q010,4,direct,1,2,stop,5144,5144,1
-q010,4,direct,2,4,stop,5143,5144,0
-q010,4,direct,3,4,stop,5153,5144,0
-q010,4,direct,4,2,stop,5144,5144,1
-q010,4,step_by_step,1,203,stop,5144,5144,1
-q010,4,step_by_step,2,155,stop,5144,5144,1
-q010,4,step_by_step,3,256,length,,5144,
-q010,4,step_by_step,4,173,stop,5142,5144,0
-q011,2,direct,1,1,stop,5142,5142,1
-q011,2,direct,2,4,stop,5142,5142,1
-q011,2,direct,3,2,stop,5142,5142,1
-q011,2,direct,4,4,stop,5142,5142,1
-q011,2,step_by_step,1,135,stop,5142,5142,1
-q011,2,step_by_step,2,130,stop,5142,5142,1
-q011,2,step_by_step,3,125,stop,5142,5142,1
-q011,2,step_by_step,4,135,stop,5142,5142,1
-q012,4,direct,1,4,stop,3678,3678,1
-q012,4,direct,2,1,stop,3678,3678,1
-q012,4,direct,3,2,stop,3678,3678,1
-q012,4,direct,4,1,stop,3678,3678,1
-q012,4,step_by_step,1,256,length,,3678,
-q012,4,step_by_step,2,189,stop,3678,3678,1
-q012,4,step_by_step,3,209,stop,3687,3678,0
-q012,4,step_by_step,4,220,stop,3678,3678,1
-q013,4,direct,1,2,stop,2738,2728,0
-q013,4,direct,2,1,stop,2728,2728,1
-q013,4,direct,3,3,stop,2728,2728,1
-q013,4,direct,4,4,stop,2728,2728,1
-q013,4,step_by_step,1,141,stop,2728,2728,1
-q013,4,step_by_step,2,246,stop,2728,2728,1
-q013,4,step_by_step,3,256,length,,2728,
-q013,4,step_by_step,4,245,stop,2718,2728,0
-q014,5,direct,1,2,stop,601,601,1
-q014,5,direct,2,1,stop,591,601,0
-q014,5,direct,3,2,stop,601,601,1
-q014,5,direct,4,3,stop,591,601,0
-q014,5,step_by_step,1,169,stop,601,601,1
-q014,5,step_by_step,2,157,stop,599,601,0
-q014,5,step_by_step,3,171,stop,601,601,1
-q014,5,step_by_step,4,256,length,,601,
-q015,2,direct,1,4,stop,4780,4780,1
-q015,2,direct,2,1,stop,4780,4780,1
-q015,2,direct,3,3,stop,4780,4780,1
-q015,2,direct,4,1,stop,4780,4780,1
-q015,2,step_by_step,1,125,stop,4780,4780,1
-q015,2,step_by_step,2,77,stop,4780,4780,1
-q015,2,step_by_step,3,88,stop,4780,4780,1
-q015,2,step_by_step,4,44,stop,4780,4780,1
-q016,4,direct,1,4,stop,1629,1639,0
-q016,4,direct,2,3,stop,1639,1639,1
-q016,4,direct,3,1,stop,1639,1639,1
-q016,4,direct,4,3,stop,1630,1639,0
-q016,4,step_by_step,1,180,stop,1639,1639,1
-q016,4,step_by_step,2,210,stop,1639,1639,1
-q016,4,step_by_step,3,186,stop,1638,1639,0
-q016,4,step_by_step,4,201,stop,1639,1639,1
-q017,6,direct,1,2,stop,3574,3574,1
-q017,6,direct,2,3,stop,3565,3574,0
-q017,6,direct,3,4,stop,3574,3574,1
-q017,6,direct,4,3,stop,3574,3574,1
-q017,6,step_by_step,1,213,stop,3574,3574,1
-q017,6,step_by_step,2,256,length,,3574,
-q017,6,step_by_step,3,256,length,,3574,
-q017,6,step_by_step,4,256,length,,3574,
-q018,6,direct,1,4,stop,2372,2374,0
-q018,6,direct,2,4,stop,2474,2374,0
-q018,6,direct,3,3,stop,2374,2374,1
-q018,6,direct,4,3,stop,2375,2374,0
-q018,6,step_by_step,1,256,length,,2374,
-q018,6,step_by_step,2,212,stop,2374,2374,1
-q018,6,step_by_step,3,256,length,,2374,
-q018,6,step_by_step,4,256,length,,2374,
-q019,5,direct,1,2,stop,1896,1906,0
-q019,5,direct,2,2,stop,1916,1906,0
-q019,5,direct,3,1,stop,1908,1906,0
-q019,5,direct,4,1,stop,1907,1906,0
-q019,5,step_by_step,1,256,length,,1906,
-q019,5,step_by_step,2,256,length,,1906,
-q019,5,step_by_step,3,256,length,,1906,
-q019,5,step_by_step,4,185,stop,1906,1906,1
-q020,5,direct,1,3,stop,4414,4414,1
-q020,5,direct,2,4,stop,4414,4414,1
-q020,5,direct,3,4,stop,4412,4414,0
-q020,5,direct,4,3,stop,4415,4414,0
-q020,5,step_by_step,1,256,length,,4414,
-q020,5,step_by_step,2,221,stop,4414,4414,1
-q020,5,step_by_step,3,256,length,,4414,
-q020,5,step_by_step,4,256,length,,4414,
-q021,4,direct,1,3,stop,1823,1823,1
-q021,4,direct,2,3,stop,1823,1823,1
-q021,4,direct,3,1,stop,1823,1823,1
-q021,4,direct,4,2,stop,1823,1823,1
-q021,4,step_by_step,1,243,stop,1823,1823,1
-q021,4,step_by_step,2,236,stop,1823,1823,1
-q021,4,step_by_step,3,249,stop,1823,1823,1
-q021,4,step_by_step,4,242,stop,1823,1823,1
-q022,6,direct,1,2,stop,4921,4921,1
-q022,6,direct,2,4,stop,4920,4921,0
-q022,6,direct,3,1,stop,4919,4921,0
-q022,6,direct,4,4,stop,4919,4921,0
-q022,6,step_by_step,1,256,length,,4921,
-q022,6,step_by_step,2,239,stop,4931,4921,0
-q022,6,step_by_step,3,241,stop,4920,4921,0
-q022,6,step_by_step,4,198,stop,4921,4921,1
-q023,3,direct,1,4,stop,2602,2602,1
-q023,3,direct,2,4,stop,2602,2602,1
-q023,3,direct,3,4,stop,2602,2602,1
-q023,3,direct,4,4,stop,2602,2602,1
-q023,3,step_by_step,1,118,stop,2602,2602,1
-q023,3,step_by_step,2,172,stop,2602,2602,1
-q023,3,step_by_step,3,146,stop,2602,2602,1
-q023,3,step_by_step,4,136,stop,2602,2602,1
-q024,3,direct,1,4,stop,253,253,1
-q024,3,direct,2,4,stop,253,253,1
-q024,3,direct,3,4,stop,254,253,0
-q024,3,direct,4,2,stop,253,253,1
-q024,3,step_by_step,1,120,stop,253,253,1
-q024,3,step_by_step,2,141,stop,253,253,1
-q024,3,step_by_step,3,120,stop,253,253,1
-q024,3,step_by_step,4,150,stop,253,253,1
-q025,3,direct,1,3,stop,7337,7337,1
-q025,3,direct,2,3,stop,7337,7337,1
-q025,3,direct,3,3,stop,7337,7337,1
-q025,3,direct,4,4,stop,7337,7337,1
-q025,3,step_by_step,1,174,stop,7346,7337,0
-q025,3,step_by_step,2,148,stop,7337,7337,1
-q025,3,step_by_step,3,120,stop,7337,7337,1
-q025,3,step_by_step,4,117,stop,7337,7337,1
-q026,4,direct,1,2,stop,3304,3294,0
-q026,4,direct,2,1,stop,3294,3294,1
-q026,4,direct,3,1,stop,3296,3294,0
-q026,4,direct,4,4,stop,3294,3294,1
-q026,4,step_by_step,1,221,stop,3294,3294,1
-q026,4,step_by_step,2,143,stop,3294,3294,1
-q026,4,step_by_step,3,205,stop,3294,3294,1
-q026,4,step_by_step,4,185,stop,3294,3294,1
-q027,3,direct,1,3,stop,805,805,1
-q027,3,direct,2,1,stop,807,805,0
-q027,3,direct,3,4,stop,803,805,0
-q027,3,direct,4,2,stop,805,805,1
-q027,3,step_by_step,1,134,stop,805,805,1
-q027,3,step_by_step,2,144,stop,805,805,1
-q027,3,step_by_step,3,189,stop,805,805,1
-q027,3,step_by_step,4,155,stop,805,805,1
-q028,5,direct,1,1,stop,759,659,0
-q028,5,direct,2,4,stop,649,659,0
-q028,5,direct,3,2,stop,659,659,1
-q028,5,direct,4,3,stop,658,659,0
-q028,5,step_by_step,1,256,length,,659,
-q028,5,step_by_step,2,218,stop,649,659,0
-q028,5,step_by_step,3,217,stop,659,659,1
-q028,5,step_by_step,4,213,stop,668,659,0
-q029,3,direct,1,3,stop,4451,4451,1
-q029,3,direct,2,4,stop,4451,4451,1
-q029,3,direct,3,2,stop,4451,4451,1
-q029,3,direct,4,2,stop,4461,4451,0
-q029,3,step_by_step,1,115,stop,4451,4451,1
-q029,3,step_by_step,2,157,stop,4451,4451,1
-q029,3,step_by_step,3,78,stop,4451,4451,1
-q029,3,step_by_step,4,129,stop,4451,4451,1
-q030,5,direct,1,3,stop,6230,6240,0
-q030,5,direct,2,1,stop,6230,6240,0
-q030,5,direct,3,4,stop,6249,6240,0
-q030,5,direct,4,4,stop,6240,6240,1
-q030,5,step_by_step,1,256,length,,6240,
-q030,5,step_by_step,2,256,length,,6240,
-q030,5,step_by_step,3,247,stop,6230,6240,0
-q030,5,step_by_step,4,256,length,,6240,
-q031,2,direct,1,2,stop,4944,4944,1
-q031,2,direct,2,2,stop,4944,4944,1
-q031,2,direct,3,3,stop,4944,4944,1
-q031,2,direct,4,3,stop,4944,4944,1
-q031,2,step_by_step,1,59,stop,4944,4944,1
-q031,2,step_by_step,2,90,stop,4944,4944,1
-q031,2,step_by_step,3,61,stop,4944,4944,1
-q031,2,step_by_step,4,148,stop,4944,4944,1
-q032,3,direct,1,3,stop,1384,1384,1
-q032,3,direct,2,3,stop,1384,1384,1
-q032,3,direct,3,2,stop,1384,1384,1
-q032,3,direct,4,1,stop,1384,1384,1
-q032,3,step_by_step,1,126,stop,1384,1384,1
-q032,3,step_by_step,2,179,stop,1384,1384,1
-q032,3,step_by_step,3,111,stop,1384,1384,1
-q032,3,step_by_step,4,102,stop,1384,1384,1
-q033,5,direct,1,4,stop,758,758,1
-q033,5,direct,2,3,stop,758,758,1
-q033,5,direct,3,1,stop,758,758,1
-q033,5,direct,4,1,stop,756,758,0
-q033,5,step_by_step,1,256,length,,758,
-q033,5,step_by_step,2,256,length,,758,
-q033,5,step_by_step,3,192,stop,758,758,1
-q033,5,step_by_step,4,256,length,,758,
-q034,2,direct,1,4,stop,8303,8303,1
-q034,2,direct,2,2,stop,8303,8303,1
-q034,2,direct,3,4,stop,8303,8303,1
-q034,2,direct,4,1,stop,8294,8303,0
-q034,2,step_by_step,1,86,stop,8303,8303,1
-q034,2,step_by_step,2,114,stop,8303,8303,1
-q034,2,step_by_step,3,132,stop,8303,8303,1
-q034,2,step_by_step,4,103,stop,8303,8303,1
-q035,2,direct,1,2,stop,6562,6562,1
-q035,2,direct,2,4,stop,6562,6562,1
-q035,2,direct,3,3,stop,6562,6562,1
-q035,2,direct,4,4,stop,6562,6562,1
-q035,2,step_by_step,1,61,stop,6562,6562,1
-q035,2,step_by_step,2,60,stop,6562,6562,1
-q035,2,step_by_step,3,80,stop,6562,6562,1
-q035,2,step_by_step,4,65,stop,6562,6562,1
-q036,5,direct,1,4,stop,792,794,0
-q036,5,direct,2,3,stop,796,794,0
-q036,5,direct,3,2,stop,804,794,0
-q036,5,direct,4,4,stop,794,794,1
-q036,5,step_by_step,1,256,length,,794,
-q036,5,step_by_step,2,256,length,,794,
-q036,5,step_by_step,3,217,stop,794,794,1
-q036,5,step_by_step,4,197,stop,794,794,1
-q037,2,direct,1,3,stop,6637,6637,1
-q037,2,direct,2,3,stop,6637,6637,1
-q037,2,direct,3,3,stop,6637,6637,1
-q037,2,direct,4,2,stop,6637,6637,1
-q037,2,step_by_step,1,108,stop,6637,6637,1
-q037,2,step_by_step,2,76,stop,6637,6637,1
-q037,2,step_by_step,3,87,stop,6637,6637,1
-q037,2,step_by_step,4,91,stop,6636,6637,0
-q038,5,direct,1,4,stop,870,870,1
-q038,5,direct,2,3,stop,870,870,1
-q038,5,direct,3,4,stop,868,870,0
-q038,5,direct,4,4,stop,879,870,0
-q038,5,step_by_step,1,186,stop,870,870,1
-q038,5,step_by_step,2,230,stop,870,870,1
-q038,5,step_by_step,3,256,length,,870,
-q038,5,step_by_step,4,195,stop,870,870,1
-q039,6,direct,1,1,stop,1621,1621,1
-q039,6,direct,2,1,stop,1621,1621,1
-q039,6,direct,3,3,stop,1621,1621,1
-q039,6,direct,4,3,stop,1621,1621,1
-q039,6,step_by_step,1,256,length,,1621,
-q039,6,step_by_step,2,256,length,,1621,
-q039,6,step_by_step,3,207,stop,1621,1621,1
-q039,6,step_by_step,4,256,length,,1621,
-q040,5,direct,1,3,stop,2982,2992,0
-q040,5,direct,2,2,stop,2992,2992,1
-q040,5,direct,3,1,stop,3001,2992,0
-q040,5,direct,4,2,stop,2992,2992,1
-q040,5,step_by_step,1,200,stop,2982,2992,0
-q040,5,step_by_step,2,256,length,,2992,
-q040,5,step_by_step,3,256,length,,2992,
-q040,5,step_by_step,4,256,length,,2992,
-q041,4,direct,1,2,stop,6609,6609,1
-q041,4,direct,2,2,stop,6609,6609,1
-q041,4,direct,3,1,stop,6599,6609,0
-q041,4,direct,4,3,stop,6609,6609,1
-q041,4,step_by_step,1,204,stop,6609,6609,1
-q041,4,step_by_step,2,154,stop,6609,6609,1
-q041,4,step_by_step,3,192,stop,6609,6609,1
-q041,4,step_by_step,4,254,stop,6609,6609,1
-q042,6,direct,1,4,stop,7329,7329,1
-q042,6,direct,2,3,stop,7329,7329,1
-q042,6,direct,3,3,stop,7331,7329,0
-q042,6,direct,4,3,stop,7330,7329,0
-q042,6,step_by_step,1,232,stop,7329,7329,1
-q042,6,step_by_step,2,256,length,,7329,
-q042,6,step_by_step,3,256,length,,7329,
-q042,6,step_by_step,4,256,length,,7329,
-q043,6,direct,1,3,stop,1719,1719,1
-q043,6,direct,2,2,stop,1710,1719,0
-q043,6,direct,3,2,stop,1710,1719,0
-q043,6,direct,4,2,stop,1719,1719,1
-q043,6,step_by_step,1,233,stop,1719,1719,1
-q043,6,step_by_step,2,256,length,,1719,
-q043,6,step_by_step,3,256,length,,1719,
-q043,6,step_by_step,4,256,length,,1719,
-q044,6,direct,1,1,stop,2591,2593,0
-q044,6,direct,2,4,stop,2602,2593,0
-q044,6,direct,3,3,stop,2593,2593,1
-q044,6,direct,4,3,stop,2593,2593,1
-q044,6,step_by_step,1,256,length,,2593,
-q044,6,step_by_step,2,255,stop,2593,2593,1
-q044,6,step_by_step,3,256,length,,2593,
-q044,6,step_by_step,4,256,length,,2593,
-q045,6,direct,1,1,stop,1989,1999,0
-q045,6,direct,2,4,stop,2008,1999,0
-q045,6,direct,3,2,stop,2008,1999,0
-q045,6,direct,4,2,stop,2099,1999,0
-q045,6,step_by_step,1,210,stop,1999,1999,1
-q045,6,step_by_step,2,226,stop,1999,1999,1
-q045,6,step_by_step,3,256,length,,1999,
-q045,6,step_by_step,4,256,length,,1999,
-q046,5,direct,1,4,stop,6081,5981,0
-q046,5,direct,2,1,stop,5981,5981,1
-q046,5,direct,3,4,stop,5979,5981,0
-q046,5,direct,4,2,stop,5991,5981,0
-q046,5,step_by_step,1,180,stop,5981,5981,1
-q046,5,step_by_step,2,178,stop,5981,5981,1
-q046,5,step_by_step,3,256,length,,5981,
-q046,5,step_by_step,4,256,length,,5981,
-q047,2,direct,1,2,stop,1395,1395,1
-q047,2,direct,2,1,stop,1397,1395,0
-q047,2,direct,3,3,stop,1404,1395,0
-q047,2,direct,4,4,stop,1385,1395,0
-q047,2,step_by_step,1,99,stop,1395,1395,1
-q047,2,step_by_step,2,81,stop,1395,1395,1
-q047,2,step_by_step,3,92,stop,1395,1395,1
-q047,2,step_by_step,4,110,stop,1495,1395,0
-q048,3,direct,1,1,stop,1802,1802,1
-q048,3,direct,2,2,stop,1802,1802,1
-q048,3,direct,3,2,stop,1811,1802,0
-q048,3,direct,4,2,stop,1802,1802,1
-q048,3,step_by_step,1,180,stop,1802,1802,1
-q048,3,step_by_step,2,150,stop,1802,1802,1
-q048,3,step_by_step,3,254,stop,1811,1802,0
-q048,3,step_by_step,4,109,stop,1802,1802,1
-q049,3,direct,1,4,stop,4729,4729,1
-q049,3,direct,2,3,stop,4729,4729,1
-q049,3,direct,3,3,stop,4729,4729,1
-q049,3,direct,4,4,stop,4729,4729,1
-q049,3,step_by_step,1,161,stop,4729,4729,1
-q049,3,step_by_step,2,127,stop,4729,4729,1
-q049,3,step_by_step,3,209,stop,4729,4729,1
-q049,3,step_by_step,4,105,stop,4729,4729,1
-q050,6,direct,1,3,stop,5618,5608,0
-q050,6,direct,2,1,stop,5608,5608,1
-q050,6,direct,3,4,stop,5606,5608,0
-q050,6,direct,4,1,stop,5618,5608,0
-q050,6,step_by_step,1,256,length,,5608,
-q050,6,step_by_step,2,231,stop,5618,5608,0
-q050,6,step_by_step,3,253,stop,5608,5608,1
-q050,6,step_by_step,4,253,stop,5608,5608,1
-q051,5,direct,1,1,stop,4396,4396,1
-q051,5,direct,2,3,stop,4386,4396,0
-q051,5,direct,3,3,stop,4405,4396,0
-q051,5,direct,4,4,stop,4396,4396,1
-q051,5,step_by_step,1,256,length,,4396,
-q051,5,step_by_step,2,256,length,,4396,
-q051,5,step_by_step,3,140,stop,4396,4396,1
-q051,5,step_by_step,4,221,stop,4395,4396,0
-q052,5,direct,1,3,stop,3748,3746,0
-q052,5,direct,2,2,stop,3746,3746,1
-q052,5,direct,3,2,stop,3748,3746,0
-q052,5,direct,4,1,stop,3746,3746,1
-q052,5,step_by_step,1,256,length,,3746,
-q052,5,step_by_step,2,256,length,,3746,
-q052,5,step_by_step,3,231,stop,3746,3746,1
-q052,5,step_by_step,4,215,stop,3748,3746,0
-q053,6,direct,1,3,stop,3732,3732,1
-q053,6,direct,2,3,stop,3732,3732,1
-q053,6,direct,3,2,stop,3742,3732,0
-q053,6,direct,4,4,stop,3732,3732,1
-q053,6,step_by_step,1,256,length,,3732,
-q053,6,step_by_step,2,256,length,,3732,
-q053,6,step_by_step,3,256,length,,3732,
-q053,6,step_by_step,4,204,stop,3732,3732,1
-q054,6,direct,1,4,stop,1020,1021,0
-q054,6,direct,2,4,stop,1030,1021,0
-q054,6,direct,3,4,stop,1012,1021,0
-q054,6,direct,4,4,stop,1121,1021,0
-q054,6,step_by_step,1,256,length,,1021,
-q054,6,step_by_step,2,256,length,,1021,
-q054,6,step_by_step,3,216,stop,1021,1021,1
-q054,6,step_by_step,4,239,stop,1021,1021,1
-q055,5,direct,1,2,stop,7053,7053,1
-q055,5,direct,2,1,stop,7053,7053,1
-q055,5,direct,3,1,stop,7053,7053,1
-q055,5,direct,4,2,stop,7044,7053,0
-q055,5,step_by_step,1,182,stop,7053,7053,1
-q055,5,step_by_step,2,256,length,,7053,
-q055,5,step_by_step,3,256,length,,7053,
-q055,5,step_by_step,4,256,length,,7053,
-q056,6,direct,1,2,stop,6017,6018,0
-q056,6,direct,2,4,stop,6018,6018,1
-q056,6,direct,3,1,stop,6028,6018,0
-q056,6,direct,4,2,stop,6018,6018,1
-q056,6,step_by_step,1,245,stop,6018,6018,1
-q056,6,step_by_step,2,256,length,,6018,
-q056,6,step_by_step,3,256,length,,6018,
-q056,6,step_by_step,4,256,length,,6018,
-q057,2,direct,1,1,stop,4684,4693,0
-q057,2,direct,2,4,stop,4693,4693,1
-q057,2,direct,3,4,stop,4693,4693,1
-q057,2,direct,4,1,stop,4693,4693,1
-q057,2,step_by_step,1,62,stop,4693,4693,1
-q057,2,step_by_step,2,93,stop,4693,4693,1
-q057,2,step_by_step,3,73,stop,4693,4693,1
-q057,2,step_by_step,4,95,stop,4693,4693,1
-q058,6,direct,1,2,stop,5061,5061,1
-q058,6,direct,2,4,stop,5063,5061,0
-q058,6,direct,3,3,stop,5062,5061,0
-q058,6,direct,4,2,stop,5061,5061,1
-q058,6,step_by_step,1,256,length,,5061,
-q058,6,step_by_step,2,144,stop,5063,5061,0
-q058,6,step_by_step,3,256,length,,5061,
-q058,6,step_by_step,4,256,length,,5061,
-q059,4,direct,1,2,stop,2010,2009,0
-q059,4,direct,2,4,stop,2009,2009,1
-q059,4,direct,3,4,stop,2010,2009,0
-q059,4,direct,4,2,stop,2011,2009,0
-q059,4,step_by_step,1,165,stop,2009,2009,1
-q059,4,step_by_step,2,136,stop,2009,2009,1
-q059,4,step_by_step,3,143,stop,2009,2009,1
-q059,4,step_by_step,4,170,stop,2010,2009,0
-q060,5,direct,1,1,stop,7290,7280,0
-q060,5,direct,2,2,stop,7280,7280,1
-q060,5,direct,3,1,stop,7280,7280,1
-q060,5,direct,4,2,stop,7282,7280,0
-q060,5,step_by_step,1,253,stop,7280,7280,1
-q060,5,step_by_step,2,188,stop,7280,7280,1
-q060,5,step_by_step,3,256,length,,7280,
-q060,5,step_by_step,4,256,length,,7280,
-q061,6,direct,1,4,stop,7811,7813,0
-q061,6,direct,2,1,stop,7813,7813,1
-q061,6,direct,3,1,stop,7822,7813,0
-q061,6,direct,4,3,stop,7913,7813,0
-q061,6,step_by_step,1,256,length,,7813,
-q061,6,step_by_step,2,207,stop,7813,7813,1
-q061,6,step_by_step,3,256,length,,7813,
-q061,6,step_by_step,4,256,length,,7813,
-q062,6,direct,1,4,stop,480,482,0
-q062,6,direct,2,1,stop,492,482,0
-q062,6,direct,3,2,stop,482,482,1
-q062,6,direct,4,1,stop,482,482,1
-q062,6,step_by_step,1,209,stop,482,482,1
-q062,6,step_by_step,2,199,stop,473,482,0
-q062,6,step_by_step,3,256,length,,482,
-q062,6,step_by_step,4,193,stop,482,482,1
-q063,4,direct,1,2,stop,5027,5036,0
-q063,4,direct,2,1,stop,5036,5036,1
-q063,4,direct,3,3,stop,5036,5036,1
-q063,4,direct,4,3,stop,5035,5036,0
-q063,4,step_by_step,1,240,stop,5036,5036,1
-q063,4,step_by_step,2,256,length,,5036,
-q063,4,step_by_step,3,247,stop,5038,5036,0
-q063,4,step_by_step,4,256,length,,5036,
-q064,2,direct,1,4,stop,7291,7291,1
-q064,2,direct,2,3,stop,7291,7291,1
-q064,2,direct,3,1,stop,7291,7291,1
-q064,2,direct,4,2,stop,7291,7291,1
-q064,2,step_by_step,1,89,stop,7291,7291,1
-q064,2,step_by_step,2,91,stop,7291,7291,1
-q064,2,step_by_step,3,102,stop,7291,7291,1
-q064,2,step_by_step,4,92,stop,7291,7291,1
-q065,5,direct,1,3,stop,5694,5694,1
-q065,5,direct,2,2,stop,5694,5694,1
-q065,5,direct,3,2,stop,5694,5694,1
-q065,5,direct,4,4,stop,5695,5694,0
-q065,5,step_by_step,1,256,length,,5694,
-q065,5,step_by_step,2,241,stop,5694,5694,1
-q065,5,step_by_step,3,256,length,,5694,
-q065,5,step_by_step,4,256,length,,5694,
-q066,2,direct,1,1,stop,8381,8381,1
-q066,2,direct,2,2,stop,8381,8381,1
-q066,2,direct,3,3,stop,8381,8381,1
-q066,2,direct,4,2,stop,8381,8381,1
-q066,2,step_by_step,1,106,stop,8381,8381,1
-q066,2,step_by_step,2,68,stop,8381,8381,1
-q066,2,step_by_step,3,70,stop,8381,8381,1
-q066,2,step_by_step,4,97,stop,8381,8381,1
-q067,5,direct,1,2,stop,4631,4631,1
-q067,5,direct,2,2,stop,4630,4631,0
-q067,5,direct,3,2,stop,4631,4631,1
-q067,5,direct,4,4,stop,4631,4631,1
-q067,5,step_by_step,1,256,length,,4631,
-q067,5,step_by_step,2,211,stop,4631,4631,1
-q067,5,step_by_step,3,256,length,,4631,
-q067,5,step_by_step,4,256,length,,4631,
-q068,6,direct,1,2,stop,3584,3575,0
-q068,6,direct,2,1,stop,3573,3575,0
-q068,6,direct,3,2,stop,3565,3575,0
-q068,6,direct,4,3,stop,3573,3575,0
-q068,6,step_by_step,1,256,length,,3575,
-q068,6,step_by_step,2,256,length,,3575,
-q068,6,step_by_step,3,256,length,,3575,
-q068,6,step_by_step,4,166,stop,3575,3575,1
-q069,2,direct,1,2,stop,6557,6457,0
-q069,2,direct,2,2,stop,6447,6457,0
-q069,2,direct,3,4,stop,6467,6457,0
-q069,2,direct,4,1,stop,6457,6457,1
-q069,2,step_by_step,1,105,stop,6455,6457,0
-q069,2,step_by_step,2,61,stop,6457,6457,1
-q069,2,step_by_step,3,80,stop,6447,6457,0
-q069,2,step_by_step,4,82,stop,6457,6457,1
-q070,3,direct,1,1,stop,5011,5011,1
-q070,3,direct,2,2,stop,5011,5011,1
-q070,3,direct,3,4,stop,5011,5011,1
-q070,3,direct,4,4,stop,5011,5011,1
-q070,3,step_by_step,1,145,stop,5011,5011,1
-q070,3,step_by_step,2,164,stop,5011,5011,1
-q070,3,step_by_step,3,163,stop,5011,5011,1
-q070,3,step_by_step,4,173,stop,5011,5011,1
-q071,5,direct,1,1,stop,2999,2999,1
-q071,5,direct,2,4,stop,2999,2999,1
-q071,5,direct,3,4,stop,2999,2999,1
-q071,5,direct,4,2,stop,2999,2999,1
-q071,5,step_by_step,1,243,stop,2999,2999,1
-q071,5,step_by_step,2,224,stop,2999,2999,1
-q071,5,step_by_step,3,109,stop,2999,2999,1
-q071,5,step_by_step,4,201,stop,2999,2999,1
-q072,2,direct,1,1,stop,3610,3610,1
-q072,2,direct,2,3,stop,3610,3610,1
-q072,2,direct,3,2,stop,3610,3610,1
-q072,2,direct,4,4,stop,3610,3610,1
-q072,2,step_by_step,1,79,stop,3610,3610,1
-q072,2,step_by_step,2,70,stop,3610,3610,1
-q072,2,step_by_step,3,61,stop,3610,3610,1
-q072,2,step_by_step,4,86,stop,3610,3610,1
-q073,5,direct,1,2,stop,7084,7084,1
-q073,5,direct,2,1,stop,7094,7084,0
-q073,5,direct,3,4,stop,7086,7084,0
-q073,5,direct,4,1,stop,7083,7084,0
-q073,5,step_by_step,1,256,length,,7084,
-q073,5,step_by_step,2,210,stop,7084,7084,1
-q073,5,step_by_step,3,207,stop,7084,7084,1
-q073,5,step_by_step,4,169,stop,7084,7084,1
-q074,2,direct,1,3,stop,572,581,0
-q074,2,direct,2,3,stop,571,581,0
-q074,2,direct,3,2,stop,581,581,1
-q074,2,direct,4,2,stop,581,581,1
-q074,2,step_by_step,1,135,stop,582,581,0
-q074,2,step_by_step,2,92,stop,581,581,1
-q074,2,step_by_step,3,107,stop,581,581,1
-q074,2,step_by_step,4,106,stop,581,581,1
-q075,2,direct,1,4,stop,2016,2016,1
-q075,2,direct,2,2,stop,2016,2016,1
-q075,2,direct,3,2,stop,2016,2016,1
-q075,2,direct,4,2,stop,2016,2016,1
-q075,2,step_by_step,1,95,stop,2016,2016,1
-q075,2,step_by_step,2,68,stop,2016,2016,1
-q075,2,step_by_step,3,109,stop,2016,2016,1
-q075,2,step_by_step,4,81,stop,2016,2016,1
-q076,2,direct,1,1,stop,8486,8486,1
-q076,2,direct,2,3,stop,8476,8486,0
-q076,2,direct,3,1,stop,8486,8486,1
-q076,2,direct,4,2,stop,8484,8486,0
-q076,2,step_by_step,1,74,stop,8484,8486,0
-q076,2,step_by_step,2,83,stop,8486,8486,1
-q076,2,step_by_step,3,72,stop,8486,8486,1
-q076,2,step_by_step,4,89,stop,8486,8486,1
-q077,5,direct,1,4,stop,3953,3953,1
-q077,5,direct,2,3,stop,3944,3953,0
-q077,5,direct,3,2,stop,3943,3953,0
-q077,5,direct,4,3,stop,3955,3953,0
-q077,5,step_by_step,1,256,length,,3953,
-q077,5,step_by_step,2,256,length,,3953,
-q077,5,step_by_step,3,256,length,,3953,
-q077,5,step_by_step,4,215,stop,3953,3953,1
-q078,3,direct,1,1,stop,7718,7718,1
-q078,3,direct,2,4,stop,7718,7718,1
-q078,3,direct,3,3,stop,7728,7718,0
-q078,3,direct,4,2,stop,7718,7718,1
-q078,3,step_by_step,1,247,stop,7716,7718,0
-q078,3,step_by_step,2,234,stop,7718,7718,1
-q078,3,step_by_step,3,147,stop,7718,7718,1
-q078,3,step_by_step,4,143,stop,7718,7718,1
-q079,4,direct,1,4,stop,8575,8575,1
-q079,4,direct,2,2,stop,8576,8575,0
-q079,4,direct,3,2,stop,8575,8575,1
-q079,4,direct,4,2,stop,8565,8575,0
-q079,4,step_by_step,1,256,length,,8575,
-q079,4,step_by_step,2,251,stop,8566,8575,0
-q079,4,step_by_step,3,242,stop,8575,8575,1
-q079,4,step_by_step,4,214,stop,8575,8575,1
-q080,2,direct,1,2,stop,6368,6369,0
-q080,2,direct,2,3,stop,6369,6369,1
-q080,2,direct,3,3,stop,6359,6369,0
-q080,2,direct,4,2,stop,6369,6369,1
-q080,2,step_by_step,1,71,stop,6369,6369,1
-q080,2,step_by_step,2,89,stop,6369,6369,1
-q080,2,step_by_step,3,106,stop,6369,6369,1
-q080,2,step_by_step,4,151,stop,6369,6369,1
-q081,3,direct,1,2,stop,8863,8863,1
-q081,3,direct,2,4,stop,8863,8863,1
-q081,3,direct,3,3,stop,8863,8863,1
-q081,3,direct,4,4,stop,8863,8863,1
-q081,3,step_by_step,1,226,stop,8863,8863,1
-q081,3,step_by_step,2,153,stop,8863,8863,1
-q081,3,step_by_step,3,176,stop,8863,8863,1
-q081,3,step_by_step,4,255,stop,8863,8863,1
-q082,4,direct,1,1,stop,2407,2408,0
-q082,4,direct,2,3,stop,2408,2408,1
-q082,4,direct,3,2,stop,2409,2408,0
-q082,4,direct,4,4,stop,2408,2408,1
-q082,4,step_by_step,1,179,stop,2408,2408,1
-q082,4,step_by_step,2,205,stop,2408,2408,1
-q082,4,step_by_step,3,162,stop,2406,2408,0
-q082,4,step_by_step,4,142,stop,2408,2408,1
-q083,6,direct,1,2,stop,4729,4738,0
-q083,6,direct,2,1,stop,4740,4738,0
-q083,6,direct,3,2,stop,4736,4738,0
-q083,6,direct,4,4,stop,4748,4738,0
-q083,6,step_by_step,1,240,stop,4738,4738,1
-q083,6,step_by_step,2,183,stop,4738,4738,1
-q083,6,step_by_step,3,256,length,,4738,
-q083,6,step_by_step,4,210,stop,4738,4738,1
-q084,3,direct,1,3,stop,4716,4716,1
-q084,3,direct,2,3,stop,4716,4716,1
-q084,3,direct,3,3,stop,4716,4716,1
-q084,3,direct,4,4,stop,4716,4716,1
-q084,3,step_by_step,1,238,stop,4716,4716,1
-q084,3,step_by_step,2,189,stop,4716,4716,1
-q084,3,step_by_step,3,170,stop,4716,4716,1
-q084,3,step_by_step,4,119,stop,4716,4716,1
-q085,4,direct,1,3,stop,5087,5087,1
-q085,4,direct,2,3,stop,5087,5087,1
-q085,4,direct,3,3,stop,5087,5087,1
-q085,4,direct,4,2,stop,5087,5087,1
-q085,4,step_by_step,1,149,stop,5087,5087,1
-q085,4,step_by_step,2,176,stop,5089,5087,0
-q085,4,step_by_step,3,159,stop,5087,5087,1
-q085,4,step_by_step,4,245,stop,5087,5087,1
-q086,3,direct,1,2,stop,3805,3815,0
-q086,3,direct,2,1,stop,3815,3815,1
-q086,3,direct,3,1,stop,3815,3815,1
-q086,3,direct,4,1,stop,3815,3815,1
-q086,3,step_by_step,1,118,stop,3815,3815,1
-q086,3,step_by_step,2,156,stop,3815,3815,1
-q086,3,step_by_step,3,246,stop,3815,3815,1
-q086,3,step_by_step,4,174,stop,3815,3815,1
-q087,3,direct,1,2,stop,5640,5641,0
-q087,3,direct,2,3,stop,5640,5641,0
-q087,3,direct,3,2,stop,5641,5641,1
-q087,3,direct,4,2,stop,5642,5641,0
-q087,3,step_by_step,1,228,stop,5641,5641,1
-q087,3,step_by_step,2,194,stop,5640,5641,0
-q087,3,step_by_step,3,117,stop,5640,5641,0
-q087,3,step_by_step,4,132,stop,5641,5641,1
-q088,4,direct,1,3,stop,6854,6854,1
-q088,4,direct,2,2,stop,6854,6854,1
-q088,4,direct,3,1,stop,6954,6854,0
-q088,4,direct,4,4,stop,6854,6854,1
-q088,4,step_by_step,1,180,stop,6854,6854,1
-q088,4,step_by_step,2,249,stop,6954,6854,0
-q088,4,step_by_step,3,198,stop,6854,6854,1
-q088,4,step_by_step,4,165,stop,6854,6854,1
-q089,2,direct,1,1,stop,8733,8733,1
-q089,2,direct,2,3,stop,8733,8733,1
-q089,2,direct,3,3,stop,8733,8733,1
-q089,2,direct,4,4,stop,8733,8733,1
-q089,2,step_by_step,1,118,stop,8733,8733,1
-q089,2,step_by_step,2,84,stop,8733,8733,1
-q089,2,step_by_step,3,187,stop,8735,8733,0
-q089,2,step_by_step,4,62,stop,8733,8733,1
-q090,3,direct,1,4,stop,6465,6465,1
-q090,3,direct,2,3,stop,6465,6465,1
-q090,3,direct,3,1,stop,6465,6465,1
-q090,3,direct,4,1,stop,6465,6465,1
-q090,3,step_by_step,1,176,stop,6465,6465,1
-q090,3,step_by_step,2,132,stop,6465,6465,1
-q090,3,step_by_step,3,85,stop,6465,6465,1
-q090,3,step_by_step,4,152,stop,6465,6465,1
-q091,6,direct,1,2,stop,3291,3281,0
-q091,6,direct,2,2,stop,3280,3281,0
-q091,6,direct,3,1,stop,3272,3281,0
-q091,6,direct,4,4,stop,3291,3281,0
-q091,6,step_by_step,1,208,stop,3290,3281,0
-q091,6,step_by_step,2,256,length,,3281,
-q091,6,step_by_step,3,256,length,,3281,
-q091,6,step_by_step,4,201,stop,3281,3281,1
-q092,2,direct,1,4,stop,853,853,1
-q092,2,direct,2,1,stop,853,853,1
-q092,2,direct,3,2,stop,855,853,0
-q092,2,direct,4,3,stop,953,853,0
-q092,2,step_by_step,1,103,stop,853,853,1
-q092,2,step_by_step,2,111,stop,953,853,0
-q092,2,step_by_step,3,81,stop,853,853,1
-q092,2,step_by_step,4,79,stop,853,853,1
-q093,3,direct,1,4,stop,8818,8818,1
-q093,3,direct,2,1,stop,8818,8818,1
-q093,3,direct,3,1,stop,8818,8818,1
-q093,3,direct,4,2,stop,8818,8818,1
-q093,3,step_by_step,1,80,stop,8818,8818,1
-q093,3,step_by_step,2,94,stop,8818,8818,1
-q093,3,step_by_step,3,90,stop,8818,8818,1
-q093,3,step_by_step,4,123,stop,8818,8818,1
-q094,3,direct,1,2,stop,2363,2363,1
-q094,3,direct,2,4,stop,2363,2363,1
-q094,3,direct,3,1,stop,2362,2363,0
-q094,3,direct,4,1,stop,2363,2363,1
-q094,3,step_by_step,1,127,stop,2363,2363,1
-q094,3,step_by_step,2,110,stop,2363,2363,1
-q094,3,step_by_step,3,208,stop,2363,2363,1
-q094,3,step_by_step,4,132,stop,2363,2363,1
-q095,6,direct,1,2,stop,5762,5771,0
-q095,6,direct,2,1,stop,5773,5771,0
-q095,6,direct,3,1,stop,5772,5771,0
-q095,6,direct,4,3,stop,5771,5771,1
-q095,6,step_by_step,1,188,stop,5771,5771,1
-q095,6,step_by_step,2,224,stop,5771,5771,1
-q095,6,step_by_step,3,209,stop,5771,5771,1
-q095,6,step_by_step,4,256,length,,5771,
-q096,2,direct,1,1,stop,7307,7307,1
-q096,2,direct,2,1,stop,7307,7307,1
-q096,2,direct,3,4,stop,7407,7307,0
-q096,2,direct,4,3,stop,7307,7307,1
-q096,2,step_by_step,1,73,stop,7307,7307,1
-q096,2,step_by_step,2,67,stop,7307,7307,1
-q096,2,step_by_step,3,77,stop,7307,7307,1
-q096,2,step_by_step,4,85,stop,7307,7307,1
-q097,4,direct,1,3,stop,7407,7407,1
-q097,4,direct,2,3,stop,7407,7407,1
-q097,4,direct,3,1,stop,7407,7407,1
-q097,4,direct,4,1,stop,7407,7407,1
-q097,4,step_by_step,1,256,length,,7407,
-q097,4,step_by_step,2,221,stop,7407,7407,1
-q097,4,step_by_step,3,128,stop,7407,7407,1
-q097,4,step_by_step,4,256,length,,7407,
-q098,6,direct,1,3,stop,6912,6902,0
-q098,6,direct,2,2,stop,6902,6902,1
-q098,6,direct,3,1,stop,6902,6902,1
-q098,6,direct,4,2,stop,6911,6902,0
-q098,6,step_by_step,1,256,length,,6902,
-q098,6,step_by_step,2,256,length,,6902,
-q098,6,step_by_step,3,234,stop,6901,6902,0
-q098,6,step_by_step,4,256,length,,6902,
-q099,4,direct,1,2,stop,1863,1863,1
-q099,4,direct,2,4,stop,1863,1863,1
-q099,4,direct,3,2,stop,1853,1863,0
-q099,4,direct,4,2,stop,1863,1863,1
-q099,4,step_by_step,1,174,stop,1863,1863,1
-q099,4,step_by_step,2,149,stop,1863,1863,1
-q099,4,step_by_step,3,140,stop,1865,1863,0
-q099,4,step_by_step,4,159,stop,1863,1863,1
-q100,3,direct,1,3,stop,6752,6752,1
-q100,3,direct,2,3,stop,6852,6752,0
-q100,3,direct,3,4,stop,6752,6752,1
-q100,3,direct,4,2,stop,6750,6752,0
-q100,3,step_by_step,1,188,stop,6752,6752,1
-q100,3,step_by_step,2,189,stop,6752,6752,1
-q100,3,step_by_step,3,170,stop,6752,6752,1
-q100,3,step_by_step,4,183,stop,6754,6752,0
-q101,3,direct,1,1,stop,4174,4165,0
-q101,3,direct,2,4,stop,4165,4165,1
-q101,3,direct,3,1,stop,4165,4165,1
-q101,3,direct,4,3,stop,4164,4165,0
-q101,3,step_by_step,1,242,stop,4165,4165,1
-q101,3,step_by_step,2,140,stop,4165,4165,1
-q101,3,step_by_step,3,150,stop,4166,4165,0
-q101,3,step_by_step,4,162,stop,4165,4165,1
-q102,4,direct,1,1,stop,8574,8574,1
-q102,4,direct,2,4,stop,8574,8574,1
-q102,4,direct,3,2,stop,8574,8574,1
-q102,4,direct,4,4,stop,8574,8574,1
-q102,4,step_by_step,1,253,stop,8574,8574,1
-q102,4,step_by_step,2,203,stop,8574,8574,1
-q102,4,step_by_step,3,133,stop,8574,8574,1
-q102,4,step_by_step,4,256,length,,8574,
-q103,4,direct,1,1,stop,8256,8256,1
-q103,4,direct,2,4,stop,8256,8256,1
-q103,4,direct,3,2,stop,8256,8256,1
-q103,4,direct,4,4,stop,8266,8256,0
-q103,4,step_by_step,1,162,stop,8256,8256,1
-q103,4,step_by_step,2,172,stop,8256,8256,1
-q103,4,step_by_step,3,135,stop,8257,8256,0
-q103,4,step_by_step,4,256,length,,8256,
-q104,5,direct,1,4,stop,6299,6299,1
-q104,5,direct,2,2,stop,6299,6299,1
-q104,5,direct,3,4,stop,6299,6299,1
-q104,5,direct,4,2,stop,6309,6299,0
-q104,5,step_by_step,1,194,stop,6299,6299,1
-q104,5,step_by_step,2,220,stop,6289,6299,0
-q104,5,step_by_step,3,195,stop,6289,6299,0
-q104,5,step_by_step,4,159,stop,6299,6299,1
-q105,2,direct,1,4,stop,2855,2855,1
-q105,2,direct,2,1,stop,2855,2855,1
-q105,2,direct,3,2,stop,2855,2855,1
-q105,2,direct,4,1,stop,2855,2855,1
-q105,2,step_by_step,1,86,stop,2855,2855,1
-q105,2,step_by_step,2,117,stop,2855,2855,1
-q105,2,step_by_step,3,127,stop,2855,2855,1
-q105,2,step_by_step,4,124,stop,2855,2855,1
-q106,2,direct,1,1,stop,5225,5225,1
-q106,2,direct,2,2,stop,5225,5225,1
-q106,2,direct,3,4,stop,5225,5225,1
-q106,2,direct,4,4,stop,5234,5225,0
-q106,2,step_by_step,1,178,stop,5225,5225,1
-q106,2,step_by_step,2,78,stop,5225,5225,1
-q106,2,step_by_step,3,96,stop,5225,5225,1
-q106,2,step_by_step,4,142,stop,5225,5225,1
-q107,2,direct,1,4,stop,2656,2656,1
-q107,2,direct,2,3,stop,2665,2656,0
-q107,2,direct,3,4,stop,2656,2656,1
-q107,2,direct,4,3,stop,2656,2656,1
-q107,2,step_by_step,1,139,stop,2656,2656,1
-q107,2,step_by_step,2,177,stop,2656,2656,1
-q107,2,step_by_step,3,141,stop,2656,2656,1
-q107,2,step_by_step,4,97,stop,2656,2656,1
-q108,3,direct,1,3,stop,5131,5131,1
-q108,3,direct,2,1,stop,5131,5131,1
-q108,3,direct,3,2,stop,5131,5131,1
-q108,3,direct,4,2,stop,5131,5131,1
-q108,3,step_by_step,1,185,stop,5131,5131,1
-q108,3,step_by_step,2,115,stop,5131,5131,1
-q108,3,step_by_step,3,129,stop,5131,5131,1
-q108,3,step_by_step,4,166,stop,5131,5131,1
-q109,3,direct,1,3,stop,1876,1876,1
-q109,3,direct,2,1,stop,1976,1876,0
-q109,3,direct,3,4,stop,1876,1876,1
-q109,3,direct,4,2,stop,1876,1876,1
-q109,3,step_by_step,1,250,stop,1876,1876,1
-q109,3,step_by_step,2,155,stop,1876,1876,1
-q109,3,step_by_step,3,236,stop,1876,1876,1
-q109,3,step_by_step,4,135,stop,1876,1876,1
-q110,5,direct,1,2,stop,8279,8279,1
-q110,5,direct,2,1,stop,8279,8279,1
-q110,5,direct,3,4,stop,8281,8279,0
-q110,5,direct,4,4,stop,8269,8279,0
-q110,5,step_by_step,1,175,stop,8279,8279,1
-q110,5,step_by_step,2,174,stop,8279,8279,1
-q110,5,step_by_step,3,210,stop,8279,8279,1
-q110,5,step_by_step,4,155,stop,8279,8279,1
-q111,4,direct,1,2,stop,4651,4651,1
-q111,4,direct,2,2,stop,4653,4651,0
-q111,4,direct,3,2,stop,4660,4651,0
-q111,4,direct,4,1,stop,4650,4651,0
-q111,4,step_by_step,1,224,stop,4651,4651,1
-q111,4,step_by_step,2,228,stop,4653,4651,0
-q111,4,step_by_step,3,197,stop,4651,4651,1
-q111,4,step_by_step,4,229,stop,4651,4651,1
-q112,2,direct,1,4,stop,5553,5553,1
-q112,2,direct,2,3,stop,5543,5553,0
-q112,2,direct,3,1,stop,5553,5553,1
-q112,2,direct,4,3,stop,5553,5553,1
-q112,2,step_by_step,1,108,stop,5555,5553,0
-q112,2,step_by_step,2,104,stop,5553,5553,1
-q112,2,step_by_step,3,116,stop,5553,5553,1
-q112,2,step_by_step,4,84,stop,5553,5553,1
-q113,3,direct,1,4,stop,5390,5390,1
-q113,3,direct,2,3,stop,5390,5390,1
-q113,3,direct,3,4,stop,5390,5390,1
-q113,3,direct,4,1,stop,5390,5390,1
-q113,3,step_by_step,1,256,length,,5390,
-q113,3,step_by_step,2,256,length,,5390,
-q113,3,step_by_step,3,142,stop,5390,5390,1
-q113,3,step_by_step,4,183,stop,5390,5390,1
-q114,4,direct,1,4,stop,6487,6487,1
-q114,4,direct,2,4,stop,6487,6487,1
-q114,4,direct,3,1,stop,6487,6487,1
-q114,4,direct,4,2,stop,6487,6487,1
-q114,4,step_by_step,1,256,length,,6487,
-q114,4,step_by_step,2,163,stop,6487,6487,1
-q114,4,step_by_step,3,219,stop,6487,6487,1
-q114,4,step_by_step,4,254,stop,6487,6487,1
-q115,5,direct,1,3,stop,510,510,1
-q115,5,direct,2,4,stop,510,510,1
-q115,5,direct,3,2,stop,510,510,1
-q115,5,direct,4,4,stop,510,510,1
-q115,5,step_by_step,1,256,length,,510,
-q115,5,step_by_step,2,225,stop,510,510,1
-q115,5,step_by_step,3,256,length,,510,
-q115,5,step_by_step,4,238,stop,510,510,1
-q116,6,direct,1,4,stop,3741,3741,1
-q116,6,direct,2,3,stop,3741,3741,1
-q116,6,direct,3,4,stop,3740,3741,0
-q116,6,direct,4,3,stop,3741,3741,1
-q116,6,step_by_step,1,215,stop,3741,3741,1
-q116,6,step_by_step,2,256,length,,3741,
-q116,6,step_by_step,3,256,length,,3741,
-q116,6,step_by_step,4,216,stop,3741,3741,1
-q117,4,direct,1,2,stop,7556,7557,0
-q117,4,direct,2,3,stop,7557,7557,1
-q117,4,direct,3,4,stop,7557,7557,1
-q117,4,direct,4,4,stop,7558,7557,0
-q117,4,step_by_step,1,213,stop,7557,7557,1
-q117,4,step_by_step,2,166,stop,7557,7557,1
-q117,4,step_by_step,3,210,stop,7557,7557,1
-q117,4,step_by_step,4,170,stop,7557,7557,1
-q118,4,direct,1,4,stop,5715,5715,1
-q118,4,direct,2,1,stop,5717,5715,0
-q118,4,direct,3,2,stop,5715,5715,1
-q118,4,direct,4,3,stop,5715,5715,1
-q118,4,step_by_step,1,169,stop,5715,5715,1
-q118,4,step_by_step,2,187,stop,5715,5715,1
-q118,4,step_by_step,3,208,stop,5705,5715,0
-q118,4,step_by_step,4,195,stop,5715,5715,1
-q119,2,direct,1,2,stop,3777,3777,1
-q119,2,direct,2,1,stop,3777,3777,1
-q119,2,direct,3,4,stop,3777,3777,1
-q119,2,direct,4,1,stop,3777,3777,1
-q119,2,step_by_step,1,123,stop,3777,3777,1
-q119,2,step_by_step,2,86,stop,3777,3777,1
-q119,2,step_by_step,3,89,stop,3777,3777,1
-q119,2,step_by_step,4,77,stop,3777,3777,1
-q120,4,direct,1,3,stop,2461,2461,1
-q120,4,direct,2,3,stop,2461,2461,1
-q120,4,direct,3,3,stop,2462,2461,0
-q120,4,direct,4,4,stop,2463,2461,0
-q120,4,step_by_step,1,104,stop,2461,2461,1
-q120,4,step_by_step,2,155,stop,2463,2461,0
-q120,4,step_by_step,3,167,stop,2462,2461,0
-q120,4,step_by_step,4,177,stop,2461,2461,1
-q121,5,direct,1,1,stop,5747,5748,0
-q121,5,direct,2,1,stop,5748,5748,1
-q121,5,direct,3,4,stop,5758,5748,0
-q121,5,direct,4,3,stop,5739,5748,0
-q121,5,step_by_step,1,180,stop,5748,5748,1
-q121,5,step_by_step,2,209,stop,5748,5748,1
-q121,5,step_by_step,3,203,stop,5748,5748,1
-q121,5,step_by_step,4,167,stop,5748,5748,1
-q122,3,direct,1,4,stop,7077,7077,1
-q122,3,direct,2,2,stop,7075,7077,0
-q122,3,direct,3,1,stop,7077,7077,1
-q122,3,direct,4,1,stop,7076,7077,0
-q122,3,step_by_step,1,125,stop,7077,7077,1
-q122,3,step_by_step,2,186,stop,7079,7077,0
-q122,3,step_by_step,3,122,stop,7077,7077,1
-q122,3,step_by_step,4,122,stop,7077,7077,1
-q123,6,direct,1,3,stop,7434,7434,1
-q123,6,direct,2,4,stop,7436,7434,0
-q123,6,direct,3,1,stop,7424,7434,0
-q123,6,direct,4,3,stop,7432,7434,0
-q123,6,step_by_step,1,215,stop,7434,7434,1
-q123,6,step_by_step,2,256,length,,7434,
-q123,6,step_by_step,3,225,stop,7434,7434,1
-q123,6,step_by_step,4,234,stop,7424,7434,0
-q124,6,direct,1,1,stop,2677,2677,1
-q124,6,direct,2,1,stop,2677,2677,1
-q124,6,direct,3,3,stop,2668,2677,0
-q124,6,direct,4,1,stop,2678,2677,0
-q124,6,step_by_step,1,256,length,,2677,
-q124,6,step_by_step,2,256,length,,2677,
-q124,6,step_by_step,3,224,stop,2677,2677,1
-q124,6,step_by_step,4,256,length,,2677,
-q125,6,direct,1,2,stop,3405,3415,0
-q125,6,direct,2,4,stop,3417,3415,0
-q125,6,direct,3,4,stop,3406,3415,0
-q125,6,direct,4,1,stop,3405,3415,0
-q125,6,step_by_step,1,202,stop,3424,3415,0
-q125,6,step_by_step,2,209,stop,3417,3415,0
-q125,6,step_by_step,3,256,length,,3415,
-q125,6,step_by_step,4,256,length,,3415,
-q126,5,direct,1,2,stop,1116,1126,0
-q126,5,direct,2,1,stop,1126,1126,1
-q126,5,direct,3,1,stop,1126,1126,1
-q126,5,direct,4,1,stop,1126,1126,1
-q126,5,step_by_step,1,256,length,,1126,
-q126,5,step_by_step,2,256,length,,1126,
-q126,5,step_by_step,3,256,length,,1126,
-q126,5,step_by_step,4,233,stop,1126,1126,1
-q127,6,direct,1,1,stop,6406,6406,1
-q127,6,direct,2,3,stop,6406,6406,1
-q127,6,direct,3,1,stop,6406,6406,1
-q127,6,direct,4,3,stop,6416,6406,0
-q127,6,step_by_step,1,199,stop,6406,6406,1
-q127,6,step_by_step,2,215,stop,6406,6406,1
-q127,6,step_by_step,3,238,stop,6406,6406,1
-q127,6,step_by_step,4,219,stop,6406,6406,1
-q128,6,direct,1,2,stop,2034,2043,0
-q128,6,direct,2,2,stop,2043,2043,1
-q128,6,direct,3,1,stop,2043,2043,1
-q128,6,direct,4,2,stop,2034,2043,0
-q128,6,step_by_step,1,254,stop,2043,2043,1
-q128,6,step_by_step,2,256,length,,2043,
-q128,6,step_by_step,3,256,length,,2043,
-q128,6,step_by_step,4,256,length,,2043,
-q129,4,direct,1,2,stop,8872,8872,1
-q129,4,direct,2,4,stop,8872,8872,1
-q129,4,direct,3,4,stop,8872,8872,1
-q129,4,direct,4,3,stop,8862,8872,0
-q129,4,step_by_step,1,203,stop,8872,8872,1
-q129,4,step_by_step,2,225,stop,8863,8872,0
-q129,4,step_by_step,3,153,stop,8872,8872,1
-q129,4,step_by_step,4,256,length,,8872,
-q130,3,direct,1,3,stop,5017,5017,1
-q130,3,direct,2,2,stop,5017,5017,1
-q130,3,direct,3,1,stop,5117,5017,0
-q130,3,direct,4,1,stop,5018,5017,0
-q130,3,step_by_step,1,173,stop,5017,5017,1
-q130,3,step_by_step,2,168,stop,5017,5017,1
-q130,3,step_by_step,3,198,stop,5017,5017,1
-q130,3,step_by_step,4,171,stop,5026,5017,0
-q131,5,direct,1,3,stop,1113,1113,1
-q131,5,direct,2,1,stop,1123,1113,0
-q131,5,direct,3,4,stop,1112,1113,0
-q131,5,direct,4,1,stop,1113,1113,1
-q131,5,step_by_step,1,256,length,,1113,
-q131,5,step_by_step,2,136,stop,1113,1113,1
-q131,5,step_by_step,3,256,length,,1113,
-q131,5,step_by_step,4,227,stop,1113,1113,1
-q132,4,direct,1,4,stop,5772,5772,1
-q132,4,direct,2,1,stop,5772,5772,1
-q132,4,direct,3,1,stop,5772,5772,1
-q132,4,direct,4,4,stop,5772,5772,1
-q132,4,step_by_step,1,256,length,,5772,
-q132,4,step_by_step,2,182,stop,5772,5772,1
-q132,4,step_by_step,3,256,length,,5772,
-q132,4,step_by_step,4,204,stop,5772,5772,1
-q133,2,direct,1,2,stop,7101,7091,0
-q133,2,direct,2,3,stop,7092,7091,0
-q133,2,direct,3,2,stop,7091,7091,1
-q133,2,direct,4,4,stop,7191,7091,0
-q133,2,step_by_step,1,144,stop,7091,7091,1
-q133,2,step_by_step,2,174,stop,7091,7091,1
-q133,2,step_by_step,3,138,stop,7091,7091,1
-q133,2,step_by_step,4,214,stop,7082,7091,0
-q134,5,direct,1,4,stop,3652,3652,1
-q134,5,direct,2,2,stop,3650,3652,0
-q134,5,direct,3,2,stop,3661,3652,0
-q134,5,direct,4,1,stop,3650,3652,0
-q134,5,step_by_step,1,199,stop,3652,3652,1
-q134,5,step_by_step,2,238,stop,3652,3652,1
-q134,5,step_by_step,3,256,length,,3652,
-q134,5,step_by_step,4,256,length,,3652,
-q135,2,direct,1,2,stop,573,573,1
-q135,2,direct,2,2,stop,573,573,1
-q135,2,direct,3,1,stop,563,573,0
-q135,2,direct,4,2,stop,583,573,0
-q135,2,step_by_step,1,113,stop,573,573,1
-q135,2,step_by_step,2,118,stop,573,573,1
-q135,2,step_by_step,3,108,stop,573,573,1
-q135,2,step_by_step,4,177,stop,573,573,1
-q136,4,direct,1,3,stop,2590,2590,1
-q136,4,direct,2,3,stop,2591,2590,0
-q136,4,direct,3,3,stop,2592,2590,0
-q136,4,direct,4,3,stop,2590,2590,1
-q136,4,step_by_step,1,142,stop,2590,2590,1
-q136,4,step_by_step,2,233,stop,2590,2590,1
-q136,4,step_by_step,3,203,stop,2590,2590,1
-q136,4,step_by_step,4,230,stop,2590,2590,1
-q137,3,direct,1,2,stop,8083,8083,1
-q137,3,direct,2,1,stop,8083,8083,1
-q137,3,direct,3,4,stop,8083,8083,1
-q137,3,direct,4,3,stop,8083,8083,1
-q137,3,step_by_step,1,133,stop,8083,8083,1
-q137,3,step_by_step,2,141,stop,8083,8083,1
-q137,3,step_by_step,3,172,stop,8083,8083,1
-q137,3,step_by_step,4,161,stop,8083,8083,1
-q138,6,direct,1,2,stop,1411,1413,0
-q138,6,direct,2,4,stop,1411,1413,0
-q138,6,direct,3,1,stop,1411,1413,0
-q138,6,direct,4,4,stop,1411,1413,0
-q138,6,step_by_step,1,256,length,,1413,
-q138,6,step_by_step,2,235,stop,1413,1413,1
-q138,6,step_by_step,3,256,length,,1413,
-q138,6,step_by_step,4,256,length,,1413,
-q139,3,direct,1,1,stop,8208,8208,1
-q139,3,direct,2,1,stop,8208,8208,1
-q139,3,direct,3,4,stop,8208,8208,1
-q139,3,direct,4,1,stop,8208,8208,1
-q139,3,step_by_step,1,102,stop,8208,8208,1
-q139,3,step_by_step,2,154,stop,8208,8208,1
-q139,3,step_by_step,3,137,stop,8208,8208,1
-q139,3,step_by_step,4,143,stop,8208,8208,1
-q140,6,direct,1,1,stop,6373,6364,0
-q140,6,direct,2,2,stop,6363,6364,0
-q140,6,direct,3,4,stop,6366,6364,0
-q140,6,direct,4,2,stop,6366,6364,0
-q140,6,step_by_step,1,256,length,,6364,
-q140,6,step_by_step,2,256,length,,6364,
-q140,6,step_by_step,3,229,stop,6364,6364,1
-q140,6,step_by_step,4,256,length,,6364,
-q141,5,direct,1,2,stop,2164,2164,1
-q141,5,direct,2,3,stop,2173,2164,0
-q141,5,direct,3,3,stop,2164,2164,1
-q141,5,direct,4,2,stop,2164,2164,1
-q141,5,step_by_step,1,256,length,,2164,
-q141,5,step_by_step,2,245,stop,2164,2164,1
-q141,5,step_by_step,3,256,length,,2164,
-q141,5,step_by_step,4,256,length,,2164,
-q142,2,direct,1,2,stop,1342,1342,1
-q142,2,direct,2,1,stop,1340,1342,0
-q142,2,direct,3,3,stop,1342,1342,1
-q142,2,direct,4,4,stop,1342,1342,1
-q142,2,step_by_step,1,71,stop,1342,1342,1
-q142,2,step_by_step,2,68,stop,1342,1342,1
-q142,2,step_by_step,3,76,stop,1342,1342,1
-q142,2,step_by_step,4,83,stop,1352,1342,0
-q143,3,direct,1,4,stop,358,358,1
-q143,3,direct,2,1,stop,358,358,1
-q143,3,direct,3,4,stop,458,358,0
-q143,3,direct,4,1,stop,358,358,1
-q143,3,step_by_step,1,147,stop,358,358,1
-q143,3,step_by_step,2,117,stop,358,358,1
-q143,3,step_by_step,3,156,stop,368,358,0
-q143,3,step_by_step,4,212,stop,358,358,1
-q144,4,direct,1,2,stop,4540,4530,0
-q144,4,direct,2,4,stop,4530,4530,1
-q144,4,direct,3,2,stop,4530,4530,1
-q144,4,direct,4,2,stop,4521,4530,0
-q144,4,step_by_step,1,141,stop,4530,4530,1
-q144,4,step_by_step,2,152,stop,4530,4530,1
-q144,4,step_by_step,3,186,stop,4530,4530,1
-q144,4,step_by_step,4,145,stop,4530,4530,1
-q145,2,direct,1,1,stop,3186,3186,1
-q145,2,direct,2,3,stop,3186,3186,1
-q145,2,direct,3,1,stop,3186,3186,1
-q145,2,direct,4,4,stop,3186,3186,1
-q145,2,step_by_step,1,67,stop,3186,3186,1
-q145,2,step_by_step,2,80,stop,3186,3186,1
-q145,2,step_by_step,3,71,stop,3186,3186,1
-q145,2,step_by_step,4,82,stop,3186,3186,1
-q146,6,direct,1,4,stop,7462,7452,0
-q146,6,direct,2,4,stop,7443,7452,0
-q146,6,direct,3,1,stop,7451,7452,0
-q146,6,direct,4,4,stop,7552,7452,0
-q146,6,step_by_step,1,256,length,,7452,
-q146,6,step_by_step,2,252,stop,7452,7452,1
-q146,6,step_by_step,3,256,length,,7452,
-q146,6,step_by_step,4,256,length,,7452,
-q147,6,direct,1,3,stop,2605,2605,1
-q147,6,direct,2,3,stop,2595,2605,0
-q147,6,direct,3,1,stop,2605,2605,1
-q147,6,direct,4,4,stop,2604,2605,0
-q147,6,step_by_step,1,251,stop,2605,2605,1
-q147,6,step_by_step,2,256,length,,2605,
-q147,6,step_by_step,3,256,length,,2605,
-q147,6,step_by_step,4,220,stop,2605,2605,1
-q148,4,direct,1,3,stop,87,87,1
-q148,4,direct,2,2,stop,87,87,1
-q148,4,direct,3,1,stop,87,87,1
-q148,4,direct,4,1,stop,87,87,1
-q148,4,step_by_step,1,103,stop,87,87,1
-q148,4,step_by_step,2,158,stop,87,87,1
-q148,4,step_by_step,3,187,stop,87,87,1
-q148,4,step_by_step,4,179,stop,87,87,1
-q149,3,direct,1,3,stop,1512,1512,1
-q149,3,direct,2,1,stop,1512,1512,1
-q149,3,direct,3,2,stop,1512,1512,1
-q149,3,direct,4,2,stop,1512,1512,1
-q149,3,step_by_step,1,105,stop,1512,1512,1
-q149,3,step_by_step,2,141,stop,1512,1512,1
-q149,3,step_by_step,3,75,stop,1512,1512,1
-q149,3,step_by_step,4,116,stop,1512,1512,1
-q150,3,direct,1,4,stop,590,590,1
-q150,3,direct,2,2,stop,590,590,1
-q150,3,direct,3,1,stop,590,590,1
-q150,3,direct,4,1,stop,590,590,1
-q150,3,step_by_step,1,131,stop,590,590,1
-q150,3,step_by_step,2,106,stop,590,590,1
-q150,3,step_by_step,3,86,stop,690,590,0
-q150,3,step_by_step,4,178,stop,590,590,1
-q151,3,direct,1,4,stop,3576,3577,0
-q151,3,direct,2,4,stop,3577,3577,1
-q151,3,direct,3,3,stop,3567,3577,0
-q151,3,direct,4,4,stop,3577,3577,1
-q151,3,step_by_step,1,103,stop,3577,3577,1
-q151,3,step_by_step,2,100,stop,3577,3577,1
-q151,3,step_by_step,3,114,stop,3568,3577,0
-q151,3,step_by_step,4,186,stop,3578,3577,0
-q152,5,direct,1,2,stop,6765,6766,0
-q152,5,direct,2,3,stop,6766,6766,1
-q152,5,direct,3,1,stop,6768,6766,0
-q152,5,direct,4,3,stop,6866,6766,0
-q152,5,step_by_step,1,256,length,,6766,
-q152,5,step_by_step,2,253,stop,6766,6766,1
-q152,5,step_by_step,3,256,length,,6766,
-q152,5,step_by_step,4,256,length,,6766,
-q153,5,direct,1,1,stop,882,892,0
-q153,5,direct,2,4,stop,892,892,1
-q153,5,direct,3,4,stop,901,892,0
-q153,5,direct,4,4,stop,892,892,1
-q153,5,step_by_step,1,256,length,,892,
-q153,5,step_by_step,2,256,length,,892,
-q153,5,step_by_step,3,255,stop,892,892,1
-q153,5,step_by_step,4,256,length,,892,
-q154,2,direct,1,2,stop,3724,3722,0
-q154,2,direct,2,3,stop,3722,3722,1
-q154,2,direct,3,4,stop,3722,3722,1
-q154,2,direct,4,1,stop,3722,3722,1
-q154,2,step_by_step,1,79,stop,3722,3722,1
-q154,2,step_by_step,2,66,stop,3722,3722,1
-q154,2,step_by_step,3,86,stop,3722,3722,1
-q154,2,step_by_step,4,98,stop,3722,3722,1
-q155,2,direct,1,1,stop,1347,1347,1
-q155,2,direct,2,3,stop,1347,1347,1
-q155,2,direct,3,2,stop,1347,1347,1
-q155,2,direct,4,2,stop,1347,1347,1
-q155,2,step_by_step,1,120,stop,1347,1347,1
-q155,2,step_by_step,2,132,stop,1347,1347,1
-q155,2,step_by_step,3,135,stop,1347,1347,1
-q155,2,step_by_step,4,91,stop,1347,1347,1
-q156,3,direct,1,2,stop,2184,2184,1
-q156,3,direct,2,4,stop,2184,2184,1
-q156,3,direct,3,2,stop,2184,2184,1
-q156,3,direct,4,3,stop,2184,2184,1
-q156,3,step_by_step,1,155,stop,2186,2184,0
-q156,3,step_by_step,2,216,stop,2184,2184,1
-q156,3,step_by_step,3,137,stop,2184,2184,1
-q156,3,step_by_step,4,149,stop,2184,2184,1
-q157,2,direct,1,4,stop,1227,1227,1
-q157,2,direct,2,1,stop,1227,1227,1
-q157,2,direct,3,2,stop,1227,1227,1
-q157,2,direct,4,2,stop,1227,1227,1
-q157,2,step_by_step,1,142,stop,1227,1227,1
-q157,2,step_by_step,2,97,stop,1237,1227,0
-q157,2,step_by_step,3,80,stop,1227,1227,1
-q157,2,step_by_step,4,107,stop,1227,1227,1
-q158,4,direct,1,3,stop,2154,2154,1
-q158,4,direct,2,3,stop,2154,2154,1
-q158,4,direct,3,2,stop,2254,2154,0
-q158,4,direct,4,1,stop,2154,2154,1
-q158,4,step_by_step,1,256,length,,2154,
-q158,4,step_by_step,2,248,stop,2155,2154,0
-q158,4,step_by_step,3,256,length,,2154,
-q158,4,step_by_step,4,191,stop,2154,2154,1
-q159,4,direct,1,2,stop,3418,3417,0
-q159,4,direct,2,2,stop,3407,3417,0
-q159,4,direct,3,4,stop,3416,3417,0
-q159,4,direct,4,1,stop,3415,3417,0
-q159,4,step_by_step,1,205,stop,3415,3417,0
-q159,4,step_by_step,2,241,stop,3417,3417,1
-q159,4,step_by_step,3,187,stop,3407,3417,0
-q159,4,step_by_step,4,204,stop,3417,3417,1
-q160,5,direct,1,1,stop,1225,1225,1
-q160,5,direct,2,1,stop,1223,1225,0
-q160,5,direct,3,2,stop,1225,1225,1
-q160,5,direct,4,2,stop,1225,1225,1
-q160,5,step_by_step,1,256,length,,1225,
-q160,5,step_by_step,2,243,stop,1225,1225,1
-q160,5,step_by_step,3,221,stop,1225,1225,1
-q160,5,step_by_step,4,256,length,,1225,
+item,steps,prompt,sample,tokens,response_end,gold
+q001,3,direct,1,3,5038,5028
+q001,3,direct,2,3,5028,5028
+q001,3,direct,3,3,5027,5028
+q001,3,direct,4,1,5028,5028
+q001,3,step_by_step,1,110,": Next, 39 * 8 = 312 crates. Step 3: That leaves 4522 + 504 = 5026. Answer: 5026",5028
+q001,3,step_by_step,2,141,8 * 6 = 168 litres. Step 3: Altogether that makes 5187 - 59 = 5128. Answer: 5128,5028
+q001,3,step_by_step,3,116, 2: Then 39 * 5 = 195 cups. Step 3: That leaves 1773 + 3254 = 5027. Answer: 5027,5028
+q001,3,step_by_step,4,78, * 7 = 105 boxes. Step 3: Altogether that makes 2851 + 2177 = 5028. Answer: 5028,5028
+q002,5,direct,1,2,6467,6458
+q002,5,direct,2,2,6458,6458
+q002,5,direct,3,3,6558,6458
+q002,5,direct,4,3,6458,6458
+q002,5,step_by_step,1,224,5 * 3 = 75 boxes. Step 5: Altogether that makes 4644 + 1814 = 6458. Answer: 6458,6458
+q002,5,step_by_step,2,205,Then 38 * 2 = 76 boxes. Step 5: So the total is 3722 + 2736 = 6458. Answer: 6458,6458
+q002,5,step_by_step,3,240,": Next, 34 * 5 = 170 boxes. Step 5: That leaves 3378 + 3080 = 6458. Answer: 6458",6458
+q002,5,step_by_step,4,227,10 = 580 tickets. Step 5: So the final amount is 6676 - 218 = 6458. Answer: 6458,6458
+q003,2,direct,1,3,6330,6330
+q003,2,direct,2,4,6330,6330
+q003,2,direct,3,3,6330,6330
+q003,2,direct,4,1,6330,6330
+q003,2,step_by_step,1,84, * 8 = 104 metres. Step 2: Altogether that makes 6648 - 318 = 6330. Answer: 6330,6330
+q003,2,step_by_step,2,120," First, 20 * 8 = 160 crates. Step 2: That leaves 5840 + 490 = 6330. Answer: 6330",6330
+q003,2,step_by_step,3,60," 1: First, 11 * 9 = 99 cups. Step 2: Which gives 5781 + 549 = 6330. Answer: 6330",6330
+q003,2,step_by_step,4,82,* 6 = 126 litres. Step 2: So the final amount is 6614 - 284 = 6330. Answer: 6330,6330
+q004,4,direct,1,2,2740,2740
+q004,4,direct,2,2,2740,2740
+q004,4,direct,3,4,2740,2740
+q004,4,direct,4,1,2740,2740
+q004,4,step_by_step,1,236,"xt, 22 * 11 = 242 coins. Step 4: So the total is 2989 - 249 = 2740. Answer: 2740",2740
+q004,4,step_by_step,2,202,", 12 * 11 = 132 tickets. Step 4: So the total is 2284 + 456 = 2740. Answer: 2740",2740
+q004,4,step_by_step,3,231,"Next, 9 * 5 = 45 litres. Step 4: So the total is 2857 - 117 = 2740. Answer: 2740",2740
+q004,4,step_by_step,4,188," Next, 23 * 3 = 69 cups. Step 4: So the total is 1956 + 784 = 2740. Answer: 2740",2740
+q005,4,direct,1,4,6582,6582
+q005,4,direct,2,4,6582,6582
+q005,4,direct,3,4,6582,6582
+q005,4,direct,4,2,6582,6582
+q005,4,step_by_step,1,214,p 3: Then 5 * 6 = 30 coins. Step 4: That leaves 4358 + 2224 = 6582. Answer: 6582,6582
+q005,4,step_by_step,2,113, 3: Then 11 * 6 = 66 metres. Step 4: Which gives 6751 - 169 = 6582. Answer: 6582,6582
+q005,4,step_by_step,3,132,"r that, 15 * 6 = 90 crates. Step 4: That leaves 2865 + 3717 = 6582. Answer: 6582",6582
+q005,4,step_by_step,4,174,tep 3: Now 19 * 3 = 57 boxes. Step 4: That leaves 6594 - 12 = 6582. Answer: 6582,6582
+q006,5,direct,1,4,4426,4426
+q006,5,direct,2,4,4426,4426
+q006,5,direct,3,1,4416,4426
+q006,5,direct,4,4,4436,4426
+q006,5,step_by_step,1,256,"= 70 seats. Step 3: After that, 10 * 4 = 40 cups. Step 4: Next, 29 * 9 = 261 cup",4426
+q006,5,step_by_step,2,256,1 * 9 = 459 coins. Step 4: Then 37 * 9 = 333 litres. Step 5: Then 54 * 2 = 108 c,4426
+q006,5,step_by_step,3,256,"First, 9 * 12 = 108 litres. Step 2: Next, 16 * 5 = 80 metres. Step 3: Next, 17 *",4426
+q006,5,step_by_step,4,241,n 6 * 6 = 36 cups. Step 5: So the final amount is 4517 - 91 = 4426. Answer: 4426,4426
+q007,6,direct,1,3,7159,7150
+q007,6,direct,2,4,7150,7150
+q007,6,direct,3,1,7159,7150
+q007,6,direct,4,4,7141,7150
+q007,6,step_by_step,1,232,: Then 39 * 4 = 156 litres. Step 6: Which gives 3523 + 3627 = 7150. Answer: 7150,7150
+q007,6,step_by_step,2,256," 29 * 5 = 145 minutes. Step 5: After that, 21 * 9 = 189 tickets. Step 6: Next, 3",7150
+q007,6,step_by_step,3,199,": Next, 31 * 6 = 186 litres. Step 6: That leaves 7469 - 319 = 7150. Answer: 7150",7150
+q007,6,step_by_step,4,256,": Now 44 * 12 = 528 seats. Step 5: After that, 55 * 5 = 275 coins. Step 6: Then ",7150
+q008,4,direct,1,4,554,554
+q008,4,direct,2,2,554,554
+q008,4,direct,3,2,554,554
+q008,4,direct,4,4,545,554
+q008,4,step_by_step,1,113,"ter that, 14 * 12 = 168 litres. Step 4: That leaves 904 - 350 = 554. Answer: 554",554
+q008,4,step_by_step,2,167,ep 3: Now 34 * 6 = 204 tickets. Step 4: Which gives 391 + 163 = 554. Answer: 554,554
+q008,4,step_by_step,3,127,tep 3: Then 24 * 5 = 120 seats. Step 4: That leaves 383 + 171 = 554. Answer: 554,554
+q008,4,step_by_step,4,201,p 3: Then 4 * 12 = 48 seats. Step 4: So the total is 645 - 91 = 554. Answer: 554,554
+q009,6,direct,1,2,6275,6275
+q009,6,direct,2,1,6275,6275
+q009,6,direct,3,1,6275,6275
+q009,6,direct,4,3,6375,6275
+q009,6,step_by_step,1,246,ow 24 * 3 = 72 tickets. Step 6: So the total is 2193 + 4082 = 6275. Answer: 6275,6275
+q009,6,step_by_step,2,256,"xt, 28 * 4 = 112 boxes. Step 5: Then 51 * 12 = 612 tickets. Step 6: Now 37 * 6 =",6275
+q009,6,step_by_step,3,224,"t, 47 * 6 = 282 litres. Step 6: So the total is 3525 + 2750 = 6275. Answer: 6275",6275
+q009,6,step_by_step,4,200,* 11 = 374 crates. Step 6: Altogether that makes 6390 - 115 = 6275. Answer: 6275,6275
+q010,4,direct,1,2,5144,5144
+q010,4,direct,2,4,5143,5144
+q010,4,direct,3,4,5153,5144
+q010,4,direct,4,2,5144,5144
+q010,4,step_by_step,1,203, * 3 = 105 cups. Step 4: So the final amount is 2542 + 2602 = 5144. Answer: 5144,5144
+q010,4,step_by_step,2,155, Now 29 * 4 = 116 boxes. Step 4: So the total is 5535 - 391 = 5144. Answer: 5144,5144
+q010,4,step_by_step,3,256,": First, 51 * 3 = 153 litres. Step 2: Next, 17 * 11 = 187 crates. Step 3: Next, ",5144
+q010,4,step_by_step,4,173,p 3: Then 35 * 7 = 245 cups. Step 4: That leaves 4175 + 967 = 5142. Answer: 5142,5144
+q011,2,direct,1,1,5142,5142
+q011,2,direct,2,4,5142,5142
+q011,2,direct,3,2,5142,5142
+q011,2,direct,4,4,5142,5142
+q011,2,step_by_step,1,135, 6 = 138 minutes. Step 2: So the final amount is 4943 + 199 = 5142. Answer: 5142,5142
+q011,2,step_by_step,2,130, * 11 = 66 seats. Step 2: Altogether that makes 3225 + 1917 = 5142. Answer: 5142,5142
+q011,2,step_by_step,3,125,"irst, 59 * 12 = 708 tickets. Step 2: Which gives 5438 - 296 = 5142. Answer: 5142",5142
+q011,2,step_by_step,4,135,"rst, 47 * 2 = 94 pages. Step 2: So the total is 2217 + 2925 = 5142. Answer: 5142",5142
+q012,4,direct,1,4,3678,3678
+q012,4,direct,2,1,3678,3678
+q012,4,direct,3,2,3678,3678
+q012,4,direct,4,1,3678,3678
+q012,4,step_by_step,1,256," = 235 seats. Step 3: After that, 33 * 5 = 165 boxes. Step 4: After that, 16 * 3",3678
+q012,4,step_by_step,2,189, 8 * 5 = 40 cups. Step 4: Altogether that makes 2129 + 1549 = 3678. Answer: 3678,3678
+q012,4,step_by_step,3,209, * 11 = 594 coins. Step 4: Altogether that makes 3058 + 629 = 3687. Answer: 3687,3678
+q012,4,step_by_step,4,220,* 8 = 200 crates. Step 4: So the final amount is 3811 - 133 = 3678. Answer: 3678,3678
+q013,4,direct,1,2,2738,2728
+q013,4,direct,2,1,2728,2728
+q013,4,direct,3,3,2728,2728
+q013,4,direct,4,4,2728,2728
+q013,4,step_by_step,1,141, 3: Then 4 * 7 = 28 tickets. Step 4: Which gives 2612 + 116 = 2728. Answer: 2728,2728
+q013,4,step_by_step,2,246,ow 38 * 11 = 418 crates. Step 4: So the total is 2911 - 183 = 2728. Answer: 2728,2728
+q013,4,step_by_step,3,256,"that, 17 * 2 = 34 pages. Step 3: Then 52 * 3 = 156 litres. Step 4: After that, 5",2728
+q013,4,step_by_step,4,245,hen 54 * 6 = 324 pages. Step 4: So the total is 1548 + 1170 = 2718. Answer: 2718,2728
+q014,5,direct,1,2,601,601
+q014,5,direct,2,1,591,601
+q014,5,direct,3,2,601,601
+q014,5,direct,4,3,591,601
+q014,5,step_by_step,1,169, 38 * 10 = 380 cups. Step 5: So the final amount is 706 - 105 = 601. Answer: 601,601
+q014,5,step_by_step,2,157,27 * 8 = 216 tickets. Step 5: Altogether that makes 241 + 358 = 599. Answer: 599,601
+q014,5,step_by_step,3,171, 10 * 8 = 80 minutes. Step 5: Altogether that makes 732 - 131 = 601. Answer: 601,601
+q014,5,step_by_step,4,256,"3 = 69 boxes. Step 4: After that, 5 * 10 = 50 minutes. Step 5: Next, 30 * 8 = 24",601
+q015,2,direct,1,4,4780,4780
+q015,2,direct,2,1,4780,4780
+q015,2,direct,3,3,4780,4780
+q015,2,direct,4,1,4780,4780
+q015,2,step_by_step,1,125,"First, 4 * 10 = 40 minutes. Step 2: That leaves 2384 + 2396 = 4780. Answer: 4780",4780
+q015,2,step_by_step,2,77,"First, 27 * 7 = 189 crates. Step 2: That leaves 3013 + 1767 = 4780. Answer: 4780",4780
+q015,2,step_by_step,3,88, 8 = 112 tickets. Step 2: Altogether that makes 2858 + 1922 = 4780. Answer: 4780,4780
+q015,2,step_by_step,4,44, * 2 = 34 boxes. Step 2: So the final amount is 3430 + 1350 = 4780. Answer: 4780,4780
+q016,4,direct,1,4,1629,1639
+q016,4,direct,2,3,1639,1639
+q016,4,direct,3,1,1639,1639
+q016,4,direct,4,3,1630,1639
+q016,4,step_by_step,1,180,"t, 37 * 11 = 407 metres. Step 4: So the total is 1312 + 327 = 1639. Answer: 1639",1639
+q016,4,step_by_step,2,210,0 * 7 = 210 litres. Step 4: Altogether that makes 708 + 931 = 1639. Answer: 1639,1639
+q016,4,step_by_step,3,186,3: Then 19 * 8 = 152 litres. Step 4: Which gives 1091 + 547 = 1638. Answer: 1638,1639
+q016,4,step_by_step,4,201,"xt, 40 * 6 = 240 metres. Step 4: So the total is 1383 + 256 = 1639. Answer: 1639",1639
+q017,6,direct,1,2,3574,3574
+q017,6,direct,2,3,3565,3574
+q017,6,direct,3,4,3574,3574
+q017,6,direct,4,3,3574,3574
+q017,6,step_by_step,1,213,"er that, 51 * 4 = 204 seats. Step 6: Which gives 3248 + 326 = 3574. Answer: 3574",3574
+q017,6,step_by_step,2,256," minutes. Step 3: After that, 7 * 7 = 49 litres. Step 4: After that, 42 * 7 = 29",3574
+q017,6,step_by_step,3,256,", 21 * 11 = 231 metres. Step 3: Then 24 * 11 = 264 pages. Step 4: Then 16 * 4 = ",3574
+q017,6,step_by_step,4,256, 3: Now 24 * 12 = 288 coins. Step 4: Now 42 * 9 = 378 metres. Step 5: Now 53 * 9,3574
+q018,6,direct,1,4,2372,2374
+q018,6,direct,2,4,2474,2374
+q018,6,direct,3,3,2374,2374
+q018,6,direct,4,3,2375,2374
+q018,6,step_by_step,1,256,"ext, 50 * 12 = 600 crates. Step 3: After that, 48 * 6 = 288 seats. Step 4: Now 1",2374
+q018,6,step_by_step,2,212,w 49 * 12 = 588 minutes. Step 6: So the total is 952 + 1422 = 2374. Answer: 2374,2374
+q018,6,step_by_step,3,256, 4: Now 9 * 2 = 18 boxes. Step 5: Then 15 * 8 = 120 minutes. Step 6: Then 22 * 5,2374
+q018,6,step_by_step,4,256,"1 * 10 = 510 litres. Step 4: Next, 36 * 7 = 252 boxes. Step 5: Next, 24 * 12 = 2",2374
+q019,5,direct,1,2,1896,1906
+q019,5,direct,2,2,1916,1906
+q019,5,direct,3,1,1908,1906
+q019,5,direct,4,1,1907,1906
+q019,5,step_by_step,1,256,"tep 2: Next, 30 * 12 = 360 litres. Step 3: Now 41 * 7 = 287 crates. Step 4: Then",1906
+q019,5,step_by_step,2,256," 2: Next, 44 * 9 = 396 minutes. Step 3: Then 20 * 10 = 200 litres. Step 4: Next,",1906
+q019,5,step_by_step,3,256,"2 * 3 = 156 metres. Step 3: After that, 48 * 7 = 336 minutes. Step 4: Next, 9 * ",1906
+q019,5,step_by_step,4,185,* 11 = 462 pages. Step 5: So the final amount is 719 + 1187 = 1906. Answer: 1906,1906
+q020,5,direct,1,3,4414,4414
+q020,5,direct,2,4,4414,4414
+q020,5,direct,3,4,4412,4414
+q020,5,direct,4,3,4415,4414
+q020,5,step_by_step,1,256," that, 16 * 4 = 64 pages. Step 3: Then 58 * 3 = 174 coins. Step 4: Now 47 * 8 = ",4414
+q020,5,step_by_step,2,221,Now 24 * 11 = 264 seats. Step 5: So the total is 4717 - 303 = 4414. Answer: 4414,4414
+q020,5,step_by_step,3,256," First, 57 * 7 = 399 crates. Step 2: Now 13 * 12 = 156 metres. Step 3: Now 4 * 9",4414
+q020,5,step_by_step,4,256," = 287 seats. Step 4: Next, 46 * 9 = 414 tickets. Step 5: Now 53 * 6 = 318 minut",4414
+q021,4,direct,1,3,1823,1823
+q021,4,direct,2,3,1823,1823
+q021,4,direct,3,1,1823,1823
+q021,4,direct,4,2,1823,1823
+q021,4,step_by_step,1,243," Next, 7 * 7 = 49 coins. Step 4: So the total is 2128 - 305 = 1823. Answer: 1823",1823
+q021,4,step_by_step,2,236,"3: Next, 46 * 7 = 322 boxes. Step 4: That leaves 1631 + 192 = 1823. Answer: 1823",1823
+q021,4,step_by_step,3,249,"3: Next, 50 * 8 = 400 seats. Step 4: Which gives 2109 - 286 = 1823. Answer: 1823",1823
+q021,4,step_by_step,4,242,5 * 9 = 225 coins. Step 4: So the final amount is 1916 - 93 = 1823. Answer: 1823,1823
+q022,6,direct,1,2,4921,4921
+q022,6,direct,2,4,4920,4921
+q022,6,direct,3,1,4919,4921
+q022,6,direct,4,4,4919,4921
+q022,6,step_by_step,1,256,"hen 23 * 12 = 276 minutes. Step 3: Next, 39 * 8 = 312 metres. Step 4: Next, 6 * ",4921
+q022,6,step_by_step,2,239,ow 41 * 12 = 492 boxes. Step 6: So the total is 3380 + 1551 = 4931. Answer: 4931,4921
+q022,6,step_by_step,3,241,Then 52 * 2 = 104 boxes. Step 6: So the total is 4511 + 409 = 4920. Answer: 4920,4921
+q022,6,step_by_step,4,198,"xt, 54 * 9 = 486 seats. Step 6: So the total is 2535 + 2386 = 4921. Answer: 4921",4921
+q023,3,direct,1,4,2602,2602
+q023,3,direct,2,4,2602,2602
+q023,3,direct,3,4,2602,2602
+q023,3,direct,4,4,2602,2602
+q023,3,step_by_step,1,118, * 3 = 36 crates. Step 3: So the final amount is 1709 + 893 = 2602. Answer: 2602,2602
+q023,3,step_by_step,2,172,en 35 * 11 = 385 litres. Step 3: So the total is 992 + 1610 = 2602. Answer: 2602,2602
+q023,3,step_by_step,3,146,6 * 3 = 48 metres. Step 3: Altogether that makes 2410 + 192 = 2602. Answer: 2602,2602
+q023,3,step_by_step,4,136, * 6 = 264 metres. Step 3: Altogether that makes 2988 - 386 = 2602. Answer: 2602,2602
+q024,3,direct,1,4,253,253
+q024,3,direct,2,4,253,253
+q024,3,direct,3,4,254,253
+q024,3,direct,4,2,253,253
+q024,3,step_by_step,1,120,Step 2: Then 10 * 8 = 80 seats. Step 3: That leaves 137 + 116 = 253. Answer: 253,253
+q024,3,step_by_step,2,141, 2: Then 54 * 8 = 432 seats. Step 3: So the total is 281 - 28 = 253. Answer: 253,253
+q024,3,step_by_step,3,120,Step 2: Now 36 * 5 = 180 pages. Step 3: That leaves 104 + 149 = 253. Answer: 253,253
+q024,3,step_by_step,4,150,p 2: Then 18 * 5 = 90 cups. Step 3: So the total is 555 - 302 = 253. Answer: 253,253
+q025,3,direct,1,3,7337,7337
+q025,3,direct,2,3,7337,7337
+q025,3,direct,3,3,7337,7337
+q025,3,direct,4,4,7337,7337
+q025,3,step_by_step,1,174,"at, 59 * 4 = 236 coins. Step 3: So the total is 5301 + 2045 = 7346. Answer: 7346",7337
+q025,3,step_by_step,2,148,", 43 * 11 = 473 minutes. Step 3: So the total is 7531 - 194 = 7337. Answer: 7337",7337
+q025,3,step_by_step,3,120,* 6 = 132 coins. Step 3: So the final amount is 3562 + 3775 = 7337. Answer: 7337,7337
+q025,3,step_by_step,4,117,* 3 = 60 tickets. Step 3: So the final amount is 7577 - 240 = 7337. Answer: 7337,7337
+q026,4,direct,1,2,3304,3294
+q026,4,direct,2,1,3294,3294
+q026,4,direct,3,1,3296,3294
+q026,4,direct,4,4,3294,3294
+q026,4,step_by_step,1,221,3: Now 48 * 5 = 240 minutes. Step 4: Which gives 2955 + 339 = 3294. Answer: 3294,3294
+q026,4,step_by_step,2,143,35 * 2 = 70 seats. Step 4: So the final amount is 3312 - 18 = 3294. Answer: 3294,3294
+q026,4,step_by_step,3,205, 3: Now 14 * 4 = 56 pages. Step 4: So the total is 3299 - 5 = 3294. Answer: 3294,3294
+q026,4,step_by_step,4,185,": Next, 38 * 9 = 342 crates. Step 4: That leaves 3432 - 138 = 3294. Answer: 3294",3294
+q027,3,direct,1,3,805,805
+q027,3,direct,2,1,807,805
+q027,3,direct,3,4,803,805
+q027,3,direct,4,2,805,805
+q027,3,step_by_step,1,134,ep 2: Then 38 * 6 = 228 boxes. Step 3: That leaves 1005 - 200 = 805. Answer: 805,805
+q027,3,step_by_step,2,144,ep 2: Now 3 * 9 = 27 boxes. Step 3: So the total is 597 + 208 = 805. Answer: 805,805
+q027,3,step_by_step,3,189,Step 2: Now 28 * 8 = 224 pages. Step 3: Which gives 294 + 511 = 805. Answer: 805,805
+q027,3,step_by_step,4,155,"t, 20 * 5 = 100 cups. Step 3: So the final amount is 715 + 90 = 805. Answer: 805",805
+q028,5,direct,1,1,759,659
+q028,5,direct,2,4,649,659
+q028,5,direct,3,2,659,659
+q028,5,direct,4,3,658,659
+q028,5,step_by_step,1,256,. Step 2: Then 59 * 8 = 472 cups. Step 3: Then 38 * 7 = 266 cups. Step 4: Now 38,659
+q028,5,step_by_step,2,218,ep 4: Then 39 * 7 = 273 metres. Step 5: Which gives 803 - 154 = 649. Answer: 649,659
+q028,5,step_by_step,3,217,"fter that, 58 * 8 = 464 metres. Step 5: That leaves 546 + 113 = 659. Answer: 659",659
+q028,5,step_by_step,4,213,"ter that, 42 * 4 = 168 minutes. Step 5: Which gives 928 - 260 = 668. Answer: 668",659
+q029,3,direct,1,3,4451,4451
+q029,3,direct,2,4,4451,4451
+q029,3,direct,3,2,4451,4451
+q029,3,direct,4,2,4461,4451
+q029,3,step_by_step,1,115,en 35 * 12 = 420 litres. Step 3: So the total is 4665 - 214 = 4451. Answer: 4451,4451
+q029,3,step_by_step,2,157,"r that, 59 * 9 = 531 seats. Step 3: Which gives 1932 + 2519 = 4451. Answer: 4451",4451
+q029,3,step_by_step,3,78,"ter that, 6 * 3 = 18 crates. Step 3: That leaves 4730 - 279 = 4451. Answer: 4451",4451
+q029,3,step_by_step,4,129,11 = 605 litres. Step 3: So the final amount is 3047 + 1404 = 4451. Answer: 4451,4451
+q030,5,direct,1,3,6230,6240
+q030,5,direct,2,1,6230,6240
+q030,5,direct,3,4,6249,6240
+q030,5,direct,4,4,6240,6240
+q030,5,step_by_step,1,256,"Then 12 * 12 = 144 crates. Step 3: After that, 27 * 5 = 135 coins. Step 4: After",6240
+q030,5,step_by_step,2,256, = 224 minutes. Step 3: Now 49 * 12 = 588 tickets. Step 4: Then 4 * 7 = 28 litre,6240
+q030,5,step_by_step,3,247," Next, 16 * 12 = 192 coins. Step 5: Which gives 4869 + 1361 = 6230. Answer: 6230",6240
+q030,5,step_by_step,4,256,"ter that, 3 * 9 = 27 boxes. Step 4: Next, 26 * 5 = 130 metres. Step 5: Then 11 *",6240
+q031,2,direct,1,2,4944,4944
+q031,2,direct,2,2,4944,4944
+q031,2,direct,3,3,4944,4944
+q031,2,direct,4,3,4944,4944
+q031,2,step_by_step,1,59,"rst, 11 * 5 = 55 pages. Step 2: So the total is 2218 + 2726 = 4944. Answer: 4944",4944
+q031,2,step_by_step,2,90,* 10 = 110 metres. Step 2: Altogether that makes 5198 - 254 = 4944. Answer: 4944,4944
+q031,2,step_by_step,3,61,"rst, 51 * 5 = 255 metres. Step 2: So the total is 4862 + 82 = 4944. Answer: 4944",4944
+q031,2,step_by_step,4,148,* 6 = 120 crates. Step 2: Altogether that makes 3255 + 1689 = 4944. Answer: 4944,4944
+q032,3,direct,1,3,1384,1384
+q032,3,direct,2,3,1384,1384
+q032,3,direct,3,2,1384,1384
+q032,3,direct,4,1,1384,1384
+q032,3,step_by_step,1,126,7 * 4 = 108 coins. Step 3: Altogether that makes 1643 - 259 = 1384. Answer: 1384,1384
+q032,3,step_by_step,2,179, * 7 = 196 boxes. Step 3: So the final amount is 1538 - 154 = 1384. Answer: 1384,1384
+q032,3,step_by_step,3,111," Next, 15 * 7 = 105 cups. Step 3: So the total is 897 + 487 = 1384. Answer: 1384",1384
+q032,3,step_by_step,4,102,* 4 = 148 minutes. Step 3: Altogether that makes 1508 - 124 = 1384. Answer: 1384,1384
+q033,5,direct,1,4,758,758
+q033,5,direct,2,3,758,758
+q033,5,direct,3,1,758,758
+q033,5,direct,4,1,756,758
+q033,5,step_by_step,1,256,": First, 8 * 4 = 32 pages. Step 2: Now 45 * 12 = 540 crates. Step 3: Next, 47 * ",758
+q033,5,step_by_step,2,256," 4 = 36 litres. Step 4: After that, 17 * 7 = 119 crates. Step 5: Next, 12 * 10 =",758
+q033,5,step_by_step,3,192,ep 4: Then 58 * 3 = 174 litres. Step 5: Which gives 322 + 436 = 758. Answer: 758,758
+q033,5,step_by_step,4,256,"0 * 7 = 140 crates. Step 2: Then 55 * 3 = 165 tickets. Step 3: After that, 57 * ",758
+q034,2,direct,1,4,8303,8303
+q034,2,direct,2,2,8303,8303
+q034,2,direct,3,4,8303,8303
+q034,2,direct,4,1,8294,8303
+q034,2,step_by_step,1,86,"st, 6 * 6 = 36 tickets. Step 2: So the total is 6947 + 1356 = 8303. Answer: 8303",8303
+q034,2,step_by_step,2,114, 8 = 312 minutes. Step 2: Altogether that makes 6146 + 2157 = 8303. Answer: 8303,8303
+q034,2,step_by_step,3,132,"1: First, 24 * 4 = 96 coins. Step 2: That leaves 7479 + 824 = 8303. Answer: 8303",8303
+q034,2,step_by_step,4,103," 1: First, 8 * 2 = 16 seats. Step 2: That leaves 8426 - 123 = 8303. Answer: 8303",8303
+q035,2,direct,1,2,6562,6562
+q035,2,direct,2,4,6562,6562
+q035,2,direct,3,3,6562,6562
+q035,2,direct,4,4,6562,6562
+q035,2,step_by_step,1,61," First, 19 * 7 = 133 seats. Step 2: Which gives 2423 + 4139 = 6562. Answer: 6562",6562
+q035,2,step_by_step,2,60,* 7 = 252 crates. Step 2: So the final amount is 6443 + 119 = 6562. Answer: 6562,6562
+q035,2,step_by_step,3,80,"st, 39 * 7 = 273 metres. Step 2: So the total is 6747 - 185 = 6562. Answer: 6562",6562
+q035,2,step_by_step,4,65,"irst, 19 * 2 = 38 cups. Step 2: So the total is 5215 + 1347 = 6562. Answer: 6562",6562
+q036,5,direct,1,4,792,794
+q036,5,direct,2,3,796,794
+q036,5,direct,3,2,804,794
+q036,5,direct,4,4,794,794
+q036,5,step_by_step,1,256,"Step 2: Now 20 * 10 = 200 pages. Step 3: Next, 55 * 7 = 385 coins. Step 4: Next,",794
+q036,5,step_by_step,2,256,15 * 4 = 60 minutes. Step 4: Now 28 * 2 = 56 tickets. Step 5: Now 48 * 4 = 192 m,794
+q036,5,step_by_step,3,217,w 52 * 5 = 260 pages. Step 5: Altogether that makes 273 + 521 = 794. Answer: 794,794
+q036,5,step_by_step,4,197,"r that, 50 * 6 = 300 seats. Step 5: So the total is 505 + 289 = 794. Answer: 794",794
+q037,2,direct,1,3,6637,6637
+q037,2,direct,2,3,6637,6637
+q037,2,direct,3,3,6637,6637
+q037,2,direct,4,2,6637,6637
+q037,2,step_by_step,1,108,"rst, 37 * 4 = 148 cups. Step 2: So the total is 2261 + 4376 = 6637. Answer: 6637",6637
+q037,2,step_by_step,2,76, * 11 = 407 boxes. Step 2: Altogether that makes 7030 - 393 = 6637. Answer: 6637,6637
+q037,2,step_by_step,3,87," First, 33 * 11 = 363 boxes. Step 2: Which gives 6314 + 323 = 6637. Answer: 6637",6637
+q037,2,step_by_step,4,91, * 3 = 144 coins. Step 2: Altogether that makes 3545 + 3091 = 6636. Answer: 6636,6637
+q038,5,direct,1,4,870,870
+q038,5,direct,2,3,870,870
+q038,5,direct,3,4,868,870
+q038,5,direct,4,4,879,870
+q038,5,step_by_step,1,186,"fter that, 50 * 11 = 550 boxes. Step 5: Which gives 477 + 393 = 870. Answer: 870",870
+q038,5,step_by_step,2,230, 41 * 6 = 246 minutes. Step 5: Altogether that makes 832 + 38 = 870. Answer: 870,870
+q038,5,step_by_step,3,256,"45 * 8 = 360 pages. Step 4: Now 5 * 12 = 60 tickets. Step 5: Next, 56 * 2 = 112 ",870
+q038,5,step_by_step,4,195,"p 4: Next, 44 * 9 = 396 boxes. Step 5: Which gives 1170 - 300 = 870. Answer: 870",870
+q039,6,direct,1,1,1621,1621
+q039,6,direct,2,1,1621,1621
+q039,6,direct,3,3,1621,1621
+q039,6,direct,4,3,1621,1621
+q039,6,step_by_step,1,256,Now 25 * 3 = 75 crates. Step 4: Now 4 * 12 = 48 boxes. Step 5: Then 44 * 8 = 352,1621
+q039,6,step_by_step,2,256,"tep 3: After that, 7 * 5 = 35 boxes. Step 4: Now 10 * 9 = 90 pages. Step 5: Then",1621
+q039,6,step_by_step,3,207," 5: Next, 58 * 2 = 116 boxes. Step 6: That leaves 1714 - 93 = 1621. Answer: 1621",1621
+q039,6,step_by_step,4,256,Step 2: Then 44 * 10 = 440 coins. Step 3: Now 55 * 11 = 605 crates. Step 4: Afte,1621
+q040,5,direct,1,3,2982,2992
+q040,5,direct,2,2,2992,2992
+q040,5,direct,3,1,3001,2992
+q040,5,direct,4,2,2992,2992
+q040,5,step_by_step,1,200,ep 4: Now 44 * 6 = 264 cups. Step 5: That leaves 3148 - 166 = 2982. Answer: 2982,2992
+q040,5,step_by_step,2,256,"3: Then 54 * 3 = 162 seats. Step 4: Next, 48 * 11 = 528 minutes. Step 5: Now 41 ",2992
+q040,5,step_by_step,3,256,"3: Now 58 * 12 = 696 boxes. Step 4: Next, 39 * 3 = 117 coins. Step 5: Then 23 * ",2992
+q040,5,step_by_step,4,256,"10 = 150 crates. Step 4: After that, 27 * 11 = 297 seats. Step 5: After that, 54",2992
+q041,4,direct,1,2,6609,6609
+q041,4,direct,2,2,6609,6609
+q041,4,direct,3,1,6599,6609
+q041,4,direct,4,3,6609,6609
+q041,4,step_by_step,1,204,"3: Next, 58 * 2 = 116 boxes. Step 4: That leaves 5963 + 646 = 6609. Answer: 6609",6609
+q041,4,step_by_step,2,154, 3: Now 33 * 5 = 165 crates. Step 4: Which gives 5872 + 737 = 6609. Answer: 6609,6609
+q041,4,step_by_step,3,192,* 7 = 315 metres. Step 4: So the final amount is 6360 + 249 = 6609. Answer: 6609,6609
+q041,4,step_by_step,4,254,3: Then 7 * 12 = 84 crates. Step 4: That leaves 4083 + 2526 = 6609. Answer: 6609,6609
+q042,6,direct,1,4,7329,7329
+q042,6,direct,2,3,7329,7329
+q042,6,direct,3,3,7331,7329
+q042,6,direct,4,3,7330,7329
+q042,6,step_by_step,1,232,Then 9 * 7 = 63 litres. Step 6: So the total is 3957 + 3372 = 7329. Answer: 7329,7329
+q042,6,step_by_step,2,256," 3: Then 10 * 3 = 30 metres. Step 4: Then 10 * 12 = 120 pages. Step 5: Next, 33 ",7329
+q042,6,step_by_step,3,256," 2: Now 8 * 9 = 72 coins. Step 3: After that, 45 * 7 = 315 boxes. Step 4: Then 8",7329
+q042,6,step_by_step,4,256," = 432 cups. Step 3: Then 4 * 3 = 12 tickets. Step 4: After that, 58 * 7 = 406 m",7329
+q043,6,direct,1,3,1719,1719
+q043,6,direct,2,2,1710,1719
+q043,6,direct,3,2,1710,1719
+q043,6,direct,4,2,1719,1719
+q043,6,step_by_step,1,233, 10 = 100 minutes. Step 6: Altogether that makes 1905 - 186 = 1719. Answer: 1719,1719
+q043,6,step_by_step,2,256," 400 cups. Step 4: After that, 56 * 11 = 616 cups. Step 5: Now 22 * 8 = 176 boxe",1719
+q043,6,step_by_step,3,256,"3 = 132 cups. Step 3: Then 6 * 12 = 72 minutes. Step 4: After that, 31 * 7 = 217",1719
+q043,6,step_by_step,4,256,"ext, 40 * 2 = 80 minutes. Step 4: Then 22 * 8 = 176 cups. Step 5: Next, 20 * 4 =",1719
+q044,6,direct,1,1,2591,2593
+q044,6,direct,2,4,2602,2593
+q044,6,direct,3,3,2593,2593
+q044,6,direct,4,3,2593,2593
+q044,6,step_by_step,1,256," * 11 = 484 seats. Step 5: Then 48 * 8 = 384 pages. Step 6: After that, 22 * 12 ",2593
+q044,6,step_by_step,2,255," that, 14 * 12 = 168 crates. Step 6: That leaves 1624 + 969 = 2593. Answer: 2593",2593
+q044,6,step_by_step,3,256,", 20 * 8 = 160 pages. Step 5: Then 56 * 5 = 280 metres. Step 6: Next, 36 * 10 = ",2593
+q044,6,step_by_step,4,256,"3 * 11 = 583 crates. Step 4: After that, 25 * 12 = 300 seats. Step 5: Now 5 * 12",2593
+q045,6,direct,1,1,1989,1999
+q045,6,direct,2,4,2008,1999
+q045,6,direct,3,2,2008,1999
+q045,6,direct,4,2,2099,1999
+q045,6,step_by_step,1,210, * 10 = 330 cups. Step 6: So the final amount is 1025 + 974 = 1999. Answer: 1999,1999
+q045,6,step_by_step,2,226, 8 = 376 minutes. Step 6: So the final amount is 1540 + 459 = 1999. Answer: 1999,1999
+q045,6,step_by_step,3,256,hen 33 * 6 = 198 crates. Step 3: Then 48 * 4 = 192 metres. Step 4: Now 12 * 8 = ,1999
+q045,6,step_by_step,4,256,"n 3 * 2 = 6 metres. Step 5: Next, 39 * 11 = 429 cups. Step 6: Now 10 * 12 = 120 ",1999
+q046,5,direct,1,4,6081,5981
+q046,5,direct,2,1,5981,5981
+q046,5,direct,3,4,5979,5981
+q046,5,direct,4,2,5991,5981
+q046,5,step_by_step,1,180,* 10 = 360 pages. Step 5: Altogether that makes 4813 + 1168 = 5981. Answer: 5981,5981
+q046,5,step_by_step,2,178,": Next, 42 * 11 = 462 metres. Step 5: Which gives 6079 - 98 = 5981. Answer: 5981",5981
+q046,5,step_by_step,3,256,"6 = 336 seats. Step 3: After that, 7 * 3 = 21 tickets. Step 4: Next, 41 * 9 = 36",5981
+q046,5,step_by_step,4,256," 336 coins. Step 2: Next, 18 * 12 = 216 cups. Step 3: After that, 43 * 8 = 344 m",5981
+q047,2,direct,1,2,1395,1395
+q047,2,direct,2,1,1397,1395
+q047,2,direct,3,3,1404,1395
+q047,2,direct,4,4,1385,1395
+q047,2,step_by_step,1,99," First, 40 * 4 = 160 litres. Step 2: Which gives 1026 + 369 = 1395. Answer: 1395",1395
+q047,2,step_by_step,2,81,": First, 53 * 9 = 477 seats. Step 2: That leaves 1257 + 138 = 1395. Answer: 1395",1395
+q047,2,step_by_step,3,92,"st, 55 * 5 = 275 litres. Step 2: So the total is 1730 - 335 = 1395. Answer: 1395",1395
+q047,2,step_by_step,4,110,"irst, 23 * 6 = 138 crates. Step 2: So the total is 1502 - 7 = 1495. Answer: 1495",1395
+q048,3,direct,1,1,1802,1802
+q048,3,direct,2,2,1802,1802
+q048,3,direct,3,2,1811,1802
+q048,3,direct,4,2,1802,1802
+q048,3,step_by_step,1,180, 2: Then 22 * 7 = 154 pages. Step 3: Which gives 2079 - 277 = 1802. Answer: 1802,1802
+q048,3,step_by_step,2,150," that, 39 * 12 = 468 crates. Step 3: That leaves 1537 + 265 = 1802. Answer: 1802",1802
+q048,3,step_by_step,3,254, 2: Then 44 * 2 = 88 crates. Step 3: Which gives 2175 - 364 = 1811. Answer: 1811,1802
+q048,3,step_by_step,4,109, Now 11 * 2 = 22 litres. Step 3: So the total is 610 + 1192 = 1802. Answer: 1802,1802
+q049,3,direct,1,4,4729,4729
+q049,3,direct,2,3,4729,4729
+q049,3,direct,3,3,4729,4729
+q049,3,direct,4,4,4729,4729
+q049,3,step_by_step,1,161,: Then 44 * 7 = 308 crates. Step 3: Which gives 1985 + 2744 = 4729. Answer: 4729,4729
+q049,3,step_by_step,2,127,5 * 9 = 225 litres. Step 3: So the final amount is 4736 - 7 = 4729. Answer: 4729,4729
+q049,3,step_by_step,3,209," that, 11 * 12 = 132 crates. Step 3: That leaves 5056 - 327 = 4729. Answer: 4729",4729
+q049,3,step_by_step,4,105,: Now 34 * 8 = 272 seats. Step 3: So the total is 4751 - 22 = 4729. Answer: 4729,4729
+q050,6,direct,1,3,5618,5608
+q050,6,direct,2,1,5608,5608
+q050,6,direct,3,4,5606,5608
+q050,6,direct,4,1,5618,5608
+q050,6,step_by_step,1,256," * 3 = 48 seats. Step 5: Now 47 * 8 = 376 metres. Step 6: Next, 54 * 8 = 432 box",5608
+q050,6,step_by_step,2,231, * 7 = 42 minutes. Step 6: Altogether that makes 4875 + 743 = 5618. Answer: 5618,5608
+q050,6,step_by_step,3,253,", 56 * 5 = 280 minutes. Step 6: So the total is 3733 + 1875 = 5608. Answer: 5608",5608
+q050,6,step_by_step,4,253, * 5 = 25 seats. Step 6: So the final amount is 1952 + 3656 = 5608. Answer: 5608,5608
+q051,5,direct,1,1,4396,4396
+q051,5,direct,2,3,4386,4396
+q051,5,direct,3,3,4405,4396
+q051,5,direct,4,4,4396,4396
+q051,5,step_by_step,1,256," * 4 = 12 pages. Step 3: Next, 3 * 8 = 24 crates. Step 4: Then 46 * 9 = 414 coin",4396
+q051,5,step_by_step,2,256,"114 cups. Step 4: Then 25 * 12 = 300 crates. Step 5: After that, 16 * 12 = 192 p",4396
+q051,5,step_by_step,3,140,w 3 * 6 = 18 pages. Step 5: So the final amount is 4392 + 4 = 4396. Answer: 4396,4396
+q051,5,step_by_step,4,221,"ext, 36 * 9 = 324 cups. Step 5: So the total is 2618 + 1777 = 4395. Answer: 4395",4396
+q052,5,direct,1,3,3748,3746
+q052,5,direct,2,2,3746,3746
+q052,5,direct,3,2,3748,3746
+q052,5,direct,4,1,3746,3746
+q052,5,step_by_step,1,256," 14 * 9 = 126 metres. Step 4: Next, 16 * 9 = 144 coins. Step 5: Then 11 * 7 = 77",3746
+q052,5,step_by_step,2,256,"60 tickets. Step 4: Now 21 * 7 = 147 boxes. Step 5: After that, 35 * 9 = 315 lit",3746
+q052,5,step_by_step,3,231, * 4 = 64 minutes. Step 5: Altogether that makes 4051 - 305 = 3746. Answer: 3746,3746
+q052,5,step_by_step,4,215,50 * 5 = 250 cups. Step 5: Altogether that makes 4027 - 279 = 3748. Answer: 3748,3746
+q053,6,direct,1,3,3732,3732
+q053,6,direct,2,3,3732,3732
+q053,6,direct,3,2,3742,3732
+q053,6,direct,4,4,3732,3732
+q053,6,step_by_step,1,256,p 2: Then 35 * 5 = 175 boxes. Step 3: Then 51 * 6 = 306 minutes. Step 4: After t,3732
+q053,6,step_by_step,2,256,"ep 3: Then 55 * 4 = 220 coins. Step 4: Next, 49 * 6 = 294 seats. Step 5: Now 23 ",3732
+q053,6,step_by_step,3,256,"3: Then 21 * 12 = 252 litres. Step 4: Next, 45 * 12 = 540 pages. Step 5: Now 52 ",3732
+q053,6,step_by_step,4,204, * 12 = 528 seats. Step 6: So the final amount is 3638 + 94 = 3732. Answer: 3732,3732
+q054,6,direct,1,4,1020,1021
+q054,6,direct,2,4,1030,1021
+q054,6,direct,3,4,1012,1021
+q054,6,direct,4,4,1121,1021
+q054,6,step_by_step,1,256,"crates. Step 4: Then 26 * 8 = 208 tickets. Step 5: After that, 54 * 9 = 486 coin",1021
+q054,6,step_by_step,2,256,"xt, 5 * 12 = 60 boxes. Step 5: Now 25 * 7 = 175 boxes. Step 6: Then 33 * 2 = 66 ",1021
+q054,6,step_by_step,3,216, * 5 = 100 litres. Step 6: So the final amount is 1001 + 20 = 1021. Answer: 1021,1021
+q054,6,step_by_step,4,239,8 * 7 = 56 coins. Step 6: So the final amount is 1233 - 212 = 1021. Answer: 1021,1021
+q055,5,direct,1,2,7053,7053
+q055,5,direct,2,1,7053,7053
+q055,5,direct,3,1,7053,7053
+q055,5,direct,4,2,7044,7053
+q055,5,step_by_step,1,182,11 = 121 tickets. Step 5: Altogether that makes 4397 + 2656 = 7053. Answer: 7053,7053
+q055,5,step_by_step,2,256," 6 = 210 metres. Step 3: Now 48 * 5 = 240 cups. Step 4: After that, 51 * 6 = 306",7053
+q055,5,step_by_step,3,256,"= 121 minutes. Step 3: Next, 33 * 10 = 330 pages. Step 4: After that, 52 * 8 = 4",7053
+q055,5,step_by_step,4,256," = 282 crates. Step 2: After that, 47 * 8 = 376 cups. Step 3: Then 13 * 8 = 104 ",7053
+q056,6,direct,1,2,6017,6018
+q056,6,direct,2,4,6018,6018
+q056,6,direct,3,1,6028,6018
+q056,6,direct,4,2,6018,6018
+q056,6,step_by_step,1,245,8 = 432 minutes. Step 6: So the final amount is 4922 + 1096 = 6018. Answer: 6018,6018
+q056,6,step_by_step,2,256," 3: Next, 36 * 8 = 288 minutes. Step 4: Now 48 * 2 = 96 litres. Step 5: Then 3 *",6018
+q056,6,step_by_step,3,256," tickets. Step 4: Then 23 * 5 = 115 crates. Step 5: After that, 56 * 9 = 504 met",6018
+q056,6,step_by_step,4,256,"hen 50 * 4 = 200 cups. Step 5: Next, 6 * 6 = 36 cups. Step 6: Next, 36 * 11 = 39",6018
+q057,2,direct,1,1,4684,4693
+q057,2,direct,2,4,4693,4693
+q057,2,direct,3,4,4693,4693
+q057,2,direct,4,1,4693,4693
+q057,2,step_by_step,1,62,10 = 120 tickets. Step 2: So the final amount is 4885 - 192 = 4693. Answer: 4693,4693
+q057,2,step_by_step,2,93,5 = 160 tickets. Step 2: So the final amount is 1796 + 2897 = 4693. Answer: 4693,4693
+q057,2,step_by_step,3,73,", 34 * 3 = 102 minutes. Step 2: So the total is 3023 + 1670 = 4693. Answer: 4693",4693
+q057,2,step_by_step,4,95," First, 21 * 5 = 105 litres. Step 2: That leaves 5070 - 377 = 4693. Answer: 4693",4693
+q058,6,direct,1,2,5061,5061
+q058,6,direct,2,4,5063,5061
+q058,6,direct,3,3,5062,5061
+q058,6,direct,4,2,5061,5061
+q058,6,step_by_step,1,256,": Then 35 * 6 = 210 minutes. Step 3: Then 44 * 7 = 308 coins. Step 4: Next, 9 * ",5061
+q058,6,step_by_step,2,144,Now 14 * 9 = 126 litres. Step 6: So the total is 5391 - 328 = 5063. Answer: 5063,5061
+q058,6,step_by_step,3,256,tep 4: Then 14 * 3 = 42 seats. Step 5: Now 10 * 10 = 100 crates. Step 6: Now 13 ,5061
+q058,6,step_by_step,4,256," 138 boxes. Step 4: Then 24 * 10 = 240 cups. Step 5: After that, 28 * 8 = 224 li",5061
+q059,4,direct,1,2,2010,2009
+q059,4,direct,2,4,2009,2009
+q059,4,direct,3,4,2010,2009
+q059,4,direct,4,2,2011,2009
+q059,4,step_by_step,1,165, 3: Then 30 * 3 = 90 litres. Step 4: That leaves 2284 - 275 = 2009. Answer: 2009,2009
+q059,4,step_by_step,2,136, Then 12 * 11 = 132 tickets. Step 4: That leaves 2361 - 352 = 2009. Answer: 2009,2009
+q059,4,step_by_step,3,143, * 10 = 310 coins. Step 4: Altogether that makes 2256 - 247 = 2009. Answer: 2009,2009
+q059,4,step_by_step,4,170,3: Now 19 * 4 = 76 cups. Step 4: So the total is 1669 + 341 = 2010. Answer: 2010,2009
+q060,5,direct,1,1,7290,7280
+q060,5,direct,2,2,7280,7280
+q060,5,direct,3,1,7280,7280
+q060,5,direct,4,2,7282,7280
+q060,5,step_by_step,1,253,: Then 39 * 11 = 429 pages. Step 5: Which gives 5372 + 1908 = 7280. Answer: 7280,7280
+q060,5,step_by_step,2,188, 10 = 80 crates. Step 5: So the final amount is 4753 + 2527 = 7280. Answer: 7280,7280
+q060,5,step_by_step,3,256,"18 * 9 = 162 pages. Step 2: After that, 44 * 6 = 264 metres. Step 3: After that,",7280
+q060,5,step_by_step,4,256," 224 cups. Step 3: After that, 50 * 10 = 500 crates. Step 4: Now 54 * 7 = 378 ti",7280
+q061,6,direct,1,4,7811,7813
+q061,6,direct,2,1,7813,7813
+q061,6,direct,3,1,7822,7813
+q061,6,direct,4,3,7913,7813
+q061,6,step_by_step,1,256," = 416 boxes. Step 3: Now 52 * 12 = 624 coins. Step 4: After that, 28 * 7 = 196 ",7813
+q061,6,step_by_step,2,207,ow 20 * 11 = 220 coins. Step 6: So the total is 4968 + 2845 = 7813. Answer: 7813,7813
+q061,6,step_by_step,3,256,6 * 9 = 54 tickets. Step 5: Now 29 * 5 = 145 tickets. Step 6: Then 55 * 3 = 165 ,7813
+q061,6,step_by_step,4,256,19 * 10 = 190 coins. Step 4: Then 34 * 3 = 102 metres. Step 5: Then 3 * 7 = 21 m,7813
+q062,6,direct,1,4,480,482
+q062,6,direct,2,1,492,482
+q062,6,direct,3,2,482,482
+q062,6,direct,4,1,482,482
+q062,6,step_by_step,1,209,45 * 12 = 540 coins. Step 6: So the final amount is 161 + 321 = 482. Answer: 482,482
+q062,6,step_by_step,2,199,"p 5: Next, 3 * 10 = 30 cups. Step 6: So the total is 541 - 68 = 473. Answer: 473",482
+q062,6,step_by_step,3,256,n 32 * 7 = 224 tickets. Step 5: Then 40 * 8 = 320 metres. Step 6: Now 50 * 4 = 2,482
+q062,6,step_by_step,4,193,"p 5: Next, 8 * 10 = 80 tickets. Step 6: That leaves 718 - 236 = 482. Answer: 482",482
+q063,4,direct,1,2,5027,5036
+q063,4,direct,2,1,5036,5036
+q063,4,direct,3,3,5036,5036
+q063,4,direct,4,3,5035,5036
+q063,4,step_by_step,1,240, 12 = 660 litres. Step 4: Altogether that makes 1773 + 3263 = 5036. Answer: 5036,5036
+q063,4,step_by_step,2,256," keeping track of each amount. Step 1: First, 15 * 11 = 165 pages. Step 2: Now 1",5036
+q063,4,step_by_step,3,247,"r that, 27 * 2 = 54 tickets. Step 4: That leaves 5267 - 229 = 5038. Answer: 5038",5036
+q063,4,step_by_step,4,256,"* 10 = 570 seats. Step 3: Then 45 * 12 = 540 crates. Step 4: After that, 20 * 9 ",5036
+q064,2,direct,1,4,7291,7291
+q064,2,direct,2,3,7291,7291
+q064,2,direct,3,1,7291,7291
+q064,2,direct,4,2,7291,7291
+q064,2,step_by_step,1,89,7 * 8 = 56 crates. Step 2: So the final amount is 7252 + 39 = 7291. Answer: 7291,7291
+q064,2,step_by_step,2,91," First, 10 * 7 = 70 tickets. Step 2: That leaves 6543 + 748 = 7291. Answer: 7291",7291
+q064,2,step_by_step,3,102,"rst, 43 * 2 = 86 litres. Step 2: So the total is 6344 + 947 = 7291. Answer: 7291",7291
+q064,2,step_by_step,4,92," First, 55 * 8 = 440 pages. Step 2: That leaves 4970 + 2321 = 7291. Answer: 7291",7291
+q065,5,direct,1,3,5694,5694
+q065,5,direct,2,2,5694,5694
+q065,5,direct,3,2,5694,5694
+q065,5,direct,4,4,5695,5694
+q065,5,step_by_step,1,256,"First, 44 * 6 = 264 tickets. Step 2: Then 42 * 4 = 168 cups. Step 3: After that,",5694
+q065,5,step_by_step,2,241,: Then 46 * 12 = 552 litres. Step 5: Which gives 5468 + 226 = 5694. Answer: 5694,5694
+q065,5,step_by_step,3,256,"t, 54 * 5 = 270 cups. Step 3: Then 34 * 7 = 238 coins. Step 4: Then 38 * 2 = 76 ",5694
+q065,5,step_by_step,4,256,"3 = 120 cups. Step 3: After that, 26 * 2 = 52 tickets. Step 4: After that, 49 * ",5694
+q066,2,direct,1,1,8381,8381
+q066,2,direct,2,2,8381,8381
+q066,2,direct,3,3,8381,8381
+q066,2,direct,4,2,8381,8381
+q066,2,step_by_step,1,106,": First, 11 * 3 = 33 metres. Step 2: Which gives 8576 - 195 = 8381. Answer: 8381",8381
+q066,2,step_by_step,2,68,15 * 9 = 135 pages. Step 2: Altogether that makes 8339 + 42 = 8381. Answer: 8381,8381
+q066,2,step_by_step,3,70,"1: First, 13 * 4 = 52 cups. Step 2: That leaves 3875 + 4506 = 8381. Answer: 8381",8381
+q066,2,step_by_step,4,97,"1: First, 47 * 2 = 94 boxes. Step 2: That leaves 8778 - 397 = 8381. Answer: 8381",8381
+q067,5,direct,1,2,4631,4631
+q067,5,direct,2,2,4630,4631
+q067,5,direct,3,2,4631,4631
+q067,5,direct,4,4,4631,4631
+q067,5,step_by_step,1,256," that, 43 * 10 = 430 pages. Step 3: Then 28 * 8 = 224 metres. Step 4: After that",4631
+q067,5,step_by_step,2,211,en 42 * 8 = 336 crates. Step 5: So the total is 1923 + 2708 = 4631. Answer: 4631,4631
+q067,5,step_by_step,3,256,"2: Then 39 * 4 = 156 cups. Step 3: Next, 40 * 7 = 280 seats. Step 4: Then 50 * 1",4631
+q067,5,step_by_step,4,256,18 * 5 = 90 seats. Step 3: Then 42 * 3 = 126 minutes. Step 4: Now 28 * 7 = 196 m,4631
+q068,6,direct,1,2,3584,3575
+q068,6,direct,2,1,3573,3575
+q068,6,direct,3,2,3565,3575
+q068,6,direct,4,3,3573,3575
+q068,6,step_by_step,1,256,s. Step 3: Now 37 * 5 = 185 seats. Step 4: Then 16 * 11 = 176 cups. Step 5: Then,3575
+q068,6,step_by_step,2,256, 52 * 6 = 312 litres. Step 3: Now 50 * 4 = 200 seats. Step 4: Then 55 * 3 = 165 ,3575
+q068,6,step_by_step,3,256,": Next, 20 * 11 = 220 pages. Step 4: Next, 56 * 3 = 168 crates. Step 5: Next, 19",3575
+q068,6,step_by_step,4,166, 5: Now 19 * 12 = 228 boxes. Step 6: Which gives 3822 - 247 = 3575. Answer: 3575,3575
+q069,2,direct,1,2,6557,6457
+q069,2,direct,2,2,6447,6457
+q069,2,direct,3,4,6467,6457
+q069,2,direct,4,1,6457,6457
+q069,2,step_by_step,1,105,* 4 = 152 litres. Step 2: Altogether that makes 3662 + 2793 = 6455. Answer: 6455,6457
+q069,2,step_by_step,2,61,": First, 43 * 5 = 215 coins. Step 2: That leaves 5782 + 675 = 6457. Answer: 6457",6457
+q069,2,step_by_step,3,80,9 = 459 tickets. Step 2: So the final amount is 3717 + 2730 = 6447. Answer: 6447,6457
+q069,2,step_by_step,4,82,3 * 9 = 117 seats. Step 2: Altogether that makes 6809 - 352 = 6457. Answer: 6457,6457
+q070,3,direct,1,1,5011,5011
+q070,3,direct,2,2,5011,5011
+q070,3,direct,3,4,5011,5011
+q070,3,direct,4,4,5011,5011
+q070,3,step_by_step,1,145,6 * 6 = 36 crates. Step 3: Altogether that makes 4672 + 339 = 5011. Answer: 5011,5011
+q070,3,step_by_step,2,164,12 * 6 = 72 pages. Step 3: Altogether that makes 4835 + 176 = 5011. Answer: 5011,5011
+q070,3,step_by_step,3,163,2: Then 41 * 8 = 328 crates. Step 3: That leaves 4145 + 866 = 5011. Answer: 5011,5011
+q070,3,step_by_step,4,173,6 * 6 = 36 coins. Step 3: Altogether that makes 3182 + 1829 = 5011. Answer: 5011,5011
+q071,5,direct,1,1,2999,2999
+q071,5,direct,2,4,2999,2999
+q071,5,direct,3,4,2999,2999
+q071,5,direct,4,2,2999,2999
+q071,5,step_by_step,1,243,4: Then 25 * 11 = 275 coins. Step 5: Which gives 2312 + 687 = 2999. Answer: 2999,2999
+q071,5,step_by_step,2,224,3 = 102 minutes. Step 5: So the final amount is 1924 + 1075 = 2999. Answer: 2999,2999
+q071,5,step_by_step,3,109,"hat, 7 * 10 = 70 tickets. Step 5: So the total is 2909 + 90 = 2999. Answer: 2999",2999
+q071,5,step_by_step,4,201,3 * 3 = 39 seats. Step 5: So the final amount is 3361 - 362 = 2999. Answer: 2999,2999
+q072,2,direct,1,1,3610,3610
+q072,2,direct,2,3,3610,3610
+q072,2,direct,3,2,3610,3610
+q072,2,direct,4,4,3610,3610
+q072,2,step_by_step,1,79,"t, 48 * 3 = 144 tickets. Step 2: So the total is 3485 + 125 = 3610. Answer: 3610",3610
+q072,2,step_by_step,2,70," First, 29 * 6 = 174 coins. Step 2: Which gives 1642 + 1968 = 3610. Answer: 3610",3610
+q072,2,step_by_step,3,61,"1: First, 29 * 2 = 58 coins. Step 2: That leaves 3934 - 324 = 3610. Answer: 3610",3610
+q072,2,step_by_step,4,86,"t, 59 * 3 = 177 crates. Step 2: So the total is 2569 + 1041 = 3610. Answer: 3610",3610
+q073,5,direct,1,2,7084,7084
+q073,5,direct,2,1,7094,7084
+q073,5,direct,3,4,7086,7084
+q073,5,direct,4,1,7083,7084
+q073,5,step_by_step,1,256,"2: Then 15 * 2 = 30 cups. Step 3: Next, 22 * 2 = 44 pages. Step 4: Next, 5 * 5 =",7084
+q073,5,step_by_step,2,210," that, 36 * 3 = 108 minutes. Step 5: Which gives 7346 - 262 = 7084. Answer: 7084",7084
+q073,5,step_by_step,3,207,"4: Next, 46 * 3 = 138 litres. Step 5: Which gives 7021 + 63 = 7084. Answer: 7084",7084
+q073,5,step_by_step,4,169,* 8 = 120 litres. Step 5: So the final amount is 7423 - 339 = 7084. Answer: 7084,7084
+q074,2,direct,1,3,572,581
+q074,2,direct,2,3,571,581
+q074,2,direct,3,2,581,581
+q074,2,direct,4,2,581,581
+q074,2,step_by_step,1,135,"rst, 41 * 12 = 492 minutes. Step 2: So the total is 227 + 355 = 582. Answer: 582",581
+q074,2,step_by_step,2,92," First, 33 * 7 = 231 crates. Step 2: So the total is 502 + 79 = 581. Answer: 581",581
+q074,2,step_by_step,3,107, 32 * 9 = 288 litres. Step 2: Altogether that makes 299 + 282 = 581. Answer: 581,581
+q074,2,step_by_step,4,106,", 57 * 3 = 171 seats. Step 2: So the final amount is 553 + 28 = 581. Answer: 581",581
+q075,2,direct,1,4,2016,2016
+q075,2,direct,2,2,2016,2016
+q075,2,direct,3,2,2016,2016
+q075,2,direct,4,2,2016,2016
+q075,2,step_by_step,1,95,19 * 8 = 152 cups. Step 2: Altogether that makes 1821 + 195 = 2016. Answer: 2016,2016
+q075,2,step_by_step,2,68,"t, 42 * 10 = 420 metres. Step 2: So the total is 1274 + 742 = 2016. Answer: 2016",2016
+q075,2,step_by_step,3,109,"First, 23 * 10 = 230 metres. Step 2: That leaves 1284 + 732 = 2016. Answer: 2016",2016
+q075,2,step_by_step,4,81,": First, 43 * 12 = 516 cups. Step 2: That leaves 1855 + 161 = 2016. Answer: 2016",2016
+q076,2,direct,1,1,8486,8486
+q076,2,direct,2,3,8476,8486
+q076,2,direct,3,1,8486,8486
+q076,2,direct,4,2,8484,8486
+q076,2,step_by_step,1,74,11 = 572 tickets. Step 2: Altogether that makes 4186 + 4298 = 8484. Answer: 8484,8486
+q076,2,step_by_step,2,83,* 7 = 147 metres. Step 2: Altogether that makes 7305 + 1181 = 8486. Answer: 8486,8486
+q076,2,step_by_step,3,72, * 6 = 222 pages. Step 2: Altogether that makes 7481 + 1005 = 8486. Answer: 8486,8486
+q076,2,step_by_step,4,89,"irst, 17 * 11 = 187 minutes. Step 2: That leaves 7611 + 875 = 8486. Answer: 8486",8486
+q077,5,direct,1,4,3953,3953
+q077,5,direct,2,3,3944,3953
+q077,5,direct,3,2,3943,3953
+q077,5,direct,4,3,3955,3953
+q077,5,step_by_step,1,256,9 = 117 boxes. Step 4: Then 41 * 10 = 410 litres. Step 5: Then 49 * 10 = 490 coi,3953
+q077,5,step_by_step,2,256,"ep 1: First, 43 * 2 = 86 coins. Step 2: Now 45 * 9 = 405 metres. Step 3: Now 44 ",3953
+q077,5,step_by_step,3,256," 1: First, 18 * 7 = 126 tickets. Step 2: Now 30 * 12 = 360 cups. Step 3: Now 33 ",3953
+q077,5,step_by_step,4,215,4 * 5 = 120 pages. Step 5: Altogether that makes 4248 - 295 = 3953. Answer: 3953,3953
+q078,3,direct,1,1,7718,7718
+q078,3,direct,2,4,7718,7718
+q078,3,direct,3,3,7728,7718
+q078,3,direct,4,2,7718,7718
+q078,3,step_by_step,1,247,2 = 264 tickets. Step 3: So the final amount is 5123 + 2593 = 7716. Answer: 7716,7718
+q078,3,step_by_step,2,234, * 4 = 120 cups. Step 3: So the final amount is 5209 + 2509 = 7718. Answer: 7718,7718
+q078,3,step_by_step,3,147, 11 = 440 crates. Step 3: Altogether that makes 3802 + 3916 = 7718. Answer: 7718,7718
+q078,3,step_by_step,4,143,1 * 7 = 287 boxes. Step 3: Altogether that makes 8053 - 335 = 7718. Answer: 7718,7718
+q079,4,direct,1,4,8575,8575
+q079,4,direct,2,2,8576,8575
+q079,4,direct,3,2,8575,8575
+q079,4,direct,4,2,8565,8575
+q079,4,step_by_step,1,256,"2: Now 17 * 7 = 119 litres. Step 3: Now 41 * 8 = 328 cups. Step 4: Next, 37 * 11",8575
+q079,4,step_by_step,2,251,"t, 56 * 12 = 672 coins. Step 4: So the total is 6600 + 1966 = 8566. Answer: 8566",8575
+q079,4,step_by_step,3,242, 12 = 96 crates. Step 4: So the final amount is 5297 + 3278 = 8575. Answer: 8575,8575
+q079,4,step_by_step,4,214,", 25 * 11 = 275 litres. Step 4: So the total is 2897 + 5678 = 8575. Answer: 8575",8575
+q080,2,direct,1,2,6368,6369
+q080,2,direct,2,3,6369,6369
+q080,2,direct,3,3,6359,6369
+q080,2,direct,4,2,6369,6369
+q080,2,step_by_step,1,71, * 2 = 118 seats. Step 2: Altogether that makes 4088 + 2281 = 6369. Answer: 6369,6369
+q080,2,step_by_step,2,89,5 * 3 = 15 seats. Step 2: Altogether that makes 2610 + 3759 = 6369. Answer: 6369,6369
+q080,2,step_by_step,3,106,* 5 = 110 litres. Step 2: So the final amount is 5860 + 509 = 6369. Answer: 6369,6369
+q080,2,step_by_step,4,151," First, 59 * 8 = 472 metres. Step 2: Which gives 6528 - 159 = 6369. Answer: 6369",6369
+q081,3,direct,1,2,8863,8863
+q081,3,direct,2,4,8863,8863
+q081,3,direct,3,3,8863,8863
+q081,3,direct,4,4,8863,8863
+q081,3,step_by_step,1,226, 2: Then 19 * 7 = 133 pages. Step 3: Which gives 8970 - 107 = 8863. Answer: 8863,8863
+q081,3,step_by_step,2,153,* 6 = 282 coins. Step 3: So the final amount is 4958 + 3905 = 8863. Answer: 8863,8863
+q081,3,step_by_step,3,176,p 2: Now 32 * 8 = 256 pages. Step 3: Which gives 8683 + 180 = 8863. Answer: 8863,8863
+q081,3,step_by_step,4,255,"ext, 54 * 5 = 270 cups. Step 3: So the total is 5690 + 3173 = 8863. Answer: 8863",8863
+q082,4,direct,1,1,2407,2408
+q082,4,direct,2,3,2408,2408
+q082,4,direct,3,2,2409,2408
+q082,4,direct,4,4,2408,2408
+q082,4,step_by_step,1,179,"3: Next, 16 * 11 = 176 pages. Step 4: That leaves 2425 - 17 = 2408. Answer: 2408",2408
+q082,4,step_by_step,2,205,Then 3 * 11 = 33 metres. Step 4: So the total is 2517 - 109 = 2408. Answer: 2408,2408
+q082,4,step_by_step,3,162, 4 = 224 litres. Step 4: So the final amount is 1105 + 1301 = 2406. Answer: 2406,2408
+q082,4,step_by_step,4,142,: Then 21 * 12 = 252 litres. Step 4: That leaves 2752 - 344 = 2408. Answer: 2408,2408
+q083,6,direct,1,2,4729,4738
+q083,6,direct,2,1,4740,4738
+q083,6,direct,3,2,4736,4738
+q083,6,direct,4,4,4748,4738
+q083,6,step_by_step,1,240,"t, 48 * 4 = 192 tickets. Step 6: So the total is 5098 - 360 = 4738. Answer: 4738",4738
+q083,6,step_by_step,2,183,Now 49 * 5 = 245 coins. Step 6: So the total is 2980 + 1758 = 4738. Answer: 4738,4738
+q083,6,step_by_step,3,256," 2 = 50 coins. Step 4: Next, 18 * 10 = 180 litres. Step 5: Then 36 * 11 = 396 mi",4738
+q083,6,step_by_step,4,210,"xt, 11 * 6 = 66 crates. Step 6: So the total is 1667 + 3071 = 4738. Answer: 4738",4738
+q084,3,direct,1,3,4716,4716
+q084,3,direct,2,3,4716,4716
+q084,3,direct,3,3,4716,4716
+q084,3,direct,4,4,4716,4716
+q084,3,step_by_step,1,238,2: Then 38 * 11 = 418 boxes. Step 3: Which gives 4836 - 120 = 4716. Answer: 4716,4716
+q084,3,step_by_step,2,189,9 * 2 = 78 boxes. Step 3: So the final amount is 4586 + 130 = 4716. Answer: 4716,4716
+q084,3,step_by_step,3,170,"ter that, 36 * 5 = 180 seats. Step 3: Which gives 4759 - 43 = 4716. Answer: 4716",4716
+q084,3,step_by_step,4,119,ep 2: Now 18 * 2 = 36 boxes. Step 3: Which gives 5003 - 287 = 4716. Answer: 4716,4716
+q085,4,direct,1,3,5087,5087
+q085,4,direct,2,3,5087,5087
+q085,4,direct,3,3,5087,5087
+q085,4,direct,4,2,5087,5087
+q085,4,step_by_step,1,149, 6 = 246 tickets. Step 4: So the final amount is 5422 - 335 = 5087. Answer: 5087,5087
+q085,4,step_by_step,2,176,p 3: Now 32 * 2 = 64 cups. Step 4: So the total is 5095 - 6 = 5089. Answer: 5089,5087
+q085,4,step_by_step,3,159,3: Now 18 * 10 = 180 litres. Step 4: Which gives 5449 - 362 = 5087. Answer: 5087,5087
+q085,4,step_by_step,4,245, 12 = 624 boxes. Step 4: So the final amount is 2587 + 2500 = 5087. Answer: 5087,5087
+q086,3,direct,1,2,3805,3815
+q086,3,direct,2,1,3815,3815
+q086,3,direct,3,1,3815,3815
+q086,3,direct,4,1,3815,3815
+q086,3,step_by_step,1,118,* 12 = 276 seats. Step 3: So the final amount is 3949 - 134 = 3815. Answer: 3815,3815
+q086,3,step_by_step,2,156,10 = 330 litres. Step 3: So the final amount is 1768 + 2047 = 3815. Answer: 3815,3815
+q086,3,step_by_step,3,246,1 * 9 = 279 cups. Step 3: So the final amount is 4207 - 392 = 3815. Answer: 3815,3815
+q086,3,step_by_step,4,174, * 11 = 33 boxes. Step 3: So the final amount is 4088 - 273 = 3815. Answer: 3815,3815
+q087,3,direct,1,2,5640,5641
+q087,3,direct,2,3,5640,5641
+q087,3,direct,3,2,5641,5641
+q087,3,direct,4,2,5642,5641
+q087,3,step_by_step,1,228,": Next, 49 * 4 = 196 seats. Step 3: Which gives 2160 + 3481 = 5641. Answer: 5641",5641
+q087,3,step_by_step,2,194,"r that, 51 * 6 = 306 boxes. Step 3: Which gives 2202 + 3438 = 5640. Answer: 5640",5641
+q087,3,step_by_step,3,117,"2: Next, 44 * 2 = 88 litres. Step 3: Which gives 4968 + 672 = 5640. Answer: 5640",5641
+q087,3,step_by_step,4,132, 6 = 210 crates. Step 3: So the final amount is 4241 + 1400 = 5641. Answer: 5641,5641
+q088,4,direct,1,3,6854,6854
+q088,4,direct,2,2,6854,6854
+q088,4,direct,3,1,6954,6854
+q088,4,direct,4,4,6854,6854
+q088,4,step_by_step,1,180,* 12 = 672 seats. Step 4: Altogether that makes 3107 + 3747 = 6854. Answer: 6854,6854
+q088,4,step_by_step,2,249, 3: Now 50 * 2 = 100 pages. Step 4: That leaves 2497 + 4457 = 6954. Answer: 6954,6854
+q088,4,step_by_step,3,198,12 * 4 = 48 seats. Step 4: Altogether that makes 6601 + 253 = 6854. Answer: 6854,6854
+q088,4,step_by_step,4,165, 9 = 297 litres. Step 4: So the final amount is 5702 + 1152 = 6854. Answer: 6854,6854
+q089,2,direct,1,1,8733,8733
+q089,2,direct,2,3,8733,8733
+q089,2,direct,3,3,8733,8733
+q089,2,direct,4,4,8733,8733
+q089,2,step_by_step,1,118,* 6 = 240 seats. Step 2: So the final amount is 5524 + 3209 = 8733. Answer: 8733,8733
+q089,2,step_by_step,2,84," First, 5 * 6 = 30 minutes. Step 2: Which gives 6353 + 2380 = 8733. Answer: 8733",8733
+q089,2,step_by_step,3,187,6 * 9 = 234 seats. Step 2: Altogether that makes 9111 - 376 = 8735. Answer: 8735,8733
+q089,2,step_by_step,4,62,"First, 25 * 7 = 175 tickets. Step 2: That leaves 9113 - 380 = 8733. Answer: 8733",8733
+q090,3,direct,1,4,6465,6465
+q090,3,direct,2,3,6465,6465
+q090,3,direct,3,1,6465,6465
+q090,3,direct,4,1,6465,6465
+q090,3,step_by_step,1,176,"xt, 54 * 7 = 378 metres. Step 3: So the total is 6571 - 106 = 6465. Answer: 6465",6465
+q090,3,step_by_step,2,132,"2: Next, 37 * 4 = 148 seats. Step 3: That leaves 6616 - 151 = 6465. Answer: 6465",6465
+q090,3,step_by_step,3,85,Then 37 * 12 = 444 minutes. Step 3: That leaves 2521 + 3944 = 6465. Answer: 6465,6465
+q090,3,step_by_step,4,152,2: Then 53 * 8 = 424 litres. Step 3: That leaves 5641 + 824 = 6465. Answer: 6465,6465
+q091,6,direct,1,2,3291,3281
+q091,6,direct,2,2,3280,3281
+q091,6,direct,3,1,3272,3281
+q091,6,direct,4,4,3291,3281
+q091,6,step_by_step,1,208,"5: Next, 58 * 7 = 406 pages. Step 6: Which gives 2754 + 536 = 3290. Answer: 3290",3281
+q091,6,step_by_step,2,256," 25 * 3 = 75 minutes. Step 3: Next, 49 * 7 = 343 seats. Step 4: Now 36 * 7 = 252",3281
+q091,6,step_by_step,3,256,"3: Now 58 * 2 = 116 coins. Step 4: Now 5 * 4 = 20 cups. Step 5: After that, 44 *",3281
+q091,6,step_by_step,4,201,* 10 = 520 boxes. Step 6: So the final amount is 3385 - 104 = 3281. Answer: 3281,3281
+q092,2,direct,1,4,853,853
+q092,2,direct,2,1,853,853
+q092,2,direct,3,2,855,853
+q092,2,direct,4,3,953,853
+q092,2,step_by_step,1,103,25 * 9 = 225 metres. Step 2: So the final amount is 700 + 153 = 853. Answer: 853,853
+q092,2,step_by_step,2,111,54 * 2 = 108 crates. Step 2: Altogether that makes 1292 - 339 = 953. Answer: 953,853
+q092,2,step_by_step,3,81,2 * 12 = 144 metres. Step 2: So the final amount is 537 + 316 = 853. Answer: 853,853
+q092,2,step_by_step,4,79,"ep 1: First, 26 * 6 = 156 cups. Step 2: That leaves 559 + 294 = 853. Answer: 853",853
+q093,3,direct,1,4,8818,8818
+q093,3,direct,2,1,8818,8818
+q093,3,direct,3,1,8818,8818
+q093,3,direct,4,2,8818,8818
+q093,3,step_by_step,1,80, * 8 = 352 litres. Step 3: Altogether that makes 8940 - 122 = 8818. Answer: 8818,8818
+q093,3,step_by_step,2,94, 10 = 280 pages. Step 3: So the final amount is 6050 + 2768 = 8818. Answer: 8818,8818
+q093,3,step_by_step,3,90,"t, 13 * 11 = 143 pages. Step 3: So the total is 5547 + 3271 = 8818. Answer: 8818",8818
+q093,3,step_by_step,4,123,11 = 330 metres. Step 3: So the final amount is 4776 + 4042 = 8818. Answer: 8818,8818
+q094,3,direct,1,2,2363,2363
+q094,3,direct,2,4,2363,2363
+q094,3,direct,3,1,2362,2363
+q094,3,direct,4,1,2363,2363
+q094,3,step_by_step,1,127,": Next, 57 * 6 = 342 metres. Step 3: Which gives 2467 - 104 = 2363. Answer: 2363",2363
+q094,3,step_by_step,2,110, 3 * 6 = 18 coins. Step 3: Altogether that makes 2701 - 338 = 2363. Answer: 2363,2363
+q094,3,step_by_step,3,208, 3 = 150 minutes. Step 3: Altogether that makes 1227 + 1136 = 2363. Answer: 2363,2363
+q094,3,step_by_step,4,132,"r that, 48 * 3 = 144 metres. Step 3: Which gives 1821 + 542 = 2363. Answer: 2363",2363
+q095,6,direct,1,2,5762,5771
+q095,6,direct,2,1,5773,5771
+q095,6,direct,3,1,5772,5771
+q095,6,direct,4,3,5771,5771
+q095,6,step_by_step,1,188,": Next, 29 * 9 = 261 crates. Step 6: Which gives 6059 - 288 = 5771. Answer: 5771",5771
+q095,6,step_by_step,2,224,Now 8 * 2 = 16 tickets. Step 6: So the total is 2439 + 3332 = 5771. Answer: 5771,5771
+q095,6,step_by_step,3,209,10 = 250 tickets. Step 6: Altogether that makes 2802 + 2969 = 5771. Answer: 5771,5771
+q095,6,step_by_step,4,256,"hat, 41 * 2 = 82 boxes. Step 4: Now 13 * 11 = 143 boxes. Step 5: After that, 17 ",5771
+q096,2,direct,1,1,7307,7307
+q096,2,direct,2,1,7307,7307
+q096,2,direct,3,4,7407,7307
+q096,2,direct,4,3,7307,7307
+q096,2,step_by_step,1,73,* 11 = 121 tickets. Step 2: Altogether that makes 7211 + 96 = 7307. Answer: 7307,7307
+q096,2,step_by_step,2,67,* 10 = 160 seats. Step 2: Altogether that makes 5065 + 2242 = 7307. Answer: 7307,7307
+q096,2,step_by_step,3,77,": First, 14 * 3 = 42 coins. Step 2: Which gives 6167 + 1140 = 7307. Answer: 7307",7307
+q096,2,step_by_step,4,85,"irst, 46 * 3 = 138 minutes. Step 2: That leaves 3344 + 3963 = 7307. Answer: 7307",7307
+q097,4,direct,1,3,7407,7407
+q097,4,direct,2,3,7407,7407
+q097,4,direct,3,1,7407,7407
+q097,4,direct,4,1,7407,7407
+q097,4,step_by_step,1,256,"First, 46 * 2 = 92 boxes. Step 2: After that, 24 * 2 = 48 metres. Step 3: Next, ",7407
+q097,4,step_by_step,2,221,5 = 250 minutes. Step 4: So the final amount is 5252 + 2155 = 7407. Answer: 7407,7407
+q097,4,step_by_step,3,128,5 * 9 = 405 coins. Step 4: Altogether that makes 7256 + 151 = 7407. Answer: 7407,7407
+q097,4,step_by_step,4,256,"track of each amount. Step 1: First, 39 * 6 = 234 crates. Step 2: Now 16 * 11 = ",7407
+q098,6,direct,1,3,6912,6902
+q098,6,direct,2,2,6902,6902
+q098,6,direct,3,1,6902,6902
+q098,6,direct,4,2,6911,6902
+q098,6,step_by_step,1,256," 12 = 384 litres. Step 4: Next, 38 * 8 = 304 pages. Step 5: After that, 9 * 7 = ",6902
+q098,6,step_by_step,2,256," Next, 55 * 12 = 660 pages. Step 4: Next, 49 * 9 = 441 metres. Step 5: Next, 17 ",6902
+q098,6,step_by_step,3,234,p 5: Now 45 * 4 = 180 boxes. Step 6: That leaves 7038 - 137 = 6901. Answer: 6901,6902
+q098,6,step_by_step,4,256," that, 18 * 7 = 126 metres. Step 3: Next, 54 * 10 = 540 seats. Step 4: Then 33 *",6902
+q099,4,direct,1,2,1863,1863
+q099,4,direct,2,4,1863,1863
+q099,4,direct,3,2,1853,1863
+q099,4,direct,4,2,1863,1863
+q099,4,step_by_step,1,174,* 12 = 552 coins. Step 4: So the final amount is 742 + 1121 = 1863. Answer: 1863,1863
+q099,4,step_by_step,2,149,tep 3: Now 3 * 8 = 24 seats. Step 4: That leaves 1139 + 724 = 1863. Answer: 1863,1863
+q099,4,step_by_step,3,140,"hat, 9 * 11 = 99 crates. Step 4: So the total is 2248 - 383 = 1865. Answer: 1865",1863
+q099,4,step_by_step,4,159,* 7 = 189 litres. Step 4: So the final amount is 2173 - 310 = 1863. Answer: 1863,1863
+q100,3,direct,1,3,6752,6752
+q100,3,direct,2,3,6852,6752
+q100,3,direct,3,4,6752,6752
+q100,3,direct,4,2,6750,6752
+q100,3,step_by_step,1,188,hen 45 * 3 = 135 crates. Step 3: So the total is 7150 - 398 = 6752. Answer: 6752,6752
+q100,3,step_by_step,2,189, * 8 = 416 cups. Step 3: So the final amount is 2639 + 4113 = 6752. Answer: 6752,6752
+q100,3,step_by_step,3,170, * 6 = 222 coins. Step 3: Altogether that makes 3076 + 3676 = 6752. Answer: 6752,6752
+q100,3,step_by_step,4,183,* 11 = 308 seats. Step 3: So the final amount is 6157 + 597 = 6754. Answer: 6754,6752
+q101,3,direct,1,1,4174,4165
+q101,3,direct,2,4,4165,4165
+q101,3,direct,3,1,4165,4165
+q101,3,direct,4,3,4164,4165
+q101,3,step_by_step,1,242,p 2: Then 26 * 7 = 182 cups. Step 3: Which gives 4294 - 129 = 4165. Answer: 4165,4165
+q101,3,step_by_step,2,140,* 6 = 276 pages. Step 3: So the final amount is 2809 + 1356 = 4165. Answer: 4165,4165
+q101,3,step_by_step,3,150,* 11 = 220 boxes. Step 3: Altogether that makes 2491 + 1675 = 4166. Answer: 4166,4165
+q101,3,step_by_step,4,162, * 7 = 196 coins. Step 3: So the final amount is 4274 - 109 = 4165. Answer: 4165,4165
+q102,4,direct,1,1,8574,8574
+q102,4,direct,2,4,8574,8574
+q102,4,direct,3,2,8574,8574
+q102,4,direct,4,4,8574,8574
+q102,4,step_by_step,1,253, 10 = 590 pages. Step 4: So the final amount is 6292 + 2282 = 8574. Answer: 8574,8574
+q102,4,step_by_step,2,203,* 8 = 432 tickets. Step 4: Altogether that makes 8194 + 380 = 8574. Answer: 8574,8574
+q102,4,step_by_step,3,133,: Now 25 * 11 = 275 tickets. Step 4: That leaves 8833 - 259 = 8574. Answer: 8574,8574
+q102,4,step_by_step,4,256," of each amount. Step 1: First, 58 * 11 = 638 metres. Step 2: Now 43 * 4 = 172 b",8574
+q103,4,direct,1,1,8256,8256
+q103,4,direct,2,4,8256,8256
+q103,4,direct,3,2,8256,8256
+q103,4,direct,4,4,8266,8256
+q103,4,step_by_step,1,162,0 * 12 = 360 pages. Step 4: Altogether that makes 8176 + 80 = 8256. Answer: 8256,8256
+q103,4,step_by_step,2,172," Next, 49 * 10 = 490 pages. Step 4: Which gives 5722 + 2534 = 8256. Answer: 8256",8256
+q103,4,step_by_step,3,135,0 * 7 = 350 litres. Step 4: Altogether that makes 8289 - 32 = 8257. Answer: 8257,8256
+q103,4,step_by_step,4,256,"ing track of each amount. Step 1: First, 30 * 4 = 120 boxes. Step 2: Then 26 * 9",8256
+q104,5,direct,1,4,6299,6299
+q104,5,direct,2,2,6299,6299
+q104,5,direct,3,4,6299,6299
+q104,5,direct,4,2,6309,6299
+q104,5,step_by_step,1,194,"ter that, 48 * 9 = 432 coins. Step 5: Which gives 6338 - 39 = 6299. Answer: 6299",6299
+q104,5,step_by_step,2,220,14 * 6 = 84 pages. Step 5: Altogether that makes 6426 - 137 = 6289. Answer: 6289,6299
+q104,5,step_by_step,3,195, * 11 = 561 cups. Step 5: So the final amount is 5364 + 925 = 6289. Answer: 6289,6299
+q104,5,step_by_step,4,159,Now 28 * 11 = 308 coins. Step 5: So the total is 6521 - 222 = 6299. Answer: 6299,6299
+q105,2,direct,1,4,2855,2855
+q105,2,direct,2,1,2855,2855
+q105,2,direct,3,2,2855,2855
+q105,2,direct,4,1,2855,2855
+q105,2,step_by_step,1,86, * 4 = 224 boxes. Step 2: Altogether that makes 1842 + 1013 = 2855. Answer: 2855,2855
+q105,2,step_by_step,2,117," 1: First, 8 * 8 = 64 boxes. Step 2: Which gives 3163 - 308 = 2855. Answer: 2855",2855
+q105,2,step_by_step,3,127,"irst, 53 * 4 = 212 tickets. Step 2: Which gives 1411 + 1444 = 2855. Answer: 2855",2855
+q105,2,step_by_step,4,124,"irst, 55 * 12 = 660 litres. Step 2: Which gives 1485 + 1370 = 2855. Answer: 2855",2855
+q106,2,direct,1,1,5225,5225
+q106,2,direct,2,2,5225,5225
+q106,2,direct,3,4,5225,5225
+q106,2,direct,4,4,5234,5225
+q106,2,step_by_step,1,178,* 6 = 264 crates. Step 2: Altogether that makes 2631 + 2594 = 5225. Answer: 5225,5225
+q106,2,step_by_step,2,78,": First, 40 * 2 = 80 seats. Step 2: Which gives 2193 + 3032 = 5225. Answer: 5225",5225
+q106,2,step_by_step,3,96,8 * 7 = 56 boxes. Step 2: Altogether that makes 1847 + 3378 = 5225. Answer: 5225,5225
+q106,2,step_by_step,4,142,"rst, 30 * 12 = 360 minutes. Step 2: That leaves 2201 + 3024 = 5225. Answer: 5225",5225
+q107,2,direct,1,4,2656,2656
+q107,2,direct,2,3,2665,2656
+q107,2,direct,3,4,2656,2656
+q107,2,direct,4,3,2656,2656
+q107,2,step_by_step,1,139,"rst, 33 * 10 = 330 tickets. Step 2: Which gives 1015 + 1641 = 2656. Answer: 2656",2656
+q107,2,step_by_step,2,177,"First, 8 * 7 = 56 seats. Step 2: So the total is 2188 + 468 = 2656. Answer: 2656",2656
+q107,2,step_by_step,3,141," 1: First, 4 * 6 = 24 seats. Step 2: That leaves 2044 + 612 = 2656. Answer: 2656",2656
+q107,2,step_by_step,4,97,"st, 49 * 4 = 196 coins. Step 2: So the total is 1323 + 1333 = 2656. Answer: 2656",2656
+q108,3,direct,1,3,5131,5131
+q108,3,direct,2,1,5131,5131
+q108,3,direct,3,2,5131,5131
+q108,3,direct,4,2,5131,5131
+q108,3,step_by_step,1,185,p 2: Then 14 * 5 = 70 boxes. Step 3: Which gives 5382 - 251 = 5131. Answer: 5131,5131
+q108,3,step_by_step,2,115, 2: Then 39 * 5 = 195 seats. Step 3: That leaves 5302 - 171 = 5131. Answer: 5131,5131
+q108,3,step_by_step,3,129, 10 = 310 litres. Step 3: So the final amount is 5392 - 261 = 5131. Answer: 5131,5131
+q108,3,step_by_step,4,166,* 12 = 504 metres. Step 3: Altogether that makes 5253 - 122 = 5131. Answer: 5131,5131
+q109,3,direct,1,3,1876,1876
+q109,3,direct,2,1,1976,1876
+q109,3,direct,3,4,1876,1876
+q109,3,direct,4,2,1876,1876
+q109,3,step_by_step,1,250,* 6 = 126 litres. Step 3: So the final amount is 2234 - 358 = 1876. Answer: 1876,1876
+q109,3,step_by_step,2,155, * 6 = 348 boxes. Step 3: So the final amount is 1195 + 681 = 1876. Answer: 1876,1876
+q109,3,step_by_step,3,236, * 5 = 30 metres. Step 3: So the final amount is 1574 + 302 = 1876. Answer: 1876,1876
+q109,3,step_by_step,4,135,"r that, 3 * 3 = 9 seats. Step 3: So the total is 1983 - 107 = 1876. Answer: 1876",1876
+q110,5,direct,1,2,8279,8279
+q110,5,direct,2,1,8279,8279
+q110,5,direct,3,4,8281,8279
+q110,5,direct,4,4,8269,8279
+q110,5,step_by_step,1,175, 7 = 301 tickets. Step 5: So the final amount is 7490 + 789 = 8279. Answer: 8279,8279
+q110,5,step_by_step,2,174,ow 55 * 10 = 550 pages. Step 5: So the total is 3290 + 4989 = 8279. Answer: 8279,8279
+q110,5,step_by_step,3,210,n 9 * 4 = 36 boxes. Step 5: Altogether that makes 8318 - 39 = 8279. Answer: 8279,8279
+q110,5,step_by_step,4,155, 4: Then 12 * 4 = 48 coins. Step 5: That leaves 6623 + 1656 = 8279. Answer: 8279,8279
+q111,4,direct,1,2,4651,4651
+q111,4,direct,2,2,4653,4651
+q111,4,direct,3,2,4660,4651
+q111,4,direct,4,1,4650,4651
+q111,4,step_by_step,1,224, * 10 = 320 seats. Step 4: Altogether that makes 4911 - 260 = 4651. Answer: 4651,4651
+q111,4,step_by_step,2,228, * 7 = 42 pages. Step 4: So the final amount is 1581 + 3072 = 4653. Answer: 4653,4651
+q111,4,step_by_step,3,197,3: Then 33 * 2 = 66 cups. Step 4: So the total is 4746 - 95 = 4651. Answer: 4651,4651
+q111,4,step_by_step,4,229,p 3: Now 8 * 7 = 56 metres. Step 4: That leaves 2902 + 1749 = 4651. Answer: 4651,4651
+q112,2,direct,1,4,5553,5553
+q112,2,direct,2,3,5543,5553
+q112,2,direct,3,1,5553,5553
+q112,2,direct,4,3,5553,5553
+q112,2,step_by_step,1,108,* 9 = 513 litres. Step 2: Altogether that makes 3007 + 2548 = 5555. Answer: 5555,5553
+q112,2,step_by_step,2,104,": First, 29 * 5 = 145 cups. Step 2: That leaves 2726 + 2827 = 5553. Answer: 5553",5553
+q112,2,step_by_step,3,116,"irst, 18 * 2 = 36 pages. Step 2: So the total is 4853 + 700 = 5553. Answer: 5553",5553
+q112,2,step_by_step,4,84,"rst, 32 * 4 = 128 seats. Step 2: So the total is 5868 - 315 = 5553. Answer: 5553",5553
+q113,3,direct,1,4,5390,5390
+q113,3,direct,2,3,5390,5390
+q113,3,direct,3,4,5390,5390
+q113,3,direct,4,1,5390,5390
+q113,3,step_by_step,1,256,"me, keeping track of each amount. Step 1: First, 4 * 10 = 40 coins. Step 2: Now ",5390
+q113,3,step_by_step,2,256,"ng track of each amount. Step 1: First, 57 * 5 = 285 seats. Step 2: Now 10 * 3 =",5390
+q113,3,step_by_step,3,142,en 23 * 10 = 230 crates. Step 3: So the total is 5122 + 268 = 5390. Answer: 5390,5390
+q113,3,step_by_step,4,183,8 * 5 = 90 seats. Step 3: Altogether that makes 4118 + 1272 = 5390. Answer: 5390,5390
+q114,4,direct,1,4,6487,6487
+q114,4,direct,2,4,6487,6487
+q114,4,direct,3,1,6487,6487
+q114,4,direct,4,2,6487,6487
+q114,4,step_by_step,1,256,"= 384 litres. Step 3: Next, 33 * 11 = 363 minutes. Step 4: Then 47 * 6 = 282 coi",6487
+q114,4,step_by_step,2,163,* 4 = 128 coins. Step 4: So the final amount is 4352 + 2135 = 6487. Answer: 6487,6487
+q114,4,step_by_step,3,219, 5 * 5 = 25 boxes. Step 4: Altogether that makes 6122 + 365 = 6487. Answer: 6487,6487
+q114,4,step_by_step,4,254, Then 50 * 3 = 150 metres. Step 4: So the total is 6495 - 8 = 6487. Answer: 6487,6487
+q115,5,direct,1,3,510,510
+q115,5,direct,2,4,510,510
+q115,5,direct,3,2,510,510
+q115,5,direct,4,4,510,510
+q115,5,step_by_step,1,256,"* 11 = 110 tickets. Step 4: Then 58 * 9 = 522 metres. Step 5: Next, 53 * 5 = 265",510
+q115,5,step_by_step,2,225,Step 4: Now 39 * 9 = 351 seats. Step 5: That leaves 814 - 304 = 510. Answer: 510,510
+q115,5,step_by_step,3,256,"fter that, 24 * 7 = 168 crates. Step 4: Next, 50 * 12 = 600 seats. Step 5: After",510
+q115,5,step_by_step,4,238,: Then 31 * 3 = 93 minutes. Step 5: So the total is 211 + 299 = 510. Answer: 510,510
+q116,6,direct,1,4,3741,3741
+q116,6,direct,2,3,3741,3741
+q116,6,direct,3,4,3740,3741
+q116,6,direct,4,3,3741,3741
+q116,6,step_by_step,1,215, * 11 = 253 seats. Step 6: Altogether that makes 4043 - 302 = 3741. Answer: 3741,3741
+q116,6,step_by_step,2,256,"ns. Step 3: After that, 43 * 3 = 129 litres. Step 4: After that, 19 * 10 = 190 s",3741
+q116,6,step_by_step,3,256,"9 * 10 = 490 pages. Step 4: After that, 50 * 6 = 300 crates. Step 5: After that,",3741
+q116,6,step_by_step,4,216,5: Now 6 * 10 = 60 cups. Step 6: So the total is 3187 + 554 = 3741. Answer: 3741,3741
+q117,4,direct,1,2,7556,7557
+q117,4,direct,2,3,7557,7557
+q117,4,direct,3,4,7557,7557
+q117,4,direct,4,4,7558,7557
+q117,4,step_by_step,1,213,"ext, 30 * 12 = 360 minutes. Step 4: That leaves 5444 + 2113 = 7557. Answer: 7557",7557
+q117,4,step_by_step,2,166,"r that, 12 * 3 = 36 litres. Step 4: That leaves 5427 + 2130 = 7557. Answer: 7557",7557
+q117,4,step_by_step,3,210,"t, 13 * 11 = 143 seats. Step 4: So the total is 3924 + 3633 = 7557. Answer: 7557",7557
+q117,4,step_by_step,4,170, 11 = 341 metres. Step 4: So the final amount is 6689 + 868 = 7557. Answer: 7557,7557
+q118,4,direct,1,4,5715,5715
+q118,4,direct,2,1,5717,5715
+q118,4,direct,3,2,5715,5715
+q118,4,direct,4,3,5715,5715
+q118,4,step_by_step,1,169,30 * 3 = 90 pages. Step 4: Altogether that makes 6100 - 385 = 5715. Answer: 5715,5715
+q118,4,step_by_step,2,187,: Then 5 * 11 = 55 minutes. Step 4: That leaves 1965 + 3750 = 5715. Answer: 5715,5715
+q118,4,step_by_step,3,208,"ext, 42 * 11 = 462 minutes. Step 4: That leaves 2759 + 2946 = 5705. Answer: 5705",5715
+q118,4,step_by_step,4,195,ow 20 * 11 = 220 boxes. Step 4: So the total is 3376 + 2339 = 5715. Answer: 5715,5715
+q119,2,direct,1,2,3777,3777
+q119,2,direct,2,1,3777,3777
+q119,2,direct,3,4,3777,3777
+q119,2,direct,4,1,3777,3777
+q119,2,step_by_step,1,123,9 * 8 = 392 crates. Step 2: Altogether that makes 3822 - 45 = 3777. Answer: 3777,3777
+q119,2,step_by_step,2,86,2 * 4 = 48 boxes. Step 2: So the final amount is 2779 + 998 = 3777. Answer: 3777,3777
+q119,2,step_by_step,3,89,* 5 = 25 minutes. Step 2: So the final amount is 4020 - 243 = 3777. Answer: 3777,3777
+q119,2,step_by_step,4,77,"irst, 28 * 12 = 336 metres. Step 2: Which gives 1269 + 2508 = 3777. Answer: 3777",3777
+q120,4,direct,1,3,2461,2461
+q120,4,direct,2,3,2461,2461
+q120,4,direct,3,3,2462,2461
+q120,4,direct,4,4,2463,2461
+q120,4,step_by_step,1,104,p 3: Now 51 * 8 = 408 metres. Step 4: That leaves 2484 - 23 = 2461. Answer: 2461,2461
+q120,4,step_by_step,2,155, * 7 = 210 seats. Step 4: Altogether that makes 1063 + 1400 = 2463. Answer: 2463,2461
+q120,4,step_by_step,3,167,"ter that, 3 * 2 = 6 minutes. Step 4: Which gives 1901 + 561 = 2462. Answer: 2462",2461
+q120,4,step_by_step,4,177, Now 22 * 7 = 154 coins. Step 4: So the total is 919 + 1542 = 2461. Answer: 2461,2461
+q121,5,direct,1,1,5747,5748
+q121,5,direct,2,1,5748,5748
+q121,5,direct,3,4,5758,5748
+q121,5,direct,4,3,5739,5748
+q121,5,step_by_step,1,180, 8 = 72 tickets. Step 5: So the final amount is 3636 + 2112 = 5748. Answer: 5748,5748
+q121,5,step_by_step,2,209, 4: Now 39 * 4 = 156 pages. Step 5: Which gives 4523 + 1225 = 5748. Answer: 5748,5748
+q121,5,step_by_step,3,203,p 4: Now 51 * 4 = 204 pages. Step 5: Which gives 5862 - 114 = 5748. Answer: 5748,5748
+q121,5,step_by_step,4,167,"er that, 14 * 12 = 168 cups. Step 5: Which gives 5877 - 129 = 5748. Answer: 5748",5748
+q122,3,direct,1,4,7077,7077
+q122,3,direct,2,2,7075,7077
+q122,3,direct,3,1,7077,7077
+q122,3,direct,4,1,7076,7077
+q122,3,step_by_step,1,125, Now 9 * 6 = 54 tickets. Step 3: So the total is 6406 + 671 = 7077. Answer: 7077,7077
+q122,3,step_by_step,2,186,"er that, 29 * 4 = 116 cups. Step 3: Which gives 2721 + 4358 = 7079. Answer: 7079",7077
+q122,3,step_by_step,3,122,": Next, 37 * 7 = 259 cups. Step 3: So the total is 7086 - 9 = 7077. Answer: 7077",7077
+q122,3,step_by_step,4,122,* 10 = 370 boxes. Step 3: Altogether that makes 2423 + 4654 = 7077. Answer: 7077,7077
+q123,6,direct,1,3,7434,7434
+q123,6,direct,2,4,7436,7434
+q123,6,direct,3,1,7424,7434
+q123,6,direct,4,3,7432,7434
+q123,6,step_by_step,1,215,ep 5: Then 4 * 7 = 28 pages. Step 6: That leaves 7771 - 337 = 7434. Answer: 7434,7434
+q123,6,step_by_step,2,256,"r that, 35 * 7 = 245 boxes. Step 5: Then 49 * 7 = 343 metres. Step 6: Next, 49 *",7434
+q123,6,step_by_step,3,225, * 12 = 72 boxes. Step 6: Altogether that makes 4318 + 3116 = 7434. Answer: 7434,7434
+q123,6,step_by_step,4,234,"ter that, 52 * 7 = 364 cups. Step 6: Which gives 7649 - 225 = 7424. Answer: 7424",7434
+q124,6,direct,1,1,2677,2677
+q124,6,direct,2,1,2677,2677
+q124,6,direct,3,3,2668,2677
+q124,6,direct,4,1,2678,2677
+q124,6,step_by_step,1,256,"98 tickets. Step 4: After that, 6 * 12 = 72 metres. Step 5: Next, 19 * 7 = 133 p",2677
+q124,6,step_by_step,2,256,"Now 56 * 3 = 168 seats. Step 4: After that, 18 * 2 = 36 metres. Step 5: Now 29 *",2677
+q124,6,step_by_step,3,224,"hat, 14 * 12 = 168 minutes. Step 6: Which gives 1592 + 1085 = 2677. Answer: 2677",2677
+q124,6,step_by_step,4,256," 200 seats. Step 4: After that, 10 * 2 = 20 crates. Step 5: Now 25 * 2 = 50 page",2677
+q125,6,direct,1,2,3405,3415
+q125,6,direct,2,4,3417,3415
+q125,6,direct,3,4,3406,3415
+q125,6,direct,4,1,3405,3415
+q125,6,step_by_step,1,202,: Now 25 * 11 = 275 minutes. Step 6: That leaves 3770 - 346 = 3424. Answer: 3424,3415
+q125,6,step_by_step,2,209,19 * 3 = 57 pages. Step 6: Altogether that makes 3008 + 409 = 3417. Answer: 3417,3415
+q125,6,step_by_step,3,256," 7 = 77 coins. Step 3: Next, 52 * 3 = 156 tickets. Step 4: Next, 26 * 5 = 130 co",3415
+q125,6,step_by_step,4,256,"360 minutes. Step 4: Then 43 * 7 = 301 coins. Step 5: After that, 17 * 3 = 51 ti",3415
+q126,5,direct,1,2,1116,1126
+q126,5,direct,2,1,1126,1126
+q126,5,direct,3,1,1126,1126
+q126,5,direct,4,1,1126,1126
+q126,5,step_by_step,1,256,", 44 * 8 = 352 pages. Step 2: Now 11 * 6 = 66 pages. Step 3: Next, 55 * 10 = 550",1126
+q126,5,step_by_step,2,256,* 9 = 270 boxes. Step 3: Now 23 * 10 = 230 metres. Step 4: Now 19 * 6 = 114 metr,1126
+q126,5,step_by_step,3,256," Then 37 * 9 = 333 crates. Step 4: Now 8 * 4 = 32 seats. Step 5: After that, 38 ",1126
+q126,5,step_by_step,4,233," 4: Next, 32 * 8 = 256 boxes. Step 5: Which gives 405 + 721 = 1126. Answer: 1126",1126
+q127,6,direct,1,1,6406,6406
+q127,6,direct,2,3,6406,6406
+q127,6,direct,3,1,6406,6406
+q127,6,direct,4,3,6416,6406
+q127,6,step_by_step,1,199,Now 14 * 5 = 70 metres. Step 6: So the total is 3348 + 3058 = 6406. Answer: 6406,6406
+q127,6,step_by_step,2,215,4 * 5 = 70 boxes. Step 6: So the final amount is 5595 + 811 = 6406. Answer: 6406,6406
+q127,6,step_by_step,3,238, * 9 = 225 pages. Step 6: Altogether that makes 3269 + 3137 = 6406. Answer: 6406,6406
+q127,6,step_by_step,4,219,"r that, 30 * 6 = 180 metres. Step 6: Which gives 6630 - 224 = 6406. Answer: 6406",6406
+q128,6,direct,1,2,2034,2043
+q128,6,direct,2,2,2043,2043
+q128,6,direct,3,1,2043,2043
+q128,6,direct,4,2,2034,2043
+q128,6,step_by_step,1,254,: Then 23 * 12 = 276 tickets. Step 6: Which gives 2138 - 95 = 2043. Answer: 2043,2043
+q128,6,step_by_step,2,256," * 9 = 504 litres. Step 4: After that, 45 * 2 = 90 crates. Step 5: Next, 11 * 4 ",2043
+q128,6,step_by_step,3,256,"n 57 * 7 = 399 minutes. Step 4: After that, 54 * 6 = 324 coins. Step 5: Next, 24",2043
+q128,6,step_by_step,4,256,"43 * 7 = 301 tickets. Step 4: Then 58 * 8 = 464 tickets. Step 5: Next, 50 * 4 = ",2043
+q129,4,direct,1,2,8872,8872
+q129,4,direct,2,4,8872,8872
+q129,4,direct,3,4,8872,8872
+q129,4,direct,4,3,8862,8872
+q129,4,step_by_step,1,203, * 4 = 36 minutes. Step 4: Altogether that makes 9209 - 337 = 8872. Answer: 8872,8872
+q129,4,step_by_step,2,225,3: Now 52 * 5 = 260 crates. Step 4: Which gives 6020 + 2843 = 8863. Answer: 8863,8872
+q129,4,step_by_step,3,153, 3: Then 26 * 3 = 78 metres. Step 4: That leaves 9207 - 335 = 8872. Answer: 8872,8872
+q129,4,step_by_step,4,256," = 144 litres. Step 3: After that, 55 * 11 = 605 boxes. Step 4: Now 45 * 4 = 180",8872
+q130,3,direct,1,3,5017,5017
+q130,3,direct,2,2,5017,5017
+q130,3,direct,3,1,5117,5017
+q130,3,direct,4,1,5018,5017
+q130,3,step_by_step,1,173,Then 49 * 12 = 588 cups. Step 3: So the total is 5238 - 221 = 5017. Answer: 5017,5017
+q130,3,step_by_step,2,168,"fter that, 43 * 5 = 215 cups. Step 3: Which gives 5050 - 33 = 5017. Answer: 5017",5017
+q130,3,step_by_step,3,198, * 8 = 184 coins. Step 3: So the final amount is 5192 - 175 = 5017. Answer: 5017,5017
+q130,3,step_by_step,4,171,* 4 = 152 tickets. Step 3: Altogether that makes 4718 + 308 = 5026. Answer: 5026,5017
+q131,5,direct,1,3,1113,1113
+q131,5,direct,2,1,1123,1113
+q131,5,direct,3,4,1112,1113
+q131,5,direct,4,1,1113,1113
+q131,5,step_by_step,1,256," that, 6 * 12 = 72 litres. Step 4: After that, 6 * 10 = 60 minutes. Step 5: Now ",1113
+q131,5,step_by_step,2,136,* 12 = 180 coins. Step 5: So the final amount is 1334 - 221 = 1113. Answer: 1113,1113
+q131,5,step_by_step,3,256, * 9 = 108 coins. Step 2: Now 10 * 11 = 110 seats. Step 3: Then 26 * 5 = 130 cra,1113
+q131,5,step_by_step,4,227," that, 46 * 7 = 322 minutes. Step 5: Which gives 1327 - 214 = 1113. Answer: 1113",1113
+q132,4,direct,1,4,5772,5772
+q132,4,direct,2,1,5772,5772
+q132,4,direct,3,1,5772,5772
+q132,4,direct,4,4,5772,5772
+q132,4,step_by_step,1,256,"pages. Step 2: After that, 45 * 9 = 405 pages. Step 3: After that, 14 * 12 = 168",5772
+q132,4,step_by_step,2,182,"hat, 19 * 3 = 57 litres. Step 4: So the total is 6046 - 274 = 5772. Answer: 5772",5772
+q132,4,step_by_step,3,256," keeping track of each amount. Step 1: First, 8 * 7 = 56 pages. Step 2: Next, 35",5772
+q132,4,step_by_step,4,204,tep 3: Now 44 * 3 = 132 cups. Step 4: Which gives 5787 - 15 = 5772. Answer: 5772,5772
+q133,2,direct,1,2,7101,7091
+q133,2,direct,2,3,7092,7091
+q133,2,direct,3,2,7091,7091
+q133,2,direct,4,4,7191,7091
+q133,2,step_by_step,1,144,"st, 49 * 5 = 245 metres. Step 2: So the total is 6299 + 792 = 7091. Answer: 7091",7091
+q133,2,step_by_step,2,174, * 10 = 370 boxes. Step 2: So the final amount is 7023 + 68 = 7091. Answer: 7091,7091
+q133,2,step_by_step,3,138,"rst, 21 * 3 = 63 seats. Step 2: So the total is 3717 + 3374 = 7091. Answer: 7091",7091
+q133,2,step_by_step,4,214,5 * 12 = 540 cups. Step 2: So the final amount is 7136 - 54 = 7082. Answer: 7082,7091
+q134,5,direct,1,4,3652,3652
+q134,5,direct,2,2,3650,3652
+q134,5,direct,3,2,3661,3652
+q134,5,direct,4,1,3650,3652
+q134,5,step_by_step,1,199,"er that, 33 * 2 = 66 metres. Step 5: Which gives 3469 + 183 = 3652. Answer: 3652",3652
+q134,5,step_by_step,2,238,"4: Next, 34 * 5 = 170 coins. Step 5: That leaves 3879 - 227 = 3652. Answer: 3652",3652
+q134,5,step_by_step,3,256, 10 = 480 minutes. Step 4: Then 54 * 10 = 540 boxes. Step 5: Then 20 * 4 = 80 mi,3652
+q134,5,step_by_step,4,256,"p 3: Next, 18 * 7 = 126 litres. Step 4: Next, 49 * 4 = 196 tickets. Step 5: Next",3652
+q135,2,direct,1,2,573,573
+q135,2,direct,2,2,573,573
+q135,2,direct,3,1,563,573
+q135,2,direct,4,2,583,573
+q135,2,step_by_step,1,113,"p 1: First, 13 * 3 = 39 minutes. Step 2: Which gives 613 - 40 = 573. Answer: 573",573
+q135,2,step_by_step,2,118,"t, 17 * 5 = 85 coins. Step 2: Altogether that makes 239 + 334 = 573. Answer: 573",573
+q135,2,step_by_step,3,108, 37 * 6 = 222 minutes. Step 2: Altogether that makes 526 + 47 = 573. Answer: 573,573
+q135,2,step_by_step,4,177, 38 * 9 = 342 seats. Step 2: So the final amount is 917 - 344 = 573. Answer: 573,573
+q136,4,direct,1,3,2590,2590
+q136,4,direct,2,3,2591,2590
+q136,4,direct,3,3,2592,2590
+q136,4,direct,4,3,2590,2590
+q136,4,step_by_step,1,142,3: Now 24 * 9 = 216 tickets. Step 4: That leaves 2853 - 263 = 2590. Answer: 2590,2590
+q136,4,step_by_step,2,233,"xt, 51 * 7 = 357 seats. Step 4: So the total is 1427 + 1163 = 2590. Answer: 2590",2590
+q136,4,step_by_step,3,203,4 * 2 = 28 metres. Step 4: Altogether that makes 2176 + 414 = 2590. Answer: 2590,2590
+q136,4,step_by_step,4,230,: Now 55 * 8 = 440 boxes. Step 4: So the total is 2611 - 21 = 2590. Answer: 2590,2590
+q137,3,direct,1,2,8083,8083
+q137,3,direct,2,1,8083,8083
+q137,3,direct,3,4,8083,8083
+q137,3,direct,4,3,8083,8083
+q137,3,step_by_step,1,133,7 * 5 = 285 boxes. Step 3: Altogether that makes 8325 - 242 = 8083. Answer: 8083,8083
+q137,3,step_by_step,2,141,2: Now 46 * 5 = 230 litres. Step 3: That leaves 6887 + 1196 = 8083. Answer: 8083,8083
+q137,3,step_by_step,3,172, Now 24 * 3 = 72 coins. Step 3: So the total is 6054 + 2029 = 8083. Answer: 8083,8083
+q137,3,step_by_step,4,161, * 2 = 58 litres. Step 3: So the final amount is 8335 - 252 = 8083. Answer: 8083,8083
+q138,6,direct,1,2,1411,1413
+q138,6,direct,2,4,1411,1413
+q138,6,direct,3,1,1411,1413
+q138,6,direct,4,4,1411,1413
+q138,6,step_by_step,1,256,": Now 44 * 4 = 176 seats. Step 5: After that, 44 * 6 = 264 crates. Step 6: Next,",1413
+q138,6,step_by_step,2,235,7 * 2 = 54 crates. Step 6: So the final amount is 1457 - 44 = 1413. Answer: 1413,1413
+q138,6,step_by_step,3,256,"* 5 = 225 pages. Step 4: Next, 9 * 4 = 36 metres. Step 5: Next, 44 * 11 = 484 pa",1413
+q138,6,step_by_step,4,256,59 * 10 = 590 pages. Step 3: Now 46 * 2 = 92 metres. Step 4: Now 41 * 4 = 164 cu,1413
+q139,3,direct,1,1,8208,8208
+q139,3,direct,2,1,8208,8208
+q139,3,direct,3,4,8208,8208
+q139,3,direct,4,1,8208,8208
+q139,3,step_by_step,1,102,: Then 53 * 4 = 212 tickets. Step 3: Which gives 8407 - 199 = 8208. Answer: 8208,8208
+q139,3,step_by_step,2,154,"2: Next, 47 * 3 = 141 boxes. Step 3: Which gives 8490 - 282 = 8208. Answer: 8208",8208
+q139,3,step_by_step,3,137,"Next, 50 * 12 = 600 metres. Step 3: Which gives 5922 + 2286 = 8208. Answer: 8208",8208
+q139,3,step_by_step,4,143, 2: Now 13 * 9 = 117 pages. Step 3: That leaves 5163 + 3045 = 8208. Answer: 8208,8208
+q140,6,direct,1,1,6373,6364
+q140,6,direct,2,2,6363,6364
+q140,6,direct,3,4,6366,6364
+q140,6,direct,4,2,6366,6364
+q140,6,step_by_step,1,256,": Now 16 * 6 = 96 seats. Step 4: After that, 16 * 10 = 160 minutes. Step 5: Next",6364
+q140,6,step_by_step,2,256,"Next, 33 * 3 = 99 cups. Step 4: Now 20 * 2 = 40 litres. Step 5: Now 46 * 4 = 184",6364
+q140,6,step_by_step,3,229," 5: Next, 29 * 2 = 58 seats. Step 6: Which gives 6200 + 164 = 6364. Answer: 6364",6364
+q140,6,step_by_step,4,256,"After that, 20 * 12 = 240 coins. Step 5: Next, 6 * 11 = 66 minutes. Step 6: Then",6364
+q141,5,direct,1,2,2164,2164
+q141,5,direct,2,3,2173,2164
+q141,5,direct,3,3,2164,2164
+q141,5,direct,4,2,2164,2164
+q141,5,step_by_step,1,256," * 6 = 222 coins. Step 3: Now 40 * 9 = 360 tickets. Step 4: After that, 31 * 3 =",2164
+q141,5,step_by_step,2,245," Next, 53 * 5 = 265 tickets. Step 5: Which gives 874 + 1290 = 2164. Answer: 2164",2164
+q141,5,step_by_step,3,256,"er that, 21 * 6 = 126 cups. Step 4: Now 47 * 2 = 94 cups. Step 5: Now 58 * 4 = 2",2164
+q141,5,step_by_step,4,256," 8 * 5 = 40 litres. Step 4: Next, 18 * 8 = 144 cups. Step 5: Then 45 * 3 = 135 c",2164
+q142,2,direct,1,2,1342,1342
+q142,2,direct,2,1,1340,1342
+q142,2,direct,3,3,1342,1342
+q142,2,direct,4,4,1342,1342
+q142,2,step_by_step,1,71,1 * 3 = 123 coins. Step 2: So the final amount is 802 + 540 = 1342. Answer: 1342,1342
+q142,2,step_by_step,2,68,": First, 31 * 11 = 341 coins. Step 2: Which gives 1381 - 39 = 1342. Answer: 1342",1342
+q142,2,step_by_step,3,76, * 10 = 280 boxes. Step 2: So the final amount is 774 + 568 = 1342. Answer: 1342,1342
+q142,2,step_by_step,4,83,59 * 4 = 236 cups. Step 2: Altogether that makes 1207 + 145 = 1352. Answer: 1352,1342
+q143,3,direct,1,4,358,358
+q143,3,direct,2,1,358,358
+q143,3,direct,3,4,458,358
+q143,3,direct,4,1,358,358
+q143,3,step_by_step,1,147,8 * 12 = 336 minutes. Step 3: Altogether that makes 626 - 268 = 358. Answer: 358,358
+q143,3,step_by_step,2,117,31 * 3 = 93 minutes. Step 3: So the final amount is 543 - 185 = 358. Answer: 358,358
+q143,3,step_by_step,3,156,", 15 * 2 = 30 minutes. Step 3: Altogether that makes 342 + 26 = 368. Answer: 368",358
+q143,3,step_by_step,4,212,tep 2: Now 24 * 8 = 192 minutes. Step 3: That leaves 382 - 24 = 358. Answer: 358,358
+q144,4,direct,1,2,4540,4530
+q144,4,direct,2,4,4530,4530
+q144,4,direct,3,2,4530,4530
+q144,4,direct,4,2,4521,4530
+q144,4,step_by_step,1,141," that, 33 * 10 = 330 seats. Step 4: Which gives 2035 + 2495 = 4530. Answer: 4530",4530
+q144,4,step_by_step,2,152,9 * 11 = 99 seats. Step 4: Altogether that makes 4681 - 151 = 4530. Answer: 4530,4530
+q144,4,step_by_step,3,186, * 8 = 464 pages. Step 4: Altogether that makes 2553 + 1977 = 4530. Answer: 4530,4530
+q144,4,step_by_step,4,145,* 12 = 144 cups. Step 4: So the final amount is 2980 + 1550 = 4530. Answer: 4530,4530
+q145,2,direct,1,1,3186,3186
+q145,2,direct,2,3,3186,3186
+q145,2,direct,3,1,3186,3186
+q145,2,direct,4,4,3186,3186
+q145,2,step_by_step,1,67,6 * 2 = 12 minutes. Step 2: Altogether that makes 3223 - 37 = 3186. Answer: 3186,3186
+q145,2,step_by_step,2,80," First, 56 * 10 = 560 cups. Step 2: That leaves 1174 + 2012 = 3186. Answer: 3186",3186
+q145,2,step_by_step,3,71," First, 42 * 2 = 84 minutes. Step 2: Which gives 3450 - 264 = 3186. Answer: 3186",3186
+q145,2,step_by_step,4,82,"rst, 49 * 5 = 245 litres. Step 2: So the total is 3259 - 73 = 3186. Answer: 3186",3186
+q146,6,direct,1,4,7462,7452
+q146,6,direct,2,4,7443,7452
+q146,6,direct,3,1,7451,7452
+q146,6,direct,4,4,7552,7452
+q146,6,step_by_step,1,256," 7 = 266 crates. Step 3: After that, 20 * 10 = 200 pages. Step 4: After that, 18",7452
+q146,6,step_by_step,2,252,"r that, 22 * 6 = 132 boxes. Step 6: Which gives 6239 + 1213 = 7452. Answer: 7452",7452
+q146,6,step_by_step,3,256,"ext, 25 * 6 = 150 cups. Step 4: Next, 29 * 8 = 232 crates. Step 5: After that, 3",7452
+q146,6,step_by_step,4,256,"3: Next, 19 * 10 = 190 cups. Step 4: Then 42 * 4 = 168 coins. Step 5: Now 32 * 4",7452
+q147,6,direct,1,3,2605,2605
+q147,6,direct,2,3,2595,2605
+q147,6,direct,3,1,2605,2605
+q147,6,direct,4,4,2604,2605
+q147,6,step_by_step,1,251, 5: Then 23 * 3 = 69 litres. Step 6: That leaves 2152 + 453 = 2605. Answer: 2605,2605
+q147,6,step_by_step,2,256,"* 10 = 390 seats. Step 3: After that, 42 * 6 = 252 coins. Step 4: Next, 12 * 7 =",2605
+q147,6,step_by_step,3,256," 12 = 96 metres. Step 5: Now 37 * 7 = 259 litres. Step 6: After that, 27 * 5 = 1",2605
+q147,6,step_by_step,4,220,5 * 8 = 40 pages. Step 6: So the final amount is 2927 - 322 = 2605. Answer: 2605,2605
+q148,4,direct,1,3,87,87
+q148,4,direct,2,2,87,87
+q148,4,direct,3,1,87,87
+q148,4,direct,4,1,87,87
+q148,4,step_by_step,1,103,es. Step 3: Now 37 * 9 = 333 cups. Step 4: Which gives 140 - 53 = 87. Answer: 87,87
+q148,4,step_by_step,2,158,"3: After that, 41 * 11 = 451 seats. Step 4: Which gives 40 + 47 = 87. Answer: 87",87
+q148,4,step_by_step,3,187,es. Step 3: Now 16 * 10 = 160 seats. Step 4: That leaves 86 + 1 = 87. Answer: 87,87
+q148,4,step_by_step,4,179,"es. Step 3: Next, 30 * 8 = 240 cups. Step 4: Which gives 84 + 3 = 87. Answer: 87",87
+q149,3,direct,1,3,1512,1512
+q149,3,direct,2,1,1512,1512
+q149,3,direct,3,2,1512,1512
+q149,3,direct,4,2,1512,1512
+q149,3,step_by_step,1,105,* 11 = 638 coins. Step 3: So the final amount is 1065 + 447 = 1512. Answer: 1512,1512
+q149,3,step_by_step,2,141,tep 2: Now 5 * 3 = 15 crates. Step 3: Which gives 1529 - 17 = 1512. Answer: 1512,1512
+q149,3,step_by_step,3,75," 2: Next, 11 * 6 = 66 seats. Step 3: That leaves 1776 - 264 = 1512. Answer: 1512",1512
+q149,3,step_by_step,4,116,: Then 3 * 9 = 27 coins. Step 3: So the total is 1890 - 378 = 1512. Answer: 1512,1512
+q150,3,direct,1,4,590,590
+q150,3,direct,2,2,590,590
+q150,3,direct,3,1,590,590
+q150,3,direct,4,1,590,590
+q150,3,step_by_step,1,131,"fter that, 54 * 5 = 270 crates. Step 3: That leaves 862 - 272 = 590. Answer: 590",590
+q150,3,step_by_step,2,106,ep 2: Then 39 * 7 = 273 minutes. Step 3: Which gives 557 + 33 = 590. Answer: 590,590
+q150,3,step_by_step,3,86,tep 2: Now 43 * 7 = 301 metres. Step 3: That leaves 920 - 230 = 690. Answer: 690,590
+q150,3,step_by_step,4,178,"p 2: Next, 33 * 7 = 231 litres. Step 3: That leaves 875 - 285 = 590. Answer: 590",590
+q151,3,direct,1,4,3576,3577
+q151,3,direct,2,4,3577,3577
+q151,3,direct,3,3,3567,3577
+q151,3,direct,4,4,3577,3577
+q151,3,step_by_step,1,103,p 2: Then 46 * 5 = 230 coins. Step 3: That leaves 3622 - 45 = 3577. Answer: 3577,3577
+q151,3,step_by_step,2,100,* 11 = 44 litres. Step 3: Altogether that makes 2069 + 1508 = 3577. Answer: 3577,3577
+q151,3,step_by_step,3,114,"t, 32 * 5 = 160 metres. Step 3: So the total is 1488 + 2080 = 3568. Answer: 3568",3577
+q151,3,step_by_step,4,186, 12 = 120 minutes. Step 3: Altogether that makes 3844 - 266 = 3578. Answer: 3578,3577
+q152,5,direct,1,2,6765,6766
+q152,5,direct,2,3,6766,6766
+q152,5,direct,3,1,6768,6766
+q152,5,direct,4,3,6866,6766
+q152,5,step_by_step,1,256,es. Step 2: Then 4 * 2 = 8 litres. Step 3: Then 42 * 3 = 126 coins. Step 4: Then,6766
+q152,5,step_by_step,2,253, * 5 = 45 litres. Step 5: Altogether that makes 3775 + 2991 = 6766. Answer: 6766,6766
+q152,5,step_by_step,3,256," 24 coins. Step 4: After that, 55 * 6 = 330 seats. Step 5: Now 20 * 3 = 60 crate",6766
+q152,5,step_by_step,4,256,"t, 31 * 9 = 279 seats. Step 2: Then 17 * 3 = 51 pages. Step 3: After that, 31 * ",6766
+q153,5,direct,1,1,882,892
+q153,5,direct,2,4,892,892
+q153,5,direct,3,4,901,892
+q153,5,direct,4,4,892,892
+q153,5,step_by_step,1,256,"1: First, 26 * 2 = 52 pages. Step 2: Now 14 * 8 = 112 litres. Step 3: Now 35 * 3",892
+q153,5,step_by_step,2,256,"3 * 4 = 52 metres. Step 2: Next, 56 * 2 = 112 litres. Step 3: Now 46 * 12 = 552 ",892
+q153,5,step_by_step,3,255,"Step 4: Next, 23 * 3 = 69 coins. Step 5: Which gives 947 - 55 = 892. Answer: 892",892
+q153,5,step_by_step,4,256," 10 = 80 metres. Step 2: After that, 50 * 6 = 300 tickets. Step 3: After that, 2",892
+q154,2,direct,1,2,3724,3722
+q154,2,direct,2,3,3722,3722
+q154,2,direct,3,4,3722,3722
+q154,2,direct,4,1,3722,3722
+q154,2,step_by_step,1,79,* 4 = 112 seats. Step 2: So the final amount is 1350 + 2372 = 3722. Answer: 3722,3722
+q154,2,step_by_step,2,66,": First, 50 * 9 = 450 crates. Step 2: That leaves 3635 + 87 = 3722. Answer: 3722",3722
+q154,2,step_by_step,3,86,"st, 27 * 3 = 81 metres. Step 2: So the total is 1254 + 2468 = 3722. Answer: 3722",3722
+q154,2,step_by_step,4,98," First, 12 * 3 = 36 minutes. Step 2: That leaves 3831 - 109 = 3722. Answer: 3722",3722
+q155,2,direct,1,1,1347,1347
+q155,2,direct,2,3,1347,1347
+q155,2,direct,3,2,1347,1347
+q155,2,direct,4,2,1347,1347
+q155,2,step_by_step,1,120," First, 24 * 8 = 192 litres. Step 2: That leaves 1116 + 231 = 1347. Answer: 1347",1347
+q155,2,step_by_step,2,132, * 12 = 540 pages. Step 2: Altogether that makes 1697 - 350 = 1347. Answer: 1347,1347
+q155,2,step_by_step,3,135, * 10 = 400 boxes. Step 2: Altogether that makes 1511 - 164 = 1347. Answer: 1347,1347
+q155,2,step_by_step,4,91, 8 * 11 = 88 coins. Step 2: Altogether that makes 1281 + 66 = 1347. Answer: 1347,1347
+q156,3,direct,1,2,2184,2184
+q156,3,direct,2,4,2184,2184
+q156,3,direct,3,2,2184,2184
+q156,3,direct,4,3,2184,2184
+q156,3,step_by_step,1,155,"ter that, 32 * 7 = 224 cups. Step 3: That leaves 1922 + 264 = 2186. Answer: 2186",2184
+q156,3,step_by_step,2,216,"er that, 36 * 8 = 288 boxes. Step 3: That leaves 2527 - 343 = 2184. Answer: 2184",2184
+q156,3,step_by_step,3,137,49 * 7 = 343 cups. Step 3: Altogether that makes 1681 + 503 = 2184. Answer: 2184,2184
+q156,3,step_by_step,4,149,"r that, 29 * 12 = 348 cups. Step 3: That leaves 1141 + 1043 = 2184. Answer: 2184",2184
+q157,2,direct,1,4,1227,1227
+q157,2,direct,2,1,1227,1227
+q157,2,direct,3,2,1227,1227
+q157,2,direct,4,2,1227,1227
+q157,2,step_by_step,1,142,"First, 21 * 11 = 231 crates. Step 2: That leaves 1050 + 177 = 1227. Answer: 1227",1227
+q157,2,step_by_step,2,97,"1: First, 7 * 10 = 70 metres. Step 2: Which gives 1170 + 67 = 1237. Answer: 1237",1227
+q157,2,step_by_step,3,80,"First, 57 * 4 = 228 tickets. Step 2: Which gives 1415 - 188 = 1227. Answer: 1227",1227
+q157,2,step_by_step,4,107,", 21 * 12 = 252 tickets. Step 2: So the total is 1461 - 234 = 1227. Answer: 1227",1227
+q158,4,direct,1,3,2154,2154
+q158,4,direct,2,3,2154,2154
+q158,4,direct,3,2,2254,2154
+q158,4,direct,4,1,2154,2154
+q158,4,step_by_step,1,256,"eping track of each amount. Step 1: First, 15 * 12 = 180 litres. Step 2: Now 21 ",2154
+q158,4,step_by_step,2,248, 10 = 160 tickets. Step 4: Altogether that makes 2524 - 369 = 2155. Answer: 2155,2154
+q158,4,step_by_step,3,256,"0 boxes. Step 2: After that, 39 * 3 = 117 minutes. Step 3: Then 30 * 7 = 210 tic",2154
+q158,4,step_by_step,4,191,"3: Next, 53 * 5 = 265 boxes. Step 4: That leaves 2407 - 253 = 2154. Answer: 2154",2154
+q159,4,direct,1,2,3418,3417
+q159,4,direct,2,2,3407,3417
+q159,4,direct,3,4,3416,3417
+q159,4,direct,4,1,3415,3417
+q159,4,step_by_step,1,205, * 9 = 315 seats. Step 4: So the final amount is 3694 - 279 = 3415. Answer: 3415,3417
+q159,4,step_by_step,2,241,"fter that, 22 * 2 = 44 seats. Step 4: That leaves 3403 + 14 = 3417. Answer: 3417",3417
+q159,4,step_by_step,3,187,"hat, 22 * 10 = 220 minutes. Step 4: That leaves 1401 + 2006 = 3407. Answer: 3407",3417
+q159,4,step_by_step,4,204,"at, 53 * 6 = 318 seats. Step 4: So the total is 1678 + 1739 = 3417. Answer: 3417",3417
+q160,5,direct,1,1,1225,1225
+q160,5,direct,2,1,1223,1225
+q160,5,direct,3,2,1225,1225
+q160,5,direct,4,2,1225,1225
+q160,5,step_by_step,1,256,Then 5 * 7 = 35 crates. Step 4: Now 6 * 7 = 42 pages. Step 5: Now 16 * 8 = 128 p,1225
+q160,5,step_by_step,2,243, * 8 = 368 boxes. Step 5: So the final amount is 1045 + 180 = 1225. Answer: 1225,1225
+q160,5,step_by_step,3,221,Now 34 * 11 = 374 metres. Step 5: So the total is 634 + 591 = 1225. Answer: 1225,1225
+q160,5,step_by_step,4,256,"174 seats. Step 3: Then 24 * 7 = 168 coins. Step 4: After that, 53 * 2 = 106 sea",1225
