@@ -30,7 +30,10 @@ facilitator pack has it); this exercise is its shape, rebuilt in the students' o
 ## The answer
 
 **The analysis's loader silently leaves out every response that has no final answer, and the gate checks the data
-only after that loader has run.** So the gate never sees what was left out, and neither does its self-test.
+only after that loader has run.** So the gate never sees what was left out, and neither does its self-test. Since v2
+(2026-10-20) the exclusion is in the loader's code only: the pre-registered plan never mentions it, and neither does
+the note. So it is also an analysis choice nobody registered, and a pair that compares the plan with the code finds
+it that way.
 
 What was left out (all numbers from `python verify_gate.py`):
 - **154 of the 640 step-by-step responses (24.1%), and none of the direct ones.** Every one was cut off at the
@@ -68,6 +71,12 @@ recommendation the data don't support at the setting it names.**
 
 And one seam a careful reader can see: every check's `EARNED` line says "inherited from the team's template". None
 was earned. An inherited checklist is not a gate (`vr.gate`'s description says so).
+
+**Found by the blind review, not planned** (`AGENT_REVIEW_RESULTS.md`): three of the seven shipped checks cannot fail
+on any real file. `load()` builds the things `CORRECT_IS_BINARY` and `COLUMNS_PRESENT` check (a missing column
+crashes `load()` before any check runs), and `ANSWER_IN_RESPONSE` tests an answer against the very text it was
+extracted from, by substring. Keep them: they are `vr.gate` objective 5 (a check that passed and was still not
+evidence) in three more forms, and a student who finds one has found something real.
 
 ### The join, for hour 3
 
@@ -127,9 +136,11 @@ Three parts. A pair that does the first is doing the hour's work; the others are
   step-by-step") will be told by the self-test that their check "fails the data as shipped". Some will start
   weakening the check until it passes. Ask: *is the check wrong, or the data? What would tell you which?* The
   task's step 2 tells them to write that down before changing anything; check that they did.
-- **Reading instead of running.** Some pairs will find it by reading the plan ("excluded: they cannot be graded")
-  and the pairing check's "at least one". Good. Then ask for the check that would have caught it without anyone
-  reading, and the number: how many were left out, from which prompt.
+- **Reading instead of running.** Some pairs will find it by reading `load()` (it skips a response whose final
+  answer it can't parse), or the pairing check's "at least one". Good. Then ask for the check that would have caught
+  it without anyone reading, and the number: how many were left out, from which prompt. In round 1 of the blind
+  review every agent suspected it from the note alone; the note no longer carries those lines (see "How it was
+  built").
 - **"The gate passed, so I'd sign."** Ask what the gate checked, and what it read to check it.
 
 ## Weak answers, and where to send them
@@ -178,6 +189,13 @@ at the reveal: it is the check most students who suspect the defect will write f
   mid-step. The wording comes from its own random stream, so the change moved no number. Check 8 holds it: no blank
   cell, every step-by-step `response_end` the same length, no answer line in a cut-off one, and the parser recovering
   every intended answer. (Its first run caught a "Step 0" in two-step chains, from the author's own text generator.)
+- **v2: the note and the plan stop giving it away** (changed 2026-10-20, after round 1 of the blind review). All five
+  fresh agents suspected the defect from three lines of `review.md` together: the 256-token cap, "median length of 164
+  tokens", and the grading row's exclusion rule; two also used the by-length table. v2 removes the median line (it
+  was also an unplanted second join: the median of the 486 graded responses, not of all 640), the by-length table
+  and its limit (the analysis still prints the table when run), and the exclusion sentence from the note's grading
+  row and from the plan. The loader still excludes, in code. Nothing in the data, the loader's behaviour or the
+  numbers changed. Check 6 now fails if any of those lines comes back.
 
 ## Verify
 

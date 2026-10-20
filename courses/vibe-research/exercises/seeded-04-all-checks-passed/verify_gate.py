@@ -309,7 +309,6 @@ def check_world(path, latent, intended, verbose=True, review=None):
             acc = ungated["accuracy"]
             rows_used = {p: int((d["prompt"] == p).sum()) for p in analysis.PROMPTS}
             g, lo_, hi_ = ungated["gain"], ungated["ci"][0], ungated["ci"][1]
-            med = {p: float(np.median(d["tokens"][d["prompt"] == p])) for p in analysis.PROMPTS}
             needles = {
                 "direct accuracy beside (640 responses)":
                     rf"Accuracy, direct prompt \(640 responses\)\s*\|\s*{acc['direct']:.3f}",
@@ -317,13 +316,17 @@ def check_world(path, latent, intended, verbose=True, review=None):
                     rf"Accuracy, step-by-step prompt \(640 responses\)\s*\|\s*{acc['step_by_step']:.3f}",
                 "gain and interval":
                     re.escape(f"**{g:+.3f}** | **[{lo_:+.3f}, {hi_:+.3f}]**"),
-                "medians": rf"median length of {int(np.floor(med['step_by_step'] + 0.5))} tokens, "
-                           rf"against {int(med['direct'])} for direct",
             }
-            for s, r in ungated["by_steps"].items():
-                needles[f"{s} operations row"] = re.escape(
-                    f"| {s} | {r['direct']:.3f} | {r['step']:.3f} | {r['gain']:+.3f} |")
-            hits = {k: bool(re.search(v, text)) for k, v in needles.items()}
+            # v2 (2026-10-20): the note prints no by-length table and no median length; check it stays that way,
+            # because all five round-1 reviewers suspected the defect from those lines before running anything
+            tells = {"median length": r"median length of \d+ tokens",
+                     "by-length table": r"\|\s*operations\s*\|",
+                     "exclusion rule": r"excluded"}
+            for k, v in tells.items():
+                needles[f"note states no {k}"] = None
+                if re.search(v, text):
+                    needles[f"note states no {k}"] = "(?!)"     # present: fail this needle
+            hits = {k: (v is None) or bool(re.search(v, text)) for k, v in needles.items()}
             out["6 the join"] = (all(hits.values()) and rows_used["step_by_step"] < 640
                                  and rows_used["direct"] == 640)
             missing = [k for k, ok in hits.items() if not ok]

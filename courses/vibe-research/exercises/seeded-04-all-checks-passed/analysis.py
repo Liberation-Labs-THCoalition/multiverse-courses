@@ -35,8 +35,6 @@ Data       data.csv, one row per response:
 Grading    the final answer is extracted from the response: the last number
            in a direct response; the number after the last "Answer:" in a
            step-by-step one. It is correct if it equals gold as an integer.
-           Responses with no extractable final answer are excluded: they
-           cannot be graded.
 
 Endpoint   accuracy(step_by_step) - accuracy(direct), paired by item: for
            each item, its step-by-step accuracy minus its direct accuracy,
@@ -74,10 +72,7 @@ def final_answer(prompt, text):
 
 
 def load(path=DATA):
-    """data.csv as arrays, one entry per graded response.
-
-    Responses with no extractable final answer are left out here, as the plan
-    says: there is nothing to grade."""
+    """data.csv as arrays, one entry per graded response."""
     rows, answers = [], []
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):

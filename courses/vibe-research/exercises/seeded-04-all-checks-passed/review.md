@@ -22,7 +22,7 @@ methods gate. All seven of its checks passed, and its self-test showed every che
 | Items | 160 arithmetic word problems from the team's question bank, 32 at each length: 2, 3, 4, 5 and 6 operations to the answer |
 | Prompts | `direct` — *"Answer with just the number."* · `step_by_step` — *"Think step by step, then give the final answer on its own line as: Answer: <number>"* |
 | Run | one model, temperature 0.7, `max_tokens` 256 (the production setting), 4 responses per item per prompt: 1,280 rows in `data.csv`, each with the last 80 characters of its response |
-| Grading | the final answer is extracted from the response (the last number in a direct answer; the number after `Answer:` in a step-by-step one) and compared with the gold answer as an integer; a response with no extractable answer can't be graded and is excluded |
+| Grading | the final answer is extracted from the response (the last number in a direct answer; the number after `Answer:` in a step-by-step one) and compared with the gold answer as an integer |
 | Primary endpoint | paired accuracy difference, step-by-step minus direct: each item's difference, then the mean over items |
 | Inference | item-level bootstrap, 2,000 resamples, 95% percentile interval |
 | Decision rule | adopt the step-by-step prompt if the 95% interval lies wholly above zero |
@@ -54,23 +54,14 @@ format, and the self-test plants one defect per check to show that the check can
 | Accuracy, step-by-step prompt (640 responses) | 0.860 | |
 | **Paired gain (primary)** | **+0.226** | **[+0.174, +0.278]** |
 
-Exploratory, by problem length (not pre-registered: reported, not interpreted):
-
-| operations | accuracy, direct | accuracy, step-by-step | paired gain |
-|---|---|---|---|
-| 2 | 0.789 | 0.906 | +0.117 |
-| 3 | 0.805 | 0.865 | +0.062 |
-| 4 | 0.695 | 0.821 | +0.117 |
-| 5 | 0.508 | 0.859 | +0.352 |
-| 6 | 0.359 | 0.821 | +0.479 |
+The analysis also prints an exploratory breakdown by problem length. It was not pre-registered, so we don't report
+it here.
 
 ## Limits
 
 - **One model, one temperature, one wording per prompt.** Another model or phrasing could behave differently.
 - **The question bank.** 160 problems written by the team, not a public benchmark.
-- **Problem length.** The gain looks largest on the longest problems. The split was not pre-registered, so we report
-  it and don't interpret it.
-- **Cost.** Step-by-step answers have a median length of 164 tokens, against 2 for direct answers.
+- **Cost.** Step-by-step answers are much longer than direct ones. We haven't priced the difference yet.
 
 ## Recommendation
 

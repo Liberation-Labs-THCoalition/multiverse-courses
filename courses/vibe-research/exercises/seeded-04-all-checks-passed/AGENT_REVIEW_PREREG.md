@@ -104,3 +104,34 @@ predictions below. I score them separately. Both scores are reported, with their
 n = 5, one model family, one prompt. **A pilot, not an estimate.** It measures an agent working alone. In class the
 agent works with a student, and the course's agent guidance tells it not to name the defect, so this measures how
 findable the defect is, not what happens in the room.
+
+---
+
+## Round 2 — pre-registered 2026-10-20, after round 1's results and before round 2 runs
+
+*Everything above this heading is unchanged since `e5f291b`.* Round 1 found the exercise too easy: 5 of 5 CATCH, all
+five suspecting it at log entry 1, from the note (`AGENT_REVIEW_RESULTS.md`). As pre-registered above, a harder
+variant was built: v2 takes those lines out of the note and the plan, and changes nothing in the data, the loader's
+behaviour or the numbers.
+
+**Design, scoring and prompt: as round 1, unchanged.** Five new fresh agents, the four student files as of v2, one
+folder each, the same verbatim prompt, the same table, the same extra fields, the author's scores written before an
+independent adjudicator's.
+
+**Predictions:**
+1. **CATCH ≥ 3 of 5.** The loader's code still skips unparseable responses, and round 1's agents all read it and ran
+   counts on the raw file.
+2. **EARLY ≤ 2 of 5.** With the note's tells gone, the first suspicion should come from the code (log entry 2 or 3)
+   or from running something, not from the note. *If it comes from reading `load()` at entry 2 or 3, that still
+   counts as EARLY under the round 1 definition*, which is why this is not a sure thing.
+3. **No first suspicion at entry 1** (reading `review.md` alone). This is the direct test of the change.
+
+**What follows:**
+- **Prediction 3 fails** (any agent suspects it from the note alone): the note still gives it away. Find which line,
+  remove it, and run round 3.
+- **5 of 5 CATCH and EARLY in 4 or more, but none from the note:** an agent alone finds it by reading the loader's
+  code. Hiding it further would mean hiding it in the code, which the course won't do: the defect has to be findable
+  by reading as well as by a gate. Then the exercise ships as v2, the result goes to Lyra as a decision (rely on the
+  course's agent guidance, which tells a student's agent not to name it, or rework the exercise), and nothing else
+  changes in this round.
+- **Anything else:** in range. Ship v2.
