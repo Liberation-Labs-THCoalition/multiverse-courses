@@ -1,8 +1,8 @@
 # Session 4 — The gate, and the room
 
 > **Clock:** this session's clock is on this page, [below](#the-clock): 201 minutes of content in a 240-minute
-> session, rebuilt 2026-10-20 and not yet piloted. [The four clocks](../../docs/session-clocks.md) still shows this
-> session's old plan. For session 4, this page replaces it.
+> session, rebuilt 2026-10-20 and not yet piloted. [The four clocks](../../docs/session-clocks.md) carries the same
+> table; if they ever differ, this page wins.
 
 **Status: `DRAFT`, 2026-08-25; rebuilt 2026-10-20 around a published case and a gate that runs on data.** Four
 hours. Last of four.

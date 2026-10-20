@@ -240,13 +240,36 @@ over, and 197 by blocks.
 
 ---
 
-## Session 4 — The gate, and the room *(corrected)*
+## Session 4 — The gate, and the room *(rebuilt 2026-10-20)*
 
-> **Superseded 2026-10-20** (branch `lyra/s4-rebuild`, for review). Session 4 was rebuilt, and its clock now lives
-> on [its own page](../courses/vibe-research/session-4-the-gate-and-the-room.md#the-clock): 201 minutes of content
-> in 240, with the house's buffer, not yet piloted. The plan below is the old one, kept for the record. Its content
-> summed to 210, not 201: the 9 minutes came out of the buffer (4, not 10) and a transition.
+Rebuilt and merged 2026-10-20 (`f8abf98`). The session page carries the same clock
+([its own page](../courses/vibe-research/session-4-the-gate-and-the-room.md#the-clock)); if the two ever differ, the
+page wins and this table is the one to fix. **201 minutes of content in 240**, with the house's buffer. Not piloted:
+every timing is `PREDICTED`.
 
+| clock | block | min |
+|---|---|---|
+| 0:00 | Opening. Hour 1's pairs were posted the night before; confirm them, don't brief | 5 |
+| 0:05 | **H1** — build the gate, and make it run | 50 |
+| 0:55 | **break** — "back at 1:00" | 5 |
+| 1:00 | **H2** — the seeded exercise: a confident review | 40 |
+| 1:40 | **lunch**, "back at 2:10" | 30 |
+| 2:10 | transition | 3 |
+| 2:13 | **H3** — defects that do not present as claims | 30 |
+| 2:43 | **break** — "back at 2:48". **Post the hand-off pairs before this break** | 5 |
+| 2:48 | **H3½** — the hand-off test | 20 |
+| 3:08 | fix what the hand-off found, and run your gate on your own pilot | 16 |
+| 3:24 | transition | 3 |
+| 3:27 | **H4** — the finding you will defend | 45 |
+| 4:12 | overrun buffer, **unspent** | 13 |
+| 4:25 | close | 5 |
+
+Content: 50 + 40 + 30 + 20 + 16 + 45 = **201**. What changed from the old plan: hour 3 went from 37 minutes to 30 and
+the hand-off fix from 18 to 16, so the buffer is the house's 13, not 4.
+
+### The old plan, kept for the record
+
+Its content summed to 210, not 201: the 9 minutes came out of the buffer (4, not 10) and a transition.
 *Was 220/201 with no transitions and no buffer.*
 
 | clock | block | min |
