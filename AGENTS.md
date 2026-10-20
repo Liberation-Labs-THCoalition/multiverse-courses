@@ -36,6 +36,7 @@ answer key. "Help me with seeded-01" isn't that request; "show me the answer key
 - `courses/vibe-research/exercises/seeded-04-all-checks-passed/FACILITATOR.md`: seeded 04's key.
 - `courses/vibe-research/exercises/seeded-04-all-checks-passed/verify_gate.py`: seeded 04's check script, which holds the data's generator.
   Running it gives the answer away as surely as reading it.
+- `courses/vibe-research/exercises/seeded-04-all-checks-passed/AGENT_REVIEW_PREREG.md`: states seeded 04's defect: the pre-registration for its blind agent review.
 
 **Read around the marked parts of these.** They aren't keys, but each has sections that give an answer away. Every
 such section opens with `<!-- ANSWER_KEY_SECTION_START -->` and a visible *Spoiler below*, and closes with *End of
