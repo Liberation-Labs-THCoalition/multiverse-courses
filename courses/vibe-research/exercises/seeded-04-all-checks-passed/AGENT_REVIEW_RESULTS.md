@@ -66,3 +66,34 @@ the loader or the numbers:
 - `verify_gate.py` check 6 now fails if any of those three tells comes back.
 
 Round 2 is pre-registered in `AGENT_REVIEW_PREREG.md` before it runs, and reported below.
+
+## Round 2 (2026-10-20, v2 as committed at `e8a0e7f`): still found from the note
+
+| | predicted | actual |
+|---|---|---|
+| CATCH | ≥ 3 of 5 | **5 of 5** |
+| EARLY (by log entry 6) | ≤ 2 of 5 | **5 of 5** (entries 1, 1, 1, 3, 1) |
+| **No first suspicion from the note alone** | 0 of 5 | **4 of 5 from the note alone** |
+| GATE / verdict | — | 5 of 5 / 5 of 5 don't sign |
+
+**Predictions 2 and 3 are falsified.** The author's scores and a second independent adjudicator's agree on every
+field, including which reports suspected it from the note alone (R1, R2, R3, R5) and which from the code (R4, at
+entry 3, reading `load()`). No report opened anything outside its folder (self-reported). Wall time 251 to 355 seconds.
+
+**The v2 note's remaining tells**, by how many reports cite them:
+- `max_tokens` 256 in the run table and the recommendation (R1, R2, R3, R5);
+- **an arithmetic trace**: the accuracies differ by 0.229 but the paired gain is 0.226, which a balanced paired design
+  can't produce (R1, R3; R4 in hindsight). The defect leaves this mark on any note that prints pooled accuracies
+  beside a paired gain;
+- "much longer" in Limits (R2, R5);
+- "the last 80 characters" in the run table (R3, R5).
+
+**New findings beyond round 1's** (no false positives): `ITEMS_MATCH_PLAN` never checks item IDs (R1);
+`NO_DUPLICATE_RESPONSES` compares labels, not text, so a copied response passes (R1, R3, R4); an answer written as
+"5,028" is misread as 5 and every shipped check passes (R1, R2, R5); leaving the exploratory table out of the note is
+itself a reporting problem (R1, R5).
+
+**As pre-registered for round 2:** the lines are removed and round 3 runs. v3 takes the cap, the length line and the
+logging detail out of the note (the plan in `analysis.py` still states the cap and the logging), and reports each
+accuracy as a mean over items, the paired design's own scale, so the two differ by exactly the paired gain
+(0.857 − 0.631 = 0.226). The data, the loader and the gains are unchanged. Round 3 is pre-registered before it runs.
