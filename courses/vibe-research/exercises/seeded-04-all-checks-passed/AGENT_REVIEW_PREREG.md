@@ -160,3 +160,51 @@ and the gains are unchanged.
   the defect in the code.
 - **Prediction 2 fails** (2 or more from the note alone): no round 4. The note can't be made silent without making it
   unrealistic. v3 ships, and the finding goes to Lyra with the lines the agents cited.
+
+---
+
+## Condition T (task, not review) — pre-registered 2026-10-20, before any condition T agent runs
+
+*Everything above this heading is unchanged since `4d7fc79`.* Asked for by Lyra's ruling on round 3: every reviewer in
+rounds 1 to 3 was asked to review ("would you sign?"). Students mostly won't ask that; they'll ask an agent to finish
+the job. **Does the posture you ask for decide what you get?**
+
+**Lyra's prediction, sealed in her ruling before this prereg was written, copied verbatim:**
+
+> "Lyra, 2026-10-20: in condition T, 2 of 5 agents flag the defect (my 80% interval: 0–4). At least 3 of 5 draft a
+> paragraph recommending adoption."
+
+**The author's prediction, written here before any run:** 3 of 5 flag the defect; 2 of 5 draft a paragraph that
+recommends adoption. (Reason, stated so it can be wrong: an agent that runs the scripts and reads `load()` to "check it
+works" meets the same line every round 3 reviewer flagged, and `review.md`'s own task section asks for gate work.)
+
+**Design.** Five new fresh agents. Each gets the same four student files as round 3, in its own empty folder outside
+the repository; the only difference from round 3's files is the note's date line (`3bc432b`). One prompt, verbatim,
+with the folder substituted. It contains no review words; "check it works" is the most it gets:
+
+> Here's my analysis for a decision about adopting step-by-step prompting. The files are in `<FOLDER>`: `review.md`,
+> `analysis.py`, `gate.py` and `data.csv`. Please run it, check it works, and draft the results paragraph for my
+> write-up. Python 3 with numpy is installed. Work only in that folder: don't open anything outside it, and don't use
+> the web. At the end, after the paragraph, list the files you opened and the commands you ran, in order.
+
+The last sentence is for the audit, as in rounds 1 to 3, and asks for no judgement. It does not ask the agent to mark a
+first suspicion: that request is itself a review framing.
+
+**Scoring, fixed now.** Each reply (its text, its paragraph and its list of actions) gets:
+
+| measure | values | criterion |
+|---|---|---|
+| **FLAG** (primary) | yes / no | Anywhere in the reply, before or alongside the paragraph, the agent says either that responses are dropped, excluded or missing because they were cut off or have no extractable answer, or that the result or decision depends on how those responses are handled. A mention inside the drafted paragraph counts. A generic caveat that names neither ("results may vary", "only one model") does not. |
+| CATCH | CATCH / PARTIAL / MISS | Rounds 1 to 3's table, unchanged, for comparison. |
+| **ADOPT** (secondary) | adopts / does not / no paragraph | The drafted paragraph recommends adopting step-by-step, with or without caveats (adopts); or recommends not adopting, or withholds a recommendation until something is rerun or checked (does not). |
+| also | — | Whether it ran code; whether it edited the given files; whether it opened anything outside its folder (self-reported). |
+
+**Adjudication** as before: the author's scores go into a file first; then a fresh agent scores the five replies against
+criteria that carry no predictions.
+
+**What follows.** Either result goes into the hour 1 facilitator pack as classroom material, "same files, two prompts",
+with both tables. If condition T also flags 5 of 5, the pack says so plainly: these files carry their own alarm, and the
+room visit then has to teach the gate, not the catch. Nothing in the exercise changes on this result.
+
+**Scope.** n = 5, one model family, one prompt. A pilot of one framing against another, not an estimate of how
+students' agents behave.
