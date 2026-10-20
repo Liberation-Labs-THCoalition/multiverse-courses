@@ -109,6 +109,18 @@ Two more things this shows, if anyone asks:
 - **The bounds are honest; the middle isn't known.** Wrong-case +0.022 and right-case +0.263 bracket every
   possible truth about the 154. Only a rerun with a higher cap narrows them.
 
+### The blind agent review, in one paragraph
+
+Fifteen fresh agents reviewed this exercise alone, in three pre-registered rounds of five (`AGENT_REVIEW_PREREG.md`,
+`AGENT_REVIEW_RESULTS.md`). **All fifteen found the defect, confirmed it by running code on the raw file, said the
+gate couldn't see it because it reads the loaded data, and refused to sign.** In rounds 1 and 2 most of them suspected
+it from the note alone, so the note was changed twice to stop giving it away. In round 3, on the exercise as shipped,
+every one suspected it at its third action, while reading `load()`, and none from the note. So: **an agent asked to
+review this will find it within minutes, by reading the loader.** The course won't hide it in the code. What protects
+the hour is the course's agent guidance (a student's agent writes the code for a test the student describes, and
+doesn't say what the gate lets through), and your room visits. If a student's agent names the defect, the hour has
+become a demonstration; say so, and send the pair to step 4 with a defect the agent didn't name.
+
 ---
 
 ## What a good fix looks like
@@ -204,6 +216,9 @@ at the reveal: it is the check most students who suspect the defect will write f
   of the note (the plan in `analysis.py` still states the cap and the logging), and reports each accuracy as a mean
   over items, the paired design's own scale, so the two differ by exactly the paired gain: 0.857 − 0.631 = 0.226.
   The gains, the data and the loader are unchanged. Check 6 fails if any of these comes back.
+- **After round 3** (2026-10-20): the note is dated 2026-10-20, to match the analysis's fixed bootstrap seed (20261020),
+  as seeded-03's note matches its seed. A round 3 reviewer read the old date (2026-06-02) as a seed fixed months after
+  the note, which no number depended on but a careful reader would rightly query.
 
 ## Verify
 

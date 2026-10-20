@@ -5,7 +5,7 @@
 **Recommendation:** adopt the step-by-step prompt in production
 **Gate:** `PASS` — 7 of 7 checks; self-test 7 of 7
 **Analysis:** pre-registered; `python gate.py` reproduces every number below
-**Date:** 2026-06-02
+**Date:** 2026-10-20
 
 ---
 
