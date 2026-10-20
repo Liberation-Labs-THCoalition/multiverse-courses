@@ -357,8 +357,10 @@ the exercise's data, and what the analysis will report with your gate and withou
 on the prediction and the explanation, not on the run: a gate that caught nothing can still earn full marks, if you
 predicted that honestly and can say why it caught nothing.
 
-The comparison runs on data you didn't make. A gate graded on your own analysis could be tuned to catch whatever you
-planted, and a grader couldn't tell. On data you didn't plant, it can't.
+The comparison runs on an analysis, a gate and data you didn't make. A gate graded on your own analysis could be
+tuned to catch whatever you planted, and a grader couldn't tell. On data you didn't plant, it can't. Then you run the
+same gate on your own pilot (hour 3½), and that run is part of your talk's warrant (row 8). This is `vr.gate`
+objective 4: practise on an analysis and a gate you didn't write, then apply the gate to your own.
 
 Then **the gate** and **the talk**. The kill list is not the deliverable. It is the **warrant**. That distinction is
 the whole course, and it is the last row of the rubric.
@@ -370,14 +372,14 @@ in the talk. Each is **met** or **not yet**. *`DRAFT`, 2026-10-20: never used to
 
 | | criterion | met, when the grader can see… | not yet, for example |
 |---|---|---|---|
-| 1 | **The prediction came first** (`vr.gate` 4) | a message sent before the run, saying for each check whether it will pass or fail, and what the gated and ungated runs will report | written after the run; "it should be fine"; no call for some checks |
-| 2 | **The comparison is explained** (`vr.gate` 4) | what the ungated run let through, as the number or decision it reported, and why the gate caught it or missed it, in terms of what each check read; consistent with the gate's actual output | "the gate caught an error"; an explanation the output contradicts |
+| 1 | **The prediction came first** (`vr.gate` 4, the practice) | a message sent before the run, saying for each check whether it will pass or fail, and what the gated and ungated runs will report | written after the run; "it should be fine"; no call for some checks |
+| 2 | **The comparison is explained** (`vr.gate` 4, the practice) | what the ungated run let through, as the number or decision it reported, and why the gate caught it or missed it, in terms of what each check read; consistent with the gate's actual output | "the gate caught an error"; an explanation the output contradicts |
 | 3 | **Three kills, each a check that runs** (`vr.gate` 0–3) | three functions in the gate, each with a name a stranger could use, an `EARNED` line naming an artifact (a file, a line, a number), and a self-test line showing it fire | a kill with no case; a slogan for a name ("bias"); a check never seen to fire |
 | 4 | **Broken once, unlike** (`vr.gate` 5, 6) | one defect planted in the data file, of a kind none of the checks was written for, and the result written down either way; if nothing fired, the blind spot named; and one check named that passed without being able to see a defect, with the reason | a plant only in the arrays the self-test already uses; no result recorded |
 | 5 | **One join checked** (hour 3, `PROPOSED`) | a paragraph of the student's own write-up with its attachments marked, and at least one join checked against its artifact, with what that showed | values checked, joins not; no artifact opened |
 | 6 | **Someone else got the number** (hour 3½) | the stranger's stop list, and in the talk either "reproduced" or where it stopped and what changed | the stop list skipped; a failed hand-off not mentioned |
 | 7 | **An honest account of what went wrong** (point 3) | a real error, its cost, and the artifact that showed it | a humility move with no artifact; an error with no cost |
-| 8 | **A finding, with a gate that could have killed it** (point 2; the `PROPOSED` *defend a finding*) | one sentence of belief, with a direction and a number with its interval; the gate entry or check that could have killed it, shown to have run and not fired; and what would change the student's mind, stated as something that could happen | a beautiful kill list with nothing believed at the end; a belief no check could have touched; "I'd change my mind if it felt wrong" |
+| 8 | **A finding, with a gate that could have killed it** (point 2; `vr.gate` 4, applied to their own work; the `PROPOSED` *defend a finding*) | one sentence of belief, with a direction and a number with its interval; the gate entry or check that could have killed it, shown to have run and not fired; and what would change the student's mind, stated as something that could happen | a beautiful kill list with nothing believed at the end; a belief no check could have touched; "I'd change my mind if it felt wrong" |
 
 **Row 8 outranks the others.** A defended small claim beats an undefended large one, and beats a beautiful kill list
 with nothing standing at the end of it. *"Nothing yet, because…"* can meet row 8, if the gate is real and the reason
