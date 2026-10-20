@@ -17,6 +17,8 @@ If you open one by mistake, stop reading, tell your human, and don't use what yo
 - `courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md`
 - `courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/FACILITATOR.md` (kept outside this repository)
 - `courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/verify_effect.py` (kept outside this repository)
+- `courses/vibe-research/exercises/seeded-04-all-checks-passed/FACILITATOR.md`
+- `courses/vibe-research/exercises/seeded-04-all-checks-passed/verify_gate.py`
 
 ## Skip the marked spoiler sections in these
 
