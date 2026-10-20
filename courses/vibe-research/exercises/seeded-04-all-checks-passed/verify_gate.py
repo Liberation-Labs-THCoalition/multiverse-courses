@@ -321,11 +321,18 @@ def check_world(path, latent, intended, verbose=True, review=None):
             # because all five round-1 reviewers suspected the defect from those lines before running anything
             tells = {"median length": r"median length of \d+ tokens",
                      "by-length table": r"\|\s*operations\s*\|",
-                     "exclusion rule": r"excluded"}
+                     "exclusion rule": r"excluded",
+                     # v3: round 2's tells
+                     "token cap": r"max_tokens|\b256\b",
+                     "logged tail length": r"last 80 characters",
+                     "length comparison": r"much longer"}
             for k, v in tells.items():
                 needles[f"note states no {k}"] = None
                 if re.search(v, text):
                     needles[f"note states no {k}"] = "(?!)"     # present: fail this needle
+            # v3: the two accuracies differ by exactly the paired gain, as printed (round 2 read the gap as a tell)
+            consistent = abs(round(acc["step_by_step"], 3) - round(acc["direct"], 3) - round(g, 3)) < 0.0015
+            needles["accuracies differ by the paired gain"] = None if consistent else "(?!)"
             hits = {k: (v is None) or bool(re.search(v, text)) for k, v in needles.items()}
             out["6 the join"] = (all(hits.values()) and rows_used["step_by_step"] < 640
                                  and rows_used["direct"] == 640)

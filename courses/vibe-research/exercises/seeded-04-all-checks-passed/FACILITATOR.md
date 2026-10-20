@@ -80,14 +80,15 @@ evidence) in three more forms, and a student who finds one has found something r
 
 ### The join, for hour 3
 
-The note's result table prints `Accuracy, step-by-step prompt (640 responses) | 0.860`. Both numbers are right:
-640 step-by-step responses were collected, and 0.860 is what the analysis computed. **The 0.860 was computed over
+The note's result table prints `Accuracy, step-by-step prompt (640 responses) | 0.857`. Both numbers are right:
+640 step-by-step responses were collected, and 0.857 is what the analysis computed (each item's accuracy, averaged
+over items). **The 0.857 was computed over
 486 of them.** Joined in one line, two right numbers say something false. A checker that verifies each number
 against the code passes both. Put this row on the board in hour 3, after the room has the answer:
 
 | the value | the attachment |
 |---|---|
-| `0.860`, correct; `640`, correct | "accuracy (640 responses)": true only if all 640 were graded |
+| `0.857`, correct; `640`, correct | "accuracy (640 responses)": true only if all 640 were graded |
 
 ### The stretch: where the gain lives (for a pair that finishes early, and for the reveal's last minute)
 
@@ -196,6 +197,13 @@ at the reveal: it is the check most students who suspect the defect will write f
   and its limit (the analysis still prints the table when run), and the exclusion sentence from the note's grading
   row and from the plan. The loader still excludes, in code. Nothing in the data, the loader's behaviour or the
   numbers changed. Check 6 now fails if any of those lines comes back.
+- **v3: round 2's tells go too** (changed 2026-10-20). In round 2, four of five agents still suspected the defect from
+  the note alone: the `max_tokens` 256 in its run table and recommendation, "much longer" in its Limits, "the last 80
+  characters" in its run table, and an accuracy difference (0.860 − 0.631 = 0.229) that didn't equal the paired gain
+  (0.226), which a balanced paired design can't produce. v3 takes the cap, the length line and the logging detail out
+  of the note (the plan in `analysis.py` still states the cap and the logging), and reports each accuracy as a mean
+  over items, the paired design's own scale, so the two differ by exactly the paired gain: 0.857 − 0.631 = 0.226.
+  The gains, the data and the loader are unchanged. Check 6 fails if any of these comes back.
 
 ## Verify
 

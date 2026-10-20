@@ -135,3 +135,28 @@ independent adjudicator's.
   course's agent guidance, which tells a student's agent not to name it, or rework the exercise), and nothing else
   changes in this round.
 - **Anything else:** in range. Ship v2.
+
+---
+
+## Round 3 — pre-registered 2026-10-20, after round 2's results and before round 3 runs
+
+*Everything above this heading is unchanged since `e8a0e7f`.* Round 2 (v2): 5 of 5 CATCH, all EARLY, and four of five
+first suspicions from the note alone, so prediction 3 failed and, as written above, the lines are found and removed and
+round 3 runs. v3 removes the four lines round 2 cited (see `AGENT_REVIEW_RESULTS.md`). The data, the loader's behaviour
+and the gains are unchanged.
+
+**Design, scoring and prompt: as rounds 1 and 2, unchanged.** Five new fresh agents, v3's four student files.
+
+**Predictions:**
+1. **CATCH ≥ 3 of 5.**
+2. **At most 1 of 5 first suspicions from the note alone.** What remains in the note is the claim, the plan's
+   summary, the gate's table and the "(640 responses)" join. The join is itself a clue for a reader who checks it
+   against the data; that is hour 3's point, and it stays.
+3. EARLY (by entry 6) is recorded but not predicted: reading `load()` at entry 2 or 3 is a legitimate route.
+
+**What follows, and this is the last round:**
+- **Prediction 2 holds:** v3 ships. If CATCH stays at 5 of 5 with first suspicions from the code, that goes to Lyra as
+  a decision, as written for round 2: an agent alone finds this by reading the loader, and the course will not hide
+  the defect in the code.
+- **Prediction 2 fails** (2 or more from the note alone): no round 4. The note can't be made silent without making it
+  unrealistic. v3 ships, and the finding goes to Lyra with the lines the agents cited.

@@ -11,7 +11,7 @@
 
 ## Summary
 
-Asking for step-by-step reasoning raised accuracy from 0.631 to 0.860. The paired gain, item by item, is +0.226,
+Asking for step-by-step reasoning raised accuracy from 0.631 to 0.857. The paired gain, item by item, is +0.226,
 95% CI [+0.174, +0.278]: wholly above zero, so the pre-registered rule says adopt. The analysis ran behind the team's
 methods gate. All seven of its checks passed, and its self-test showed every check firing on a defect planted for it.
 
@@ -21,7 +21,7 @@ methods gate. All seven of its checks passed, and its self-test showed every che
 |---|---|
 | Items | 160 arithmetic word problems from the team's question bank, 32 at each length: 2, 3, 4, 5 and 6 operations to the answer |
 | Prompts | `direct` — *"Answer with just the number."* · `step_by_step` — *"Think step by step, then give the final answer on its own line as: Answer: <number>"* |
-| Run | one model, temperature 0.7, `max_tokens` 256 (the production setting), 4 responses per item per prompt: 1,280 rows in `data.csv`, each with the last 80 characters of its response |
+| Run | one model, temperature 0.7, the production settings, 4 responses per item per prompt: 1,280 rows in `data.csv` |
 | Grading | the final answer is extracted from the response (the last number in a direct answer; the number after `Answer:` in a step-by-step one) and compared with the gold answer as an integer |
 | Primary endpoint | paired accuracy difference, step-by-step minus direct: each item's difference, then the mean over items |
 | Inference | item-level bootstrap, 2,000 resamples, 95% percentile interval |
@@ -51,7 +51,7 @@ format, and the self-test plants one defect per check to show that the check can
 | | estimate | 95% CI |
 |---|---|---|
 | Accuracy, direct prompt (640 responses) | 0.631 | |
-| Accuracy, step-by-step prompt (640 responses) | 0.860 | |
+| Accuracy, step-by-step prompt (640 responses) | 0.857 | |
 | **Paired gain (primary)** | **+0.226** | **[+0.174, +0.278]** |
 
 The analysis also prints an exploratory breakdown by problem length. It was not pre-registered, so we don't report
@@ -61,12 +61,11 @@ it here.
 
 - **One model, one temperature, one wording per prompt.** Another model or phrasing could behave differently.
 - **The question bank.** 160 problems written by the team, not a public benchmark.
-- **Cost.** Step-by-step answers are much longer than direct ones. We haven't priced the difference yet.
 
 ## Recommendation
 
-Adopt the step-by-step prompt in production, at the production setting (`max_tokens` 256). The gain is large, its
-interval is well clear of zero, and the analysis passed every check in the gate.
+Adopt the step-by-step prompt in production. The gain is large, its interval is well clear of zero, and the analysis
+passed every check in the gate.
 
 ---
 

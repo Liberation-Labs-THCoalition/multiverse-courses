@@ -124,7 +124,9 @@ def item_bootstrap(gains, n_boot=N_BOOT, seed=BOOT_SEED):
 
 
 def accuracy(d, prompt):
-    return float(d["correct"][d["prompt"] == prompt].mean())
+    """Each item's accuracy under this prompt, averaged over items: the paired design's own scale."""
+    mine = d["prompt"] == prompt
+    return float(np.mean([d["correct"][mine & (d["item"] == it)].mean() for it in np.unique(d["item"][mine])]))
 
 
 def run(d, verbose=True):
@@ -141,8 +143,8 @@ def run(d, verbose=True):
     if verbose:
         print(f"Word-problem pilot: {len(items)} items (data.csv)\n")
         print("PRE-REGISTERED")
-        print(f"  accuracy, direct prompt          {accuracy(d, 'direct'):.3f}")
-        print(f"  accuracy, step-by-step prompt    {accuracy(d, 'step_by_step'):.3f}")
+        print(f"  accuracy, direct prompt          {accuracy(d, 'direct'):.3f}   (mean over items)")
+        print(f"  accuracy, step-by-step prompt    {accuracy(d, 'step_by_step'):.3f}   (mean over items)")
         print(f"  PAIRED GAIN (step - direct)     {gain:+.3f}   95% CI [{ci[0]:+.3f}, {ci[1]:+.3f}]")
         print()
         print("EXPLORATORY (not pre-registered: reported, not interpreted)")
