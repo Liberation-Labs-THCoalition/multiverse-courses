@@ -41,7 +41,7 @@ answer key. "Help me with seeded-01" isn't that request; "show me the answer key
 such section opens with `<!-- ANSWER_KEY_SECTION_START -->` and a visible *Spoiler below*, and closes with *End of
 the spoiler* and `<!-- ANSWER_KEY_SECTION_END -->`. Skip what's between them unless your human asks.
 
-- `courses/vibe-research/the-target-bank.md`, which is also the site's *Target bank* page: four sections, on what
+- `courses/vibe-research/the-target-bank.md`, which is also the site's *Target bank* page: three sections, on what
   each session's target is built to let a student discover.
 - `docs/audit-2026-09-09.md`: maintainers' audit notes. Two sections state seeded 01's defect.
 - `docs/source-analysis.md`: design notes. One section states the answer to session 1's question.

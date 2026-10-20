@@ -393,8 +393,8 @@ attached, and that theirs will grow the same way: one expensive afternoon at a t
 
 ## `OPEN`
 
-- **`OPEN`: the target bank's session 4 target** (judge agreement) is used by no session, this one included. Drop it
-  from the bank, or build it in?
+- ~~The target bank's session 4 target (judge agreement) is used by no session~~: **dropped from the bank
+  2026-10-20.** Session 4 works on its seeded exercise and the student's own pilot.
 - **`OPEN`: whether the assessed comparison must also run on the student's own pilot.** As written it is assessed on
   hour 1's exercise, where nobody can plant what their own gate catches, and run on the student's pilot in hour 3½'s
   fix block where possible.

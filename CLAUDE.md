@@ -24,7 +24,7 @@ If you open one by mistake, stop reading, tell your human, and don't use what yo
 
 Each marked section sits between `<!-- ANSWER_KEY_SECTION_START -->` and `<!-- ANSWER_KEY_SECTION_END -->`.
 
-- `courses/vibe-research/the-target-bank.md` (four sections)
+- `courses/vibe-research/the-target-bank.md` (three sections)
 - `docs/audit-2026-09-09.md` (two sections)
 - `docs/source-analysis.md` (one section)
 

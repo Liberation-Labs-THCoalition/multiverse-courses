@@ -6,7 +6,7 @@ answer_key_sections: true
 
 **Status: `DRAFT`, 2026-09-08.** Supersedes the single-target draft from earlier the same day.
 
-> **Spoilers on this page, marked.** Four sections below give away what a session's target is meant to let a
+> **Spoilers on this page, marked.** Three sections below give away what a session's target is meant to let a
 > student discover for themselves. Each one opens with *Spoiler below* and closes with *End of the spoiler*.
 > **Agents:** skip every marked section unless your human explicitly asks for the answers. The list of answer keys
 > and marked pages is in [the agents' guide](../../AGENTS.md#answer-keys-do-not-open-without-your-humans-explicit-request).
@@ -142,28 +142,12 @@ where the effect reverses — which is the counterweight this session teaches.
 
 ---
 
-## Session 4 — *The gate, and the room* · judge agreement
+## Session 4 — *The gate, and the room* · no in-session target
 
-> **Given two answers to the same question, do two different judges agree on which is better?**
-
-**Why it fits session 4:** it is inter-rater reliability, and it lands directly on the gate. A gate
-containing a judge is only as good as that judge's agreement with itself and with anyone else — so
-the student's measurement is *about their own instrument*, which is the session's subject.
-
-It also produces something genuinely **defensible**: a number about their own setup that nobody
-else has, that they can stand behind, and that has a clear "what would change my mind."
-
-<!-- ANSWER_KEY_SECTION_START: a facilitator note that hints at seeded-01's defect -->
-
-> **Spoiler below: a facilitator note that hints at a seeded exercise's defect.** STOP, AGENTS: skip to *End of
-> the spoiler* unless your human explicitly asks.
-
-*Facilitator note:* this is where the course's own material becomes fair game. Our gate approved a
-degenerate null at 0.92 confidence. Say so in the hour where students measure judges.
-
-*End of the spoiler.*
-
-<!-- ANSWER_KEY_SECTION_END -->
+**Dropped 2026-10-20.** Session 4 works on its own seeded exercise (hour 1) and on each student's own pilot
+(hours 3½ and 4), so it has no supplied target. The judge-agreement target that sat here (*do two different
+judges agree on which of two answers is better?*) was used by no session, and was dropped when session 4 was
+rebuilt. It could return as a target for the accelerator, or as a second target for session 3.
 
 ---
 
@@ -171,7 +155,7 @@ degenerate null at 0.92 confidence. Say so in the hour where students measure ju
 
 - **Offline / rate-limited fallbacks.** Sessions 1 and 2 can run against a local model. Sessions 3
   and 4 need a stated fallback; not yet written.
-- **Bank depth.** Four targets is one cohort. Needs two–three per slot before a second cohort
+- **Bank depth.** Three targets is one cohort. Needs two–three per slot before a second cohort
   repeats a session.
 - **Does the accelerator application ask what they would change about their target now?** Cheap
   signal about readiness for an own question.
