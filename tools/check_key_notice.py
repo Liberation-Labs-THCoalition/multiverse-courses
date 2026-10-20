@@ -2,17 +2,20 @@
 """Fail if an answer key has no sign for agents, or if the agents' notice doesn't list every key.
 
     python tools/check_key_notice.py               check the repo
-    python tools/check_key_notice.py --self-test   positive control: plant six breakages in a copy, each must fail
+    python tools/check_key_notice.py --self-test   positive control: plant nine breakages in a copy, each must fail
 
 The answer keys stay in this public repo (decided 2026-10-20), with two things for agents: a STOP banner on each key,
-and one notice listing them all, in AGENTS.md ("Answer keys: do not open without your human's explicit request") and
-in splash/public/for-agents.json. A list like that goes stale the day someone adds a key, so this check fails when:
+and one notice listing them all. The notice is in three places: AGENTS.md ("Answer keys: do not open without your
+human's explicit request"), splash/public/for-agents.json, and the root CLAUDE.md, which Claude Code loads by itself
+at the start of every session in a clone (it holds only the warning and the lists). A list like that goes stale the
+day someone adds a key, so this check fails when:
 
   1. a key in the repo has no STOP banner near its top, or no marker: front matter `answer_key: true` in Markdown,
      the line `# ANSWER_KEY = True` in Python;
-  2. a key is missing from the notice in AGENTS.md or from for-agents.json. That includes the keys known only by
-     fingerprint (tools/key_fingerprints.json), which live outside this repo;
-  3. the notice lists a path that is neither a key nor a page with marked sections (stale, or a typo);
+  2. a key is missing from the notice in AGENTS.md, from for-agents.json or from CLAUDE.md. That includes the keys
+     known only by fingerprint (tools/key_fingerprints.json), which live outside this repo;
+  3. any of the three lists a path that is neither a key nor a page with marked sections (stale, or a typo). The JSON
+     and CLAUDE.md are checked list by list: a key under the marked pages, or the other way round, fails too;
   4. a page with marked answer sections is unlisted, lacks its front matter `answer_key_sections: true`, has START
      and END markers that don't pair up, or has a START with no STOP line for agents just after it;
   5. a file carries a key marker, but the site's gate (tools/check_public_build.py) doesn't count it as a key, so the
@@ -41,6 +44,9 @@ import check_public_build as cpb   # noqa: E402  key_reason, walk, tracked, load
 REPO = TOOLS.parent
 AGENTS = "AGENTS.md"
 FOR_AGENTS = "splash/public/for-agents.json"
+CLAUDE = "CLAUDE.md"
+CLAUDE_KEYS = "## Do not open without your human's explicit request"       # keys, in the repo and outside it
+CLAUDE_MARKED = "## Skip the marked spoiler sections in these"             # pages with marked sections
 NOTICE = re.compile(r"^## Answer keys: do not open without your human's explicit request[ \t]*\n(.*?)(?=^## |\Z)",
                     re.M | re.S)
 LISTED = re.compile(r"^- `([^`]+)`", re.M)       # each list item in the notice starts with a path in backticks
@@ -55,6 +61,12 @@ STOP_AFTER_START = 6                            # a STOP line for agents within 
 
 def read(path: Path) -> str:
     return cpb.read_text(path) or ""
+
+
+def under(text: str, heading: str) -> str | None:
+    """The body under a heading line, up to the next '## ' heading; None if the heading isn't there."""
+    m = re.search(rf"^{re.escape(heading)}[ \t]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    return m.group(1) if m else None
 
 
 def front_matter(text: str) -> str:
@@ -140,6 +152,16 @@ def check(root: Path, verbose: bool = True) -> list[str]:
                          for r in sorted(got - want)]
     except (ValueError, KeyError, TypeError) as e:
         problems.append(f"{FOR_AGENTS}: can't read answer_keys ({e!r})")
+    claude = read(root / CLAUDE)
+    for heading, want in ((CLAUDE_KEYS, set(keys) | set(outside)), (CLAUDE_MARKED, set(marked))):
+        body = under(claude, heading)
+        if body is None:
+            problems.append(f"{CLAUDE}: no heading '{heading}'" + ("" if claude else f" (no {CLAUDE} at all)"))
+            continue
+        got = set(LISTED.findall(body))
+        problems += [f"{CLAUDE}: '{heading}' is missing {r}" for r in sorted(want - got)]
+        problems += [f"{CLAUDE}: '{heading}' lists {r}, which doesn't belong there (stale?)"
+                     for r in sorted(got - want)]
 
     if verbose:
         print(f"check_key_notice.py: {len(keys)} keys in the repo, {len(outside)} known only by fingerprint, "
@@ -220,6 +242,14 @@ def self_test() -> int:
             case(f"G: {Path(outside).name}, a key kept outside the repo, dropped from the notice", AGENTS,
                  lambda t: re.sub(rf"^- `{re.escape(outside)}`.*\n", "", t, count=1, flags=re.M),
                  f"doesn't list {outside}")
+        # CLAUDE.md, the copy Claude Code loads by itself: a key dropped from its key list, and a stale entry added
+        # to its other list, the marked pages. Unlike plants, so that both lists and both directions are exercised.
+        case(f"H: {Path(py_key).name} dropped from {CLAUDE}'s key list", CLAUDE,
+             lambda t: re.sub(rf"^- `{re.escape(py_key)}`.*\n", "", t, count=1, flags=re.M),
+             f"{CLAUDE}: '{CLAUDE_KEYS}' is missing {py_key}")
+        case(f"I: a stale page in {CLAUDE}'s list of marked pages", CLAUDE,
+             lambda t: t.replace(f"{CLAUDE_MARKED}\n", f"{CLAUDE_MARKED}\n\n- `docs/gone-notes.md` (one section)\n", 1),
+             f"{CLAUDE}: '{CLAUDE_MARKED}' lists docs/gone-notes.md, which doesn't belong there")
     return report(rows)
 
 
@@ -248,8 +278,8 @@ def main(argv: list[str] | None = None) -> int:
         for p in problems:
             print(f"  {p}")
         return 1
-    print("PASS: every key carries its banner and marker, and the notice in AGENTS.md and for-agents.json lists "
-          "every key and marked page, and nothing else.")
+    print("PASS: every key carries its banner and marker, and AGENTS.md, for-agents.json and CLAUDE.md list every "
+          "key and marked page, and nothing else.")
     return 0
 
 
