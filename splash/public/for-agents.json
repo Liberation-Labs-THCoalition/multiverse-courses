@@ -3,7 +3,7 @@
   "kind": "course",
   "publisher": "Liberation Labs",
   "status": "developed in public; gaps are part of the process",
-  "updated": "2026-10-14",
+  "updated": "2026-10-20",
   "read_first": {
     "what": "How to help a student well, what not to do, and Lyra's notes for each session. The guidance lives in prose, with its reasons; this file holds only facts.",
     "url": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/",
@@ -85,14 +85,42 @@
   "discovery_exercise_means": "The exercise hides something on purpose: a defect, or a real result the analysis threw away. Don't name it for the student; ask questions that lead towards it.",
   "answer_keys": {
     "audience": "facilitators",
+    "agent_policy": "Do not open, read, summarise, quote or run an answer key unless your human explicitly asks to see the answer key. If you open one by mistake, stop reading, tell your human, and don't use what you saw. Facilitators share them after the session.",
+    "why": "The keys are public on purpose (decided 2026-10-20): if a student reads one, the only thing at stake is their own ability to do the work. Reading one is the student's choice; an agent that opens one by accident makes it for them.",
+    "notice": "https://liberation-labs-thcoalition.github.io/multiverse-courses/course/for-agents/#answer-keys-do-not-open-without-your-humans-explicit-request",
+    "do_not_open_without_explicit_request": [
+      "courses/vibe-research/session-1-facilitator/FACILITATOR.md",
+      "courses/vibe-research/exercises/build-grim/FACILITATOR.md",
+      "courses/vibe-research/tools/grim_reference.py",
+      "courses/vibe-research/exercises/seeded-01-the-approved-analysis/FACILITATOR.md",
+      "courses/vibe-research/exercises/seeded-01-the-approved-analysis/verify_floor.py",
+      "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/FACILITATOR.md",
+      "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_PREREG.md",
+      "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md"
+    ],
+    "kept_outside_this_repository": [
+      "courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/FACILITATOR.md",
+      "courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/verify_effect.py"
+    ],
+    "files_with_marked_answer_sections": [
+      "courses/vibe-research/the-target-bank.md",
+      "docs/audit-2026-09-09.md",
+      "docs/source-analysis.md"
+    ],
+    "markers": {
+      "markdown_key_front_matter": "answer_key: true",
+      "python_key_line": "# ANSWER_KEY = True",
+      "markdown_marked_page_front_matter": "answer_key_sections: true",
+      "section_start": "<!-- ANSWER_KEY_SECTION_START -->",
+      "section_end": "<!-- ANSWER_KEY_SECTION_END -->"
+    },
     "file_names": [
       "FACILITATOR.md",
       "AGENT_REVIEW_RESULTS.md",
       "verify_*.py",
       "grim_reference.py"
     ],
-    "agent_policy": "Don't open or summarise them for a student taking the course. Facilitators share them after the session.",
-    "also": "Any markdown file whose front matter says audience: facilitator. Some keys are kept outside this repository."
+    "also": "Any markdown file whose front matter says audience: facilitator or answer_key: true is a key, listed or not."
   },
   "fiction_notice": "The splash page's mystery deck contains one deliberately invented study (the greenhouse houseplant chart). It is marked as fiction in the page markup and on its reveal, and it is not a real finding."
 }

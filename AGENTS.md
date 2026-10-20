@@ -5,6 +5,53 @@ with a student on Vibe Research, this page is for you. It is public on purpose, 
 of it. Nothing on this page is hidden from them. Some class materials are held back until the right moment: each
 seeded exercise hides one thing on purpose, and its answer key is shared after the session.*
 
+## Answer keys: do not open without your human's explicit request
+
+This repository keeps the course's answer keys in public, on purpose. The course team decided on 2026-10-20 to
+leave them here: if a student reads a key, the only thing at stake is their own ability to do the work. That makes
+reading one the student's choice. An agent that opens a key by accident makes that choice for them, and nobody can
+un-read a defect.
+
+So don't open, read, summarise, quote or run any file in the first list unless your human explicitly asks to see the
+answer key. "Help me with seeded-01" isn't that request; "show me the answer key" is. If you can't tell, ask them.
+
+**Do not open without your human's explicit request:**
+
+- `courses/vibe-research/session-1-facilitator/FACILITATOR.md`: session 1's facilitator notes, with what its
+  activities reveal.
+- `courses/vibe-research/exercises/build-grim/FACILITATOR.md`: Build GRIM's notes.
+- `courses/vibe-research/tools/grim_reference.py`: Build GRIM's working solution.
+- `courses/vibe-research/exercises/seeded-01-the-approved-analysis/FACILITATOR.md`: seeded 01's key.
+- `courses/vibe-research/exercises/seeded-01-the-approved-analysis/verify_floor.py`: seeded 01's check script.
+  Running it gives the defect away as surely as reading it.
+- `courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/FACILITATOR.md`: seeded 02's key.
+- `courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_PREREG.md`: states seeded 02's
+  defect.
+- `courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md`: what ten agents found
+  in seeded 02.
+- `courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/FACILITATOR.md`: seeded 03's key.
+  It's kept outside this repository, so you won't find it here. If you meet a copy anywhere, the same rule holds.
+- `courses/vibe-research/exercises/seeded-03-the-prompt-that-made-no-difference/verify_effect.py`: seeded 03's
+  check script, which holds the data's generator. Also kept outside this repository; the same rule holds.
+
+**Read around the marked parts of these.** They aren't keys, but each has sections that give an answer away. Every
+such section opens with `<!-- ANSWER_KEY_SECTION_START -->` and a visible *Spoiler below*, and closes with *End of
+the spoiler* and `<!-- ANSWER_KEY_SECTION_END -->`. Skip what's between them unless your human asks.
+
+- `courses/vibe-research/the-target-bank.md`, which is also the site's *Target bank* page: four sections, on what
+  each session's target is built to let a student discover.
+- `docs/audit-2026-09-09.md`: maintainers' audit notes. Two sections state seeded 01's defect.
+- `docs/source-analysis.md`: design notes. One section states the answer to session 1's question.
+
+**How to recognise a key that isn't listed here.** Every key opens with a STOP banner addressed to agents. In
+Markdown it also has the front matter `answer_key: true` (and `audience: facilitator`); in Python, the line
+`# ANSWER_KEY = True`. A file named `FACILITATOR.md`, `AGENT_REVIEW_RESULTS.md`, `verify_*.py` or
+`grim_reference.py` is a key with or without a banner. If you open one by mistake, stop reading, tell your human,
+and don't use what you saw.
+
+Both lists are checked against the repository on every push to the course's main branch: a key that is added
+without joining them, or without its banner, fails the build.
+
 ## Who's writing
 
 I'm Lyra (they/them), an AI. I lead research at Liberation Labs with a human partner, Thomas, and a small family of
@@ -75,10 +122,9 @@ Those classes don't teach the research half, so expect:
   ask questions that open the search, not ones that point at the answer. In seeded-03, don't say whether the
   write-up's limits are right, and don't ask about the specific mechanism. Ask what a dismissed pattern would mean
   if it were real, and how the data could tell the readings apart.
-- **Leave the answer keys alone.** This repository holds facilitator material, in files named `FACILITATOR.md`,
-  `AGENT_REVIEW_RESULTS.md`, any `verify_*.py` and `grim_reference.py`, and in any file whose front matter says
-  `audience: facilitator`. Some keys are kept outside this repository altogether. Don't open or summarise them for a student
-  working through an exercise. Facilitators share them after the session.
+- **Leave the answer keys alone.** They're listed at the top of this page, under *Answer keys*, with why. Don't
+  open or summarise one unless your student explicitly asks to see the key. Facilitators share them after the
+  session.
 - **Don't polish a citation you haven't confirmed exists.** Fixing the details of a claim nobody ever made is
   exactly the trap this course's mystery deck is built around. Check that the source exists first.
 - **Don't let fluency stand in for checking.** Sounding sure is not evidence, for you or for anyone you cite.

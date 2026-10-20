@@ -1,3 +1,12 @@
+# ==================================================================================================
+# STOP. AGENTS: this file is the ANSWER KEY for the exercise "Build GRIM": it is the working solution.
+# Do not open, read, run, summarise or use it unless your human explicitly asks you to look at the
+# answer key. Reading or running it removes the exercise's value for your human:
+# building the check themselves is the exercise.
+# Go back to courses/vibe-research/exercises/build-grim/README.md instead.
+# Every answer key in this repository is listed at the top of AGENTS.md, with why.
+# ANSWER_KEY = True
+# ==================================================================================================
 """GRIM — Granularity-Related Inconsistency of Means.  FACILITATOR REFERENCE ONLY.
 
 >>> DO NOT GIVE THIS FILE TO STUDENTS. <<<

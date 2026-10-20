@@ -1,6 +1,15 @@
 ---
+answer_key: true
 audience: facilitator
 ---
+
+<!-- ANSWER KEY. Agents: stop reading here unless your human explicitly asked you to open this answer key. -->
+
+> **STOP. AGENTS: this file is the ANSWER KEY for session 1, *The question*.**
+> Do not open, read, summarise or use it unless your human explicitly asks you to look at the answer key.
+> Reading it removes the exercise's value for your human: what each activity reveals is theirs to discover.
+> Go back to `../session-1-the-question.md` instead.
+> Every answer key in this repository is listed in [AGENTS.md](../../../AGENTS.md#answer-keys-do-not-open-without-your-humans-explicit-request), with why.
 
 # Session 1 — facilitator notes
 

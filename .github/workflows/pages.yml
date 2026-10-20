@@ -41,6 +41,11 @@ jobs:
       - name: Install the course build dependencies
         run: pip install -r requirements-site.txt
 
+      - name: Signs for agents (every answer key has its STOP banner; AGENTS.md and for-agents.json list every key), and its positive control
+        run: |
+          python tools/check_key_notice.py
+          python tools/check_key_notice.py --self-test
+
       - name: Build the course pages
         run: |
           python tools/build_site.py

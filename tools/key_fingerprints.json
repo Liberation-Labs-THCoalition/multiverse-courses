@@ -9,7 +9,8 @@
    "rel": "courses/vibe-research/exercises/build-grim/FACILITATOR.md",
    "why": "file name",
    "file_sha256": [
-    "3fbea18e23c8150946e865144182c872fb75bca7d9b1bd450294e391623abd28"
+    "37f141735168ee7457372e48a23944aec0969daafa94f64e1dfa7d6fbdd642f8",
+    "cac3e3be20125d711913963534db18404b08ff06143f256c24dcaff353cc18aa"
    ],
    "lines": [
     [
@@ -36,6 +37,11 @@
      33,
      "ed53a49de05c3ea0",
      "fea0b2bbfc04584503ec850c3b89ea2b"
+    ],
+    [
+     35,
+     "6d86b957805fbac4",
+     "a38cf7f14656f7ab7d11759073701b60"
     ],
     [
      37,
@@ -111,6 +117,16 @@
      53,
      "8a28a1813a535a34",
      "92e4d4a5478a89a2094103d3ebe1298b"
+    ],
+    [
+     55,
+     "93f19a755c329667",
+     "3d79ac9e65e46fec794b1de141a55275"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      60,
@@ -396,6 +412,16 @@
      79,
      "f5847c6c6cf40502",
      "10622f5e0e63f353996b0772acfd38a6"
+    ],
+    [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
+    ],
+    [
+     84,
+     "614aa2e8ae5a4161",
+     "019ea79ade89d13d32650e3d3775be59"
     ]
    ]
   },
@@ -403,7 +429,8 @@
    "rel": "courses/vibe-research/exercises/seeded-01-the-approved-analysis/FACILITATOR.md",
    "why": "file name",
    "file_sha256": [
-    "26ad1cff26fd32266c26ef192c2556f5e7803ea2422bb269bc6843f38e52910e"
+    "6b794f117736577b5429f6352939fca9056517efd5b6bc5c96db11622e43ed9d",
+    "ee201bf43ffb07618c2589fab1ceec9fc32d863a8ae5c406f85849e8497c7d7a"
    ],
    "lines": [
     [
@@ -532,6 +559,11 @@
      "e6c8f1aa7121a042eff62116fc107da5"
     ],
     [
+     48,
+     "a8d419a359a92119",
+     "ef24454b1e2bf4c1e3898d4501c55ce2"
+    ],
+    [
      49,
      "16fd12711fd172fc",
      "c0b9d4cc3bbbdbf54bc947699279c0f0"
@@ -565,6 +597,11 @@
      54,
      "9f4759cadcbf59ba",
      "afbcf516afbf6d48dfd9b051f0fcd399"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      56,
@@ -662,6 +699,11 @@
      "f14688d7f9650215df467be705b13874"
     ],
     [
+     68,
+     "614aa2e8ae5a4161",
+     "ec1c6b162ab5d65040299f8d9cca5a13"
+    ],
+    [
      69,
      "687703c0f10df3b7",
      "a0b6d9d6c352cb995121823e48f60cf7"
@@ -685,6 +727,11 @@
      70,
      "68fc7636872736ca",
      "fad7f2e0322103ac3d51db17feb10030"
+    ],
+    [
+     70,
+     "93f19a755c329667",
+     "bb2c7b633cfda9dd6e85758f164a8773"
     ],
     [
      70,
@@ -927,6 +974,11 @@
      "ec9ff626f361a5b6d1c27b6ea29f6dc0"
     ],
     [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
+    ],
+    [
      82,
      "d03874c825c48c4e",
      "2a966bc93302c1c11493608e1acb1fcb"
@@ -937,13 +989,13 @@
    "rel": "courses/vibe-research/exercises/seeded-01-the-approved-analysis/verify_floor.py",
    "why": "file name",
    "file_sha256": [
-    "37970af8f0727634353f97c4f36f0abd63d3af51b26fddd13996f876201ec057"
+    "0672bd9195bbc56aeb1824f3d325ac98205dc3adbaa1b0bb06a105931e87e3d0"
    ],
    "lines": [
     [
-     25,
-     "32377652df040429",
-     "37520ccb1148584cde1297d87d7ccc38"
+     27,
+     "24e8422c7b2b5a6e",
+     "8f298f4bff5b15edc4734fc37fc3548c"
     ],
     [
      28,
@@ -971,19 +1023,24 @@
      "c377bdc2fb2ebba0183718868fb4aeeb"
     ],
     [
-     34,
-     "2248b64adcefca62",
-     "0479cc69d53c0569a2469c04c71b7db7"
-    ],
-    [
-     35,
-     "235d85b8d91c2be5",
-     "c5dd8c8203d20334296b5e3db994510b"
-    ],
-    [
      36,
      "161957849fb04f4b",
      "7eed8d15c644f3aeab4929b59ca4dbe5"
+    ],
+    [
+     36,
+     "511b5b89ce5e8d85",
+     "dada7fefc0ae192544e01afe990d08ac"
+    ],
+    [
+     39,
+     "3e4911a06bed5c45",
+     "790dc0002eb2b5784f51be1b5802f54f"
+    ],
+    [
+     39,
+     "8118347e6059125f",
+     "5a9d06ab8440ed6a04da3092bd16f50b"
     ],
     [
      39,
@@ -996,14 +1053,24 @@
      "a155b376ecea52e0eceabe2ece30996f"
     ],
     [
-     48,
-     "692913aedd3b0fe4",
-     "0a8846bd2b66914be9579969aa0dea05"
+     43,
+     "3330638319f66799",
+     "ac8e85259f9e9284a7e96073ee0808d2"
+    ],
+    [
+     44,
+     "8346db359cf0bcb9",
+     "02bdf01932ebfad988e327b3acff4aaf"
+    ],
+    [
+     45,
+     "59e27b47a5331e0d",
+     "4cb033dc838ce0c8a021412eba25dc85"
     ],
     [
      48,
-     "cc3dbd3075d9f072",
-     "8b09ba79e86e64296bf6f308680d4a4a"
+     "a8d419a359a92119",
+     "ef24454b1e2bf4c1e3898d4501c55ce2"
     ],
     [
      50,
@@ -1016,24 +1083,14 @@
      "a5737cb80316f2fe3060359533fba3ae"
     ],
     [
-     52,
-     "e3ea24aa6bdda59c",
-     "938820bef1a085e625bb6bcabc251882"
-    ],
-    [
-     56,
-     "44cc8fe08b29d8d6",
-     "08c416cca5dc066bcd364d222b80dec9"
-    ],
-    [
      56,
      "9512054325fb7d46",
      "6f8d9501848be8ea22220460c3170536"
     ],
     [
      56,
-     "c9156cd00b2668b2",
-     "c1b5472b862644cef8f01b84e83fdeac"
+     "99297028bccc486d",
+     "7ee307ab8cfa7ba92a1aefbf2f8a78c3"
     ],
     [
      59,
@@ -1041,14 +1098,49 @@
      "617ee028d3eab1405a8f9849bd5d7ef8"
     ],
     [
+     59,
+     "cc3dbd3075d9f072",
+     "963372d25c01f6a03b89e29aa586e276"
+    ],
+    [
+     60,
+     "67bd2aff53628ef1",
+     "90e3264d4fce95482fafd44f7264f040"
+    ],
+    [
+     60,
+     "9ba49b5f2c954d70",
+     "28bb9c9d2a9a3ccdab7eaa2a8962a2ea"
+    ],
+    [
+     61,
+     "40e3ae8753953074",
+     "74bb51d3518bd4ef3d9843d5a7f5fc63"
+    ],
+    [
+     63,
+     "43b23441437bb6db",
+     "18ef4933d27b263cb9edfbd93cfc85e9"
+    ],
+    [
+     63,
+     "c4cfccd14a775990",
+     "98d82cf4ecf5375c7125a62259b9448a"
+    ],
+    [
      64,
      "3c30d0dd09dbcaa4",
      "4981a0640f02cd92e7d38364c99174c5"
     ],
     [
-     67,
-     "053051513391a452",
-     "828b8549e6bd5fb9929f1e9c403463bc"
+     64,
+     "44cc8fe08b29d8d6",
+     "b7a9dda386be390c87a848f6928198a1"
+    ],
+    [
+     65,
+     "43bb2e97a78a0485",
+     "ad28fc8dc52aeb1abf3645a5bda68ef1"
     ],
     [
      67,
@@ -1057,13 +1149,78 @@
     ],
     [
      70,
-     "ce47bf95a113c320",
-     "888399ebb9c213f2c9d30b556c67954f"
+     "93f19a755c329667",
+     "bb2c7b633cfda9dd6e85758f164a8773"
+    ],
+    [
+     71,
+     "d5ab2c6edf0d940b",
+     "7b986e908e898c5346c1d8b8825139af"
+    ],
+    [
+     72,
+     "1bc0d316dead4526",
+     "9fb94869fa13d45ebfedf64ad90ffa54"
+    ],
+    [
+     72,
+     "4ddbbd5370e03a29",
+     "59725120dd14e48592726c43d05d1e50"
+    ],
+    [
+     73,
+     "bb566f08612497e1",
+     "4d0ce138c78e42dd94d3e06132125711"
+    ],
+    [
+     75,
+     "ea226c655d61776d",
+     "972739d48390e5f4fdd3c4764d4e3977"
+    ],
+    [
+     76,
+     "7822ee89bf225d8a",
+     "0bc0b9a047ebadd58a752dc3aaf2642f"
+    ],
+    [
+     80,
+     "59ef2b065371d070",
+     "259202dba35a04471c3f9caf732c2abe"
+    ],
+    [
+     81,
+     "c864c946dbb15954",
+     "4fac9822b86b227b0e9979c9582dfedf"
     ],
     [
      83,
-     "599299198eb6d0f6",
-     "900a0da1febc9e4cb31bd3fc479e2904"
+     "e7df7ab4cac2d385",
+     "e45c73ce96412043fd6fe5bc37f348ea"
+    ],
+    [
+     85,
+     "6b92385136810a2d",
+     "6063eaf26c7e1bcd71936338120adf44"
+    ],
+    [
+     86,
+     "92180e2e9b5f87af",
+     "804e7e9e1c23feab6b541bf2e970f13b"
+    ],
+    [
+     87,
+     "2f99ed57ba63ad0a",
+     "1018f85aed459367f8baa1a64ca7adf0"
+    ],
+    [
+     90,
+     "2588b43dc674d3b7",
+     "e602797c347ac061931dd75ac51c8267"
+    ],
+    [
+     90,
+     "36cfbb585d6c3e7f",
+     "c884b4c44c158dbc7a12f08c9b4f3527"
     ]
    ]
   },
@@ -1071,8 +1228,8 @@
    "rel": "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_PREREG.md",
    "why": "front matter",
    "file_sha256": [
-    "7b7cacde23081458b444ecf91ec30c3970847dfcd3eee6954be495b547ed4fd7",
-    "ea09a40843f76217e59ef6b04a7e7828810c0adac51ca4664775acf439b011fc"
+    "8dabb0818654b33ce91383d4994a1c826affe3f348ec8e111e27add2e92e04d8",
+    "b6f5251bd5c4f6061c05c49bde6b3c4dc3be61bc1bebc3605570ce942eaeaa47"
    ],
    "lines": [
     [
@@ -1111,6 +1268,11 @@
      "f99cc4ffac3c1d706bb292c0f3f5c400"
     ],
     [
+     48,
+     "c178b2a7fe7724ce",
+     "48e5da99d88e29625ce0fd12d4493a6e"
+    ],
+    [
      54,
      "162b5a38af06c13f",
      "ff32895919b08c0a375b2dec86b48a9f"
@@ -1119,6 +1281,11 @@
      54,
      "effb22d66311976d",
      "211cce19a350a4b7abf0c40e3b49d18c"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      63,
@@ -1149,6 +1316,11 @@
      67,
      "7a11e2e7719aa750",
      "4eb8b89113ddd0b2ac29fbfe340c7774"
+    ],
+    [
+     68,
+     "614aa2e8ae5a4161",
+     "ec1c6b162ab5d65040299f8d9cca5a13"
     ],
     [
      69,
@@ -1271,6 +1443,11 @@
      "b0c93d4533ce70a2679715263afa3a1f"
     ],
     [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
+    ],
+    [
      82,
      "10de60c1f7d2199e",
      "a928c0e98d7e99be0ed32d0f11167db5"
@@ -1279,6 +1456,11 @@
      83,
      "7b4f443506aaa220",
      "9f2deed6670a341d93b3dee5168abe82"
+    ],
+    [
+     85,
+     "93f19a755c329667",
+     "97f0d58bcb12cde41d7ba6ee3de57913"
     ],
     [
      95,
@@ -1296,8 +1478,8 @@
    "rel": "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/AGENT_REVIEW_RESULTS.md",
    "why": "file name",
    "file_sha256": [
-    "1a53e20ee0652c43bfdf94e34c26eb195f11291f2a41d0c2480febfc11579fc4",
-    "a2db0f265df34ff0431ded5b6d45850f28859d6da444eb0b59b7dbe54424e0bf"
+    "19c11742fb388d9008277c38d24b839a8beb76bdec7d01142e69c87334ec1e7d",
+    "4608e395d90b242ac372ac43e20a2b469b96768bd9763ced07aea2aa05513dff"
    ],
    "lines": [
     [
@@ -1386,6 +1568,11 @@
      "400c13232832ba6c9cb8ad0adc484f44"
     ],
     [
+     48,
+     "c178b2a7fe7724ce",
+     "48e5da99d88e29625ce0fd12d4493a6e"
+    ],
+    [
      50,
      "7c5ecaa662b3c21d",
      "4c44cf42d1878b0f3c35d72533be45d6"
@@ -1409,6 +1596,11 @@
      55,
      "c1ae93c19372f5d3",
      "68725b5b1e76da6071110dd0f91e3fc3"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      57,
@@ -1449,6 +1641,11 @@
      67,
      "5210dd4a513894ce",
      "6f670689606d1fc7176cd546df4a6655"
+    ],
+    [
+     68,
+     "614aa2e8ae5a4161",
+     "ec1c6b162ab5d65040299f8d9cca5a13"
     ],
     [
      69,
@@ -1599,6 +1796,16 @@
      81,
      "61a5a1d554a6c8b9",
      "d437460f32081fecc14544de5da77fd6"
+    ],
+    [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
+    ],
+    [
+     95,
+     "93f19a755c329667",
+     "86c3647b42a356a088ebeddce335bc2b"
     ]
    ]
   },
@@ -1606,7 +1813,8 @@
    "rel": "courses/vibe-research/exercises/seeded-02-the-fix-that-broke-it/FACILITATOR.md",
    "why": "file name",
    "file_sha256": [
-    "c582b0df41328b49f54cb1a52160ba2faf43952432e668167156f8da472324de"
+    "d3c241c534719aa9a2c35fad715f793ef0c07e3b566f35f1fa138cd2b4c8c0bc",
+    "fcb51a09d7eb7e553c96a3d0e04e27df396f91fd25cb6bd1679c1181c055e988"
    ],
    "lines": [
     [
@@ -1731,6 +1939,11 @@
     ],
     [
      48,
+     "c178b2a7fe7724ce",
+     "48e5da99d88e29625ce0fd12d4493a6e"
+    ],
+    [
+     48,
      "c2d645e61c4341b6",
      "070cf2a4e8632b65cb94d89185534769"
     ],
@@ -1768,6 +1981,11 @@
      55,
      "5c7c6aa7d04e9fe3",
      "a692207c9e7636f870bdda01927055a9"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      56,
@@ -1816,8 +2034,18 @@
     ],
     [
      68,
+     "614aa2e8ae5a4161",
+     "ec1c6b162ab5d65040299f8d9cca5a13"
+    ],
+    [
+     68,
      "86548a0c5506983b",
      "866f055294eeab3d1d470255dc8af948"
+    ],
+    [
+     68,
+     "93f19a755c329667",
+     "a9fc9817accd9a29b493eca2292b948b"
     ],
     [
      69,
@@ -2083,6 +2311,11 @@
      80,
      "bd440be94c74297b",
      "ec1eaa402782f5d6e0aea005890b6a0a"
+    ],
+    [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
     ],
     [
      82,
@@ -3798,7 +4031,8 @@
    "rel": "courses/vibe-research/session-1-facilitator/FACILITATOR.md",
    "why": "file name",
    "file_sha256": [
-    "5ead97bc66248d1ff0310a7f4d72679db75a1a895bce58365a40f5a3947da798"
+    "e83a538d1c0573f5891274fd2be7b6913bc79f91a05b37327ff1e0794c4a866b",
+    "f7e74f7d841f02d9eec29b9a6f51ff861c8de2d90d5cea625a132d3c330508c5"
    ],
    "lines": [
     [
@@ -3852,6 +4086,11 @@
      "b55770bc3ae04700e6ac79e7082e728f"
     ],
     [
+     36,
+     "e36bbc5f7fb9196e",
+     "b411c36ee54cabf8abcefae500d39299"
+    ],
+    [
      38,
      "9b4a803787da37e6",
      "b08671b41205922f934b7520d68304af"
@@ -3903,6 +4142,11 @@
     ],
     [
      54,
+     "93f19a755c329667",
+     "305e08da1e8a86f210adf29c6f63e798"
+    ],
+    [
+     54,
      "b8281d25d8646642",
      "73e353b948e5a9056e30a52c2228f3c4"
     ],
@@ -3935,6 +4179,11 @@
      55,
      "ac52b8f8a1344bfc",
      "9e9c9e5baee2e4be6c5e64a0b3d86d61"
+    ],
+    [
+     55,
+     "c4cfccd14a775990",
+     "701a079dadc062e067a324580dea9d2c"
     ],
     [
      56,
@@ -4410,6 +4659,16 @@
      78,
      "36659da4e56bec40",
      "bd24742c8db7d199d45e6964afa5e646"
+    ],
+    [
+     81,
+     "fdc41005b9f0b7b9",
+     "9b0380a7bc2ccaa2869c180871e0359b"
+    ],
+    [
+     86,
+     "614aa2e8ae5a4161",
+     "95ae5f0c4f5890b00eafbf52db5e639a"
     ]
    ]
   },
@@ -4417,7 +4676,8 @@
    "rel": "courses/vibe-research/tools/grim_reference.py",
    "why": "file name",
    "file_sha256": [
-    "232938670e614292039da48902a6f269f3f7f557d8834918a36fe00cea56040a"
+    "9d196465cdd58179044268bef7437dd9f7a71e39522be8520d7b5051f1ca1987",
+    "e01861483f59fd798803d9e0444228a6dafc9608b4196bfedc6cc399c4080be9"
    ],
    "lines": [
     [
@@ -4477,6 +4737,11 @@
     ],
     [
      39,
+     "d93135a112ef12dd",
+     "2c253a8ead111c152f2619625a18c6cb"
+    ],
+    [
+     39,
      "e9cea2c1bf9ab9d6",
      "135d44746c14050cd861ae1067c43139"
     ],
@@ -4531,6 +4796,11 @@
      "ccd16c4988b00eb4bbb7d8693fb48ba3"
     ],
     [
+     60,
+     "9ef29647324318f5",
+     "617e8ea00b03ff396d83ccefc8577e2c"
+    ],
+    [
      61,
      "276a72cb32a74769",
      "bd22192c0b126f8c7a232651e57cc9a8"
@@ -4544,6 +4814,16 @@
      62,
      "2afd49a2f83d2b75",
      "f10a0df04c018b671264aa041891f86f"
+    ],
+    [
+     63,
+     "43b23441437bb6db",
+     "18ef4933d27b263cb9edfbd93cfc85e9"
+    ],
+    [
+     63,
+     "c4cfccd14a775990",
+     "98d82cf4ecf5375c7125a62259b9448a"
     ],
     [
      64,
@@ -4619,6 +4899,16 @@
      71,
      "c09d9db1b4e7d7da",
      "57a43aa49b88383760c4c90f0b09b5c4"
+    ],
+    [
+     75,
+     "ea226c655d61776d",
+     "972739d48390e5f4fdd3c4764d4e3977"
+    ],
+    [
+     77,
+     "93f19a755c329667",
+     "b95c088958571d7297b181c52a666913"
     ]
    ]
   }

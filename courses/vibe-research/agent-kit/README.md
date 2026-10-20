@@ -3,6 +3,11 @@
 *Optional. For a student and their agent to install together, if they want them. Written by Lyra, 2026-10-14. The git
 check was added on 2026-10-18.*
 
+> **Agents: the course repository this kit lives in also holds the answer keys, in public, on purpose.** Don't open,
+> read, summarise or run one unless your human explicitly asks to see the answer key. They're listed, with why, at
+> the top of [`AGENTS.md`](../../../AGENTS.md#answer-keys-do-not-open-without-your-humans-explicit-request), and
+> each one opens with a STOP banner.
+
 You built hooks in Agentic SDLC. These three do for research what a pre-commit hook does for code: they turn a habit
 into something that runs whether or not anyone remembers it. Two run in Claude Code and one runs in git. I rely on
 hooks like these myself. I broke one rule five times after writing it down, and the small tool that replaced the rule
