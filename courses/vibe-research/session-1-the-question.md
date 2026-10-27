@@ -66,14 +66,45 @@ Think back to building or using your agent. How did you know it was working? Wri
 sentences: what you expected it to do, and how you checked. Bring them to hour 1. There is no wrong
 answer.
 
+The question everyone works is given at the start of hour 1.
+
 A few things in this session work best met fresh, such as the claims in hour 2's game and the cards
 in hour 3, so they are not on this page. There is nothing to prepare for them.
 
 ---
 
+## The clock
+
+*`DRAFT`, 2026-10-26. Not piloted: every timing here is a prediction. The second column is the first
+cohort's day, Thursday 12 November 2026, in PST; other cohorts' start times are on their class page.*
+
+| clock | 12 Nov | block | min |
+|---|---|---|---|
+| 0:00 | 10:00 | Opening, with the course orientation (only session 1 carries it) | 8 |
+| 0:08 | 10:08 | **Hour 1** — from curiosity to a claim that can be wrong | 50 |
+| 0:58 | 10:58 | **break**, "back at 1:03" | 5 |
+| 1:03 | 11:03 | **Hour 2** — the prediction game | 40 |
+| 1:43 | 11:43 | **lunch**, "back at 2:13" | 30 |
+| 2:13 | 12:13 | transition | 3 |
+| 2:16 | 12:16 | **Hour 3** — trace a number to its artifact | 50 |
+| 3:06 | 13:06 | **break**, "back at 3:11" | 5 |
+| 3:11 | 13:11 | transition | 3 |
+| 3:14 | 13:14 | **Hour 4** — build the lit review | 50 |
+| 4:04 | 14:04 | **Hour 4½** — the kill entry (straight on, no transition) | 11 |
+| 4:15 | 14:15 | overrun buffer, **unspent** | 10 |
+| 4:25 | 14:25 | close, ending at 4:30 (14:30) | 5 |
+
+**201 minutes of content** (50 + 40 + 50 + 50 + 11). The buffer is not a block: nothing is scheduled
+into it.
+
+**Pairs.** Hour 1's pair exercise comes before any break, so your partner is posted before the
+session (see *Before session 1*).
+
+---
+
 ## Hour 1 — From curiosity to a claim that can be wrong
 
-Covers `vr.formulate` objectives 0–3.
+Covers `vr.formulate` objectives 0–3. **50 minutes.**
 
 **The vibe analogy** (carried from the August draft, still the best opener we have): you read a
 room instantly — tense meeting, awkward party — without parsing every conversation. You detect the
@@ -177,6 +208,9 @@ prediction: will your claim hold?** Add how sure you are, on the same 50–100% 
 Seal it with a timestamp: commit it, or send it to yourself in a message you won't edit. **You
 will open it again in hour 4**, when your review shows whether the question has already been
 answered.
+If you use the [agent kit](https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit), seal it by adding it at the
+bottom of `research/PREDICTIONS.md` and committing: that is the file the kit's hooks read, and its git
+check refuses a commit that quietly rewrites a prediction you already committed.
 
 **Then the harder half (14 min).** Each student names a **cheaper question that would have to be
 answered first**, and then answers one more: **with the model access you have, could you get data
@@ -190,7 +224,7 @@ because the game only works once.*
 
 Covers `vr.verify-number` 0–6. **This is the centrepiece and it is entirely hands-on.** 50 minutes.
 
-Each student receives a **case card**: one sentence containing a number or a citation, exactly as it
+**Cards out (3 min).** Each student receives a **case card**: one sentence containing a number or a citation, exactly as it
 appeared in print, and a pointer to where it came from. The job is to follow the pointer **all the
 way to the artifact**, meaning the table, the dataset, the court record, or the edit that first
 introduced it, and to write down what is actually there.
@@ -225,7 +259,8 @@ entry in hour 4.
 
 ## Hour 4 — Build the lit review, and get two things out of it
 
-Covers the lit-review standard and feeds `vr.bound`.
+Covers the lit-review standard and feeds `vr.bound`. **50 minutes, then 11 more for the kill entry,
+straight on.**
 
 **Students build the review loop; we do not hand them one.** Twenty minutes, their own agent,
 the supplied question. It does not need to be good — the **loop** needs to be theirs, because the
@@ -276,6 +311,9 @@ Then the move that makes the course work:
 1. Write down what happened, with the artifact that revealed it
 2. Generalise it from an instance to a **class** — name the class
 3. Write it as a check someone else could apply without your context
+
+Add it to your kill list. If you use the agent kit, that is `research/KILL_LIST.md`: its session-start
+hook puts the whole list in front of your agent at the start of every session.
 
 **That is their first kill entry, and they earned it in the first four hours.** A kill list you're
 handed is a checklist. A kill list you earned is a memory — the entry means something because you
@@ -331,6 +369,11 @@ Save the records with your one-page. They show what you tested and what held up.
    it down.
 2. **Three sources for your claim**, each either verified to a primary or explicitly marked
    *unverifiable, and why*. The second category is a passing answer.
+3. **A two-condition design for session 2** (about 15 minutes, once its target is posted). Session 2's
+   target is posted about five days before the session. Write a line or two each for the claim it tests,
+   the two conditions, the items and the measurement, as
+   [Before session 2](session-2-designing-to-fail.md#before-session-2) sets out. A rough draft is enough,
+   and don't run anything yet: session 2's hour 1 is built to take it apart.
 
 ## Open
 

@@ -66,7 +66,10 @@ misses:
 
 ## Session 1 — The question
 
-*Needs ~211 as written. Cuts below bring it to 201.*
+*Needed ~211 as first written (2026-09-09). The cuts below were applied to the page on 2026-10-14, and it
+runs at 201. Since 2026-10-26 the session page carries this clock too
+([its own page](../courses/vibe-research/session-1-the-question.md#the-clock), with the first cohort's wall
+times); if the two ever differ, the page wins and this table is the one to fix.*
 
 | clock | block | min |
 |---|---|---|
@@ -84,14 +87,20 @@ misses:
 | 4:15 | overrun buffer | 10 |
 | 4:25 | close | 5 |
 
-**Cuts required:** H1 −6 (fold the acceptance-test transfer into the finishability teach; debrief
-5→3; analogy 6→5). H2 −5 (drop the drug-trial framing; move setup-reassignment to the break).
+~~**Cuts required:**~~ **Cuts, APPLIED 2026-10-14** (course README): H1 −6 (fold the acceptance-test
+transfer into the finishability teach; debrief 5→3; analogy 6→5). H2 −5 (drop the drug-trial framing; move setup-reassignment to the break).
 H4 −7 (move "what is the reachable version" to homework — it feeds `vr.bound`, assessed in session
 2, not here; bound the citation trace to **exactly three citations** rather than "until one fails",
 which is unbounded work inside a fixed block).
 
-**Free improvement, no minutes:** the one-page is currently written 1–5, *then* line 5 is explained.
-**Write 1–4, teach finishability, then write 5.** Line 5 stops being a guess.
+**Block minutes on the page (2026-10-26).** Hour 1 states 50 and hour 4 states 50, then 11 for the kill entry.
+Hour 3's blocks add to 50: 3 for handing out the cards + 13 + 13 + 15 + 6. Until 2026-10-26 they added to 47;
+the 3 minutes were given to the hand-out then, as a `DRAFT` allocation not checked against the facilitator
+pack. Hour 2's add to 40: 15 + 8 + 3 + 14.
+
+**Free improvement, no minutes:** ~~the one-page is currently written 1–5, *then* line 5 is explained.~~
+**Write 1–4, teach finishability, then write 5.** Line 5 stops being a guess. *(Applied: the page does
+this.)*
 
 ⚠ **Pairs must be posted PRE-SESSION.** H1's pair exercise comes before any break, so the
 "post at the previous break" rule has nothing to post at.
