@@ -69,7 +69,7 @@ dissolves it, and **without giving up either thing we wanted:**
 | | **in-session target** | **carried pipeline** |
 |---|---|---|
 | what | rotates every session — `temperature=0`, option order, step-by-step (session 4 has none since 2026-10-20) | **one supplied target, chosen at session 1, carried all four** |
-| bounded? | yes, by construction — an afternoon | yes, but built stage by stage across ~56 days |
+| bounded? | yes, by construction — an afternoon | yes, but built stage by stage across the cohort's four sessions (70 days for the first cohort) |
 | purpose | teach *this session's* judgment move, with a clean reveal | **be the pipeline they walk out owning** |
 | lives | the room | continuing work, workbook, agent |
 

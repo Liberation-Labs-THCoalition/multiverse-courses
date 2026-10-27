@@ -85,7 +85,8 @@ watching you build it is not a stranger, and the test silently returns a pass it
 
 ## Rolling cohorts — *not* rolling attendance
 
-**`SETTLED` 2026-09-09 (Thomas).** A cohort runs sessions 1 → 2 → 3 → 4 together, **fortnightly**,
+**`SETTLED` 2026-09-09 (Thomas).** A cohort runs sessions 1 → 2 → 3 → 4 together, on the dates
+its class page sets (planned as fortnightly; the first cohort's gaps, set 2026-10-26, are 7, 49 and 14 days),
 and **each session is a formal prerequisite for the next.** Nobody joins mid-arc. Then a new cohort
 starts; graduates may take the whole arc again.
 
@@ -103,8 +104,11 @@ Consequences for the room:
   `seeded-01`'s first ten minutes ends the exercise for their partner.
 - **Repeaters get fresh targets** where the bank has depth — see
   [the target bank](../courses/vibe-research/the-target-bank.md). It does not yet.
-- **Cadence check `OPEN`:** fortnightly is the intent; Thomas to confirm with Liz against the wider
-  school schedule.
+- ~~**Cadence check `OPEN`:** fortnightly is the intent; Thomas to confirm with Liz against the wider
+  school schedule.~~ **ANSWERED 2026-10-26 by the first cohort's class page:** 12 Nov, 19 Nov, 7 Jan and
+  21 Jan, so the gaps are 7, 49 and 14 days. Two consequences are still `OPEN`: when session 2's target is
+  posted, with only 7 days after session 1, and session 3's fallback dataset, which the winter gap makes
+  load-bearing.
 
 ### When someone misses a session
 

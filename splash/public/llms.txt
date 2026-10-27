@@ -1,6 +1,6 @@
 Vibe Research: Intensive research methodology course
 
-Four fortnightly four-hour sessions for students learning to build verification gates into their research workflow.
+Four four-hour sessions, on the dates each cohort's class page sets, for students learning to build verification gates into their research workflow.
 
 Sessions:
 1. The Question: Turn curiosity into testable claims with literature review

@@ -3,7 +3,7 @@
 
 At the start of every session, it puts your student's research notes into the agent's context, in full.
 The agent starts from what the student committed to, not from its own memory of it. Sessions are a
-fortnight apart, and an agent's memory of a fortnight ago is the least reliable thing in the room.
+week or more apart, and an agent's memory of a session weeks ago is the least reliable thing in the room.
 
 It never leaves anything out quietly. The only limit is Claude Code's own (see OUTPUT_LIMIT). If the notes
 don't fit under it, the hook leaves out the oldest lines, and says how many and where the full file is,

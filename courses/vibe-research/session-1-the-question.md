@@ -7,8 +7,9 @@ facilitator notes moved off this page 2026-10-14.** Four hours. First of four.
 **Standards covered:** `vr.formulate`, `vr.verify-number`, and the lit-review standard from
 [Course: Question](../../standards/vibe-research/README.md).
 
-**`SETTLED` (Thomas, 2026-09-09):** four sessions, fortnightly, about 56 days per cohort, and each
-session is the prerequisite for the next. **The question is supplied** (Thomas, 2026-09-08):
+**`SETTLED` (Thomas, 2026-09-09):** four sessions, and each session is the prerequisite for the next.
+Your cohort's dates are on [the school's class page](https://themultiverse.school/classes); the first cohort meets on
+Thursdays 12 Nov and 19 Nov 2026, then 7 Jan and 21 Jan 2027. **The question is supplied** (Thomas, 2026-09-08):
 everyone in the cohort works the same one, so you do not need to bring a question of your own.
 
 ---

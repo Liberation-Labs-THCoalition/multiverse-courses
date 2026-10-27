@@ -28,8 +28,8 @@ session teaches.
 session 2's target, not about who is in the room.
 
 > **Delivery model, `SETTLED` 2026-09-09 (Thomas): rolling cohorts, not rolling attendance.**
-> A cohort runs 1 → 2 → 3 → 4 together, **fortnightly** (≈ 56 days, which is the README's "roughly
-> 60"), and **each session is a formal prerequisite for the next.** Mid-arc entry is not
+> A cohort runs 1 → 2 → 3 → 4 together, on the dates its class page sets (planned as fortnightly
+> until 2026-10-26; the first cohort's gaps are 7, 49 and 14 days), and **each session is a formal prerequisite for the next.** Mid-arc entry is not
 > discouraged, it is *impossible*. Then a new cohort starts, and graduates may take the arc again.
 >
 > An earlier draft of this file argued the target bank was needed because *"anyone who joins at

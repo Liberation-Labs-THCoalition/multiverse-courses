@@ -15,7 +15,7 @@ has never broken it.
 
 | Hook | When it runs | What it does |
 |---|---|---|
-| [`session_start.py`](hooks/session_start.py) | at the start of every Claude Code session | Puts the student's predictions and kill list into the agent's context, in full, so the agent starts from what the student committed to rather than from memory. Sessions are a fortnight apart. |
+| [`session_start.py`](hooks/session_start.py) | at the start of every Claude Code session | Puts the student's predictions and kill list into the agent's context, in full, so the agent starts from what the student committed to rather than from memory. Sessions are a week or more apart. |
 | [`predict_first.py`](hooks/predict_first.py) | before the agent runs a script | Reminds the agent to ask for the student's prediction first. It never blocks anything, and it stays quiet if the predictions file changed in the last 30 minutes. |
 | [`check_predictions.py`](hooks/check_predictions.py) | before every git commit | Makes `research/PREDICTIONS.md` append-only. New lines at the bottom go through. A commit that changes, deletes or moves a line that was already committed is refused, unless it also adds a line starting `REVISION:` that says what changed and why. |
 

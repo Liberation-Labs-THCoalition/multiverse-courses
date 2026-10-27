@@ -10,7 +10,7 @@ Two consequences, one practical and one that turns out to be pedagogy rather tha
 
 ## 1. The gap between intensives is where the course actually happens
 
-Four-hour sessions spread over ~60 days means the majority of a student's contact with the
+Four-hour sessions spread over weeks (70 days, for the first cohort) means the majority of a student's contact with the
 material is **unattended**. That is a problem in most courses. Here it is the point: the students
 already have long-horizon agents, and learning to work with one *is* the subject.
 

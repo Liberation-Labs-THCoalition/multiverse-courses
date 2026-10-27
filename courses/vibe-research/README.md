@@ -4,7 +4,9 @@
 
 **Names are ours to propose.** Liz has creative latitude over the campus. To save them time, we present finished names rather than options, and they change whatever they like. Everything below is a proposal, not a claim.
 
-**Four** four-hour intensives, **fortnightly**, ≈ 56 days per cohort. Prerequisite: two of the school's agent classes,
+**Four** four-hour intensives, on the dates each cohort's [class page](https://themultiverse.school/classes) sets. The
+first cohort meets on Thursdays 12 Nov and 19 Nov 2026, then 7 Jan and 21 Jan 2027, 10:00-14:30 PST: gaps of 7, 49
+and 14 days, with December off (2026-10-26). Prerequisite: two of the school's agent classes,
 **Intro to Agents** (Agent 101) and **Agentic SDLC** (Thomas, 2026-10-14), so **every student arrives with an agent of
 their own.** Read against both curricula on 2026-10-14, students arrive able to:
 
@@ -209,8 +211,8 @@ round-2 audit.)*
 
 ## Open
 
-- ~~3 sessions or 4, and where the 60 days start~~ — **RESOLVED 2026-09-09 (Thomas).** Four, and the clock starts at the cohort's session 1. **Rolling cohorts:** a cohort runs 1→2→3→4 together, **fortnightly** (≈56 days, which is the "roughly 60"), and **each session is a formal prerequisite for the next** — nobody joins mid-arc. New cohort after; graduates may repeat the whole arc. *(An earlier line here read "3–4 … over roughly 60 days" while the status line above said `SETTLED at 4` — a claim that was simultaneously SETTLED and OPEN in one file, which is exactly what the marking scheme exists to prevent. Found by audit.)*
-- **`OPEN`, needs Liz:** does fortnightly fit the wider school schedule?
+- ~~3 sessions or 4, and where the 60 days start~~ — **RESOLVED 2026-09-09 (Thomas).** Four, and the clock starts at the cohort's session 1. **Rolling cohorts:** a cohort runs 1→2→3→4 together, **fortnightly** (≈56 days, which is the "roughly 60"), and **each session is a formal prerequisite for the next** — nobody joins mid-arc. New cohort after; graduates may repeat the whole arc. *(Cadence superseded 2026-10-26: the first cohort's class page sets 12 Nov, 19 Nov, 7 Jan and 21 Jan, gaps of 7, 49 and 14 days, not a fortnight each. See the next line.)* *(An earlier line here read "3–4 … over roughly 60 days" while the status line above said `SETTLED at 4` — a claim that was simultaneously SETTLED and OPEN in one file, which is exactly what the marking scheme exists to prevent. Found by audit.)*
+- ~~**`OPEN`, needs Liz:** does fortnightly fit the wider school schedule?~~ **ANSWERED 2026-10-26 by the first cohort's [class page](https://themultiverse.school/classes):** not as planned. That cohort meets 12 Nov, 19 Nov, 7 Jan and 21 Jan (gaps of 7, 49 and 14 days). Still `OPEN` as consequences: with 7 days between sessions 1 and 2, session 2's "about five days before" target post falls two days after session 1, and the 49-day winter gap falls between sessions 2 and 3.
 - Cohort size, and whether sessions are live-only or recorded. **Cohort size: target 8, hard cap 10**; the reasoning is in [the clocks](../../docs/session-clocks.md).
 - ~~What students bring: their own question is assumed~~ — **RESOLVED 2026-09-08 (Thomas): the question is SUPPLIED.** Own questions are an accelerator requirement, not this course's. Rationale: this course teaches holding the tools on something basic, and a personal project invites burning class time defending it. See [the target bank](./the-target-bank.md).
 - Whether Kavi's `kv_verify` battery can be taught with attribution (their call, and Dwayne's)
