@@ -513,7 +513,8 @@ def cohort_links_section() -> str:
 
 def stage_cohort_hub() -> str:
     """The site 'Cohort hub' page (run notes): links to the four session pages and a
-    'Links' section rendered from docs/cohort-links.md. Labels and links only — no prose."""
+    'Links' section rendered from docs/cohort-links.md. Labels and links only — no prose, apart
+    from that file's one sentence saying class links are shared in the class's own channels."""
     base = posixpath.dirname(COHORT_HUB.dest) or "."
     sessions = [f"- [{p.label}]({posixpath.relpath(p.dest, base)})" for p in SESSIONS]
     return "\n".join([
