@@ -41,9 +41,10 @@ own syllabus.
   power, confidence interval. All used across sessions 2–3, **none defined anywhere**, and the
   audit's stated novice drop-out point is a block that uses four of them at once. This is the
   single highest-value thing the workbook can carry and it costs zero session minutes.
-- **"Choosing a test."** Currently a real hole — no pipeline stage covers it, and session 2 hour 3
-  asks students to run *"their planned test"* on noise. A workbook chapter plus an agent to work
-  it through is a better teacher than an hour of lecture would have been.
+- **"Choosing a test."** Currently a real hole — no pipeline stage covers it, ~~and session 2 hour 3
+  asks students to run *"their planned test"* on noise~~ *(superseded 2026-09-29: hour 3 now has
+  students write a one-line expected test and build data for it)*. A workbook chapter plus an agent to
+  work it through is a better teacher than an hour of lecture would have been.
 - **Mechanical how-to** for stages 2, 5, 6, 8: running a lit review loop, provenance stamping,
   the staleness hook, packaging a repo so a stranger can run it.
 - **Every worked case we currently narrate.** Students read them before the session; the room
@@ -51,9 +52,11 @@ own syllabus.
 
 ### What the campus agents take
 
-- **The gate-sparring companion.** It is currently a spec, not a build
-  (`docs/between-sessions-and-tone.md`), and **two sessions assign homework against it.** A campus
-  agent with the right brief is that companion, and it exists today.
+- **The gate-sparring companion.** ~~It is currently a spec, not a build
+  (`docs/between-sessions-and-tone.md`), and **two sessions assign homework against it.**~~
+  *(2026-10-26: between sessions, students now spar with their own agent, using the prompt on
+  session 1's page, and session 2 reuses it.)* A campus agent with the right brief could still be that
+  companion later.
 - **Between-session project help** — running the pilot, debugging the harness, the parts where
   being stuck alone at 11pm is what actually kills momentum.
 - **Background delivery** for anyone arriving thin on a prerequisite.

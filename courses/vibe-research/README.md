@@ -1,6 +1,6 @@
 # Vibe Research — intensive series
 
-**Status: `DRAFT`.** Structure proposed 2026-08-22. **Session count SETTLED at 4** (Thomas, 2026-08-25) — *"stick with 4 until someone says otherwise."* Dates still `OPEN`.
+**Status: `DRAFT`.** Structure proposed 2026-08-22. **Session count SETTLED at 4** (Thomas, 2026-08-25) — *"stick with 4 until someone says otherwise."* ~~Dates still `OPEN`.~~ Dates: set per cohort on the school's [class page](https://themultiverse.school/classes) (2026-10-26); the first cohort's are below.
 
 **Names are ours to propose.** Liz has creative latitude over the campus. To save them time, we present finished names rather than options, and they change whatever they like. Everything below is a proposal, not a claim.
 

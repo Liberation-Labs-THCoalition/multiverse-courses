@@ -48,9 +48,11 @@ hard" from session 4 hour 4 at five minutes per student did not add up (10 × 5 
 45-minute hour). All four facilitators independently arrived at **eight**, for a reason arithmetic
 misses:
 
-- **Session 2** — hour 3 has every student running code against a live model API. At ~4–5 min of
-  help per stuck student and a third of the room stuck, ten students is ~15 minutes of facilitator
-  attention inside a 25-minute exercise.
+- **Session 2** — ~~hour 3 has every student running code against a live model API~~ *(superseded
+  2026-09-29; see Prep below)*. Hour 3 now has every student building two small synthetic datasets
+  with their agent and running their own test on them, in a 15-minute block. At ~4–5 min of help per
+  stuck student and a third of the room stuck, ten students is ~15 minutes of facilitator attention:
+  the whole block.
 - **Session 3** — three individual-work windows whose whole premise is *you cannot see your own
   error*, so someone else must look. At 8 you read every student's output; **at 10 you are
   sampling, in an exercise whose thesis is that sampling does not work.**

@@ -3,7 +3,7 @@
 > **For facilitators:** this session's timings and cuts are in [the four clocks](../../docs/session-clocks.md).
 
 **Status: `DRAFT`, 2026-08-24; hours 2–3 written 2026-09-29 from verified external cases;
-facilitator notes moved off this page 2026-10-14.** Four hours. First of four.
+facilitator notes moved off this page 2026-10-14.** Four hours, plus a 30-minute lunch. First of four.
 **Standards covered:** `vr.formulate`, `vr.verify-number`, and the lit-review standard from
 [Course: Question](../../standards/vibe-research/README.md).
 
@@ -40,7 +40,8 @@ day: it is much easier to sort out early.
   one you built in Intro to Agents works too.
 - **A place to write that keeps a timestamp**: a doc with version history, a notes file in a git
   repository, or a message to yourself. In hour 2 you will seal a prediction there.
-- **Four hours.** Two short breaks are built in.
+- **Four and a half hours** (10:00 to 14:30 PST for the first cohort): four hours of class with two
+  short breaks built in, and a 30-minute lunch straight after hour 2.
 
 **Set up**
 
@@ -340,9 +341,12 @@ Save the records with your one-page. They show what you tested and what held up.
 - ~~Session 3 should open by reading back the sealed predictions~~ — **changed 2026-10-14:** the
   sealed prediction from hour 2 is opened in hour 4 of this session, when the review answers it.
   Session 3 (rebuilt 2026-10-14) does not return to it.
-- **Where the facilitator pack lives.** Pending the public/private repo decision; until then it is
-  kept outside the public repo. Any example used in class must **not** also appear on the course
-  splash page, or the page spoils the class.
+- ~~**Where the facilitator pack lives.** Pending the public/private repo decision; until then it is
+  kept outside the public repo.~~ **`SETTLED` 2026-10-20 (course team; see
+  [the agents' guide](../../AGENTS.md)):** answer keys stay in this public repository, marked so that
+  agents leave them alone, and this session's facilitator notes are one of them. Hour 2's claims and
+  hour 3's cards stay outside it, as those hours say. Any example used in class must **not** also
+  appear on the course splash page, or the page spoils the class.
 - ~~Where the 60 days start~~ — **RESOLVED 2026-09-09 (Thomas):** the clock starts at the
   cohort's session 1. See [the course README](./README.md).
 - Baba Yaga's two extra riddle types — now a **PR to the campus repo** rather than a request,

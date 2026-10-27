@@ -54,13 +54,17 @@ files have been on public `master` since 2026-08-25. Since Pages was switched on
 master), they are also served as web pages (seeded-01's key returned HTTP 200). Excluding them from the
 site build therefore hides nothing. Worse for this course: students clone the repo to get the exercises,
 and an agent asked to "review this analysis" reads the whole working tree, including `FACILITATOR.md`
-in the same folder. **Decision pending (Thomas):**
+in the same folder. ~~**Decision pending (Thomas):**~~ **`SETTLED` 2026-10-20 (course team; see
+[AGENTS.md](../AGENTS.md)):** the keys stay in this public repository, marked. Each opens with a STOP
+banner, CLAUDE.md and AGENTS.md list them, and the build fails when a key is unlisted or has no banner
+(`tools/check_key_notice.py`). Seeded-03's key is kept outside the repository. The options were:
 - split into a public student-facing repo (lessons and exercise inputs) and a private facilitator repo
   (keys, `verify_floor.py`, agent-review results);
 - and/or assess on the process record (the gate-sparring record per probe) rather than the answer.
 
 Git history keeps the current keys findable either way. No cohort has run yet, so nothing is spoiled.
-New seeded exercises should keep their keys private from day one.
+New seeded exercises should keep their keys private from day one. *(Superseded by the 2026-10-20
+decision above: seeded-04's key is in the repository, marked.)*
 
 - **v0:** the keys are **not built into the public site.** Each exercise page ends with a *"Solutions
   and facilitator notes: available after you complete this session"* box, with its link target set
@@ -83,7 +87,9 @@ New seeded exercises should keep their keys private from day one.
 ## Gaps are visible, not hidden
 
 - Pages or hours not yet written get front-matter `status: in-development` and a banner saying so.
-  Known gaps: session 1 hours 2-3, session 2 hour 3.
+  Known gaps: ~~session 1 hours 2-3, session 2 hour 3~~. Both were written on 2026-09-29, and
+  `GAPS` in `tools/build_site.py` has been empty since (2026-10-26). The only in-development page is
+  the *Interactive pieces (coming)* placeholder.
 - Each such page carries a short "what will go here" note, taken from the session file's own notes
   where they exist.
 
