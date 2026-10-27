@@ -448,11 +448,24 @@ def stage_home(dest_of: dict[str, str], report: Report) -> str:
     section = re.search(r"^## What the series is for[ \t]*\n(.*?)(?=^## |\Z)", readme, re.M | re.S)
     if not section:
         raise BuildError(f"{readme_rel}: no '## What the series is for' section for the Home page")
-    para = next((p for p in re.split(r"\n[ \t]*\n", readme) if "Prerequisite:" in p), None)
-    if para is None:
+    blocks = re.split(r"\n[ \t]*\n", readme)
+    at = next((i for i, p in enumerate(blocks) if "Prerequisite:" in p), None)
+    if at is None:
         raise BuildError(f"{readme_rel}: no 'Prerequisite:' sentence for the Home page")
+    para = blocks[at]
     what_for = section.group(1).strip().rstrip("-").strip()
     who_for = " ".join(para[para.index("Prerequisite:"):].split())
+    # A dated decision record such as "(Name, 2026-10-14)" stays in the README, where CONTRIBUTING.md
+    # asks for it; the student-facing Home page carries the sentence without it.
+    who_for = re.sub(r"\s*\([A-Z][A-Za-z]+, \d{4}-\d\d-\d\d\)", "", who_for)
+    if who_for.endswith(":"):
+        # The sentence introduces a list, which is the next blank-line block of the README. Until
+        # 2026-10-26 only the sentence was kept, so the Home page broke off at "arrive able to:".
+        nxt = blocks[at + 1].strip() if at + 1 < len(blocks) else ""
+        if not nxt.startswith("- "):
+            raise BuildError(f"{readme_rel}: the 'Prerequisite:' paragraph ends in ':' but no list "
+                             f"follows it, so the Home page's 'Who it is for' would break off")
+        who_for += "\n\n" + nxt
     what_for, who_for = (rewrite_links(t, readme_rel, HOME.dest, dest_of, report)
                          for t in (what_for, who_for))
     sessions = [f"{i}. [{p.label}]({p.dest})" for i, p in enumerate(SESSIONS, 1)]
