@@ -70,6 +70,9 @@ and by making the closing mechanical rather than dependent on remembering.** An 
 maintained Zotero library is the anchor example — it turns citation verification from an act of
 will into a lookup.
 
+[`glossary.md`](glossary.md) — **the course's words, defined once.** Thirty-seven terms, from *ablation*
+to *Type S / Type M error*, each linked to the place in the course where it first appears.
+
 Tools are marked `used` (we run it) or `known` (established, but not used in this work), because a
 course on verification should not recommend from hearsay.
 

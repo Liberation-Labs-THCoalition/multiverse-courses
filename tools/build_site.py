@@ -96,6 +96,7 @@ SPINE = [
     Page("The target bank", "spine/the-target-bank.md", f"{COURSE}/the-target-bank.md"),
     Page("Toolset", "spine/toolset.md", f"{COURSE}/toolset.md"),
     Page("Tools by stage", "spine/tools-by-stage.md", f"{COURSE}/tools-by-stage.md"),
+    Page("Glossary", "spine/glossary.md", f"{COURSE}/glossary.md"),
 ]
 
 EXERCISES = [
