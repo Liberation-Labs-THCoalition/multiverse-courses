@@ -9,7 +9,7 @@ a gap in this page, not a word the course does not use.
 
 ---
 
-**[ablation](README.md)** — A comparison of two runs that differ in one thing, with that one thing removed in one run. On student-facing pages the course calls it a *comparison*, never an ablation.
+**[ablation](README.md)** — A comparison of two runs that differ in one thing, with that one thing removed in one run. The session pages call it a *comparison*; the word is defined here because papers use it.
 *First appears in:* the course README.
 
 **[adjustment set](tools-by-stage.md#tools-and-there-are-good-ones)** — The variables you statistically control for so your comparison is not confounded; a tool like dagitty finds the minimal such set and shows when adjusting for one would break the design.

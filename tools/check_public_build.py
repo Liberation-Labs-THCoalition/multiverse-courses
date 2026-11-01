@@ -502,14 +502,26 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
              lambda: (neutral.parent.mkdir(), neutral.write_text(rendered, encoding="utf-8")),
              lambda: shutil.rmtree(neutral.parent), want={"text"}, forbid=blind)
 
-        pages = sorted(copy.rglob("index.html"), key=lambda p: (len(p.parts), str(p)))
-        page = next((p for p in pages if p.parent.name == "course"), pages[0])
-        original = page.read_bytes()
+        # C plants one line into a built page. The markdown export (export_curriculum.py) has no index.html, so there
+        # the line goes into a markdown lesson instead. Until 2026-11-01 this case crashed on the export (IndexError).
         n, line = min(source.distinctive, key=lambda d: len(d[0]))
-        snippet = render_html(line, True).split("<article>")[1].split("</article>")[0]
-        marker = b"</article>" if b"</article>" in original else b"</body>"
+        pages = sorted(copy.rglob("index.html"), key=lambda p: (len(p.parts), str(p)))
+        if pages:
+            page = next((p for p in pages if p.parent.name == "course"), pages[0])
+            original = page.read_bytes()
+            snippet = render_html(line, True).split("<article>")[1].split("</article>")[0]
+            marker = b"</article>" if b"</article>" in original else b"</body>"
+            planted_page = original.replace(marker, snippet.encode() + marker, 1)
+        else:
+            pages = sorted(copy.rglob("*.md"), key=lambda p: (len(p.parts), str(p)))
+            if not pages:
+                print(f"self-test: cannot run case C: {site} has no index.html pages and no markdown lessons")
+                return 2
+            page = pages[0]
+            original = page.read_bytes()
+            planted_page = original + b"\n\n" + line.encode("utf-8") + b"\n"
         case(f"C: one {len(n)}-character line inside {page.relative_to(copy).as_posix()}",
-             lambda: page.write_bytes(original.replace(marker, snippet.encode() + marker, 1)),
+             lambda: page.write_bytes(planted_page),
              lambda: page.write_bytes(original), want={"text"}, forbid=blind)
 
         fake_repo = Path(tmp) / "repo"
@@ -545,12 +557,18 @@ def self_test(site: Path, keys: list[Key], source: Key | None = None) -> int:
         (lesson_repo / "lesson.md").write_text("# A lesson (self-test only)\n\n" + secret + "\n", encoding="utf-8")
         lesson_keys = discover(lesson_repo, use_git=False)
 
+        # A markdown page gets the markdown itself. Until 2026-11-01 the HTML marker was missing there, so on the
+        # export E and F planted nothing and G passed without being tested.
         def inject(target: Path, md: str):
             original = target.read_bytes()
-            snippet = render_html(md, True).split("<article>")[1].split("</article>")[0]
-            marker = b"</article>" if b"</article>" in original else b"</body>"
-            return (lambda: target.write_bytes(original.replace(marker, snippet.encode() + marker, 1)),
-                    lambda: target.write_bytes(original))
+            if target.suffix.lower() == ".md":
+                planted_page = original + b"\n\n" + md.encode("utf-8") + b"\n"
+            else:
+                snippet = render_html(md, True).split("<article>")[1].split("</article>")[0].encode()
+                marker = b"</article>" if b"</article>" in original else b"</body>"
+                planted_page = (original.replace(marker, snippet + marker, 1) if marker in original
+                                else original + snippet)
+            return (lambda: target.write_bytes(planted_page), lambda: target.write_bytes(original))
 
         lessons = [p for p in pages if SESSION_PAGE.match(p.relative_to(copy).as_posix())]
         outside = next((p for p in pages if not SESSION_PAGE.match(p.relative_to(copy).as_posix())), None)

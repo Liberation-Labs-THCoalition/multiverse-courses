@@ -76,18 +76,18 @@ in hour 3, so they are not on this page. There is nothing to prepare for them.
 ## The clock
 
 *`DRAFT`, 2026-10-26. Not piloted: every timing here is a prediction. The second column is the first
-cohort's day, Thursday 12 November 2026, in PST; other cohorts' start times are on their class page.*
+cohort's day, Thursday 12 November 2026, in PST; other cohorts' start times are on their class page. The quoted return times are 12 Nov clock times: announce a return as a clock time, never as a course offset, and other cohorts shift it by their own start.*
 
 | clock | 12 Nov | block | min |
 |---|---|---|---|
 | 0:00 | 10:00 | Opening, with the course orientation (only session 1 carries it) | 8 |
 | 0:08 | 10:08 | **Hour 1** — from curiosity to a claim that can be wrong | 50 |
-| 0:58 | 10:58 | **break**, "back at 1:03" | 5 |
+| 0:58 | 10:58 | **break**, "back at 11:03" | 5 |
 | 1:03 | 11:03 | **Hour 2** — the prediction game | 40 |
-| 1:43 | 11:43 | **lunch**, "back at 2:13" | 30 |
+| 1:43 | 11:43 | **lunch**, "back at 12:13" | 30 |
 | 2:13 | 12:13 | transition | 3 |
 | 2:16 | 12:16 | **Hour 3** — trace a number to its artifact | 50 |
-| 3:06 | 13:06 | **break**, "back at 3:11" | 5 |
+| 3:06 | 13:06 | **break**, "back at 1:11" (13:11) | 5 |
 | 3:11 | 13:11 | transition | 3 |
 | 3:14 | 13:14 | **Hour 4** — build the lit review | 50 |
 | 4:04 | 14:04 | **Hour 4½** — the kill entry (straight on, no transition) | 11 |

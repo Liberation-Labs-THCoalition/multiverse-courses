@@ -75,12 +75,12 @@ times); if the two ever differ, the page wins and this table is the one to fix.*
 |---|---|---|
 | 0:00 | Opening — **plus course-level orientation** (only session 1 carries it) | 8 |
 | 0:08 | **H1** — curiosity → a claim that can be wrong | 50 |
-| 0:58 | **break** — "back at 1:03" | 5 |
+| 0:58 | **break** — returns at 1:03; announce that as a clock time ("back at 11:03" on 12 Nov) | 5 |
 | 1:03 | **H2** — the prediction game *materials: facilitator pack (private), 2026-09-29* | 40 |
-| 1:43 | **lunch**, "back at 2:13" | 30 |
+| 1:43 | **lunch** — returns at 2:13; announce that as a clock time ("back at 12:13" on 12 Nov) | 30 |
 | 2:13 | transition | 3 |
 | 2:16 | **H3** — trace a number to its artifact *materials: facilitator pack (private), 2026-09-29* | 50 |
-| 3:06 | **break** — post H4 pairs here | 5 |
+| 3:06 | **break** — returns at 3:11; announce that as a clock time ("back at 1:11" on 12 Nov). *Removed 2026-11-01: "post H4 pairs here", left from an older hour 4. The page's hour 4 has no pair work, and the page wins.* | 5 |
 | 3:11 | transition | 3 |
 | 3:14 | **H4** — build the review loop, run it to saturation | 50 |
 | 4:04 | **H4½** — the kill entry (continuous, no transition) | 11 |
