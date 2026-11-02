@@ -57,18 +57,18 @@ prediction, and it only works on a first read.
 
 ## The clock
 
-*`DRAFT`, 2026-10-20. Not piloted: every timing here is `PREDICTED`.*
+*`DRAFT`, 2026-10-20. Not piloted: every timing here is `PREDICTED`. The quoted return times are clock times for the first cohort's day, Thursday 21 January 2027, from 10:00 PST: announce a return as a clock time, never as a course offset, and other cohorts shift it by their own start.*
 
 | clock | block | min |
 |---|---|---|
 | 0:00 | Opening. Hour 1's pairs were posted the night before; confirm them, don't brief | 5 |
 | 0:05 | **Hour 1** — build the gate, and make it run | 50 |
-| 0:55 | **break**, "back at 1:00" | 5 |
+| 0:55 | **break**, "back at 11:00" | 5 |
 | 1:00 | **Hour 2** — the seeded exercise: a confident review | 40 |
-| 1:40 | **lunch**, "back at 2:10" | 30 |
+| 1:40 | **lunch**, "back at 12:10" | 30 |
 | 2:10 | transition | 3 |
 | 2:13 | **Hour 3** — defects that do not present as claims | 30 |
-| 2:43 | **break**, "back at 2:48". *Post the hand-off pairs before this break* | 5 |
+| 2:43 | **break**, "back at 12:48". *Post the hand-off pairs before this break* | 5 |
 | 2:48 | **Hour 3½** — the hand-off test | 20 |
 | 3:08 | fix what the hand-off found, and run your gate on your own pilot | 16 |
 | 3:24 | transition | 3 |

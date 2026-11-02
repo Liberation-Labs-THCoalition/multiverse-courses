@@ -42,18 +42,18 @@ support, and what you now believe.
 
 ## The clock
 
-*`DRAFT`, 2026-10-14. Not piloted: every timing here is a prediction.*
+*`DRAFT`, 2026-10-14. Not piloted: every timing here is a prediction. The quoted return times are clock times for the first cohort's day, Thursday 7 January 2027, from 10:00 PST: announce a return as a clock time, never as a course offset, and other cohorts shift it by their own start.*
 
 | clock | block | min |
 |---|---|---|
 | 0:00 | Opening. Orientation and hour 1's pairs are posted the night before; confirm them, don't brief | 5 |
 | 0:05 | **Hour 1** — the number that was measuring your sample size | 48 |
-| 0:53 | **break**, "back at 0:58". Post any change to hour 3's pairs | 5 |
+| 0:53 | **break**, "back at 10:58". Post any change to hour 3's pairs | 5 |
 | 0:58 | **Hour 2** — the statistic that is not what its name says | 45 |
-| 1:43 | **lunch**, "back at 2:13" | 30 |
+| 1:43 | **lunch**, "back at 12:13" | 30 |
 | 2:13 | transition | 3 |
 | 2:16 | **Hour 3** — would you sign it? *(the discovery hour)* | 50 |
-| 3:06 | **break**, "back at 3:11". Post hour 4's new pairs and the template | 5 |
+| 3:06 | **break**, "back at 1:11" (13:11). Post hour 4's new pairs and the template | 5 |
 | 3:11 | transition | 3 |
 | 3:14 | **Hour 4** — the limits section first, then the verdict | 48 |
 | 4:02 | **Hour 4½** — the third kill (straight on, no transition) | 10 |

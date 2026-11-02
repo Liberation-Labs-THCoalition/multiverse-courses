@@ -119,13 +119,13 @@ here is a prediction.*
 |---|---|---|
 | 0:00 | Opening — hour 1 pairs already posted | 5 |
 | 0:05 | **H1** — the confound that got there first | 50 |
-| 0:55 | **break** — "back at 1:00" | 5 |
+| 0:55 | **break** — returns at 1:00; announce that as a clock time ("back at 11:00" on 19 Nov) | 5 |
 | 1:00 | transition | 3 |
 | 1:03 | **H2** — a control capable of failing | 42 |
-| 1:45 | **lunch**, "back at 2:15" | 30 |
+| 1:45 | **lunch** — returns at 2:15; announce that as a clock time ("back at 12:15" on 19 Nov) | 30 |
 | 2:15 | transition | 3 |
 | 2:18 | **H3** — a test that cannot reject *(the centrepiece)* | 50 |
-| 3:08 | **break** — "back at 3:13", **post H4 template here** | 5 |
+| 3:08 | **break** — returns at 3:13; announce that as a clock time ("back at 1:13" on 19 Nov), **post H4 template here** | 5 |
 | 3:13 | transition | 3 |
 | 3:16 | **H4** — pre-register, then have your agent attack it | 48 |
 | 4:04 | **H4½** — the break log, and name the second kill (continuous, no transition) | 10 |
@@ -262,12 +262,12 @@ every timing is `PREDICTED`.
 |---|---|---|
 | 0:00 | Opening. Hour 1's pairs were posted the night before; confirm them, don't brief | 5 |
 | 0:05 | **H1** — build the gate, and make it run | 50 |
-| 0:55 | **break** — "back at 1:00" | 5 |
+| 0:55 | **break** — returns at 1:00; announce that as a clock time ("back at 11:00" on 21 Jan) | 5 |
 | 1:00 | **H2** — the seeded exercise: a confident review | 40 |
-| 1:40 | **lunch**, "back at 2:10" | 30 |
+| 1:40 | **lunch** — returns at 2:10; announce that as a clock time ("back at 12:10" on 21 Jan) | 30 |
 | 2:10 | transition | 3 |
 | 2:13 | **H3** — defects that do not present as claims | 30 |
-| 2:43 | **break** — "back at 2:48". **Post the hand-off pairs before this break** | 5 |
+| 2:43 | **break** — returns at 2:48; announce that as a clock time ("back at 12:48" on 21 Jan). **Post the hand-off pairs before this break** | 5 |
 | 2:48 | **H3½** — the hand-off test | 20 |
 | 3:08 | fix what the hand-off found, and run your gate on your own pilot | 16 |
 | 3:24 | transition | 3 |
