@@ -523,7 +523,7 @@ def raw_url(source: str) -> str:
 def hub_list(items: list, base: str, raw_ok: set[str], indent: int = 0) -> list[str]:
     """Nav items as a list, in nav order: a Page is its nav label linked to its page; a group is its nav
     label with its pages under it. A page whose source is in raw_ok is followed by a raw-download link,
-    labelled '<filename> (raw)', never with the bare URL (a bare URL overflows a phone screen)."""
+    labelled '<filename> (raw)', never with the bare URL (a filename says what you get; a URL doesn't)."""
     pad = " " * indent
     lines = []
     for item in items:

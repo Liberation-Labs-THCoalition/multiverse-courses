@@ -13,7 +13,14 @@ The hub is the class's plain-links page, for students who cannot use the campus 
      the test follows them; a file with marked spoiler sections counts too, as a raw download is whole;
   3. every raw link's file is tracked in git (git ls-files), so the link cannot 404 on GitHub;
   4. the sections are Sessions, Course spine, Exercises, then Links, last; the page links in the first
-     three follow the nav's own order; and no link's text is a bare URL (it overflows a phone).
+     three follow the nav's own order; and no link's text is a bare URL (a filename says what you get);
+  5. NO link of any kind lands on an answer key: raw or blob GitHub URLs in any scheme or letter case,
+     this site's own URLs, and relative paths are all resolved and checked against both CLAUDE.md lists
+     and build_site.py's key names (by name only: this test never opens a file). A file with marked
+     spoiler sections may be linked as its site page, but never whole from GitHub and never by anchor;
+  6. labels and links only (docs/run-card-hedgedoc-v1.md): every line is a heading, a link item or a nav
+     group label, except in Links, where a non-link line must appear verbatim in docs/cohort-links.md.
+     That file is edited by hand, so 5 and 6 cover it too.
 
 The self-test never opens an answer key. It plants a key's PATH, a string read from CLAUDE.md, and the
 hub generator only writes that string into a link; nothing reads the file.
@@ -28,7 +35,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit
 
 TOOLS = Path(__file__).resolve().parent
 REPO = TOOLS.parent
@@ -52,11 +59,11 @@ HEADING = re.compile(r"^## (.+?)[ \t]*$", re.M)
 # --------------------------------------------------------------------------- facts the checks rest on
 
 
-def answer_key_paths(text: str | None = None) -> set[str]:
-    """Every path in CLAUDE.md's two answer-key lists. Fails loudly if a list cannot be found, so a
-    reworded CLAUDE.md cannot quietly empty the check."""
+def answer_key_lists(text: str | None = None) -> tuple[set[str], set[str]]:
+    """CLAUDE.md's two lists: (do not open, marked spoiler sections). Fails loudly if a list cannot be
+    found, so a reworded CLAUDE.md cannot quietly empty the check."""
     text = CLAUDE_MD.read_text(encoding="utf-8-sig") if text is None else text
-    paths: set[str] = set()
+    lists = []
     for heading in KEY_LISTS:
         m = re.search(heading, text, re.M)
         if not m:
@@ -66,8 +73,86 @@ def answer_key_paths(text: str | None = None) -> set[str]:
         found = re.findall(r"^- `([^`]+)`", body[:nxt.start()] if nxt else body, re.M)
         if not found:
             raise AssertionError(f"CLAUDE.md: the list under {m.group(0)!r} has no `path` bullets")
-        paths.update(found)
-    return paths
+        lists.append(set(found))
+    return lists[0], lists[1]
+
+
+def answer_key_paths(text: str | None = None) -> set[str]:
+    """Every path on either of CLAUDE.md's answer-key lists."""
+    closed, spoiler = answer_key_lists(text)
+    return closed | spoiler
+
+
+KEY_STEMS = {posixpath.splitext(n)[0] for n in bs.KEY_NAMES}
+
+
+def name_is_key(name: str) -> bool:
+    """build_site.is_key's NAME rule only. is_key itself reads a .md file's front matter, and this test
+    must never open a file a link points at, so it is not called here. A code page is staged as .md, so
+    a key's stem counts too (verify_floor.md, the page a verify_floor.py would get)."""
+    n = name.lower()
+    stem = posixpath.splitext(n)[0]
+    return (n in bs.KEY_NAMES or bool(bs.VERIFY_SCRIPT.match(n)) or stem in KEY_STEMS
+            or bool(bs.VERIFY_SCRIPT.match(stem + ".py")))
+
+
+def site_page(path: str) -> str:
+    """A site path as the staged page it serves: 'x/review/' and 'x/review/index.html' are 'x/review.md'."""
+    path = path.lower()
+    if path.endswith("/index.html"):
+        path = path[: -len("/index.html")]
+    path = path.rstrip("/")
+    return path if posixpath.splitext(path)[1] else path + ".md"
+
+
+def link_lands(target: str, base: str) -> tuple[str | None, str, str]:
+    """Where a link lands, without opening anything: (path, fragment, kind). kind is 'repo' for a GitHub
+    file URL (raw, blob, tree, edit; path repo-relative), 'site' for a page of this site (path staged),
+    'other' for the rest of the web (path None). Scheme and host are compared without letter case."""
+    parts = urlsplit(target)
+    frag, path, host = parts.fragment, unquote(parts.path), parts.netloc.lower()
+    if parts.scheme or host:
+        segs = [s for s in path.split("/") if s]
+        org_repo = [s.lower() for s in urlsplit(bs.GITHUB).path.strip("/").split("/")]
+        if [s.lower() for s in segs[:2]] == org_repo:
+            if host == "raw.githubusercontent.com" and len(segs) > 3:
+                return "/".join(segs[3:]), frag, "repo"
+            if host in ("github.com", "www.github.com") and len(segs) > 4 \
+                    and segs[2].lower() in ("blob", "raw", "tree", "edit"):
+                return "/".join(segs[4:]), frag, "repo"
+        site = urlsplit(bs.SITE_URL)
+        if host == site.netloc.lower() and path.lower().startswith(site.path.lower()):
+            return site_page(path[len(site.path):] or bs.COHORT_HUB.dest), frag, "site"
+        return None, frag, "other"
+    if not path:                                   # an anchor on the hub itself
+        return site_page(bs.COHORT_HUB.dest), frag, "site"
+    return site_page(posixpath.normpath(posixpath.join(base, path))), frag, "site"
+
+
+def key_targets(closed: set[str], spoiler: set[str], nav: list) -> dict[str, dict[str, str]]:
+    """For each kind of landing, the lower-cased paths that are keys: {'repo'|'site': {path: 'closed'|'spoiler'}}.
+    A key's site forms are its path under the course folder, as itself and as a .md page, plus the dest of
+    any nav Page built from it."""
+    dest_of = {p.source: p.dest for _, p in bs.pages_in(nav) if p.source}
+    out: dict[str, dict[str, str]] = {"repo": {}, "site": {}}
+    for kind_name, paths in (("spoiler", spoiler), ("closed", closed)):      # closed wins a tie
+        for k in paths:
+            out["repo"][k.lower()] = kind_name
+            under = k[len(bs.COURSE) + 1:] if k.startswith(bs.COURSE + "/") else k
+            for form in (under, posixpath.splitext(under)[0] + ".md", dest_of.get(k, "")):
+                if form:
+                    out["site"][site_page(form)] = kind_name
+    return out
+
+
+def group_labels(items: list):
+    for item in items:
+        if not isinstance(item, bs.Page):
+            yield item[0]
+            yield from group_labels(item[1])
+
+
+LINK_ITEM = re.compile(r"^\s*- \[[^\]]*\]\([^)\s]+\)$")
 
 
 def tracked_files() -> set[str]:
@@ -110,9 +195,47 @@ def problems(hub: str, nav: list, keys: set[str], tracked: set[str]) -> list[str
         if re.match(r"\s*(https?:|www\.)", text):
             out.append(f"link text is a bare URL: [{text}]({target})")
 
+    # 5. every link, whatever its scheme, host or letter case, resolved and checked against the keys
+    spoiler = answer_key_lists()[1] & keys
+    targets = key_targets(keys - spoiler, spoiler, nav)
+    base = posixpath.dirname(bs.COHORT_HUB.dest)
+    for text, target in links:
+        path, frag, kind = link_lands(target, base)
+        if path is None:
+            continue
+        name = posixpath.basename(path)
+        hit = targets[kind].get(path.lower() if kind == "repo" else site_page(path))
+        if hit == "closed" or name_is_key(name):
+            out.append(f"link [{text}]({target}) lands on an answer key ({path}): never link one, in any form")
+        elif hit == "spoiler" and kind == "repo":
+            out.append(f"link [{text}]({target}) gives the whole of {path}, which has marked spoiler sections")
+        elif hit == "spoiler" and frag:
+            out.append(f"link [{text}]({target}) anchors into {path}, which has marked spoiler sections")
+
+    # 6. labels and links only; in Links, a non-link line must come verbatim from docs/cohort-links.md
+    labels = set(group_labels(nav))
+    cohort = {s.strip() for s in bs.cohort_links_section().splitlines() if s.strip()}
+    section = None
+    for line in hub.splitlines():
+        s = line.strip()
+        m = re.match(r"^## (.+?)[ \t]*$", line)
+        if not s or m:
+            section = m.group(1) if m else section
+            continue
+        if section is None and (re.match(r"^# \S", line) or (s.startswith("<!--") and s.endswith("-->"))):
+            continue
+        if LINK_ITEM.match(line):
+            continue
+        g = re.match(r"^\s*- (.+?)\s*$", line)
+        if g and g.group(1) in labels and section != "Links":
+            continue
+        if section == "Links" and s in cohort and not LINK.search(s):
+            continue
+        out.append(f"line is not a heading, a link item or a nav label (labels and links only): {s!r}")
+
     raw_seen = []
     for text, target in links:
-        if not target.startswith("https://raw.githubusercontent.com/"):
+        if urlsplit(target).netloc.lower() != "raw.githubusercontent.com":
             continue
         if not target.startswith(raw_prefix):
             out.append(f"raw link not into {raw_prefix}: {target}")
@@ -261,6 +384,37 @@ def self_test() -> int:
     url_h = bs.raw_url(f"{bs.S04}/gate.py")
     hub_h = clean.replace(f"    - [gate.py (raw)]({url_h})\n", "", 1)
     report("gate.py's raw link removed", problems(hub_h, bs.NAV, keys, tracked), "has no raw link")
+
+    # J-O: links that are not raw https downloads. Found by the 2026-11-04 answer-key verifier (J-M got
+    # through the first version of this test) and two more unlike them (N, O). Path strings only.
+    def in_section(hub: str, section: str, line: str) -> str:
+        return hub.replace(f"## {section}\n\n", f"## {section}\n\n{line}\n", 1)
+
+    fac01 = key_path("seeded-01-the-approved-analysis/FACILITATOR.md")
+    fac02 = key_path("seeded-02-the-fix-that-broke-it/FACILITATOR.md")
+    prereg = key_path("seeded-04-all-checks-passed/AGENT_REVIEW_PREREG.md")
+    bank = f"{bs.COURSE}/the-target-bank.md"
+    site_host = urlsplit(bs.SITE_URL).netloc.upper()
+    site_path = urlsplit(bs.SITE_URL).path
+    under = fac02[len(bs.COURSE) + 1:]
+    plants = [
+        ("J", "a github.com /blob/ link to a key, in Exercises", "Exercises",
+         f"- [Notes]({bs.GITHUB}/blob/{bs.BRANCH}/{fac01})", "lands on an answer key"),
+        ("K", "an http:// (not https) raw link to a key, in Links", "Links",
+         f"- [Notes]({bs.raw_url(fac01).replace('https://', 'http://', 1)})", "lands on an answer key"),
+        ("L", "an anchor into the target bank, in Links", "Links",
+         "- [Hints](spine/the-target-bank.md#answer-key)", "anchors into"),
+        ("M", "a line of prose under Exercises", "Exercises",
+         "Start with Seeded 01; it is the easiest.", "labels and links only"),
+        ("N", "this site's own URL for a key's page, host in capitals", "Links",
+         f"- [Notes](HTTPS://{site_host}{site_path}{posixpath.splitext(under)[0]}/)", "lands on an answer key"),
+        ("O", "a relative link to a key only CLAUDE.md lists (not a build_site key name)", "Links",
+         f"- [Notes]({prereg[len(bs.COURSE) + 1:]})", "lands on an answer key"),
+        ("P", "the target bank whole from GitHub", "Links",
+         f"- [Bank]({bs.GITHUB}/blob/{bs.BRANCH}/{bank})", "marked spoiler sections"),
+    ]
+    for tag, label, section, line, want in plants:
+        report(f"{tag}. {label}", problems(in_section(clean, section, line), bs.NAV, keys, tracked), want)
 
     # I. The key-list parser itself: a CLAUDE.md without the list must fail, not return an empty set.
     try:
