@@ -51,6 +51,13 @@ jobs:
           python tools/build_site.py
           mkdocs build --strict
 
+      # The Cohort hub is the class's plain-links page (phones, no campus game). Its raw download links must name only
+      # files the site already publishes as code pages, never a file on CLAUDE.md's answer-key lists. Added 2026-11-04.
+      - name: Cohort hub (raw links only to published code pages, never a key; nav order), and its positive control
+        run: |
+          python tools/test_cohort_hub.py
+          python tools/test_cohort_hub.py --self-test
+
       - name: Publisher tests (the HedgeDoc key gate refuses planted keys; it crashed instead from 10-14 to 10-18)
         run: python tools/test_publish_hedgedoc.py
 
