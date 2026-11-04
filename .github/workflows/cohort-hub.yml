@@ -1,0 +1,33 @@
+# Check the Cohort hub on every push and pull request (tools/test_cohort_hub.py).
+#
+# pages.yml runs the same test, but only on master, so a bad hub would first show as a failed deploy after a merge.
+# This runs it before the merge. build_site.py needs only the standard library, so no site dependencies are
+# installed here; the test reads the hub that build_site.py stages and never opens an answer key.
+name: Cohort hub
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-cohort-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Stage the site
+        run: python tools/build_site.py
+
+      - name: Cohort hub test, then its self-test
+        run: |
+          python tools/test_cohort_hub.py
+          python tools/test_cohort_hub.py --self-test

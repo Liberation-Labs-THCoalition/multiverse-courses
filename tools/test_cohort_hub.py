@@ -7,17 +7,20 @@
 
 The hub is the class's plain-links page, for students who cannot use the campus game. It must hold:
 
-  1. every raw-download link names a file the site publishes as a code page: a nav Page with code=True
+  1. every raw-download link in the generated sections (all but Links) names a file the site publishes as a code page: a nav Page with code=True
      whose download build_site.py staged. Every such file has one, and nothing else does;
   2. no raw link names a file on CLAUDE.md's answer-key lists. Both lists are parsed from CLAUDE.md, so
      the test follows them; a file with marked spoiler sections counts too, as a raw download is whole;
   3. every raw link's file is tracked in git (git ls-files), so the link cannot 404 on GitHub;
   4. the sections are Sessions, Course spine, Exercises, then Links, last; the page links in the first
      three follow the nav's own order; and no link's text is a bare URL (a filename says what you get);
-  5. NO link of any kind lands on an answer key: raw or blob GitHub URLs in any scheme or letter case,
-     this site's own URLs, and relative paths are all resolved and checked against both CLAUDE.md lists
-     and build_site.py's key names (by name only: this test never opens a file). A file with marked
-     spoiler sections may be linked as its site page, but never whole from GitHub and never by anchor;
+  5. no link lands on an answer key, in the forms link_lands() resolves: this repo's files on
+     raw.githubusercontent.com and github.com (blob, raw, tree, edit; a branch, a commit or refs/heads/;
+     '..' resolved; any scheme or letter case), this site's pages (full URL, root-relative or relative),
+     and, on any other host, a path that ends in a key's repo path. Each is checked against both CLAUDE.md
+     lists and build_site.py's key names (by name only: this test never opens a file). A file with marked
+     spoiler sections may be linked as its site page, but never whole and never by anchor. A link form
+     not resolved here is still checked by its file name, and nothing more;
   6. labels and links only (docs/run-card-hedgedoc-v1.md): every line is a heading, a link item or a nav
      group label, except in Links, where a non-link line must appear verbatim in docs/cohort-links.md.
      That file is edited by hand, so 5 and 6 cover it too.
@@ -52,7 +55,10 @@ SECTIONS = ["Sessions", "Course spine", "Exercises", "Links"]
 NAV_GROUP = {"Sessions": "Sessions", "Course spine": "The course spine", "Exercises": "Exercises"}
 KEY_LISTS = (r"^## Do not open\b.*$", r"^## Skip the marked spoiler sections\b.*$")
 
-LINK = re.compile(r"\[([^\]]*)\]\(([^)\s]+)\)")
+# A link target may hold balanced parentheses (…/Confounding_(statistics)) and be followed by a "title".
+LINK_TARGET = r"((?:[^()\s]|\([^()\s]*\))+)"
+LINK_TITLE = r'(?:\s+"[^"]*")?'
+LINK = re.compile(r"\[([^\]]*)\]\(" + LINK_TARGET + LINK_TITLE + r"\)")
 HEADING = re.compile(r"^## (.+?)[ \t]*$", re.M)
 
 
@@ -105,27 +111,48 @@ def site_page(path: str) -> str:
     return path if posixpath.splitext(path)[1] else path + ".md"
 
 
+def repo_file(rest: list[str]) -> str | None:
+    """The repo path after a ref: 'master/a/b' or 'refs/heads/master/a/b' (or a commit) give 'a/b',
+    with '..' and '.' segments resolved as a client resolves them before it asks."""
+    if len(rest) >= 3 and rest[0].lower() == "refs" and rest[1].lower() in ("heads", "tags"):
+        rest = rest[3:]
+    else:
+        rest = rest[1:]
+    return posixpath.normpath("/".join(rest)) if rest else None
+
+
 def link_lands(target: str, base: str) -> tuple[str | None, str, str]:
-    """Where a link lands, without opening anything: (path, fragment, kind). kind is 'repo' for a GitHub
-    file URL (raw, blob, tree, edit; path repo-relative), 'site' for a page of this site (path staged),
-    'other' for the rest of the web (path None). Scheme and host are compared without letter case."""
+    """Where a link lands, without opening anything: (path, fragment, kind).
+    - 'repo': this repo's files on raw.githubusercontent.com, or github.com blob/raw/tree/edit URLs, at a
+      branch, a commit or refs/heads/<branch>; path is repo-relative, '..' resolved.
+    - 'site': this site's pages, as a full URL, a root-relative path or a relative one; path is staged.
+    - 'other': anything else; path is the URL's path, still checked by file name and by key-path suffix.
+    Scheme and host are compared without letter case. Forms not listed here are not resolved."""
     parts = urlsplit(target)
     frag, path, host = parts.fragment, unquote(parts.path), parts.netloc.lower()
+    site = urlsplit(bs.SITE_URL)
     if parts.scheme or host:
         segs = [s for s in path.split("/") if s]
         org_repo = [s.lower() for s in urlsplit(bs.GITHUB).path.strip("/").split("/")]
         if [s.lower() for s in segs[:2]] == org_repo:
-            if host == "raw.githubusercontent.com" and len(segs) > 3:
-                return "/".join(segs[3:]), frag, "repo"
-            if host in ("github.com", "www.github.com") and len(segs) > 4 \
+            if host == "raw.githubusercontent.com":
+                found = repo_file(segs[2:])
+                if found:
+                    return found, frag, "repo"
+            if host in ("github.com", "www.github.com") and len(segs) > 3 \
                     and segs[2].lower() in ("blob", "raw", "tree", "edit"):
-                return "/".join(segs[4:]), frag, "repo"
-        site = urlsplit(bs.SITE_URL)
+                found = repo_file(segs[3:])
+                if found:
+                    return found, frag, "repo"
         if host == site.netloc.lower() and path.lower().startswith(site.path.lower()):
             return site_page(path[len(site.path):] or bs.COHORT_HUB.dest), frag, "site"
-        return None, frag, "other"
+        return path, frag, "other"
     if not path:                                   # an anchor on the hub itself
         return site_page(bs.COHORT_HUB.dest), frag, "site"
+    if path.startswith("/"):                       # root-relative
+        if path.lower().startswith(site.path.lower()):
+            return site_page(path[len(site.path):] or bs.COHORT_HUB.dest), frag, "site"
+        return path, frag, "other"
     return site_page(posixpath.normpath(posixpath.join(base, path))), frag, "site"
 
 
@@ -152,7 +179,7 @@ def group_labels(items: list):
             yield from group_labels(item[1])
 
 
-LINK_ITEM = re.compile(r"^\s*- \[[^\]]*\]\([^)\s]+\)$")
+LINK_ITEM = re.compile(r"^\s*- \[[^\]]*\]\(" + LINK_TARGET + LINK_TITLE + r"\)$")
 
 
 def tracked_files() -> set[str]:
@@ -201,13 +228,18 @@ def problems(hub: str, nav: list, keys: set[str], tracked: set[str]) -> list[str
     base = posixpath.dirname(bs.COHORT_HUB.dest)
     for text, target in links:
         path, frag, kind = link_lands(target, base)
-        if path is None:
+        if not path:
             continue
-        name = posixpath.basename(path)
-        hit = targets[kind].get(path.lower() if kind == "repo" else site_page(path))
+        name = posixpath.basename(path.rstrip("/"))
+        if kind == "other":             # a mirror or another host: does its path END in a key's repo path?
+            low = path.lower()
+            hits = {v for k, v in targets["repo"].items() if low == k or low.endswith("/" + k)}
+            hit = "closed" if "closed" in hits else ("spoiler" if hits else None)
+        else:
+            hit = targets[kind].get(path.lower() if kind == "repo" else site_page(path))
         if hit == "closed" or name_is_key(name):
             out.append(f"link [{text}]({target}) lands on an answer key ({path}): never link one, in any form")
-        elif hit == "spoiler" and kind == "repo":
+        elif hit == "spoiler" and kind in ("repo", "other"):
             out.append(f"link [{text}]({target}) gives the whole of {path}, which has marked spoiler sections")
         elif hit == "spoiler" and frag:
             out.append(f"link [{text}]({target}) anchors into {path}, which has marked spoiler sections")
@@ -233,8 +265,10 @@ def problems(hub: str, nav: list, keys: set[str], tracked: set[str]) -> list[str
             continue
         out.append(f"line is not a heading, a link item or a nav label (labels and links only): {s!r}")
 
+    # 1-3 apply to the generated sections. Links comes from docs/cohort-links.md, edited by hand: a raw link
+    # there (a dataset elsewhere, this repo's README) need not be a code page, and 5 still checks it for keys.
     raw_seen = []
-    for text, target in links:
+    for text, target in LINK.findall(re.split(r"^## Links", hub, maxsplit=1, flags=re.M)[0]):
         if urlsplit(target).netloc.lower() != "raw.githubusercontent.com":
             continue
         if not target.startswith(raw_prefix):
@@ -413,8 +447,33 @@ def self_test() -> int:
         ("P", "the target bank whole from GitHub", "Links",
          f"- [Bank]({bs.GITHUB}/blob/{bs.BRANCH}/{bank})", "marked spoiler sections"),
     ]
+    # Q-T: forms the pre-merge checker got through J-P's version (2026-11-04).
+    org_repo = urlsplit(bs.GITHUB).path.strip("/")
+    s01, s04 = fac01.rsplit("/", 1)[0], prereg.rsplit("/", 1)[0]
+    plants += [
+        ("Q", "a '..' segment walking from Seeded 01 to a key only CLAUDE.md lists", "Links",
+         f"- [Notes]({bs.GITHUB}/blob/{bs.BRANCH}/{s01}/../{s04.rsplit('/', 1)[1]}/{prereg.rsplit('/', 1)[1]})",
+         "lands on an answer key"),
+        ("R", "GitHub's Raw button form, raw/refs/heads/<branch>/", "Links",
+         f"- [Notes]({bs.GITHUB}/raw/refs/heads/{bs.BRANCH}/{prereg})", "lands on an answer key"),
+        ("S", "a CDN mirror of the repo (another host), to a key only CLAUDE.md lists", "Links",
+         f"- [Notes](https://cdn.jsdelivr.net/gh/{org_repo}@{bs.BRANCH}/{prereg})", "lands on an answer key"),
+        ("T", "the target bank whole, by blob/refs/heads/", "Links",
+         f"- [Bank]({bs.GITHUB}/blob/refs/heads/{bs.BRANCH}/{bank})", "marked spoiler sections"),
+    ]
     for tag, label, section, line, want in plants:
         report(f"{tag}. {label}", problems(in_section(clean, section, line), bs.NAV, keys, tracked), want)
+
+    # Negative controls: ordinary links a maintainer adds to docs/cohort-links.md must NOT be flagged.
+    for label, line in [
+        ("a link whose URL has parentheses", "- [Confounding](https://en.wikipedia.org/wiki/Confounding_(statistics))"),
+        ("a link with a title", '- [Call](https://zoom.us/j/1 "Weekly call")'),
+        ("a Matrix room", "- [Chat](https://matrix.to/#/#room:example.org)"),
+        ("a glossary anchor", "- [Confound](spine/glossary.md#confound)"),
+        ("an email address", "- [Write to us](mailto:class@example.org)"),
+    ]:
+        report(f"ordinary link passes: {label}", problems(in_section(clean, "Links", line), bs.NAV, keys, tracked),
+               None)
 
     # I. The key-list parser itself: a CLAUDE.md without the list must fail, not return an empty set.
     try:
