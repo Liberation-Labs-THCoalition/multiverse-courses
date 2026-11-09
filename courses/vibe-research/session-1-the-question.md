@@ -177,7 +177,7 @@ Then the claims are revealed one at a time. A reveal is not just *true* or *fals
 thing that decides it**, shown from the primary source.
 
 **Score how sure you were, not only whether you were right.** For each claim: if you were right,
-your penalty is (1 − confidence)²; if you were wrong, it is confidence². The lowest total wins, and a tie shares the win. Nothing is graded and no score is posted anywhere, so "no agent and no search" is on your honour.
+your penalty is (1 − confidence)²; if you were wrong, it is confidence². The lowest total wins, and a tie shares the win. The game isn't graded and no score is posted anywhere, so "no agent and no search" is on your honour.
 
 | how sure you wrote | penalty if right | penalty if wrong |
 |---|---|---|
