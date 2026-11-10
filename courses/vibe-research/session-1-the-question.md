@@ -45,7 +45,7 @@ day: it is much easier to sort out early.
 
 **Set up**
 
-- The class meets online: a video call on Livelink (Google Meet is the fallback), with a Matrix chat
+- The class meets in Campus, on its Livelink video call (Google Meet is the fallback), with a Matrix chat
   room alongside. `OPEN`: where the links are posted, and when.
 - Your partner for hour 1 is posted before the session, so nobody has to find one on the day.
   `OPEN`: where it is posted.
