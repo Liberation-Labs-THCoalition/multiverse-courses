@@ -92,7 +92,7 @@ cohort's day, Thursday 12 November 2026, in PST; other cohorts' start times are 
 | 3:14 | 13:14 | **Hour 4** — build the lit review | 50 |
 | 4:04 | 14:04 | **Hour 4½** — the kill entry (straight on, no transition) | 11 |
 | 4:15 | 14:15 | overrun buffer, **unspent** | 10 |
-| 4:25 | 14:25 | close, ending at 4:30 (14:30) | 5 |
+| 4:25 | 14:25 | close, ending at 2:30 (14:30) | 5 |
 
 **201 minutes of content** (50 + 40 + 50 + 50 + 11). The buffer is not a block: nothing is scheduled
 into it.
