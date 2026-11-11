@@ -45,10 +45,14 @@ day: it is much easier to sort out early.
 
 **Set up**
 
-- The class meets in Campus, on its Livelink video call (Google Meet is the fallback), with a Matrix chat
-  room alongside. `OPEN`: where the links are posted, and when.
-- Your partner for hour 1 is posted before the session, so nobody has to find one on the day.
-  `OPEN`: where it is posted.
+- The class meets online, in a campus jam that Thomas hosts (Google Meet is the fallback), with a Matrix
+  chat room alongside: [Vibe Research](https://matrix.to/#/%23vibe-research:themultiverse.school).
+- If you have a campus account, find the jam on campus: jams are listed, and an open door means walk
+  in. If you don't, use the guest link, posted in the chat room at 10:00 on the day. A guest link only
+  works for the call it was made in, so it can't be sent days ahead. If campus fails, the Google Meet
+  link goes up in the chat room too.
+- Your partner for hour 1 is posted in the chat room the evening before, so nobody has to find one on
+  the day.
 - Optional: the [agent kit](https://github.com/Liberation-Labs-THCoalition/multiverse-courses/tree/master/courses/vibe-research/agent-kit), three small tools: two Claude Code hooks (one puts your research notes in front of
   your agent at the start of every session; one reminds it to ask for your prediction before it runs an analysis
   script), and a git check that stops a committed prediction being quietly rewritten. Read them before you install them.
