@@ -19,9 +19,9 @@ stated commitment: what result would make them believe their own claim.
 
 *`DRAFT`, 2026-10-15. Not piloted. Anything the school still has to decide is marked `OPEN`.*
 
-**Pre-work (about 15 minutes): a two-condition design.** This session's target is posted about five
-days before the session. `OPEN`: where it is posted. Draft a design for it and bring it: hour 1's last
-block runs on it, and hours 2 and 3 come back to it.
+**Pre-work (about 15 minutes): a two-condition design.** This session's target was posted in the
+[Vibe Research](https://matrix.to/#/%23vibe-research:themultiverse.school) chat room on 18 November.
+Draft a design for it and bring it: hour 1's last block runs on it, and hours 2 and 3 come back to it.
 
 Write a line or two for each:
 
@@ -34,7 +34,12 @@ Write a line or two for each:
 A rough draft is enough: hour 1 is built to take it apart. **Don't run anything yet.** If you try
 something out anyway, write down what you looked at, because hour 4 asks.
 
-Your partner for hour 1 is posted before the session, as in session 1. `OPEN`: where it is posted.
+Your partner for hour 1 is posted in the Vibe Research chat room the evening before the session.
+
+**You don't need a coding agent for this session.** A chat window with any model is enough:
+wherever this page says "your agent", a chat window counts. If you have a coding agent, one that
+can write and run code, use it. Where hours 3 and 4 ask you to run something, they also say how to
+do it by hand. The pilot homework may need more model access; the close of the session covers it.
 
 ## The one idea
 
@@ -214,6 +219,11 @@ and made with your agent:
 1. one that **should** make your test reject, and run the test on it;
 2. one that **should not**, and run the test on it.
 
+**No coding agent?** Make the two datasets by hand or in a chat window. Then work the test through
+on each one: by hand, in a spreadsheet, or by asking the chat window to write out the formula and
+show every step. Check what you can (redo at least one step yourself), and note any step you
+couldn't check.
+
 If the first one won't reject, however extreme you make it, you have found a test that cannot reject
 before it cost you anything. That is a success. Hour 4 is where you replace it.
 
@@ -282,7 +292,8 @@ If you can't fill a line yet, write *I don't know yet* and why. The attack will 
 **Break this (23 min), with your agent.** Hand it the pre-registration with one instruction: **break
 this.** Not "review" — *find the version of this design that produces my preferred answer
 regardless of the truth.* It is the Evil Genie Test from Agentic SDLC, pointed at your own design:
-the genie grants the result you are hoping for, and your claim is still false. How? Paste this prompt, then your whole pre-registration:
+the genie grants the result you are hoping for, and your claim is still false. How? (In a chat
+window, read the note under the prompt first.) Paste this prompt, then your whole pre-registration:
 
 ```text
 Break this pre-registration. Do not review it or praise it, and do not fix
@@ -303,6 +314,21 @@ Then check two things by running something, not by reading:
 
 Put the attack that would most change my headline first. If you find
 nothing, list what you tried.
+```
+
+**In a chat window?** Use the block below in place of the lines from *Then check two things* down
+to the first *Show the arithmetic.* (that line and its two bullets). It works whether or not your
+chat can run code. A chat asked to "run" something it can't run may make up the output. Check what
+you can: redo at least one step of its arithmetic yourself, and log any step you couldn't check.
+
+```text
+Then check two things by working them out, not by reading. Show every
+step of the arithmetic, so I can check it by hand:
+- Can my test reject at all? Build a small dataset where it should, do
+  the test's arithmetic on it, and show me the result.
+- If my claim is true at the effect I expect, how often would my planned
+  sample meet the branch that says I believe it? Show the arithmetic.
+Don't say you ran or simulated anything unless you really did.
 ```
 
 If your agent praises the design, or says it found nothing, send this:
@@ -373,12 +399,13 @@ work against. Run your design past it and log what it challenged.
   reveal. Its mechanism is unrelated to either seeded exercise's. The case, its sources, the key and the reveal are in the facilitator pack. **Not
   piloted.** Its blind-labelling handout was drawn at random with a recorded seed and has never been
   run with a room.
-- **`OPEN`, narrowed 2026-10-15: the pre-work's target and posting.** Hour 1 assumes the design
-  draft is pre-work (`docs/session-clocks.md`, H1 −15). The instruction a student sees is now on this
+- ✅ **RESOLVED 2026-11-18: who posts the pre-work's target, and where.** Class mode posted it in Vibe
+  Research, 18 Nov. Hour 1 assumes the design draft is pre-work (`docs/session-clocks.md`, H1 −15).
+  The instruction a student sees is now on this
   page (*Before session 2*), with four lines in place of the clocks' one-page template, which was
-  never written. Still undecided: which target the design is for, which waits on whether targets
-  rotate within a cohort's arc, and who posts it, and where, about five days ahead. Until it is
-  posted, a student who arrives without a design does hour 1's last block on a partner's.
+  never written. Which target is resolved (Thomas, 2026-10-28): the shared target rotates, so
+  session 2 has its own, and a student's own session 1 question can come too, as an optional second
+  design. A student who arrives without a design does hour 1's last block on a partner's.
 - **`OPEN` (2026-10-14): where the believe step should live.** The course outline (`OUTLINE_v2.md`,
   session 2) has session 2 end with *what result would make them believe their own claim*. It now sits in hour
   4: a branch of the decision rule, a check against the power line, and a question in the attack
